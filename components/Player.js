@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Button, View, Text, TouchableHighlight, LifeButton } from 'react-native';
+import { StyleSheet, Button, View, Text, TouchableHighlight } from 'react-native';
+import LifeButton from './LifeButton';
 
 export default class Player extends React.Component {
 
@@ -22,15 +23,9 @@ export default class Player extends React.Component {
             <View style={ styles.tile }>
                 <Text style={ styles.playerName }>{ player.name }</Text>
                 <View style={ styles.lifeContainer }>
-                    <TouchableHighlight style={ styles.button } 
-                        onPress={ () => this.subtractLife(1) } onLongPress={ () => this.subtractLife(10) }>
-                        <Text style={ styles.buttonText }>-</Text>
-                    </TouchableHighlight>
+                    <LifeButton content="-" onPress={ () => this.subtractLife(1) } onLongPress={ () => this.subtractLife(10) } />
                     <Text style={ styles.points }>{ points }</Text>
-                    <TouchableHighlight style={ styles.button } 
-                        onPress={ () => this.addLife(1) } onLongPress={ () => this.addLife(10) }>
-                        <Text style={ styles.buttonText }>+</Text>
-                    </TouchableHighlight>
+                    <LifeButton content="+" onPress={ () => this.addLife(1) } onLongPress={ () => this.addLife(10) } />
                 </View>
             </View>
         );
@@ -63,7 +58,7 @@ const styles = StyleSheet.create({
     },
     playerName: {
         color: 'white',
-        fontSize: 16,
+        fontSize: 18,
         textAlign: 'center',
         elevation: 30,
     },
@@ -83,19 +78,5 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'white',
         fontSize: 40,
-        // backgroundColor: 'red'
-    },
-    button: {
-        width: '40%',
-        // backgroundColor: 'steelblue'
-    },
-    buttonText: {
-        fontSize: 20,
-        height: '100%',
-        color: 'white',
-        fontWeight: 'bold',
-        textAlign: 'center',
-        textAlignVertical: 'center',
-        // backgroundColor: 'gray'
     }
 });
