@@ -3,10 +3,10 @@ import { StyleSheet, Text, View } from 'react-native';
 import Player from './components/Player';
 
 const players = [
-  { name: 'Player 1', lifeTotal: 40 },
-  { name: 'Player 2', lifeTotal: 40 },
-  { name: 'Player 3', lifeTotal: 40 },
-  { name: 'Player 4', lifeTotal: 40 },
+  { name: 'Player 1', life: 40 },
+  { name: 'Player 2', life: 40 },
+  // { name: 'Player 3', life: 40 },
+  // { name: 'Player 4', life: 40 },
 ];
 
 export default class App extends React.Component {

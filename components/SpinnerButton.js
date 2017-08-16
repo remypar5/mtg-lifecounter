@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, TouchableHighlight, Text } from 'react-native';
 
-export default class LifeButton extends React.Component {
+export default class SpinnerButton extends React.Component {
     constructor(props) {
         super(props);
 
@@ -16,7 +16,7 @@ export default class LifeButton extends React.Component {
         
         return (
             <TouchableHighlight style={ styles.hitbox } 
-                onPress={ this._onPress } onLongPress={ this.onLongPress }>
+                onPress={ this._onPress } onLongPress={ this._onLongPress }>
                 <Text style={ styles.button }>{ props.content }</Text>
             </TouchableHighlight>
         );
