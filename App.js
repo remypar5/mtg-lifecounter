@@ -1,16 +1,19 @@
 import React from 'react';
-import { StyleSheet, View, ToolbarAndroid } from 'react-native';
-import Game from './components/Game';
+import { StyleSheet, View, Text } from 'react-native';
+import { NativeRouter as Router, Route, Link } from 'react-router-native';
+import Game from './sections/Game';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <ToolbarAndroid
-          style={styles.toolbar}
-          title="MTG Lifecounter" />
-        <Game />
-      </View>
+      <Router>
+        <View style={styles.container}>
+          <Route exact path='/' render={() => (
+            <Link to="/game"><Text>Start</Text></Link>
+          )} />
+          <Route path="/game" component={ Game } />
+        </View>
+      </Router>
     );
   }
 }
@@ -18,7 +21,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },

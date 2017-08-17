@@ -6,9 +6,6 @@ import renderer from 'react-test-renderer';
 let render;
 
 beforeEach(() => {
-    pressSpy = jest.fn();
-    longPressSpy = jest.fn();
-
     render = renderer.create(
         <Game />
     );

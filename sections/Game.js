@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import { Link } from 'react-router-native';
 
-import Player from './Player';
+import Player from '../components/Player';
 
 export default class Game extends React.Component {
     constructor(props) {
@@ -24,6 +25,7 @@ export default class Game extends React.Component {
         return (
             <View>
                 <Text style={styles.title}>Current Game</Text>
+                <Link to="../"><Text>Back</Text></Link>
                 { this.state.players.map(this.renderPlayer) }
             </View>
         );
