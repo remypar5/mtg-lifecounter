@@ -1,26 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Player from './components/Player';
-
-const players = [
-  { name: 'Player 1', life: 40 },
-  { name: 'Player 2', life: 40 },
-  // { name: 'Player 3', life: 40 },
-  // { name: 'Player 4', life: 40 },
-];
+import { StyleSheet, View, ToolbarAndroid } from 'react-native';
+import Game from './components/Game';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        { players.map(this.renderPlayer) }
+        <ToolbarAndroid
+          style={styles.toolbar}
+          title="MTG Lifecounter" />
+        <Game />
       </View>
-    );
-  }
-  
-  renderPlayer(player, key) {
-    return (
-      <Player key={key} player={player} />
     );
   }
 }
@@ -31,5 +21,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  toolbar: {
+    height: 50,
+    backgroundColor: 'steelblue'
   }
 });
