@@ -1,66 +1,29 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { Link } from 'react-router-native';
+import { NativeRouter as Router, Route, Link } from 'react-router-native';
 
 import Player from '../components/Player';
+import GameSettings from './Game/GameSettings';
+import GameRound from './Game/GameRound';
 
 export default class Game extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            startingLifeTotal: props.startingLifeTotal,
-            numberOfPlayers: props.numberOfPlayers,
-            players: []
-        }
-    }
-
-    componentWillMount() {
-        this.setState({
-            players: this.generatePlayers()
-        });
-    }
-    
     render() {
         return (
-            <View>
-                <Text style={styles.title}>Current Game</Text>
-                <Link to="../"><Text>Back</Text></Link>
-                { this.state.players.map(this.renderPlayer) }
-            </View>
+            <Router>
+                <View>
+                    <Route exact path="/" render={() => (
+                        <GameRound
+                            numberOfPlayers={5}
+                            startingLifeTotal={40} />
+                    )} />
+                    {/* <Route exact path="/" component={GameSettings} /> */}
+                    {/* <Route path="/round/:playerAmount/:life" render={({ match }) => (
+                        <GameRound
+                            playerAmount={ match.params.playerAmount }
+                            life={ match.params.life } />
+                    )} /> */}
+                </View>
+            </Router>
         );
     }
-    
-    renderPlayer(player, key) {
-      return (
-        <Player key={key} player={player} />
-      );
-    }
-
-    generatePlayers() {
-        const players = [];
-
-        for (let i = 0; i < this.state.numberOfPlayers; i++) {
-            players.push({
-                id: i,
-                name: 'Speler ' + (i+1),
-                life: this.state.startingLifeTotal
-            });
-        }
-        
-        return players;
-    }
 }
-
-Game.defaultProps = {
-    startingLifeTotal: 100,
-    numberOfPlayers: 3
-}
-
-const styles = StyleSheet.create({
-    title: {
-        fontSize: 20,
-        color: 'white',
-        backgroundColor: 'steelblue'
-    }
-});

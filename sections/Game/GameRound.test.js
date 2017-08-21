@@ -1,12 +1,16 @@
 import React from 'react';
-import Player from './Player';
+import GameRound from './GameRound';
 
 import renderer from 'react-test-renderer';
 
 let render;
 
 beforeEach(() => {
-    render = renderer.create(<Player player={{ name: 'John Doe', life: 40 }} />);
+    render = renderer.create(
+        <GameRound
+            numberOfPlayers={3}
+            startingLifeTotal={40} />
+    );
 });
 
 it('renders without crashing', () => {

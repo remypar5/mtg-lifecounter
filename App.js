@@ -6,14 +6,9 @@ import Game from './sections/Game';
 export default class App extends React.Component {
   render() {
     return (
-      <Router>
-        <View style={styles.container}>
-          <Route exact path='/' render={() => (
-            <Link to="/game"><Text>Start</Text></Link>
-          )} />
-          <Route path="/game" component={ Game } />
-        </View>
-      </Router>
+      <View style={styles.container}>
+        <Game />
+      </View>
     );
   }
 }
@@ -21,12 +16,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'blue',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  toolbar: {
-    height: 50,
-    backgroundColor: 'steelblue'
   }
 });

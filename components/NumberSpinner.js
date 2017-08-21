@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, View, Text, TextInput } from 'react-native';
 import SpinnerButton from './SpinnerButton';
 
@@ -10,8 +11,8 @@ export default class NumberSpinner extends React.Component {
             value: props.value
         };
 
-        this.addPoints = this.addPoints.bind(this);
-        this.subtractPoints = this.subtractPoints.bind(this);
+        this.increase = this.increase.bind(this);
+        this.decrease = this.decrease.bind(this);
     }
     
     render() {
@@ -20,30 +21,59 @@ export default class NumberSpinner extends React.Component {
         return (
             <View style={ styles.container }>
                 <SpinnerButton content="-"
-                    onPress={ () => this.subtractPoints(1) } onLongPress={ () => this.subtractPoints(10) } />
+                    onPress={ () => this.decrease(props.step) } onLongPress={ () => this.decrease(props.stepLarge) } />
                 <Text style={ styles.value }>{ this.state.value }</Text>
                 <SpinnerButton content="+"
-                    onPress={ () => this.addPoints(1) } onLongPress={ () => this.addPoints(10) } />
+                    onPress={ () => this.increase(props.step) } onLongPress={ () => this.increase(props.stepLarge) } />
             </View>
         );
     }
     
-    setLife(value) {
+    setValue(value) {
         // TODO: use actions and reducers
         this.setState({
             value
         });
+
+        this.props.onChange(value);
     }
     
-    addPoints(points = 0) {
-        this.setLife(this.state.value + points);
+    increase(points = 0) {
+        let newValue = this.state.value + points;
+
+        if (this.props.max !== undefined) {
+            newValue = Math.min(this.props.max, newValue);
+        }
+        
+        this.setValue(newValue);
     }
     
-    subtractPoints(points = 0) {
-        this.setLife(this.state.value - points);
+    decrease(points = 0) {
+        let newValue = this.state.value - points;
+
+        if (this.props.min !== undefined) {
+            newValue = Math.max(this.props.min, newValue);
+        }
+        
+        this.setValue(newValue);
     }
     
 }
+
+NumberSpinner.propTypes = {
+    value: PropTypes.number.isRequired,
+    min: PropTypes.number,
+    max: PropTypes.number,
+    step: PropTypes.number,
+    stepLarge: PropTypes.number,
+    onChange: PropTypes.func
+};
+
+NumberSpinner.defaultProps = {
+    step: 1,
+    stepLarge: 10,
+    onChange: () => {}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -52,14 +82,14 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'center', // Horizontal
-        alignItems: 'stretch', // Vertical
+        alignItems: 'center', // Vertical
     },
     value: {
         width: '20%',
         height: '100%',
         textAlignVertical: 'center',
-        alignSelf: 'center',
         textAlign: 'center',
+        alignSelf: 'center',
         color: 'white',
         fontSize: 40,
     }

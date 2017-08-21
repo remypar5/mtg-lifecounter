@@ -1,5 +1,7 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import { StyleSheet, Text, View } from 'react-native';
+
 import NumberSpinner from './NumberSpinner';
 
 export default class Player extends React.Component {
@@ -7,8 +9,11 @@ export default class Player extends React.Component {
         super(props);
 
         this.state = {
-            life: props.player.life
+            life: props.player.life,
+            gameOver: false
         };
+
+        this.onLifeChange = this.onLifeChange.bind(this);
     }
     
     render() {
@@ -16,28 +21,43 @@ export default class Player extends React.Component {
         const life = this.state.life;
         
         return (
-            <View style={ styles.tile }>
+            <View style={ [styles.tile, this.state.gameOver ? styles.gameOver : null] }>
+                <NumberSpinner value={ this.state.life }
+                    onChange={this.onLifeChange} />
                 <Text style={ styles.playerName }>{ player.name }</Text>
-                <NumberSpinner value={ this.state.life } />
             </View>
         );
     }
+
+    onLifeChange(life) {
+        this.setState({
+            gameOver: life <= 0
+        });
+    }
 };
+
+Player.propTypes = {
+    player: propTypes.object.isRequired
+}
 
 const styles = StyleSheet.create({
     tile: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: 'stretch',
+        justifyContent: 'flex-start',
         borderColor: 'white',
         borderWidth: 1,
         borderStyle: 'solid',
         width: '100%',
+        height: '100%',
+    },
+    gameOver: {
+        backgroundColor: 'grey'
     },
     playerName: {
         color: 'white',
         fontSize: 18,
-        textAlign: 'center',
-        elevation: 30,
+        alignSelf: 'center',
+        paddingVertical: 5
     }
 });
