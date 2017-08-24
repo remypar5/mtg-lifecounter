@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, View, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import Player from '../../components/Player';
 import splitArray from '../../utils/array.split';
@@ -12,7 +12,7 @@ export default class GameRound extends React.Component {
         this.players = this.generatePlayers();
     }
 
-    // TODO: Lock screen's orientation to portrait after ejecting
+    // TODO after ejecting: Lock screen's orientation to portrait
     // componentDidMount() {
     //     Orientation.lockToPortrait();
     // }
@@ -40,13 +40,13 @@ export default class GameRound extends React.Component {
     
     generatePlayers() {
         const players = [];
-        const props = this.props;
+        const { numberOfPlayers, startingLifeTotal } = this.props;
         
-        for (let id = 0; id < props.numberOfPlayers; id++) {
+        for (let id = 0; id < numberOfPlayers; id++) {
             players.push({
                 id,
                 name: 'Player ' + (id+1),
-                life: props.startingLifeTotal
+                life: startingLifeTotal
             });
         }
         
@@ -61,6 +61,7 @@ GameRound.propsTypes = {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: 'black',
         flex: 1,
         flexDirection: 'row',
     },

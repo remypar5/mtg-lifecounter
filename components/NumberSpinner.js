@@ -77,15 +77,13 @@ NumberSpinner.defaultProps = {
 
 const styles = StyleSheet.create({
     container: {
-        elevation: 20,
-        width: '100%',
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'center', // Horizontal
         alignItems: 'center', // Vertical
     },
     value: {
-        width: '20%',
+        width: '30%',
         height: '100%',
         textAlignVertical: 'center',
         textAlign: 'center',

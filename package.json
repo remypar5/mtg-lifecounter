@@ -23,13 +23,20 @@
     "verbose": true,
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/?!(react-router-native|react-router)"
-    ]
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 85,
+        "functions": 85,
+        "lines": 85,
+        "statements": 85
+      }
+    }
   },
   "dependencies": {
     "expo": "^19.0.0",
     "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.12",
-    "react-native": "^0.46.1",
-    "react-router-native": "^4.1.1"
+    "react-native": "^0.46.1"
   }
 }

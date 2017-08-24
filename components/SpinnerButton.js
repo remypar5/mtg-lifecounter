@@ -25,7 +25,7 @@ export default class SpinnerButton extends React.Component {
 
 const styles = StyleSheet.create({
     hitbox: {
-        width: '40%',
+        width: '35%',
     },
     button: {
         fontSize: 20,
