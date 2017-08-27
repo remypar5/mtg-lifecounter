@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Alert } from 'react-native';
 
 import Player from '../../components/Player';
 import splitArray from '../../utils/array.split';
@@ -9,13 +9,10 @@ export default class GameRound extends React.Component {
     constructor(props) {
         super(props);
 
-        this.players = this.generatePlayers();
+        this.state = {
+            players: this.generatePlayers()
+        };
     }
-
-    // TODO after ejecting: Lock screen's orientation to portrait
-    // componentDidMount() {
-    //     Orientation.lockToPortrait();
-    // }
 
     render() {
         return (
@@ -27,12 +24,16 @@ export default class GameRound extends React.Component {
 
     renderPlayers() {
         const sides = ['first', 'second'];
-        const columns = splitInHalf(this.players);
+        const columns = splitInHalf(this.state.players);
 
         return columns.map((players, column) => (
             <View key={`playerColumn${column}`} style={ [styles.column, styles[sides[column] + 'Column']] }>
                 { players.map((player) => (
-                    <Player key={`playerContainer${player.id}`} player={player} style={ styles[sides[column] + 'Player'] } />
+                    <Player
+                        key={`playerContainer${player.id}`}
+                        player={player}
+                        onGameOver={ (isGameOver) => this.playerGameOver(player, isGameOver) }
+                        style={ styles[sides[column] + 'Player'] } />
                 )) }
             </View>
         ));
@@ -46,18 +47,44 @@ export default class GameRound extends React.Component {
             players.push({
                 id,
                 name: 'Player ' + (id+1),
-                life: startingLifeTotal
+                life: startingLifeTotal,
+                isGameOver: false
             });
         }
         
         return players;
     }
+
+    playerGameOver(player, isGameOver) {
+        const self = this;
+        let gameOverPlayers = 0;
+        
+        player.isGameOver = isGameOver;
+
+        for (let p of this.state.players) {
+            if (p.isGameOver) {
+                gameOverPlayers++;
+            }
+        }
+
+        if ((this.props.numberOfPlayers - gameOverPlayers) <= 1) {
+            Alert.alert('Game Over', 'Play again?', [
+                { text: 'Yes', onPress: () => self.props.onGameEnd(true) },
+                { text: 'No', onPress: () => self.props.onGameEnd(false) }
+            ], { cancelable: false });
+        }
+    }
 }
 
 GameRound.propsTypes = {
     numberOfPlayers: PropTypes.number.isRequired,
-    startingLifeTotal: PropTypes.number.isRequired
+    startingLifeTotal: PropTypes.number.isRequired,
+    onGameEnd: PropTypes.func
 };
+
+GameRound.defaultProps = {
+    onGameEnd: () => {}
+}
 
 const styles = StyleSheet.create({
     container: {

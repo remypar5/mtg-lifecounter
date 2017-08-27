@@ -30,14 +30,23 @@ export default class Player extends React.Component {
     }
 
     onLifeChange(life) {
+        const gameOver = life <= 0;
+        
         this.setState({
-            gameOver: life <= 0
+            gameOver
         });
+
+        this.props.onGameOver(gameOver);
     }
 };
 
 Player.propTypes = {
-    player: propTypes.object.isRequired
+    player: propTypes.object.isRequired,
+    onGameOver: propTypes.func
+}
+
+Player.defaultProps = {
+    onGameOver: () => {}
 }
 
 const styles = StyleSheet.create({

@@ -11,20 +11,24 @@ export default class Game extends React.Component {
 
         this.state = {
             numberOfPlayers: 0,
-            startingLifeTotal: 0
+            startingLifeTotal: 0,
+            playing: false
         };
 
         this.startGame = this.startGame.bind(this);
+        this.onGameEnd = this.onGameEnd.bind(this);
     }
     
     render() {
-        const playing = this.state.numberOfPlayers && this.state.startingLifeTotal;
+        const { numberOfPlayers, startingLifeTotal, playing } = this.state;
+        const isPlaying = numberOfPlayers && startingLifeTotal && playing;
         
         return (
             <View style={ styles.container }>
-                { !playing ?
+                { !isPlaying ?
                     <GameSettings onStart={ this.startGame } />
                     : <GameRound 
+                        onGameEnd={ this.onGameEnd }
                         numberOfPlayers={ this.state.numberOfPlayers }
                         startingLifeTotal={ this.state.startingLifeTotal } />
                 }
@@ -35,7 +39,14 @@ export default class Game extends React.Component {
     startGame(numberOfPlayers, startingLifeTotal) {
         this.setState({
             numberOfPlayers,
-            startingLifeTotal
+            startingLifeTotal,
+            playing: true,
+        });
+    }
+    
+    onGameEnd(restart) {
+        this.setState({
+            playing: !restart
         });
     }
 }

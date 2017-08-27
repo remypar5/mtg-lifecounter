@@ -30,7 +30,6 @@ export default class NumberSpinner extends React.Component {
     }
     
     setValue(value) {
-        // TODO: use actions and reducers
         this.setState({
             value
         });
