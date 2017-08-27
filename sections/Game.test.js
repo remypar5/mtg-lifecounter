@@ -1,12 +1,14 @@
 import React from 'react';
-import Player from './Player';
+import Game from './Game';
 
 import renderer from 'react-test-renderer';
 
 let render;
 
 beforeEach(() => {
-    render = renderer.create(<Player player={{ name: 'John Doe', life: 40 }} />);
+    render = renderer.create(
+        <Game />
+    );
 });
 
 it('renders without crashing', () => {

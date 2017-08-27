@@ -1,12 +1,15 @@
 import React from 'react';
-import Player from './Player';
+import GameSettings from './GameSettings';
 
 import renderer from 'react-test-renderer';
 
 let render;
+const onStartSpy = jest.fn();
 
 beforeEach(() => {
-    render = renderer.create(<Player player={{ name: 'John Doe', life: 40 }} />);
+    render = renderer.create(
+        <GameSettings onStart={ onStartSpy } />
+    );
 });
 
 it('renders without crashing', () => {

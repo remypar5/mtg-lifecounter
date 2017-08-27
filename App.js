@@ -1,35 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Player from './components/Player';
+import { StyleSheet, View, Text, Button } from 'react-native';
 
-const players = [
-  { name: 'Player 1', life: 40 },
-  { name: 'Player 2', life: 40 },
-  // { name: 'Player 3', life: 40 },
-  // { name: 'Player 4', life: 40 },
-];
+import Game from './sections/Game';
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        { players.map(this.renderPlayer) }
-      </View>
-    );
-  }
-  
-  renderPlayer(player, key) {
-    return (
-      <Player key={key} player={player} />
-    );
-  }
+    render() {
+        return (
+            <View style={styles.container}>
+                <Game />
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
+    container: {
+        flex: 1,
+        backgroundColor: 'black',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
 });

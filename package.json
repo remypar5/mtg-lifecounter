@@ -14,13 +14,28 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js",
-    "test:dev": "node node_modules/jest/bin/jest.js --watch"
+    "test:dev": "node node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node node_modules/jest/bin/jest.js --coverage",
+    "test:dev:coverage": "node node_modules/jest/bin/jest.js --watch --coverage"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "verbose": true,
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/?!(react-router-native|react-router)"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 85,
+        "functions": 85,
+        "lines": 85,
+        "statements": 85
+      }
+    }
   },
   "dependencies": {
     "expo": "^19.0.0",
+    "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.46.1"
   }
