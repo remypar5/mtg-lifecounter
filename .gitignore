@@ -2,3 +2,9 @@ node_modules/
 .expo/
 npm-debug.*
 coverage/
+android/local.properties
+android/.gradle
+android/.idea
+android/build
+android/app/build
+ios/
