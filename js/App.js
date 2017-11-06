@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 
-import Game from './sections/Game';
+import Game from './screens/Game';
 
 export default class App extends React.Component {
     render() {
