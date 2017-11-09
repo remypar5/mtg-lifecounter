@@ -8,13 +8,15 @@ export default class GameSettings extends React.Component {
     static navigationOptions = {
         title: 'Game Settings'
     };
+
+    static lifePoints = [20, 30, 40];
     
     constructor(props) {
         super(props);
 
         this.state = {
             numberOfPlayers: 2,
-            startingLifeTotal: 20
+            startingLifeTotal: GameSettings.lifePoints[0]
         };
     }
 
@@ -32,7 +34,7 @@ export default class GameSettings extends React.Component {
 
                 <Text style={ styles.label }>Starting lifepoints [{state.startingLifeTotal}]</Text>
                 <View style={ styles.buttonContainer }>
-                    { [20, 30, 40].map((startingLifeTotal) => (
+                    { GameSettings.lifePoints.map((startingLifeTotal) => (
                         <Button
                             key={`buttonLifePoints${startingLifeTotal}`}
                             style={[ styles.button, state.startingLifeTotal === startingLifeTotal ? styles.selected : null ]}
@@ -52,7 +54,6 @@ export default class GameSettings extends React.Component {
     startRound() {
         const { startingLifeTotal, numberOfPlayers } = this.state;
 
-        // alert([startingLifeTotal, numberOfPlayers].join(' / '));
         this.props.navigation.navigate('GameRound', { startingLifeTotal, numberOfPlayers });
     }
 }

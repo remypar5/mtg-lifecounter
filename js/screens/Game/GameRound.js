@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, Alert, Text } from 'react-native';
+import { View, StyleSheet, Alert, BackHandler } from 'react-native';
+import { addNavigationHelpers, NavigationActions } from 'react-navigation';
 
 import Player from '../../components/Player';
 import splitArray from '../../utils/array.split';
@@ -9,21 +10,30 @@ export default class GameRound extends React.Component {
     static navigationOptions = {
         header: null
     };
-    
+
+    confirmGameOver = true;
+
     constructor(props) {
         super(props);
 
+        this.players = this.generatePlayers();
+
         this.state = {
-            players: this.generatePlayers()
+            roundNumber: 1
         };
     }
 
+    componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress', this.onBackPress);
+    }
+
+    componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress', this.onBackPress);
+    }
+
     render() {
-        // return (
-        //     <Text>{ Object.keys(this.props).join(' / ') }</Text>
-        // );
         return (
-            <View style={ styles.container }>
+            <View style={ styles.container } key={ `round${this.state.roundNumber}` }>
                 { this.renderPlayers() }
             </View>
         );
@@ -31,7 +41,7 @@ export default class GameRound extends React.Component {
 
     renderPlayers() {
         const sides = ['first', 'second'];
-        const columns = splitInHalf(this.state.players);
+        const columns = splitInHalf(this.players);
 
         return columns.map((players, column) => (
             <View key={`playerColumn${column}`} style={ [styles.column, styles[sides[column] + 'Column']] }>
@@ -64,22 +74,44 @@ export default class GameRound extends React.Component {
 
     playerGameOver(player, isGameOver) {
         const self = this;
+        const { numberOfPlayers } = this.props.navigation.state.params;
+        const { goBack } = this.props.navigation;
         let gameOverPlayers = 0;
-        
+
         player.isGameOver = isGameOver;
 
-        for (let p of this.state.players) {
+        for (let p of this.players) {
             if (p.isGameOver) {
                 gameOverPlayers++;
             }
         }
 
-        if ((this.props.numberOfPlayers - gameOverPlayers) <= 1) {
-            Alert.alert('Game Over', 'Play again?', [
-                { text: 'Yes', onPress: () => self.props.onGameEnd(true) },
-                { text: 'No', onPress: () => self.props.onGameEnd(false) }
-            ], { cancelable: false });
+        if (this.confirmGameOver && (numberOfPlayers - gameOverPlayers) <= 1) {
+            Alert.alert('Game Over', 'What do you want to do?', [
+                { text: 'Restart', onPress: () => self.setState({ roundNumber: this.state.roundNumber + 1 }) },
+                { text: 'Exit', onPress: () => goBack() },
+                {
+                    text: 'Continue', onPress: () => {
+                        self.confirmGameOver = false;
+                        Alert.alert('Continue playing', 'Press the back button on your device to exit the game.');
+                    }
+                }
+            ], { cancelable: true });
         }
+    }
+
+    onBackPress = () => {
+        const { navigation } = this.props;
+        if (navigation.index === 0) {
+            return false;
+        }
+
+        Alert.alert('Exit game', 'Are you sure?', [
+            { text: 'Yes', onPress: () => navigation.dispatch(NavigationActions.back()) },
+            { text: 'No' }
+        ]);
+        
+        return true;
     }
 }
 
