@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, Alert } from 'react-native';
+import { View, StyleSheet, Alert, Text } from 'react-native';
 
 import Player from '../../components/Player';
 import splitArray from '../../utils/array.split';
 
 export default class GameRound extends React.Component {
+    static navigationOptions = {
+        header: null
+    };
+    
     constructor(props) {
         super(props);
 
@@ -15,6 +19,9 @@ export default class GameRound extends React.Component {
     }
 
     render() {
+        // return (
+        //     <Text>{ Object.keys(this.props).join(' / ') }</Text>
+        // );
         return (
             <View style={ styles.container }>
                 { this.renderPlayers() }
@@ -41,7 +48,7 @@ export default class GameRound extends React.Component {
     
     generatePlayers() {
         const players = [];
-        const { numberOfPlayers, startingLifeTotal } = this.props;
+        const { numberOfPlayers, startingLifeTotal } = this.props.navigation.state.params;
         
         for (let id = 0; id < numberOfPlayers; id++) {
             players.push({
@@ -112,5 +119,5 @@ const styles = StyleSheet.create({
 const splitInHalf = (arr) => {
     const half = Math.ceil(arr.length / 2);
     
-    return splitArray(arr, [(item, idx) => idx < half, (item, idx) => idx >= half], true)
+    return splitArray(arr, [(item, idx) => idx < half, (item, idx) => idx >= half], true);
 };

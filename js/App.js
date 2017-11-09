@@ -1,23 +1,25 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import Game from './screens/Game';
+import { StackNavigator } from 'react-navigation';
+import GameSettings from './screens/Game/GameSettings';
+import GameRound from './screens/Game/GameRound';
+
+const GameRouter = StackNavigator({
+    GameSettings: {
+        screen: GameSettings
+    },
+    GameRound: {
+        screen: GameRound
+    }
+}, {
+    initialRouteName: 'GameSettings'
+});
 
 export default class App extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Game />
-            </View>
+            <GameRouter />
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'black',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }
-});

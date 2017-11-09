@@ -5,31 +5,37 @@ import PropTypes from 'prop-types';
 import NumberSpinner from '../../components/NumberSpinner';
 
 export default class GameSettings extends React.Component {
+    static navigationOptions = {
+        title: 'Game Settings'
+    };
+    
     constructor(props) {
         super(props);
 
         this.state = {
-            playerAmount: 2,
+            numberOfPlayers: 2,
             startingLifeTotal: 20
         };
     }
 
     render() {
+        const state = this.state;
+        
         return (
             <View style={ styles.container }>
                 <Text style={ styles.label }>Number of players [1-6]</Text>
                 <NumberSpinner
                     min={ 1 }
                     max={ 6 }
-                    value={ this.state.playerAmount }
-                    onChange={ (playerAmount) => this.setState({playerAmount}) } />
+                    value={ state.numberOfPlayers }
+                    onChange={ (numberOfPlayers) => this.setState({numberOfPlayers}) } />
 
-                <Text style={ styles.label }>Starting lifepoints [{this.state.startingLifeTotal}]</Text>
+                <Text style={ styles.label }>Starting lifepoints [{state.startingLifeTotal}]</Text>
                 <View style={ styles.buttonContainer }>
                     { [20, 30, 40].map((startingLifeTotal) => (
                         <Button
                             key={`buttonLifePoints${startingLifeTotal}`}
-                            style={[ styles.button, this.state.startingLifeTotal === startingLifeTotal ? styles.selected : null ]}
+                            style={[ styles.button, state.startingLifeTotal === startingLifeTotal ? styles.selected : null ]}
                             title={`${startingLifeTotal}`}
                             onPress={() => this.setState({ startingLifeTotal })} />
                     )) }
@@ -44,14 +50,11 @@ export default class GameSettings extends React.Component {
     }
 
     startRound() {
-        const { playerAmount, startingLifeTotal } = this.state;
-        
-        this.props.onStart(playerAmount, startingLifeTotal);
-    }
-}
+        const { startingLifeTotal, numberOfPlayers } = this.state;
 
-GameSettings.propTypes = {
-    onStart: PropTypes.func.isRequired
+        // alert([startingLifeTotal, numberOfPlayers].join(' / '));
+        this.props.navigation.navigate('GameRound', { startingLifeTotal, numberOfPlayers });
+    }
 }
 
 const styles = StyleSheet.create({

@@ -1,11 +1,15 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 import Player from '../components/Player';
 import GameSettings from './Game/GameSettings';
 import GameRound from './Game/GameRound';
 
 export default class Game extends React.Component {
+    static navigationOptions = {
+        title: 'Welcome'
+    };
+    
     constructor(props) {
         super(props);
 
@@ -25,13 +29,10 @@ export default class Game extends React.Component {
         
         return (
             <View style={ styles.container }>
-                { !isPlaying ?
-                    <GameSettings onStart={ this.startGame } />
-                    : <GameRound 
-                        onGameEnd={ this.onGameEnd }
-                        numberOfPlayers={ this.state.numberOfPlayers }
-                        startingLifeTotal={ this.state.startingLifeTotal } />
-                }
+                <GameRound 
+                    onGameEnd={ this.onGameEnd }
+                    numberOfPlayers={ this.state.numberOfPlayers }
+                    startingLifeTotal={ this.state.startingLifeTotal } />
             </View>
         );
     }
