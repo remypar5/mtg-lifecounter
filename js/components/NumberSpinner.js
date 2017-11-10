@@ -14,21 +14,21 @@ export default class NumberSpinner extends React.Component {
         this.increase = this.increase.bind(this);
         this.decrease = this.decrease.bind(this);
     }
-    
+
     render() {
         const props = this.props;
-        
+
         return (
-            <View style={ styles.container }>
+            <View style={styles.container}>
                 <SpinnerButton content="-"
-                    onPress={ () => this.decrease(props.step) } onLongPress={ () => this.decrease(props.stepLarge) } />
-                <Text style={ styles.value }>{ this.state.value }</Text>
+                    onPress={() => this.decrease(props.step)} onHold={() => this.decrease(props.stepLarge)} />
+                <Text style={styles.value}>{this.state.value}</Text>
                 <SpinnerButton content="+"
-                    onPress={ () => this.increase(props.step) } onLongPress={ () => this.increase(props.stepLarge) } />
+                    onPress={() => this.increase(props.step)} onHold={() => this.increase(props.stepLarge)} />
             </View>
         );
     }
-    
+
     setValue(value) {
         this.setState({
             value
@@ -36,27 +36,27 @@ export default class NumberSpinner extends React.Component {
 
         this.props.onChange(value);
     }
-    
+
     increase(points = 0) {
         let newValue = this.state.value + points;
 
         if (this.props.max !== undefined) {
             newValue = Math.min(this.props.max, newValue);
         }
-        
+
         this.setValue(newValue);
     }
-    
+
     decrease(points = 0) {
         let newValue = this.state.value - points;
 
         if (this.props.min !== undefined) {
             newValue = Math.max(this.props.min, newValue);
         }
-        
+
         this.setValue(newValue);
     }
-    
+
 }
 
 NumberSpinner.propTypes = {
@@ -71,7 +71,7 @@ NumberSpinner.propTypes = {
 NumberSpinner.defaultProps = {
     step: 1,
     stepLarge: 10,
-    onChange: () => {}
+    onChange: () => { }
 };
 
 const styles = StyleSheet.create({

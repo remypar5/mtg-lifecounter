@@ -9,3 +9,5 @@ android/.idea
 android/build
 android/app/build
 ios/
+.vscode/
+android/app/src/main/assets/index.android.bundle*
