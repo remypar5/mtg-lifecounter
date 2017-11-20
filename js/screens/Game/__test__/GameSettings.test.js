@@ -1,15 +1,14 @@
 import React from 'react';
-import GameRound from './GameRound';
+import GameSettings from '../GameSettings';
 
 import renderer from 'react-test-renderer';
 
 let render;
+const onStartSpy = jest.fn();
 
 beforeEach(() => {
     render = renderer.create(
-        <GameRound
-            numberOfPlayers={3}
-            startingLifeTotal={40} />
+        <GameSettings onStart={ onStartSpy } />
     );
 });
 

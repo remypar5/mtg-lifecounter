@@ -1,5 +1,5 @@
 import React from 'react';
-import NumberSpinner from './NumberSpinner';
+import NumberSpinner from '../NumberSpinner';
 
 import renderer from 'react-test-renderer';
 
@@ -15,13 +15,13 @@ it('renders without crashing', () => {
 
 it('should initialize with the provided value', () => {
     const component = render.toJSON();
-    
+
     expect(component.children[1].children[0]).toBe('3');
 });
 
 it.skip('should be able to increase or decrease the value by pressing the spinner buttons', () => {
     const component = render.toJSON();
-    
+
     // Simulate clicking a button to change the value
     expect(component.children[1].children[0]).toBe('4');
 });
@@ -29,11 +29,11 @@ it.skip('should be able to increase or decrease the value by pressing the spinne
 it.skip('should call the onChange event listener', () => {
     const onChangeSpy = jest.fn();
     const render = renderer.create(
-        <NumberSpinner 
+        <NumberSpinner
             value={3}
             onChange={onChangeSpy} />
     );
-    
+
     // Simulate clicking a button to change the value
     expect(onChangeSpy).toHaveBeenCalled();
 });

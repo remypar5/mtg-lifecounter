@@ -1,5 +1,5 @@
 import React from 'react';
-import SpinnerButton from './SpinnerButton';
+import SpinnerButton from '../SpinnerButton';
 
 import renderer from 'react-test-renderer';
 

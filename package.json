@@ -4,7 +4,8 @@
   "private": true,
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
-    "jest-expo": "~19.0.0",
+    "jest-expo": "^23.0.0",
+    "jest-react-native": "^18.0.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "scripts": {
@@ -19,9 +20,9 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "verbose": true,
+    "verbose": false,
     "transformIgnorePatterns": [
-      "<rootDir>/node_modules/?!(react-router-native|react-router)"
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
     ],
     "coverageThreshold": {
       "global": {
