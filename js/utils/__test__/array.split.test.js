@@ -1,4 +1,4 @@
-import splitArray from './array.split';
+import splitArray from '../array.split';
 
 it('splits an array into arrays based on the provided splitters', () => {
     const arr = '0123456789'.split('');
