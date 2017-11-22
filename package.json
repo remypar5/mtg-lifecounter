@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "react-native start",
-    "bundle": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "bundle": "react-native bundle --platform android --dev true --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "test": "node node_modules/jest/bin/jest.js",
@@ -19,11 +19,8 @@
     "test:dev:coverage": "node node_modules/jest/bin/jest.js --watch --coverage"
   },
   "jest": {
-    "preset": "jest-expo",
-    "verbose": false,
-    "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-navigation)"
-    ],
+    "preset": "react-native",
+    "verbose": true,
     "coverageThreshold": {
       "global": {
         "branches": 85,
