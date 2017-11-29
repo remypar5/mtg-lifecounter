@@ -21,10 +21,12 @@ export default class NumberSpinner extends React.Component {
         return (
             <View style={styles.container}>
                 <SpinnerButton content="-"
-                    onPress={() => this.decrease(props.step)} onHold={() => this.decrease(props.stepLarge)} />
+                    onPress={() => this.decrease(props.step)}
+                    onHold={() => this.decrease(props.stepLarge)} />
                 <Text style={styles.value}>{this.state.value}</Text>
                 <SpinnerButton content="+"
-                    onPress={() => this.increase(props.step)} onHold={() => this.increase(props.stepLarge)} />
+                    onPress={() => this.increase(props.step)}
+                    onHold={() => this.increase(props.stepLarge)} />
             </View>
         );
     }
@@ -37,7 +39,7 @@ export default class NumberSpinner extends React.Component {
         this.props.onChange(value);
     }
 
-    increase(points = 0) {
+    increase(points) {
         let newValue = this.state.value + points;
 
         if (this.props.max !== undefined) {
@@ -47,7 +49,7 @@ export default class NumberSpinner extends React.Component {
         this.setValue(newValue);
     }
 
-    decrease(points = 0) {
+    decrease(points) {
         let newValue = this.state.value - points;
 
         if (this.props.min !== undefined) {
