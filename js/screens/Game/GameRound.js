@@ -7,9 +7,6 @@ import Player from '../../components/Player';
 import splitArray from '../../utils/array.split';
 
 export default class GameRound extends React.Component {
-    static navigationOptions = {
-        header: null
-    };
 
     confirmGameOver = true;
 

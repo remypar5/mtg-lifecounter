@@ -5,12 +5,9 @@ import PropTypes from 'prop-types';
 import NumberSpinner from '../../components/NumberSpinner';
 
 export default class GameSettings extends React.Component {
-    static navigationOptions = {
-        title: 'Game Settings'
-    };
 
     static lifePoints = [20, 30, 40];
-    
+
     constructor(props) {
         super(props);
 
@@ -22,7 +19,7 @@ export default class GameSettings extends React.Component {
 
     render() {
         const state = this.state;
-        
+
         return (
             <View style={ styles.container }>
                 <Text style={ styles.label }>Number of players [1-6]</Text>
