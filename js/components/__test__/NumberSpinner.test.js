@@ -1,39 +1,50 @@
 import React from 'react';
+import { shallow } from 'enzyme';
+
 import NumberSpinner from '../NumberSpinner';
 
-import renderer from 'react-test-renderer';
+describe('<NumberSpinner />', () => {
 
-let render;
+    let component;
 
-beforeEach(() => {
-    render = renderer.create(<NumberSpinner value={3} />);
-});
+    beforeEach(() => {
+        component = shallow(
+            <NumberSpinner
+                value={3} />
+        );
+    });
 
-it('renders without crashing', () => {
-    expect(render.toJSON()).toBeTruthy();
-});
+    it('renders without crashing', () => {
+        expect(component).toMatchSnapshot();
+    });
 
-it('should initialize with the provided value', () => {
-    const component = render.toJSON();
+    it('should initialize with the provided value', () => {
+        expect(component
+            .find('Text')
+            .get(0)
+            .props
+            .children
+        )
+        .toBe(3);
+    });
 
-    expect(component.children[1].children[0]).toBe('3');
-});
+    it.skip('should be able to increase or decrease the value by pressing the spinner buttons', () => {
+        const render = renderer.create(<NumberSpinner value={3} />);
+        const component = render.toJSON();
 
-it.skip('should be able to increase or decrease the value by pressing the spinner buttons', () => {
-    const component = render.toJSON();
+        // Simulate clicking a button to change the value
+        expect(component.children[1].children[0]).toBe('4');
+    });
 
-    // Simulate clicking a button to change the value
-    expect(component.children[1].children[0]).toBe('4');
-});
+    it.skip('should call the onChange event listener', () => {
+        const onChangeSpy = jest.fn();
+        const render = renderer.create(
+            <NumberSpinner
+                value={3}
+                onChange={onChangeSpy} />
+        );
 
-it.skip('should call the onChange event listener', () => {
-    const onChangeSpy = jest.fn();
-    const render = renderer.create(
-        <NumberSpinner
-            value={3}
-            onChange={onChangeSpy} />
-    );
-
-    // Simulate clicking a button to change the value
-    expect(onChangeSpy).toHaveBeenCalled();
+        // Simulate clicking a button to change the value
+        expect(onChangeSpy).toHaveBeenCalled();
+    });
 });

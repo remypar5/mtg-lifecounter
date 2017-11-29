@@ -1,17 +1,20 @@
 import React from 'react';
+import { shallow } from 'enzyme';
+
 import GameSettings from '../GameSettings';
 
-import renderer from 'react-test-renderer';
 
-let render;
-const onStartSpy = jest.fn();
+describe('<GameSettings />' , () => {
 
-beforeEach(() => {
-    render = renderer.create(
-        <GameSettings onStart={ onStartSpy } />
-    );
-});
+    let component;
 
-it('renders without crashing', () => {
-    expect(render.toJSON()).toBeTruthy();
+    beforeEach(() => {
+        component = shallow(
+            <GameSettings />
+        );
+    });
+
+    it('renders without crashing', () => {
+        expect(component).toMatchSnapshot();
+    });
 });

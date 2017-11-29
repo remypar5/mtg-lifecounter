@@ -1,14 +1,21 @@
 import React from 'react';
+import { shallow } from 'enzyme';
+
 import Player from '../Player';
 
-import renderer from 'react-test-renderer';
+describe('<Player />', () => {
 
-let render;
+    let component;
 
-beforeEach(() => {
-    render = renderer.create(<Player player={{ name: 'John Doe', life: 40 }} />);
-});
+    beforeEach(() => {
+        component = shallow(
+            <Player
+                player={{ name: 'John Doe', life: 40 }} />
+        );
+    });
 
-it('renders without crashing', () => {
-    expect(render.toJSON()).toBeTruthy();
+    it('renders without crashing', () => {
+        expect(component).toMatchSnapshot();
+    });
+
 });

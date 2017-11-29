@@ -1,18 +1,22 @@
 import React from 'react';
+import { shallow } from 'enzyme';
+
 import GameRound from '../GameRound';
 
-import renderer from 'react-test-renderer';
+describe('<GameRound />', () => {
 
-let render;
+    let component;
 
-beforeEach(() => {
-    render = renderer.create(
-        <GameRound
-            numberOfPlayers={3}
-            startingLifeTotal={40} />
-    );
-});
+    beforeEach(() => {
+        component = shallow(
+            <GameRound
+                numberOfPlayers={3}
+                startingLifeTotal={40} />
+        );
+    });
 
-it('renders without crashing', () => {
-    expect(render.toJSON()).toBeTruthy();
+    it('renders without crashing', () => {
+        expect(component).toMatchSnapshot();
+    });
+
 });

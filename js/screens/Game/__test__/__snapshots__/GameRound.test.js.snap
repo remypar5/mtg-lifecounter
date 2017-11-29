@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GameRound /> renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GameRound
+    numberOfPlayers={3}
+    onGameEnd={[Function]}
+    startingLifeTotal={40}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "round1",
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <View
+          style={
+            Array [
+              Object {
+                "width": "50%",
+              },
+              Object {},
+            ]
+          }
+        >
+          <Player
+            onGameOver={[Function]}
+            player={
+              Object {
+                "id": 0,
+                "isGameOver": false,
+                "life": 40,
+                "name": "Player 1",
+              }
+            }
+            style={Object {}}
+          />
+          <Player
+            onGameOver={[Function]}
+            player={
+              Object {
+                "id": 1,
+                "isGameOver": false,
+                "life": 40,
+                "name": "Player 2",
+              }
+            }
+            style={Object {}}
+          />
+        </View>,
+        <View
+          style={
+            Array [
+              Object {
+                "width": "50%",
+              },
+              Object {},
+            ]
+          }
+        >
+          <Player
+            onGameOver={[Function]}
+            player={
+              Object {
+                "id": 2,
+                "isGameOver": false,
+                "life": 40,
+                "name": "Player 3",
+              }
+            }
+            style={Object {}}
+          />
+        </View>,
+      ],
+      "style": Object {
+        "backgroundColor": "black",
+        "flex": 1,
+        "flexDirection": "row",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "playerColumn0",
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Player
+              onGameOver={[Function]}
+              player={
+                Object {
+                  "id": 0,
+                  "isGameOver": false,
+                  "life": 40,
+                  "name": "Player 1",
+                }
+              }
+              style={Object {}}
+            />,
+            <Player
+              onGameOver={[Function]}
+              player={
+                Object {
+                  "id": 1,
+                  "isGameOver": false,
+                  "life": 40,
+                  "name": "Player 2",
+                }
+              }
+              style={Object {}}
+            />,
+          ],
+          "style": Array [
+            Object {
+              "width": "50%",
+            },
+            Object {},
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "playerContainer0",
+            "nodeType": "class",
+            "props": Object {
+              "onGameOver": [Function],
+              "player": Object {
+                "id": 0,
+                "isGameOver": false,
+                "life": 40,
+                "name": "Player 1",
+              },
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "playerContainer1",
+            "nodeType": "class",
+            "props": Object {
+              "onGameOver": [Function],
+              "player": Object {
+                "id": 1,
+                "isGameOver": false,
+                "life": 40,
+                "name": "Player 2",
+              },
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "playerColumn1",
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Player
+              onGameOver={[Function]}
+              player={
+                Object {
+                  "id": 2,
+                  "isGameOver": false,
+                  "life": 40,
+                  "name": "Player 3",
+                }
+              }
+              style={Object {}}
+            />,
+          ],
+          "style": Array [
+            Object {
+              "width": "50%",
+            },
+            Object {},
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "playerContainer2",
+            "nodeType": "class",
+            "props": Object {
+              "onGameOver": [Function],
+              "player": Object {
+                "id": 2,
+                "isGameOver": false,
+                "life": 40,
+                "name": "Player 3",
+              },
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "round1",
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <View
+            style={
+              Array [
+                Object {
+                  "width": "50%",
+                },
+                Object {},
+              ]
+            }
+          >
+            <Player
+              onGameOver={[Function]}
+              player={
+                Object {
+                  "id": 0,
+                  "isGameOver": false,
+                  "life": 40,
+                  "name": "Player 1",
+                }
+              }
+              style={Object {}}
+            />
+            <Player
+              onGameOver={[Function]}
+              player={
+                Object {
+                  "id": 1,
+                  "isGameOver": false,
+                  "life": 40,
+                  "name": "Player 2",
+                }
+              }
+              style={Object {}}
+            />
+          </View>,
+          <View
+            style={
+              Array [
+                Object {
+                  "width": "50%",
+                },
+                Object {},
+              ]
+            }
+          >
+            <Player
+              onGameOver={[Function]}
+              player={
+                Object {
+                  "id": 2,
+                  "isGameOver": false,
+                  "life": 40,
+                  "name": "Player 3",
+                }
+              }
+              style={Object {}}
+            />
+          </View>,
+        ],
+        "style": Object {
+          "backgroundColor": "black",
+          "flex": 1,
+          "flexDirection": "row",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "playerColumn0",
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Player
+                onGameOver={[Function]}
+                player={
+                  Object {
+                    "id": 0,
+                    "isGameOver": false,
+                    "life": 40,
+                    "name": "Player 1",
+                  }
+                }
+                style={Object {}}
+              />,
+              <Player
+                onGameOver={[Function]}
+                player={
+                  Object {
+                    "id": 1,
+                    "isGameOver": false,
+                    "life": 40,
+                    "name": "Player 2",
+                  }
+                }
+                style={Object {}}
+              />,
+            ],
+            "style": Array [
+              Object {
+                "width": "50%",
+              },
+              Object {},
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "playerContainer0",
+              "nodeType": "class",
+              "props": Object {
+                "onGameOver": [Function],
+                "player": Object {
+                  "id": 0,
+                  "isGameOver": false,
+                  "life": 40,
+                  "name": "Player 1",
+                },
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "playerContainer1",
+              "nodeType": "class",
+              "props": Object {
+                "onGameOver": [Function],
+                "player": Object {
+                  "id": 1,
+                  "isGameOver": false,
+                  "life": 40,
+                  "name": "Player 2",
+                },
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "playerColumn1",
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Player
+                onGameOver={[Function]}
+                player={
+                  Object {
+                    "id": 2,
+                    "isGameOver": false,
+                    "life": 40,
+                    "name": "Player 3",
+                  }
+                }
+                style={Object {}}
+              />,
+            ],
+            "style": Array [
+              Object {
+                "width": "50%",
+              },
+              Object {},
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "playerContainer2",
+              "nodeType": "class",
+              "props": Object {
+                "onGameOver": [Function],
+                "player": Object {
+                  "id": 2,
+                  "isGameOver": false,
+                  "life": 40,
+                  "name": "Player 3",
+                },
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

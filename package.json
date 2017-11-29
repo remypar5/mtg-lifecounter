@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "babel-preset-react-native-stage-0": "^1.0.1",
+    "babel-register": "^6.26.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "jest-enzyme": "^4.0.1",
     "jest-expo": "^23.0.0",
-    "jest-react-native": "^18.0.0",
-    "react-test-renderer": "16.0.0-alpha.12"
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.1.1",
+    "react-native-scripts": "^1.7.0"
   },
   "scripts": {
     "start": "react-native start",
@@ -20,7 +24,12 @@
   },
   "jest": {
     "preset": "react-native",
-    "verbose": true,
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest/setup.js"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 85,
@@ -32,8 +41,8 @@
   },
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react": "16.0.0-alpha.12",
-    "react-native": "^0.46.1",
+    "react": "16.0.0-beta.5",
+    "react-native": "^0.49.5",
     "react-navigation": "^1.0.0-beta.19"
   }
 }

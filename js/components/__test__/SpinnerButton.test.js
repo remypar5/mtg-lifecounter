@@ -1,23 +1,24 @@
 import React from 'react';
+import { shallow } from 'enzyme';
+
 import SpinnerButton from '../SpinnerButton';
 
-import renderer from 'react-test-renderer';
+describe('<SpinnerButton />', () => {
 
-let render;
-let pressSpy;
-let longPressSpy;
+    let component;
+    let onPressSpy = jest.fn();
+    let onLongPressSpy = jest.fn();
 
-beforeEach(() => {
-    pressSpy = jest.fn();
-    longPressSpy = jest.fn();
+    beforeEach(() => {
+        component = shallow(
+            <SpinnerButton
+                content="-"
+                onPress={ onPressSpy }
+                onLongPress={ onLongPressSpy } />
+        );
+    });
 
-    render = renderer.create(
-        <SpinnerButton content="-"
-            onPress={ pressSpy }
-            onLongPress={ longPressSpy } />
-    );
-});
-
-it('renders without crashing', () => {
-    expect(render.toJSON()).toBeTruthy();
+    it('renders without crashing', () => {
+        expect(component).toMatchSnapshot();
+    });
 });
