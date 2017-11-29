@@ -2,15 +2,15 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { StackNavigator } from 'react-navigation';
-import GameSettings from './screens/Game/GameSettings';
-import GameRound from './screens/Game/GameRound';
+import GameSettingsContainer from './screens/Game/GameSettings.container';
+import GameRoundContainer from './screens/Game/GameRound.container';
 
 const GameRouter = StackNavigator({
     GameSettings: {
-        screen: GameSettings
+        screen: GameSettingsContainer
     },
     GameRound: {
-        screen: GameRound
+        screen: GameRoundContainer
     }
 }, {
     initialRouteName: 'GameSettings'

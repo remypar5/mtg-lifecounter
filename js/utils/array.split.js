@@ -16,6 +16,6 @@ export default arraySplit = (arr, splitters, unique = false) => {
             }
         }
     });
-    
+
     return results;
 }

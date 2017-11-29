@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Player /> renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Player
+    onGameOver={[Function]}
+    player={
+      Object {
+        "life": 40,
+        "name": "John Doe",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <NumberSpinner
+          onChange={[Function]}
+          step={1}
+          stepLarge={10}
+          value={40}
+        />,
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": "white",
+              "fontSize": 18,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          John Doe
+        </Text>,
+      ],
+      "style": Array [
+        Object {
+          "alignItems": "stretch",
+          "borderColor": "white",
+          "borderStyle": "solid",
+          "borderWidth": 1,
+          "flex": 1,
+          "height": "100%",
+          "justifyContent": "flex-start",
+          "width": "100%",
+        },
+        null,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "onChange": [Function],
+          "step": 1,
+          "stepLarge": 10,
+          "value": 40,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
+          "children": "John Doe",
+          "disabled": false,
+          "ellipsizeMode": "tail",
+          "style": Object {
+            "alignSelf": "center",
+            "color": "white",
+            "fontSize": 18,
+            "paddingVertical": 5,
+          },
+        },
+        "ref": null,
+        "rendered": "John Doe",
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <NumberSpinner
+            onChange={[Function]}
+            step={1}
+            stepLarge={10}
+            value={40}
+          />,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "white",
+                "fontSize": 18,
+                "paddingVertical": 5,
+              }
+            }
+          >
+            John Doe
+          </Text>,
+        ],
+        "style": Array [
+          Object {
+            "alignItems": "stretch",
+            "borderColor": "white",
+            "borderStyle": "solid",
+            "borderWidth": 1,
+            "flex": 1,
+            "height": "100%",
+            "justifyContent": "flex-start",
+            "width": "100%",
+          },
+          null,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "onChange": [Function],
+            "step": 1,
+            "stepLarge": 10,
+            "value": 40,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "John Doe",
+            "disabled": false,
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "alignSelf": "center",
+              "color": "white",
+              "fontSize": 18,
+              "paddingVertical": 5,
+            },
+          },
+          "ref": null,
+          "rendered": "John Doe",
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

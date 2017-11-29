@@ -7,9 +7,6 @@ import Player from '../../components/Player';
 import splitArray from '../../utils/array.split';
 
 export default class GameRound extends React.Component {
-    static navigationOptions = {
-        header: null
-    };
 
     confirmGameOver = true;
 
@@ -55,11 +52,11 @@ export default class GameRound extends React.Component {
             </View>
         ));
     }
-    
+
     generatePlayers() {
         const players = [];
-        const { numberOfPlayers, startingLifeTotal } = this.props.navigation.state.params;
-        
+        const { numberOfPlayers, startingLifeTotal } = this.props;
+
         for (let id = 0; id < numberOfPlayers; id++) {
             players.push({
                 id,
@@ -68,13 +65,13 @@ export default class GameRound extends React.Component {
                 isGameOver: false
             });
         }
-        
+
         return players;
     }
 
     playerGameOver(player, isGameOver) {
         const self = this;
-        const { numberOfPlayers } = this.props.navigation.state.params;
+        const { numberOfPlayers } = this.props;
         const { goBack } = this.props.navigation;
         let gameOverPlayers = 0;
 
@@ -110,7 +107,7 @@ export default class GameRound extends React.Component {
             { text: 'Yes', onPress: () => navigation.dispatch(NavigationActions.back()) },
             { text: 'No' }
         ]);
-        
+
         return true;
     }
 }
@@ -150,6 +147,6 @@ const styles = StyleSheet.create({
 
 const splitInHalf = (arr) => {
     const half = Math.ceil(arr.length / 2);
-    
+
     return splitArray(arr, [(item, idx) => idx < half, (item, idx) => idx >= half], true);
 };
