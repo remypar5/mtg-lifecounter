@@ -10,16 +10,21 @@ export default class SpinnerButton extends React.Component {
         super(props);
 
         this._onPress = this._onPress.bind(this);
-        this._onPressIn = this._onPressIn.bind(this);
-        this._onPressOut = this._onPressOut.bind(this);
+
+        if (props.onHold) {
+            this._onPressIn = this._onPressIn.bind(this);
+            this._onPressOut = this._onPressOut.bind(this);
+        }
     }
 
     render() {
         const props = this.props;
 
         return (
-            <TouchableWithoutFeedback style={styles.hitbox}
-                onPress={this._onPress} onPressIn={this._onPressIn} onPressOut={this._onPressOut}>
+            <TouchableWithoutFeedback
+                onPress={this._onPress}
+                onPressIn={this._onPressIn}
+                onPressOut={this._onPressOut}>
                 <View style={styles.buttonContainer}>
                     <Text style={styles.button}>{props.content}</Text>
                 </View>
@@ -55,13 +60,7 @@ SpinnerButton.propTypes = {
     onHold: PropTypes.func
 };
 
-SpinnerButton.defaultProps = {
-    onHold: () => { }
-};
-
 const styles = StyleSheet.create({
-    hitbox: {
-    },
     buttonContainer: {
         width: '35%',
     },
