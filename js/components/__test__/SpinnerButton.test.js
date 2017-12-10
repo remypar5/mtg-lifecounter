@@ -53,6 +53,12 @@ describe('<SpinnerButton />', () => {
 
             jest.runOnlyPendingTimers();
             component.simulate('pressOut');
+            /**
+             * RN fires a `press` event after `pressIn` and `pressOut` have been fired
+             * on the same element. Enzyme, on the other hand, does not. So do
+             * it manually to test the `spinnerButton._preventOnPress` flag.
+             */
+            component.simulate('press');
 
             expect(onHoldSpy).toHaveBeenCalled();
             expect(onPressSpy).not.toHaveBeenCalled();
