@@ -6,8 +6,6 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SpinnerButton
     content="-"
-    onHold={[Function]}
-    onLongPress={[Function]}
     onPress={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -51,7 +49,6 @@ ShallowWrapper {
       "onPress": [Function],
       "onPressIn": [Function],
       "onPressOut": [Function],
-      "style": Object {},
     },
     "ref": null,
     "rendered": Object {
@@ -144,7 +141,6 @@ ShallowWrapper {
         "onPress": [Function],
         "onPressIn": [Function],
         "onPressOut": [Function],
-        "style": Object {},
       },
       "ref": null,
       "rendered": Object {
