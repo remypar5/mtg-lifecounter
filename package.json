@@ -16,6 +16,7 @@
     "start": "react-native start",
     "bundle": "react-native bundle --platform android --dev true --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
     "android": "react-native run-android",
+    "clean:node_modules": "rm -rf node_modules/ && yarn cache clean && yarn",
     "ios": "react-native run-ios",
     "test": "node node_modules/jest/bin/jest.js",
     "test:dev": "node node_modules/jest/bin/jest.js --watch",
@@ -36,6 +37,9 @@
         "functions": 85,
         "lines": 85,
         "statements": 85
+      },
+      "./js/**/*.container.js": {
+        "lines": 0
       }
     }
   },
