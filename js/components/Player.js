@@ -15,23 +15,23 @@ export default class Player extends React.Component {
 
         this.onLifeChange = this.onLifeChange.bind(this);
     }
-    
+
     render() {
         const player = this.props.player;
         const life = this.state.life;
-        
+
         return (
             <View style={ [styles.tile, this.state.gameOver ? styles.gameOver : null] }>
                 <NumberSpinner value={ this.state.life }
                     onChange={this.onLifeChange} />
-                <Text style={ styles.playerName }>{ player.name }</Text>
+                <Text style={ [styles.playerName, { color: player.color }] }>{ player.name }</Text>
             </View>
         );
     }
 
     onLifeChange(life) {
         const gameOver = life <= 0;
-        
+
         this.setState({
             gameOver
         });
@@ -54,17 +54,17 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'stretch',
         justifyContent: 'flex-start',
-        borderColor: 'white',
-        borderWidth: 1,
+        borderColor: '#262626',
+        borderWidth: 3,
         borderStyle: 'solid',
         width: '100%',
         height: '100%',
     },
     gameOver: {
-        backgroundColor: 'grey'
+        backgroundColor: '#710000'
     },
     playerName: {
-        color: 'white',
+        color: '#b2b2b0',
         fontSize: 18,
         alignSelf: 'center',
         paddingVertical: 5

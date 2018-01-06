@@ -54,6 +54,7 @@ export default class GameRound extends React.Component {
     }
 
     generatePlayers() {
+        const colors = ['#57719e', '#d83f2d', '#95b54c', '#efd86f', '#b2b2b0', '#cb8034'];
         const players = [];
         const { numberOfPlayers, startingLifeTotal } = this.props;
 
@@ -62,7 +63,8 @@ export default class GameRound extends React.Component {
                 id,
                 name: 'Player ' + (id+1),
                 life: startingLifeTotal,
-                isGameOver: false
+                isGameOver: false,
+                color: colors[id]
             });
         }
 
@@ -124,7 +126,7 @@ GameRound.defaultProps = {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'black',
+        backgroundColor: '#161616',
         flex: 1,
         flexDirection: 'row',
     },
