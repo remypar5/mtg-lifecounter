@@ -14,6 +14,8 @@ export default class GameSettings extends React.Component {
         this.state = {
             numberOfPlayers: 2,
             startingLifeTotal: GameSettings.lifePoints[0]
+            // numberOfPlayers: 6,
+            // startingLifeTotal: 200
         };
     }
 

@@ -25,7 +25,7 @@ export default class SpinnerButton extends React.Component {
                 onPress={this._onPress}
                 onPressIn={this._onPressIn}
                 onPressOut={this._onPressOut}>
-                <View style={styles.buttonContainer}>
+                <View style={[styles.buttonContainer, { width: props.width }]}>
                     <Text style={styles.button}>{props.content}</Text>
                 </View>
             </TouchableWithoutFeedback>
@@ -44,7 +44,7 @@ export default class SpinnerButton extends React.Component {
         this._onHoldInterval = setInterval(() => {
             this._preventOnPress = true;
             this.props.onHold();
-        }, 900);
+        }, 650);
     }
 
     _onPressOut() {
@@ -62,10 +62,10 @@ SpinnerButton.propTypes = {
 
 const styles = StyleSheet.create({
     buttonContainer: {
-        width: '35%',
+        // backgroundColor: 'gray'
     },
     button: {
-        fontSize: 20,
+        width: '100%',
         height: '100%',
         color: 'white',
         fontWeight: 'bold',

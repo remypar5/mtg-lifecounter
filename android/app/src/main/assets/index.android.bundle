@@ -60662,6 +60662,8 @@ var _react = require(38     ); // 38 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
+var _reactNative = require(12            ); // 12 = react-native
+
 var _GameSettings = require(401             ); // 401 = ./GameSettings
 
 var _GameSettings2 = babelHelpers.interopRequireDefault(_GameSettings);
@@ -60683,7 +60685,7 @@ var GameSettingsContainer = function (_React$Component) {
             return _react2.default.createElement(_GameSettings2.default, {
                 navigation: navigation, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 14
+                    lineNumber: 18
                 }
             });
         }
@@ -60692,7 +60694,14 @@ var GameSettingsContainer = function (_React$Component) {
 }(_react2.default.Component);
 
 GameSettingsContainer.navigationOptions = {
-    title: 'Game Settings'
+    title: 'Game Settings',
+    headerLeft: _react2.default.createElement(_reactNative.Image, {
+        style: { width: 48, height: 48 },
+        source: { uri: 'asset:/ic_launcher.png' }, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 10
+        }
+    })
 };
 exports.default = GameSettingsContainer;
 }, 400, null, "mtg-lifecounter/js/screens/Game/GameSettings.container.js");
@@ -60741,14 +60750,14 @@ var GameSettings = function (_React$Component) {
                 _reactNative.View,
                 { style: styles.container, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 24
+                        lineNumber: 26
                     }
                 },
                 _react2.default.createElement(
                     _reactNative.Text,
                     { style: styles.label, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 25
+                            lineNumber: 27
                         }
                     },
                     'Number of players [1-6]'
@@ -60761,14 +60770,14 @@ var GameSettings = function (_React$Component) {
                         return _this2.setState({ numberOfPlayers: numberOfPlayers });
                     }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 26
+                        lineNumber: 28
                     }
                 }),
                 _react2.default.createElement(
                     _reactNative.Text,
                     { style: styles.label, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 32
+                            lineNumber: 34
                         }
                     },
                     'Starting lifepoints [',
@@ -60779,7 +60788,7 @@ var GameSettings = function (_React$Component) {
                     _reactNative.View,
                     { style: styles.buttonContainer, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 33
+                            lineNumber: 35
                         }
                     },
                     GameSettings.lifePoints.map(function (startingLifeTotal) {
@@ -60791,7 +60800,7 @@ var GameSettings = function (_React$Component) {
                                 return _this2.setState({ startingLifeTotal: startingLifeTotal });
                             }, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 35
+                                lineNumber: 37
                             }
                         });
                     })
@@ -60803,7 +60812,7 @@ var GameSettings = function (_React$Component) {
                         return _this2.startRound();
                     }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 43
+                        lineNumber: 45
                     }
                 })
             );
@@ -60909,10 +60918,14 @@ var NumberSpinner = function (_React$Component) {
                         lineNumber: 22
                     }
                 },
-                _react2.default.createElement(_SpinnerButton2.default, { content: '-',
+                _react2.default.createElement(_SpinnerButton2.default, {
+                    style: styles.button,
+                    width: '20%',
+                    content: '-',
                     onPress: function onPress() {
                         return _this2.decrease(props.step);
-                    }, onHold: function onHold() {
+                    },
+                    onHold: function onHold() {
                         return _this2.decrease(props.stepLarge);
                     }, __source: {
                         fileName: _jsxFileName,
@@ -60923,19 +60936,23 @@ var NumberSpinner = function (_React$Component) {
                     _reactNative.Text,
                     { style: styles.value, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 25
+                            lineNumber: 29
                         }
                     },
                     this.state.value
                 ),
-                _react2.default.createElement(_SpinnerButton2.default, { content: '+',
+                _react2.default.createElement(_SpinnerButton2.default, {
+                    width: '20%',
+                    style: styles.button,
+                    content: '+',
                     onPress: function onPress() {
                         return _this2.increase(props.step);
-                    }, onHold: function onHold() {
+                    },
+                    onHold: function onHold() {
                         return _this2.increase(props.stepLarge);
                     }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 26
+                        lineNumber: 30
                     }
                 })
             );
@@ -60951,9 +60968,7 @@ var NumberSpinner = function (_React$Component) {
         }
     }, {
         key: 'increase',
-        value: function increase() {
-            var points = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
+        value: function increase(points) {
             var newValue = this.state.value + points;
 
             if (this.props.max !== undefined) {
@@ -60964,9 +60979,7 @@ var NumberSpinner = function (_React$Component) {
         }
     }, {
         key: 'decrease',
-        value: function decrease() {
-            var points = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
+        value: function decrease(points) {
             var newValue = this.state.value - points;
 
             if (this.props.min !== undefined) {
@@ -61001,15 +61014,19 @@ var styles = _reactNative.StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         alignItems: 'center' },
+    button: {
+        height: '100%',
+        color: '#b2b2b0'
+    },
     value: {
-        width: '30%',
+        width: '40%',
         height: '100%',
         textAlignVertical: 'center',
         textAlign: 'center',
         alignSelf: 'center',
-        color: 'white',
+        color: '#b2b2b0',
         fontSize: 40
     }
 });
@@ -61041,8 +61058,11 @@ var SpinnerButton = function (_React$Component) {
 
 
         _this._onPress = _this._onPress.bind(_this);
-        _this._onPressIn = _this._onPressIn.bind(_this);
-        _this._onPressOut = _this._onPressOut.bind(_this);
+
+        if (props.onHold) {
+            _this._onPressIn = _this._onPressIn.bind(_this);
+            _this._onPressOut = _this._onPressOut.bind(_this);
+        }
         return _this;
     }
 
@@ -61053,24 +61073,26 @@ var SpinnerButton = function (_React$Component) {
 
             return _react2.default.createElement(
                 _reactNative.TouchableWithoutFeedback,
-                { style: styles.hitbox,
-                    onPress: this._onPress, onPressIn: this._onPressIn, onPressOut: this._onPressOut, __source: {
+                {
+                    onPress: this._onPress,
+                    onPressIn: this._onPressIn,
+                    onPressOut: this._onPressOut, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 21
+                        lineNumber: 24
                     }
                 },
                 _react2.default.createElement(
                     _reactNative.View,
-                    { style: styles.buttonContainer, __source: {
+                    { style: [styles.buttonContainer, { width: props.width }], __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 23
+                            lineNumber: 28
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.Text,
                         { style: styles.button, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 24
+                                lineNumber: 29
                             }
                         },
                         props.content
@@ -61095,7 +61117,7 @@ var SpinnerButton = function (_React$Component) {
             this._onHoldInterval = setInterval(function () {
                 _this2._preventOnPress = true;
                 _this2.props.onHold();
-            }, 900);
+            }, 650);
         }
     }, {
         key: '_onPressOut',
@@ -61119,17 +61141,10 @@ SpinnerButton.propTypes = {
     onHold: _propTypes2.default.func
 };
 
-SpinnerButton.defaultProps = {
-    onHold: function onHold() {}
-};
-
 var styles = _reactNative.StyleSheet.create({
-    hitbox: {},
-    buttonContainer: {
-        width: '35%'
-    },
+    buttonContainer: {},
     button: {
-        fontSize: 20,
+        width: '100%',
         height: '100%',
         color: 'white',
         fontWeight: 'bold',
@@ -61302,6 +61317,7 @@ var GameRound = function (_React$Component) {
     }, {
         key: 'generatePlayers',
         value: function generatePlayers() {
+            var colors = ['#57719e', '#d83f2d', '#95b54c', '#efd86f', '#b2b2b0', '#cb8034'];
             var players = [];
             var _props = this.props,
                 numberOfPlayers = _props.numberOfPlayers,
@@ -61313,7 +61329,8 @@ var GameRound = function (_React$Component) {
                     id: id,
                     name: 'Player ' + (id + 1),
                     life: startingLifeTotal,
-                    isGameOver: false
+                    isGameOver: false,
+                    color: colors[id]
                 });
             }
 
@@ -61383,7 +61400,7 @@ GameRound.defaultProps = {
 
 var styles = _reactNative.StyleSheet.create({
     container: {
-        backgroundColor: 'black',
+        backgroundColor: '#161616',
         flex: 1,
         flexDirection: 'row'
     },
@@ -61463,7 +61480,7 @@ var Player = function (_React$Component) {
                 }),
                 _react2.default.createElement(
                     _reactNative.Text,
-                    { style: styles.playerName, __source: {
+                    { style: [styles.playerName, { color: player.color }], __source: {
                             fileName: _jsxFileName,
                             lineNumber: 27
                         }
@@ -61504,17 +61521,17 @@ var styles = _reactNative.StyleSheet.create({
         flex: 1,
         alignItems: 'stretch',
         justifyContent: 'flex-start',
-        borderColor: 'white',
-        borderWidth: 1,
+        borderColor: '#262626',
+        borderWidth: 3,
         borderStyle: 'solid',
         width: '100%',
         height: '100%'
     },
     gameOver: {
-        backgroundColor: 'grey'
+        backgroundColor: '#710000'
     },
     playerName: {
-        color: 'white',
+        color: '#b2b2b0',
         fontSize: 18,
         alignSelf: 'center',
         paddingVertical: 5

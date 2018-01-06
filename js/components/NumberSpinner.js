@@ -20,11 +20,17 @@ export default class NumberSpinner extends React.Component {
 
         return (
             <View style={styles.container}>
-                <SpinnerButton content="-"
+                <SpinnerButton
+                    style={ styles.button }
+                    width="20%"
+                    content="-"
                     onPress={() => this.decrease(props.step)}
                     onHold={() => this.decrease(props.stepLarge)} />
                 <Text style={styles.value}>{this.state.value}</Text>
-                <SpinnerButton content="+"
+                <SpinnerButton
+                    width="20%"
+                    style={ styles.button }
+                    content="+"
                     onPress={() => this.increase(props.step)}
                     onHold={() => this.increase(props.stepLarge)} />
             </View>
@@ -80,16 +86,23 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'center', // Horizontal
+        justifyContent: 'space-between', // Horizontal
         alignItems: 'center', // Vertical
     },
+    button: {
+        // flexGrow: 3,
+        // width: '20%',
+        height: '100%',
+        color: '#b2b2b0',
+    },
     value: {
-        width: '30%',
+        // backgroundColor: 'red',
+        width: '40%',
         height: '100%',
         textAlignVertical: 'center',
         textAlign: 'center',
         alignSelf: 'center',
-        color: 'white',
+        color: '#b2b2b0',
         fontSize: 40,
     }
 });
