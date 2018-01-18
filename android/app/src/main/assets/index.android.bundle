@@ -61312,13 +61312,30 @@ var GameRound = function (_React$Component) {
                         lineNumber: 33
                     }
                 },
-                this.renderPlayers()
+                this.players.length === 1 ? this.renderSinglePlayer() : this.renderPlayers()
             );
+        }
+    }, {
+        key: 'renderSinglePlayer',
+        value: function renderSinglePlayer() {
+            var _this2 = this;
+
+            var player = this.players[0];
+
+            return _react2.default.createElement(_Player2.default, {
+                player: player,
+                onGameOver: function onGameOver(isGameOver) {
+                    return _this2.playerGameOver(player, isGameOver);
+                }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 45
+                }
+            });
         }
     }, {
         key: 'renderPlayers',
         value: function renderPlayers() {
-            var _this2 = this;
+            var _this3 = this;
 
             var sides = ['first', 'second'];
             var columns = splitInHalf(this.players);
@@ -61328,7 +61345,7 @@ var GameRound = function (_React$Component) {
                     _reactNative.View,
                     { key: 'playerColumn' + column, style: [styles.column, styles[sides[column] + 'Column']], __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 44
+                            lineNumber: 56
                         }
                     },
                     players.map(function (player) {
@@ -61336,11 +61353,11 @@ var GameRound = function (_React$Component) {
                             key: 'playerContainer' + player.id,
                             player: player,
                             onGameOver: function onGameOver(isGameOver) {
-                                return _this2.playerGameOver(player, isGameOver);
+                                return _this3.playerGameOver(player, isGameOver);
                             },
                             style: styles[sides[column] + 'Player'], __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 46
+                                lineNumber: 58
                             }
                         });
                     })
@@ -61372,12 +61389,13 @@ var GameRound = function (_React$Component) {
     }, {
         key: 'playerGameOver',
         value: function playerGameOver(player, isGameOver) {
-            var _this3 = this;
+            var _this4 = this;
 
             var self = this;
             var numberOfPlayers = this.props.numberOfPlayers;
             var goBack = this.props.navigation.goBack;
 
+            var minDeadPlayers = this.players.length === 1 ? 0 : 1;
             var gameOverPlayers = 0;
 
             player.isGameOver = isGameOver;
@@ -61401,17 +61419,17 @@ var GameRound = function (_React$Component) {
                 }
             }
 
-            if (this.confirmGameOver && numberOfPlayers - gameOverPlayers <= 1) {
-                _reactNative.Alert.alert('Game Over', 'What do you want to do?', [{ text: 'Restart', onPress: function onPress() {
-                        return self.setState({ roundNumber: _this3.state.roundNumber + 1 });
-                    } }, { text: 'Exit', onPress: function onPress() {
-                        return goBack();
-                    } }, {
-                    text: 'Continue', onPress: function onPress() {
+            if (this.confirmGameOver && numberOfPlayers - gameOverPlayers <= minDeadPlayers) {
+                _reactNative.Alert.alert('Game Over', 'What do you want to do?', [{
+                    text: 'Continue game', onPress: function onPress() {
                         self.confirmGameOver = false;
-                        _reactNative.Alert.alert('Continue playing', 'Press the back button on your device to exit the game.');
+                        _reactNative.Alert.alert('Continue game', 'Press the back button on your device to exit the game.');
                     }
-                }], { cancelable: true });
+                }, { text: 'Exit', onPress: function onPress() {
+                        return goBack();
+                    } }, { text: 'Restart', onPress: function onPress() {
+                        return self.setState({ roundNumber: _this4.state.roundNumber + 1 });
+                    } }], { cancelable: true });
             }
         }
     }]);

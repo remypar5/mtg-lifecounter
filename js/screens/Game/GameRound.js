@@ -31,8 +31,20 @@ export default class GameRound extends React.Component {
     render() {
         return (
             <View style={ styles.container } key={ `round${this.state.roundNumber}` }>
-                { this.renderPlayers() }
+                { this.players.length === 1 ?
+                    this.renderSinglePlayer() :
+                    this.renderPlayers() }
             </View>
+        );
+    }
+
+    renderSinglePlayer() {
+        const player = this.players[0];
+
+        return (
+            <Player
+                player={player}
+                onGameOver={ (isGameOver) => this.playerGameOver(player, isGameOver) } />
         );
     }
 
@@ -75,6 +87,7 @@ export default class GameRound extends React.Component {
         const self = this;
         const { numberOfPlayers } = this.props;
         const { goBack } = this.props.navigation;
+        const minDeadPlayers = this.players.length === 1 ? 0 : 1;
         let gameOverPlayers = 0;
 
         player.isGameOver = isGameOver;
@@ -85,16 +98,16 @@ export default class GameRound extends React.Component {
             }
         }
 
-        if (this.confirmGameOver && (numberOfPlayers - gameOverPlayers) <= 1) {
+        if (this.confirmGameOver && (numberOfPlayers - gameOverPlayers) <= minDeadPlayers) {
             Alert.alert('Game Over', 'What do you want to do?', [
-                { text: 'Restart', onPress: () => self.setState({ roundNumber: this.state.roundNumber + 1 }) },
-                { text: 'Exit', onPress: () => goBack() },
                 {
-                    text: 'Continue', onPress: () => {
+                    text: 'Continue game', onPress: () => {
                         self.confirmGameOver = false;
-                        Alert.alert('Continue playing', 'Press the back button on your device to exit the game.');
+                        Alert.alert('Continue game', 'Press the back button on your device to exit the game.');
                     }
-                }
+                },
+                { text: 'Exit', onPress: () => goBack() },
+                { text: 'Restart', onPress: () => self.setState({ roundNumber: this.state.roundNumber + 1 }) },
             ], { cancelable: true });
         }
     }
