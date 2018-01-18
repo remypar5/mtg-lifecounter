@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, Button, View, Alert } from 'react-native';
+import { StyleSheet, Text, Button, View, Alert, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import NumberSpinner from '../../components/NumberSpinner';
@@ -24,28 +24,30 @@ export default class GameSettings extends React.Component {
 
         return (
             <View style={ styles.container }>
-                <Text style={ styles.label }>Number of players [1-6]</Text>
+                <Text style={ styles.label }>Players</Text>
                 <NumberSpinner
                     min={ 1 }
                     max={ 6 }
                     value={ state.numberOfPlayers }
                     onChange={ (numberOfPlayers) => this.setState({numberOfPlayers}) } />
 
-                <Text style={ styles.label }>Starting lifepoints [{state.startingLifeTotal}]</Text>
+                <Text style={ styles.label }>Lifepoints</Text>
                 <View style={ styles.buttonContainer }>
                     { GameSettings.lifePoints.map((startingLifeTotal) => (
-                        <Button
+                        <Text
                             key={`buttonLifePoints${startingLifeTotal}`}
                             style={[ styles.button, state.startingLifeTotal === startingLifeTotal ? styles.selected : null ]}
-                            title={`${startingLifeTotal}`}
-                            onPress={() => this.setState({ startingLifeTotal })} />
+                            onPress={() => this.setState({ startingLifeTotal })}>
+                            {startingLifeTotal}
+                        </Text>
                     )) }
                 </View>
 
-                <Button
-                    style={ styles.button }
-                    title="Start game"
-                    onPress={ () => this.startRound() } />
+                <Text
+                    style={ [styles.button, styles.startButton] }
+                    onPress={ () => this.startRound() }>
+                    Start game
+                </Text>
             </View>
         );
     }
@@ -59,33 +61,44 @@ export default class GameSettings extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'black',
+        backgroundColor: '#161616',
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'stretch'
+        alignItems: 'stretch',
+        justifyContent: 'flex-end',
     },
     label: {
-        color: 'white',
+        color: '#b2b2b0',
         fontWeight: 'bold',
-        fontSize: 18,
+        fontSize: 25,
+        textAlign: 'left',
+        width: '95%',
+        alignSelf: 'center'
     },
     buttonContainer: {
         height: '20%',
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
     },
     button: {
+        flex: 1,
         height: 50,
-        width: '100%',
-        backgroundColor: 'steelblue',
+        backgroundColor: '#262626',
+        color: '#b2b2b0',
         textAlign: 'center',
         textAlignVertical: 'center',
-        color: 'white',
         alignSelf: 'baseline'
     },
+    startButton: {
+        width: '100%',
+        height: 50,
+        fontSize: 28,
+        borderColor: '#161616',
+        borderWidth: 6,
+    },
     selected: {
-        backgroundColor: 'red'
+        backgroundColor: '#710000'
     },
 });

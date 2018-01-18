@@ -52812,6 +52812,14 @@ var App = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = App;
+
+
+var styles = _reactNative.StyleSheet.create({
+    app: {
+        backgroundColor: '#161616'
+
+    }
+});
 }, 336, null, "mtg-lifecounter/js/App.js");
 __d(/* react-navigation/src/react-navigation.js */function(global, require, module, exports) {
 
@@ -60668,6 +60676,15 @@ var _GameSettings = require(401             ); // 401 = ./GameSettings
 
 var _GameSettings2 = babelHelpers.interopRequireDefault(_GameSettings);
 
+var styles = _reactNative.StyleSheet.create({
+    header: {
+        backgroundColor: '#101011'
+    },
+    headerTitle: {
+        color: '#b2b2b0'
+    }
+});
+
 var GameSettingsContainer = function (_React$Component) {
     babelHelpers.inherits(GameSettingsContainer, _React$Component);
 
@@ -60682,10 +60699,9 @@ var GameSettingsContainer = function (_React$Component) {
             var navigation = this.props.navigation;
 
 
-            return _react2.default.createElement(_GameSettings2.default, {
-                navigation: navigation, __source: {
+            return _react2.default.createElement(_GameSettings2.default, { navigation: navigation, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 18
+                    lineNumber: 30
                 }
             });
         }
@@ -60694,14 +60710,16 @@ var GameSettingsContainer = function (_React$Component) {
 }(_react2.default.Component);
 
 GameSettingsContainer.navigationOptions = {
-    title: 'Game Settings',
+    title: 'Lifecounter',
     headerLeft: _react2.default.createElement(_reactNative.Image, {
-        style: { width: 48, height: 48 },
-        source: { uri: 'asset:/ic_launcher.png' }, __source: {
+        style: { width: 42, height: 42 },
+        source: { uri: 'mipmap/ic_launcher' }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 10
+            lineNumber: 19
         }
-    })
+    }),
+    headerStyle: styles.header,
+    headerTitleStyle: styles.headerTitle
 };
 exports.default = GameSettingsContainer;
 }, 400, null, "mtg-lifecounter/js/screens/Game/GameSettings.container.js");
@@ -60760,7 +60778,7 @@ var GameSettings = function (_React$Component) {
                             lineNumber: 27
                         }
                     },
-                    'Number of players [1-6]'
+                    'Players'
                 ),
                 _react2.default.createElement(_NumberSpinner2.default, {
                     min: 1,
@@ -60780,9 +60798,7 @@ var GameSettings = function (_React$Component) {
                             lineNumber: 34
                         }
                     },
-                    'Starting lifepoints [',
-                    state.startingLifeTotal,
-                    ']'
+                    'Lifepoints'
                 ),
                 _react2.default.createElement(
                     _reactNative.View,
@@ -60792,29 +60808,35 @@ var GameSettings = function (_React$Component) {
                         }
                     },
                     GameSettings.lifePoints.map(function (startingLifeTotal) {
-                        return _react2.default.createElement(_reactNative.Button, {
-                            key: 'buttonLifePoints' + startingLifeTotal,
-                            style: [styles.button, state.startingLifeTotal === startingLifeTotal ? styles.selected : null],
-                            title: '' + startingLifeTotal,
-                            onPress: function onPress() {
-                                return _this2.setState({ startingLifeTotal: startingLifeTotal });
-                            }, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 37
-                            }
-                        });
+                        return _react2.default.createElement(
+                            _reactNative.Text,
+                            {
+                                key: 'buttonLifePoints' + startingLifeTotal,
+                                style: [styles.button, state.startingLifeTotal === startingLifeTotal ? styles.selected : null],
+                                onPress: function onPress() {
+                                    return _this2.setState({ startingLifeTotal: startingLifeTotal });
+                                }, __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 37
+                                }
+                            },
+                            startingLifeTotal
+                        );
                     })
                 ),
-                _react2.default.createElement(_reactNative.Button, {
-                    style: styles.button,
-                    title: 'Start game',
-                    onPress: function onPress() {
-                        return _this2.startRound();
-                    }, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 45
-                    }
-                })
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    {
+                        style: [styles.button, styles.startButton],
+                        onPress: function onPress() {
+                            return _this2.startRound();
+                        }, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 46
+                        }
+                    },
+                    'Start game'
+                )
             );
         }
     }, {
@@ -60837,34 +60859,45 @@ exports.default = GameSettings;
 
 var styles = _reactNative.StyleSheet.create({
     container: {
-        backgroundColor: 'black',
+        backgroundColor: '#161616',
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'stretch'
+        alignItems: 'stretch',
+        justifyContent: 'flex-end'
     },
     label: {
-        color: 'white',
+        color: '#b2b2b0',
         fontWeight: 'bold',
-        fontSize: 18
+        fontSize: 25,
+        textAlign: 'left',
+        width: '95%',
+        alignSelf: 'center'
     },
     buttonContainer: {
         height: '20%',
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'space-around'
     },
     button: {
+        flex: 1,
         height: 50,
-        width: '100%',
-        backgroundColor: 'steelblue',
+        backgroundColor: '#262626',
+        color: '#b2b2b0',
         textAlign: 'center',
         textAlignVertical: 'center',
-        color: 'white',
         alignSelf: 'baseline'
     },
+    startButton: {
+        width: '100%',
+        height: 50,
+        fontSize: 28,
+        borderColor: '#161616',
+        borderWidth: 6
+    },
     selected: {
-        backgroundColor: 'red'
+        backgroundColor: '#710000'
     }
 });
 }, 401, null, "mtg-lifecounter/js/screens/Game/GameSettings.js");
@@ -61146,7 +61179,7 @@ var styles = _reactNative.StyleSheet.create({
     button: {
         width: '100%',
         height: '100%',
-        color: 'white',
+        color: '#b2b2b0',
         fontWeight: 'bold',
         textAlign: 'center',
         textAlignVertical: 'center'
