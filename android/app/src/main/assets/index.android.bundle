@@ -61285,14 +61285,16 @@ var GameRound = function (_React$Component) {
         _this.confirmGameOver = true;
 
         _this.onBackPress = function () {
-            var navigation = _this.props.navigation;
+            var _this$props$navigatio = _this.props.navigation,
+                index = _this$props$navigatio.index,
+                dispatch = _this$props$navigatio.dispatch;
 
-            if (navigation.index === 0) {
+            if (index === 0) {
                 return false;
             }
 
             _reactNative.Alert.alert('Exit game', 'Are you sure?', [{ text: 'Yes', onPress: function onPress() {
-                    return navigation.dispatch(_reactNavigation.NavigationActions.back());
+                    return dispatch(_reactNavigation.NavigationActions.back());
                 } }, { text: 'No' }]);
 
             return true;
@@ -61320,25 +61322,27 @@ var GameRound = function (_React$Component) {
         key: 'render',
         value: function render() {
             var length = this.players.length;
+            var roundNumber = this.state.roundNumber;
+
 
             return _react2.default.createElement(
                 _reactNative.View,
-                { style: styles.container, key: 'round' + this.state.roundNumber, __source: {
+                { style: styles.container, key: 'round' + roundNumber, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 34
+                        lineNumber: 36
                     }
                 },
-                length === 1 ? this.renderSinglePlayer() : length === 2 ? this.renderTwoPlayers() : this.renderPlayers()
+                length === 1 ? this.renderSinglePlayer(this.players[0]) : length === 2 ? this.renderTwoPlayers() : this.renderPlayers()
             );
         }
     }, {
         key: 'renderSinglePlayer',
-        value: function renderSinglePlayer() {
+        value: function renderSinglePlayer(player) {
             var _this2 = this;
 
-            var player = this.players[0];
+            var playerProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-            return _react2.default.createElement(_Player2.default, {
+            return _react2.default.createElement(_Player2.default, babelHelpers.extends({}, playerProps, {
                 player: player,
                 onGameOver: function onGameOver(isGameOver) {
                     return _this2.playerGameOver(player, isGameOver);
@@ -61346,43 +61350,43 @@ var GameRound = function (_React$Component) {
                     fileName: _jsxFileName,
                     lineNumber: 48
                 }
-            });
+            }));
         }
     }, {
         key: 'renderTwoPlayers',
         value: function renderTwoPlayers() {
+            var _players = babelHelpers.slicedToArray(this.players, 2),
+                player1 = _players[0],
+                player2 = _players[1];
+
+            var asColumn = styles.asColumn,
+                rotated180 = styles.rotated180;
+
+
             return _react2.default.createElement(
                 _reactNative.View,
-                { style: styles.asColumn, __source: {
+                { style: asColumn, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 56
+                        lineNumber: 60
                     }
                 },
                 _react2.default.createElement(
                     _reactNative.View,
-                    { style: [styles.asColumn, styles.rotated180], __source: {
+                    { style: [asColumn, rotated180], __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 57
+                            lineNumber: 61
                         }
                     },
-                    _react2.default.createElement(_Player2.default, { player: this.players[1], __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 57
-                        }
-                    })
+                    this.renderSinglePlayer(player2)
                 ),
                 _react2.default.createElement(
                     _reactNative.View,
-                    { style: [styles.asColumn], __source: {
+                    { style: [asColumn], __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 58
+                            lineNumber: 64
                         }
                     },
-                    _react2.default.createElement(_Player2.default, { player: this.players[0], __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 58
-                        }
-                    })
+                    this.renderSinglePlayer(player1)
                 )
             );
         }
@@ -61391,28 +61395,21 @@ var GameRound = function (_React$Component) {
         value: function renderPlayers() {
             var _this3 = this;
 
-            var sides = ['first', 'second'];
             var columns = splitInHalf(this.players);
+            var columnStyle = styles.column;
+
 
             return columns.map(function (players, column) {
                 return _react2.default.createElement(
                     _reactNative.View,
-                    { key: 'playerColumn' + column, style: [styles.column, styles[sides[column] + 'Column']], __source: {
+                    { key: 'playerColumn' + column, style: columnStyle, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 68
+                            lineNumber: 76
                         }
                     },
                     players.map(function (player) {
-                        return _react2.default.createElement(_Player2.default, {
-                            key: 'player' + player.id,
-                            player: player,
-                            onGameOver: function onGameOver(isGameOver) {
-                                return _this3.playerGameOver(player, isGameOver);
-                            },
-                            style: styles[sides[column] + 'Player'], __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 70
-                            }
+                        return _this3.renderSinglePlayer(player, {
+                            key: 'player' + player.id
                         });
                     })
                 );
@@ -61446,8 +61443,10 @@ var GameRound = function (_React$Component) {
             var _this4 = this;
 
             var self = this;
-            var numberOfPlayers = this.props.numberOfPlayers;
-            var goBack = this.props.navigation.goBack;
+            var _props2 = this.props,
+                numberOfPlayers = _props2.numberOfPlayers,
+                navigation = _props2.navigation;
+            var goBack = navigation.goBack;
 
             var minDeadPlayers = this.players.length === 1 ? 0 : 1;
             var gameOverPlayers = 0;
@@ -61495,12 +61494,7 @@ exports.default = GameRound;
 
 GameRound.propsTypes = {
     numberOfPlayers: _propTypes2.default.number.isRequired,
-    startingLifeTotal: _propTypes2.default.number.isRequired,
-    onGameEnd: _propTypes2.default.func
-};
-
-GameRound.defaultProps = {
-    onGameEnd: function onGameEnd() {}
+    startingLifeTotal: _propTypes2.default.number.isRequired
 };
 
 var styles = _reactNative.StyleSheet.create({
@@ -61518,11 +61512,7 @@ var styles = _reactNative.StyleSheet.create({
     },
     rotated180: {
         transform: [{ rotate: '180deg' }]
-    },
-    firstColumn: {},
-    secondColumn: {},
-    firstPlayer: {},
-    secondPlayer: {}
+    }
 });
 
 var splitInHalf = function splitInHalf(arr) {

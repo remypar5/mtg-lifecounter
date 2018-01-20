@@ -30,10 +30,12 @@ export default class GameRound extends React.Component {
 
     render() {
         const {length} = this.players;
+        const { roundNumber } = this.state;
+
         return (
-            <View style={ styles.container } key={ `round${this.state.roundNumber}` }>
+            <View style={ styles.container } key={ `round${roundNumber}` }>
                 { length === 1 ?
-                    this.renderSinglePlayer() :
+                    this.renderSinglePlayer(this.players[0]) :
                     ( length === 2 ?
                         this.renderTwoPlayers() :
                         this.renderPlayers()) }
@@ -41,38 +43,40 @@ export default class GameRound extends React.Component {
         );
     }
 
-    renderSinglePlayer() {
-        const player = this.players[0];
-
+    renderSinglePlayer(player, playerProps = {}) {
         return (
             <Player
+                { ...playerProps }
                 player={player}
                 onGameOver={ (isGameOver) => this.playerGameOver(player, isGameOver) } />
         );
     }
 
     renderTwoPlayers() {
+        const [ player1, player2 ] = this.players;
+        const { asColumn, rotated180 } = styles;
+
         return (
-            <View style={styles.asColumn}>
-                <View style={[styles.asColumn, styles.rotated180]}><Player player={this.players[1]} /></View>
-                <View style={[styles.asColumn]}><Player player={this.players[0]} /></View>
+            <View style={ asColumn }>
+                <View style={[ asColumn, rotated180 ]}>
+                    { this.renderSinglePlayer(player2) }
+                </View>
+                <View style={[asColumn]}>
+                    { this.renderSinglePlayer(player1) }
+                </View>
             </View>
         );
     }
 
     renderPlayers() {
-        const sides = ['first', 'second'];
         const columns = splitInHalf(this.players);
+        const { column: columnStyle } = styles;
 
         return columns.map((players, column) => (
-            <View key={`playerColumn${column}`} style={ [styles.column, styles[sides[column] + 'Column']] }>
-                { players.map((player) => (
-                    <Player
-                        key={`player${player.id}`}
-                        player={player}
-                        onGameOver={ (isGameOver) => this.playerGameOver(player, isGameOver) }
-                        style={ styles[sides[column] + 'Player'] } />
-                )) }
+            <View key={`playerColumn${column}`} style={ columnStyle }>
+                { players.map((player) => this.renderSinglePlayer(player, {
+                    key: `player${player.id}`
+                })) }
             </View>
         ));
     }
@@ -97,8 +101,8 @@ export default class GameRound extends React.Component {
 
     playerGameOver(player, isGameOver) {
         const self = this;
-        const { numberOfPlayers } = this.props;
-        const { goBack } = this.props.navigation;
+        const { numberOfPlayers, navigation } = this.props;
+        const { goBack } = navigation;
         const minDeadPlayers = this.players.length === 1 ? 0 : 1;
         let gameOverPlayers = 0;
 
@@ -125,13 +129,13 @@ export default class GameRound extends React.Component {
     }
 
     onBackPress = () => {
-        const { navigation } = this.props;
-        if (navigation.index === 0) {
+        const { index, dispatch } = this.props.navigation;
+        if (index === 0) {
             return false;
         }
 
         Alert.alert('Exit game', 'Are you sure?', [
-            { text: 'Yes', onPress: () => navigation.dispatch(NavigationActions.back()) },
+            { text: 'Yes', onPress: () => dispatch(NavigationActions.back()) },
             { text: 'No' }
         ]);
 
@@ -142,12 +146,7 @@ export default class GameRound extends React.Component {
 GameRound.propsTypes = {
     numberOfPlayers: PropTypes.number.isRequired,
     startingLifeTotal: PropTypes.number.isRequired,
-    onGameEnd: PropTypes.func
 };
-
-GameRound.defaultProps = {
-    onGameEnd: () => {}
-}
 
 const styles = StyleSheet.create({
     container: {
@@ -164,21 +163,9 @@ const styles = StyleSheet.create({
     },
     rotated180: {
         transform: [
-            { rotate: '180deg' }
+            { rotate: '180deg' },
         ]
     },
-    firstColumn: {
-        //
-    },
-    secondColumn: {
-        //
-    },
-    firstPlayer: {
-        //
-    },
-    secondPlayer: {
-        //
-    }
 });
 
 const splitInHalf = (arr) => {
