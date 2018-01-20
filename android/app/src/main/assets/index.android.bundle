@@ -52774,7 +52774,7 @@ var _GameSettings = require(400                                    ); // 400 = .
 
 var _GameSettings2 = babelHelpers.interopRequireDefault(_GameSettings);
 
-var _GameRound = require(404                                 ); // 404 = ./screens/Game/GameRound.container
+var _GameRound = require(405                                 ); // 405 = ./screens/Game/GameRound.container
 
 var _GameRound2 = babelHelpers.interopRequireDefault(_GameRound);
 
@@ -60742,6 +60742,10 @@ var _NumberSpinner = require(402                             ); // 402 = ../../c
 
 var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
 
+var _Dimensions$get = _reactNative.Dimensions.get('screen'),
+    screenWidth = _Dimensions$get.width,
+    screenHeight = _Dimensions$get.height;
+
 var GameSettings = function (_React$Component) {
     babelHelpers.inherits(GameSettings, _React$Component);
 
@@ -60768,14 +60772,19 @@ var GameSettings = function (_React$Component) {
                 _reactNative.View,
                 { style: styles.container, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 26
+                        lineNumber: 28
                     }
                 },
+                _react2.default.createElement(_reactNative.Image, { source: require(404           ), style: [_reactNative.StyleSheet.absoluteFill, styles.bgicon], __source: { // 404 = ./bgicon.png
+                        fileName: _jsxFileName,
+                        lineNumber: 29
+                    }
+                }),
                 _react2.default.createElement(
                     _reactNative.Text,
                     { style: styles.label, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 27
+                            lineNumber: 30
                         }
                     },
                     'Players'
@@ -60788,14 +60797,14 @@ var GameSettings = function (_React$Component) {
                         return _this2.setState({ numberOfPlayers: numberOfPlayers });
                     }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 28
+                        lineNumber: 31
                     }
                 }),
                 _react2.default.createElement(
                     _reactNative.Text,
                     { style: styles.label, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 34
+                            lineNumber: 37
                         }
                     },
                     'Lifepoints'
@@ -60804,7 +60813,7 @@ var GameSettings = function (_React$Component) {
                     _reactNative.View,
                     { style: styles.buttonContainer, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 35
+                            lineNumber: 38
                         }
                     },
                     GameSettings.lifePoints.map(function (startingLifeTotal) {
@@ -60817,7 +60826,7 @@ var GameSettings = function (_React$Component) {
                                     return _this2.setState({ startingLifeTotal: startingLifeTotal });
                                 }, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 37
+                                    lineNumber: 40
                                 }
                             },
                             startingLifeTotal
@@ -60832,7 +60841,7 @@ var GameSettings = function (_React$Component) {
                             return _this2.startRound();
                         }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 46
+                            lineNumber: 49
                         }
                     },
                     'Start game'
@@ -60865,9 +60874,12 @@ var styles = _reactNative.StyleSheet.create({
         alignItems: 'stretch',
         justifyContent: 'flex-end'
     },
+    bgicon: {
+        width: '100%',
+        height: screenHeight
+    },
     label: {
         color: '#b2b2b0',
-        fontWeight: 'bold',
         fontSize: 25,
         textAlign: 'left',
         width: '95%',
@@ -61186,6 +61198,8 @@ var styles = _reactNative.StyleSheet.create({
     }
 });
 }, 403, null, "mtg-lifecounter/js/components/SpinnerButton.js");
+__d(/* mtg-lifecounter/js/screens/Game/bgicon.png */function(global, require, module, exports) {module.exports=require(171                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/js/screens/Game","width":312,"height":306,"scales":[1],"hash":"359060493314b32659ff3d81d6437580","name":"bgicon","type":"png"}); // 171 = react-native/Libraries/Image/AssetRegistry
+}, 404, null, "mtg-lifecounter/js/screens/Game/bgicon.png");
 __d(/* mtg-lifecounter/js/screens/Game/GameRound.container.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61195,7 +61209,7 @@ var _react = require(38     ); // 38 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
-var _GameRound = require(405          ); // 405 = ./GameRound
+var _GameRound = require(406          ); // 406 = ./GameRound
 
 var _GameRound2 = babelHelpers.interopRequireDefault(_GameRound);
 
@@ -61234,7 +61248,7 @@ GameRoundContainer.navigationOptions = {
     header: null
 };
 exports.default = GameRoundContainer;
-}, 404, null, "mtg-lifecounter/js/screens/Game/GameRound.container.js");
+}, 405, null, "mtg-lifecounter/js/screens/Game/GameRound.container.js");
 __d(/* mtg-lifecounter/js/screens/Game/GameRound.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61252,11 +61266,11 @@ var _reactNative = require(12            ); // 12 = react-native
 
 var _reactNavigation = require(337               ); // 337 = react-navigation
 
-var _Player = require(406                      ); // 406 = ../../components/Player
+var _Player = require(407                      ); // 407 = ../../components/Player
 
 var _Player2 = babelHelpers.interopRequireDefault(_Player);
 
-var _array = require(407                      ); // 407 = ../../utils/array.split
+var _array = require(408                      ); // 408 = ../../utils/array.split
 
 var _array2 = babelHelpers.interopRequireDefault(_array);
 
@@ -61473,7 +61487,7 @@ var splitInHalf = function splitInHalf(arr) {
         return idx >= half;
     }], true);
 };
-}, 405, null, "mtg-lifecounter/js/screens/Game/GameRound.js");
+}, 406, null, "mtg-lifecounter/js/screens/Game/GameRound.js");
 __d(/* mtg-lifecounter/js/components/Player.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61588,7 +61602,7 @@ var styles = _reactNative.StyleSheet.create({
         paddingVertical: 5
     }
 });
-}, 406, null, "mtg-lifecounter/js/components/Player.js");
+}, 407, null, "mtg-lifecounter/js/components/Player.js");
 __d(/* mtg-lifecounter/js/utils/array.split.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61616,6 +61630,6 @@ exports.default = arraySplit = function arraySplit(arr, splitters) {
 
     return results;
 };
-}, 407, null, "mtg-lifecounter/js/utils/array.split.js");
+}, 408, null, "mtg-lifecounter/js/utils/array.split.js");
 ;require(57);
 ;require(0);

@@ -1,8 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, Button, View, Alert, Image } from 'react-native';
+import { StyleSheet, Text, Button, View, Alert, Image, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 
 import NumberSpinner from '../../components/NumberSpinner';
+
+const { width: screenWidth, height: screenHeight } = Dimensions.get('screen');
 
 export default class GameSettings extends React.Component {
 
@@ -24,6 +26,7 @@ export default class GameSettings extends React.Component {
 
         return (
             <View style={ styles.container }>
+                <Image source={require('./bgicon.png')} style={[StyleSheet.absoluteFill, styles.bgicon]} />
                 <Text style={ styles.label }>Players</Text>
                 <NumberSpinner
                     min={ 1 }
@@ -67,9 +70,12 @@ const styles = StyleSheet.create({
         alignItems: 'stretch',
         justifyContent: 'flex-end',
     },
+    bgicon: {
+        width: '100%',
+        height: screenHeight,
+    },
     label: {
         color: '#b2b2b0',
-        fontWeight: 'bold',
         fontSize: 25,
         textAlign: 'left',
         width: '95%',
