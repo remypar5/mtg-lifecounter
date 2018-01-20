@@ -29,7 +29,7 @@ export default class GameRound extends React.Component {
     }
 
     render() {
-        const {length} = this.players;
+        const { length } = this.players;
         const { roundNumber } = this.state;
 
         return (

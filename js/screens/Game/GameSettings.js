@@ -3,6 +3,7 @@ import { StyleSheet, Text, Button, View, Alert, Image, Dimensions } from 'react-
 import PropTypes from 'prop-types';
 
 import NumberSpinner from '../../components/NumberSpinner';
+import { FONT_FAMILY, COLOR_MARKED, COLOR_FOREGROUND, COLOR_BACKGROUND } from '../../utils/constants';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('screen');
 
@@ -15,19 +16,20 @@ export default class GameSettings extends React.Component {
 
         this.state = {
             numberOfPlayers: 2,
-            startingLifeTotal: GameSettings.lifePoints[0]
+            // startingLifeTotal: GameSettings.lifePoints[0]
             // numberOfPlayers: 6,
-            // startingLifeTotal: 200
+            startingLifeTotal: 888
         };
     }
 
     render() {
         const state = this.state;
+        const { container, bgicon, label, buttonContainer, button, selected, startButton } = styles;
 
         return (
-            <View style={ styles.container }>
-                <Image source={require('./bgicon.png')} style={[StyleSheet.absoluteFill, styles.bgicon]} />
-                <Text style={ styles.label }>Players</Text>
+            <View style={ container }>
+                <Image source={require('./bgicon.png')} style={[StyleSheet.absoluteFill, bgicon]} />
+                <Text style={ label }>Players</Text>
                 <NumberSpinner
                     min={ 1 }
                     max={ 6 }
@@ -35,12 +37,12 @@ export default class GameSettings extends React.Component {
                     value={ state.numberOfPlayers }
                     onChange={ (numberOfPlayers) => this.setState({numberOfPlayers}) } />
 
-                <Text style={ styles.label }>Lifepoints</Text>
-                <View style={ styles.buttonContainer }>
+                <Text style={ label }>Lifepoints</Text>
+                <View style={ buttonContainer }>
                     { GameSettings.lifePoints.map((startingLifeTotal) => (
                         <Text
                             key={`buttonLifePoints${startingLifeTotal}`}
-                            style={[ styles.button, state.startingLifeTotal === startingLifeTotal ? styles.selected : null ]}
+                            style={[ button, state.startingLifeTotal === startingLifeTotal ? selected : null ]}
                             onPress={() => this.setState({ startingLifeTotal })}>
                             {startingLifeTotal}
                         </Text>
@@ -48,7 +50,7 @@ export default class GameSettings extends React.Component {
                 </View>
 
                 <Text
-                    style={ [styles.button, styles.startButton] }
+                    style={ [button, startButton] }
                     onPress={ () => this.startRound() }>
                     Start game
                 </Text>
@@ -76,7 +78,7 @@ const styles = StyleSheet.create({
         height: screenHeight,
     },
     label: {
-        color: '#b2b2b0',
+        color: COLOR_FOREGROUND,
         fontSize: 25,
         textAlign: 'left',
         width: '95%',
@@ -92,20 +94,22 @@ const styles = StyleSheet.create({
     button: {
         flex: 1,
         height: 50,
-        backgroundColor: '#262626',
-        color: '#b2b2b0',
+        backgroundColor: COLOR_BACKGROUND,
+        color: COLOR_FOREGROUND,
+        fontFamily: FONT_FAMILY,
+        fontSize: 24,
         textAlign: 'center',
         textAlignVertical: 'center',
         alignSelf: 'baseline'
     },
     startButton: {
         width: '100%',
-        height: 50,
-        fontSize: 28,
+        height: 40,
+        fontSize: 36,
         borderColor: '#161616',
         borderWidth: 6,
     },
     selected: {
-        backgroundColor: '#710000'
+        backgroundColor: COLOR_MARKED
     },
 });

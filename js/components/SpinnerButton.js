@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, TouchableWithoutFeedback, Text, View } from 'react-native';
 
+import { FONT_FAMILY, COLOR_FOREGROUND } from '../utils/constants';
+
 export default class SpinnerButton extends React.Component {
 
     _preventOnPress = false;
@@ -66,10 +68,11 @@ const styles = StyleSheet.create({
         width: '20%'
     },
     button: {
+        fontSize: 32,
+        fontFamily: FONT_FAMILY,
         width: '100%',
         height: '100%',
-        color: '#b2b2b0',
-        fontWeight: 'bold',
+        color: COLOR_FOREGROUND,
         textAlign: 'center',
         textAlignVertical: 'center',
     }

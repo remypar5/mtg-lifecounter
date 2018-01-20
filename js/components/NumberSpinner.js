@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, View, Text, TextInput } from 'react-native';
+
 import SpinnerButton from './SpinnerButton';
+import { FONT_FAMILY, COLOR_FOREGROUND } from '../utils/constants';
 
 export default class NumberSpinner extends React.Component {
     constructor(props) {
@@ -95,7 +97,9 @@ const styles = StyleSheet.create({
     },
     button: {
         height: '100%',
-        color: '#b2b2b0',
+        color: COLOR_FOREGROUND,
+        fontSize: 32,
+        fontFamily: FONT_FAMILY,
     },
     value: {
         width: '40%',
@@ -103,7 +107,8 @@ const styles = StyleSheet.create({
         textAlignVertical: 'center',
         textAlign: 'center',
         alignSelf: 'center',
-        color: '#b2b2b0',
-        fontSize: 40,
+        color: COLOR_FOREGROUND,
+        fontSize: 42,
+        fontFamily: FONT_FAMILY,
     }
 });

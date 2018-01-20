@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import { StyleSheet, Text, View } from 'react-native';
 
 import NumberSpinner from './NumberSpinner';
+import { FONT_FAMILY, COLOR_FOREGROUND, COLOR_BACKGROUND, COLOR_MARKED } from '../utils/constants';
 
 export default class Player extends React.Component {
     constructor(props) {
@@ -54,18 +55,18 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'stretch',
         justifyContent: 'flex-start',
-        borderColor: '#262626',
+        borderColor: COLOR_BACKGROUND,
         borderWidth: 3,
         borderStyle: 'solid',
         width: '100%',
         height: '100%',
     },
     gameOver: {
-        backgroundColor: '#710000'
+        backgroundColor: COLOR_MARKED
     },
     playerName: {
-        color: '#b2b2b0',
-        fontSize: 18,
+        color: COLOR_FOREGROUND,
+        fontSize: 24,
         alignSelf: 'center',
         paddingVertical: 5
     }
