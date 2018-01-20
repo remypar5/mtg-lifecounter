@@ -18,14 +18,15 @@ export default class Player extends React.Component {
     }
 
     render() {
-        const player = this.props.player;
-        const life = this.state.life;
+        const { color, name } = this.props.player;
+        const { gameOver, life } = this.state;
+        const { tile, playerName, gameOver: gameOverStyle } = styles;
 
         return (
-            <View style={ [styles.tile, this.state.gameOver ? styles.gameOver : null] }>
-                <NumberSpinner value={ this.state.life }
+            <View style={ [tile, gameOver ? gameOverStyle : null] }>
+                <NumberSpinner value={ life }
                     onChange={this.onLifeChange} />
-                <Text style={ [styles.playerName, { color: player.color }] }>{ player.name }</Text>
+                <Text style={ [playerName, { color }] }>{ name }</Text>
             </View>
         );
     }

@@ -52812,13 +52812,6 @@ var App = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = App;
-
-
-var styles = _reactNative.StyleSheet.create({
-    app: {
-        backgroundColor: '#161616'
-    }
-});
 }, 336, null, "mtg-lifecounter/js/App.js");
 __d(/* react-navigation/src/react-navigation.js */function(global, require, module, exports) {
 
@@ -60746,7 +60739,6 @@ var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
 var _constants = require(404                    ); // 404 = ../../utils/constants
 
 var _Dimensions$get = _reactNative.Dimensions.get('screen'),
-    screenWidth = _Dimensions$get.width,
     screenHeight = _Dimensions$get.height;
 
 var GameSettings = function (_React$Component) {
@@ -60759,8 +60751,7 @@ var GameSettings = function (_React$Component) {
 
         _this.state = {
             numberOfPlayers: 2,
-
-            startingLifeTotal: 888
+            startingLifeTotal: GameSettings.lifePoints[0]
         };
         return _this;
     }
@@ -60770,7 +60761,9 @@ var GameSettings = function (_React$Component) {
         value: function render() {
             var _this2 = this;
 
-            var state = this.state;
+            var _state = this.state,
+                numberOfPlayers = _state.numberOfPlayers,
+                startingLifeTotal = _state.startingLifeTotal;
             var container = styles.container,
                 bgicon = styles.bgicon,
                 label = styles.label,
@@ -60784,19 +60777,19 @@ var GameSettings = function (_React$Component) {
                 _reactNative.View,
                 { style: container, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 30
+                        lineNumber: 28
                     }
                 },
                 _react2.default.createElement(_reactNative.Image, { source: require(405           ), style: [_reactNative.StyleSheet.absoluteFill, bgicon], __source: { // 405 = ./bgicon.png
                         fileName: _jsxFileName,
-                        lineNumber: 31
+                        lineNumber: 29
                     }
                 }),
                 _react2.default.createElement(
                     _reactNative.Text,
                     { style: label, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 32
+                            lineNumber: 30
                         }
                     },
                     'Players'
@@ -60805,19 +60798,19 @@ var GameSettings = function (_React$Component) {
                     min: 1,
                     max: 6,
                     stepLarge: 1,
-                    value: state.numberOfPlayers,
+                    value: numberOfPlayers,
                     onChange: function onChange(numberOfPlayers) {
                         return _this2.setState({ numberOfPlayers: numberOfPlayers });
                     }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 33
+                        lineNumber: 31
                     }
                 }),
                 _react2.default.createElement(
                     _reactNative.Text,
                     { style: label, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 40
+                            lineNumber: 38
                         }
                     },
                     'Lifepoints'
@@ -60826,23 +60819,23 @@ var GameSettings = function (_React$Component) {
                     _reactNative.View,
                     { style: buttonContainer, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 41
+                            lineNumber: 39
                         }
                     },
-                    GameSettings.lifePoints.map(function (startingLifeTotal) {
+                    GameSettings.lifePoints.map(function (points) {
                         return _react2.default.createElement(
                             _reactNative.Text,
                             {
-                                key: 'buttonLifePoints' + startingLifeTotal,
-                                style: [button, state.startingLifeTotal === startingLifeTotal ? selected : null],
+                                key: 'buttonLifePoints' + points,
+                                style: [button, startingLifeTotal === points ? selected : null],
                                 onPress: function onPress() {
-                                    return _this2.setState({ startingLifeTotal: startingLifeTotal });
+                                    return _this2.setState({ startingLifeTotal: points });
                                 }, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 43
+                                    lineNumber: 41
                                 }
                             },
-                            startingLifeTotal
+                            points
                         );
                     })
                 ),
@@ -60854,7 +60847,7 @@ var GameSettings = function (_React$Component) {
                             return _this2.startRound();
                         }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 52
+                            lineNumber: 50
                         }
                     },
                     'Start game'
@@ -60864,9 +60857,9 @@ var GameSettings = function (_React$Component) {
     }, {
         key: 'startRound',
         value: function startRound() {
-            var _state = this.state,
-                startingLifeTotal = _state.startingLifeTotal,
-                numberOfPlayers = _state.numberOfPlayers;
+            var _state2 = this.state,
+                startingLifeTotal = _state2.startingLifeTotal,
+                numberOfPlayers = _state2.numberOfPlayers;
 
 
             this.props.navigation.navigate('GameRound', { startingLifeTotal: startingLifeTotal, numberOfPlayers: numberOfPlayers });
@@ -61487,8 +61480,6 @@ var GameRound = function (_React$Component) {
     }, {
         key: 'playerGameOver',
         value: function playerGameOver(player, isGameOver) {
-            var _this4 = this;
-
             var self = this;
             var _props2 = this.props,
                 numberOfPlayers = _props2.numberOfPlayers,
@@ -61496,6 +61487,8 @@ var GameRound = function (_React$Component) {
             var goBack = navigation.goBack;
 
             var minDeadPlayers = this.players.length === 1 ? 0 : 1;
+            var roundNumber = this.state.roundNumber;
+
             var gameOverPlayers = 0;
 
             player.isGameOver = isGameOver;
@@ -61528,7 +61521,7 @@ var GameRound = function (_React$Component) {
                 }, { text: 'Exit', onPress: function onPress() {
                         return goBack();
                     } }, { text: 'Restart', onPress: function onPress() {
-                        return self.setState({ roundNumber: _this4.state.roundNumber + 1 });
+                        return self.setState({ roundNumber: roundNumber + 1 });
                     } }], { cancelable: true });
             }
         }
@@ -61613,30 +61606,38 @@ var Player = function (_React$Component) {
     babelHelpers.createClass(Player, [{
         key: 'render',
         value: function render() {
-            var player = this.props.player;
-            var life = this.state.life;
+            var _props$player = this.props.player,
+                color = _props$player.color,
+                name = _props$player.name;
+            var _state = this.state,
+                gameOver = _state.gameOver,
+                life = _state.life;
+            var tile = styles.tile,
+                playerName = styles.playerName,
+                gameOverStyle = styles.gameOver;
+
 
             return _react2.default.createElement(
                 _reactNative.View,
-                { style: [styles.tile, this.state.gameOver ? styles.gameOver : null], __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 25
-                    }
-                },
-                _react2.default.createElement(_NumberSpinner2.default, { value: this.state.life,
-                    onChange: this.onLifeChange, __source: {
+                { style: [tile, gameOver ? gameOverStyle : null], __source: {
                         fileName: _jsxFileName,
                         lineNumber: 26
+                    }
+                },
+                _react2.default.createElement(_NumberSpinner2.default, { value: life,
+                    onChange: this.onLifeChange, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 27
                     }
                 }),
                 _react2.default.createElement(
                     _reactNative.Text,
-                    { style: [styles.playerName, { color: player.color }], __source: {
+                    { style: [playerName, { color: color }], __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 28
+                            lineNumber: 29
                         }
                     },
-                    player.name
+                    name
                 )
             );
         }

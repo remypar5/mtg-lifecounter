@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import NumberSpinner from '../../components/NumberSpinner';
 import { FONT_FAMILY, COLOR_MARKED, COLOR_FOREGROUND, COLOR_BACKGROUND } from '../../utils/constants';
 
-const { width: screenWidth, height: screenHeight } = Dimensions.get('screen');
+const { height: screenHeight } = Dimensions.get('screen');
 
 export default class GameSettings extends React.Component {
 
@@ -16,14 +16,12 @@ export default class GameSettings extends React.Component {
 
         this.state = {
             numberOfPlayers: 2,
-            // startingLifeTotal: GameSettings.lifePoints[0]
-            // numberOfPlayers: 6,
-            startingLifeTotal: 888
+            startingLifeTotal: GameSettings.lifePoints[0]
         };
     }
 
     render() {
-        const state = this.state;
+        const { numberOfPlayers, startingLifeTotal } = this.state;
         const { container, bgicon, label, buttonContainer, button, selected, startButton } = styles;
 
         return (
@@ -34,17 +32,17 @@ export default class GameSettings extends React.Component {
                     min={ 1 }
                     max={ 6 }
                     stepLarge={ 1 }
-                    value={ state.numberOfPlayers }
+                    value={ numberOfPlayers }
                     onChange={ (numberOfPlayers) => this.setState({numberOfPlayers}) } />
 
                 <Text style={ label }>Lifepoints</Text>
                 <View style={ buttonContainer }>
-                    { GameSettings.lifePoints.map((startingLifeTotal) => (
+                    { GameSettings.lifePoints.map((points) => (
                         <Text
-                            key={`buttonLifePoints${startingLifeTotal}`}
-                            style={[ button, state.startingLifeTotal === startingLifeTotal ? selected : null ]}
-                            onPress={() => this.setState({ startingLifeTotal })}>
-                            {startingLifeTotal}
+                            key={`buttonLifePoints${points}`}
+                            style={[ button, startingLifeTotal === points ? selected : null ]}
+                            onPress={() => this.setState({ startingLifeTotal: points })}>
+                            { points }
                         </Text>
                     )) }
                 </View>

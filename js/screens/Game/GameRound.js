@@ -104,6 +104,7 @@ export default class GameRound extends React.Component {
         const { numberOfPlayers, navigation } = this.props;
         const { goBack } = navigation;
         const minDeadPlayers = this.players.length === 1 ? 0 : 1;
+        const { roundNumber } = this.state;
         let gameOverPlayers = 0;
 
         player.isGameOver = isGameOver;
@@ -123,7 +124,7 @@ export default class GameRound extends React.Component {
                     }
                 },
                 { text: 'Exit', onPress: () => goBack() },
-                { text: 'Restart', onPress: () => self.setState({ roundNumber: this.state.roundNumber + 1 }) },
+                { text: 'Restart', onPress: () => self.setState({ roundNumber: roundNumber + 1 }) },
             ], { cancelable: true });
         }
     }
