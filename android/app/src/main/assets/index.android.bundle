@@ -61319,14 +61319,16 @@ var GameRound = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
+            var length = this.players.length;
+
             return _react2.default.createElement(
                 _reactNative.View,
                 { style: styles.container, key: 'round' + this.state.roundNumber, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 33
+                        lineNumber: 34
                     }
                 },
-                this.players.length === 1 ? this.renderSinglePlayer() : this.renderPlayers()
+                length === 1 ? this.renderSinglePlayer() : length === 2 ? this.renderTwoPlayers() : this.renderPlayers()
             );
         }
     }, {
@@ -61342,9 +61344,47 @@ var GameRound = function (_React$Component) {
                     return _this2.playerGameOver(player, isGameOver);
                 }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 45
+                    lineNumber: 48
                 }
             });
+        }
+    }, {
+        key: 'renderTwoPlayers',
+        value: function renderTwoPlayers() {
+            return _react2.default.createElement(
+                _reactNative.View,
+                { style: styles.asColumn, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 56
+                    }
+                },
+                _react2.default.createElement(
+                    _reactNative.View,
+                    { style: [styles.asColumn, styles.rotated180], __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 57
+                        }
+                    },
+                    _react2.default.createElement(_Player2.default, { player: this.players[1], __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 57
+                        }
+                    })
+                ),
+                _react2.default.createElement(
+                    _reactNative.View,
+                    { style: [styles.asColumn], __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 58
+                        }
+                    },
+                    _react2.default.createElement(_Player2.default, { player: this.players[0], __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 58
+                        }
+                    })
+                )
+            );
         }
     }, {
         key: 'renderPlayers',
@@ -61359,19 +61399,19 @@ var GameRound = function (_React$Component) {
                     _reactNative.View,
                     { key: 'playerColumn' + column, style: [styles.column, styles[sides[column] + 'Column']], __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 56
+                            lineNumber: 68
                         }
                     },
                     players.map(function (player) {
                         return _react2.default.createElement(_Player2.default, {
-                            key: 'playerContainer' + player.id,
+                            key: 'player' + player.id,
                             player: player,
                             onGameOver: function onGameOver(isGameOver) {
                                 return _this3.playerGameOver(player, isGameOver);
                             },
                             style: styles[sides[column] + 'Player'], __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 58
+                                lineNumber: 70
                             }
                         });
                     })
@@ -61471,6 +61511,13 @@ var styles = _reactNative.StyleSheet.create({
     },
     column: {
         width: '50%'
+    },
+    asColumn: {
+        flex: 1,
+        flexDirection: 'column'
+    },
+    rotated180: {
+        transform: [{ rotate: '180deg' }]
     },
     firstColumn: {},
     secondColumn: {},

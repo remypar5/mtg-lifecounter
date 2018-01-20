@@ -29,11 +29,14 @@ export default class GameRound extends React.Component {
     }
 
     render() {
+        const {length} = this.players;
         return (
             <View style={ styles.container } key={ `round${this.state.roundNumber}` }>
-                { this.players.length === 1 ?
+                { length === 1 ?
                     this.renderSinglePlayer() :
-                    this.renderPlayers() }
+                    ( length === 2 ?
+                        this.renderTwoPlayers() :
+                        this.renderPlayers()) }
             </View>
         );
     }
@@ -48,6 +51,15 @@ export default class GameRound extends React.Component {
         );
     }
 
+    renderTwoPlayers() {
+        return (
+            <View style={styles.asColumn}>
+                <View style={[styles.asColumn, styles.rotated180]}><Player player={this.players[1]} /></View>
+                <View style={[styles.asColumn]}><Player player={this.players[0]} /></View>
+            </View>
+        );
+    }
+
     renderPlayers() {
         const sides = ['first', 'second'];
         const columns = splitInHalf(this.players);
@@ -56,7 +68,7 @@ export default class GameRound extends React.Component {
             <View key={`playerColumn${column}`} style={ [styles.column, styles[sides[column] + 'Column']] }>
                 { players.map((player) => (
                     <Player
-                        key={`playerContainer${player.id}`}
+                        key={`player${player.id}`}
                         player={player}
                         onGameOver={ (isGameOver) => this.playerGameOver(player, isGameOver) }
                         style={ styles[sides[column] + 'Player'] } />
@@ -145,6 +157,15 @@ const styles = StyleSheet.create({
     },
     column: {
         width: '50%',
+    },
+    asColumn: {
+        flex: 1,
+        flexDirection: 'column',
+    },
+    rotated180: {
+        transform: [
+            { rotate: '180deg' }
+        ]
     },
     firstColumn: {
         //
