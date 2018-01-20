@@ -60954,50 +60954,57 @@ var NumberSpinner = function (_React$Component) {
         value: function render() {
             var _this2 = this;
 
-            var props = this.props;
+            var _props = this.props,
+                step = _props.step,
+                stepLarge = _props.stepLarge;
+            var value = this.state.value;
+            var container = styles.container,
+                button = styles.button,
+                valueStyle = styles.value;
+
 
             return _react2.default.createElement(
                 _reactNative.View,
-                { style: styles.container, __source: {
+                { style: container, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 22
+                        lineNumber: 24
                     }
                 },
                 _react2.default.createElement(_SpinnerButton2.default, {
-                    style: styles.button,
+                    style: button,
                     width: '20%',
                     content: '-',
                     onPress: function onPress() {
-                        return _this2.decrease(props.step);
+                        return _this2.decrease(step);
                     },
                     onHold: function onHold() {
-                        return _this2.decrease(props.stepLarge);
+                        return _this2.decrease(stepLarge);
                     }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 23
+                        lineNumber: 25
                     }
                 }),
                 _react2.default.createElement(
                     _reactNative.Text,
-                    { style: styles.value, __source: {
+                    { style: valueStyle, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 29
+                            lineNumber: 31
                         }
                     },
-                    this.state.value
+                    value
                 ),
                 _react2.default.createElement(_SpinnerButton2.default, {
                     width: '20%',
-                    style: styles.button,
+                    style: button,
                     content: '+',
                     onPress: function onPress() {
-                        return _this2.increase(props.step);
+                        return _this2.increase(step);
                     },
                     onHold: function onHold() {
-                        return _this2.increase(props.stepLarge);
+                        return _this2.increase(stepLarge);
                     }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 30
+                        lineNumber: 32
                     }
                 })
             );
@@ -61014,10 +61021,13 @@ var NumberSpinner = function (_React$Component) {
     }, {
         key: 'increase',
         value: function increase(points) {
-            var newValue = this.state.value + points;
+            var value = this.state.value;
+            var max = this.props.max;
 
-            if (this.props.max !== undefined) {
-                newValue = Math.min(this.props.max, newValue);
+            var newValue = value + points;
+
+            if (max !== undefined) {
+                newValue = Math.min(max, newValue);
             }
 
             this.setValue(newValue);
@@ -61025,10 +61035,13 @@ var NumberSpinner = function (_React$Component) {
     }, {
         key: 'decrease',
         value: function decrease(points) {
-            var newValue = this.state.value - points;
+            var value = this.state.value;
+            var min = this.props.min;
 
-            if (this.props.min !== undefined) {
-                newValue = Math.max(this.props.min, newValue);
+            var newValue = value - points;
+
+            if (min !== undefined) {
+                newValue = Math.max(min, newValue);
             }
 
             this.setValue(newValue);

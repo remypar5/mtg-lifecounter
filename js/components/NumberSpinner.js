@@ -16,23 +16,25 @@ export default class NumberSpinner extends React.Component {
     }
 
     render() {
-        const props = this.props;
+        const { step, stepLarge } = this.props;
+        const { value } = this.state;
+        const { container, button, value: valueStyle } = styles;
 
         return (
-            <View style={styles.container}>
+            <View style={ container }>
                 <SpinnerButton
-                    style={ styles.button }
+                    style={ button }
                     width="20%"
                     content="-"
-                    onPress={() => this.decrease(props.step)}
-                    onHold={() => this.decrease(props.stepLarge)} />
-                <Text style={styles.value}>{this.state.value}</Text>
+                    onPress={() => this.decrease(step)}
+                    onHold={() => this.decrease(stepLarge)} />
+                <Text style={ valueStyle }>{ value }</Text>
                 <SpinnerButton
                     width="20%"
-                    style={ styles.button }
+                    style={ button }
                     content="+"
-                    onPress={() => this.increase(props.step)}
-                    onHold={() => this.increase(props.stepLarge)} />
+                    onPress={() => this.increase(step)}
+                    onHold={() => this.increase(stepLarge)} />
             </View>
         );
     }
@@ -46,20 +48,24 @@ export default class NumberSpinner extends React.Component {
     }
 
     increase(points) {
-        let newValue = this.state.value + points;
+        const { value } = this.state;
+        const { max } = this.props;
+        let newValue = value + points;
 
-        if (this.props.max !== undefined) {
-            newValue = Math.min(this.props.max, newValue);
+        if (max !== undefined) {
+            newValue = Math.min(max, newValue);
         }
 
         this.setValue(newValue);
     }
 
     decrease(points) {
-        let newValue = this.state.value - points;
+        const { value } = this.state;
+        const { min } = this.props;
+        let newValue = value - points;
 
-        if (this.props.min !== undefined) {
-            newValue = Math.max(this.props.min, newValue);
+        if (min !== undefined) {
+            newValue = Math.max(min, newValue);
         }
 
         this.setValue(newValue);
@@ -90,13 +96,10 @@ const styles = StyleSheet.create({
         alignItems: 'center', // Vertical
     },
     button: {
-        // flexGrow: 3,
-        // width: '20%',
         height: '100%',
         color: '#b2b2b0',
     },
     value: {
-        // backgroundColor: 'red',
         width: '40%',
         height: '100%',
         textAlignVertical: 'center',
