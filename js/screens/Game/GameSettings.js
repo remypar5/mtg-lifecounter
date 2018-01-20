@@ -31,6 +31,7 @@ export default class GameSettings extends React.Component {
                 <NumberSpinner
                     min={ 1 }
                     max={ 6 }
+                    stepLarge={ 1 }
                     value={ state.numberOfPlayers }
                     onChange={ (numberOfPlayers) => this.setState({numberOfPlayers}) } />
 

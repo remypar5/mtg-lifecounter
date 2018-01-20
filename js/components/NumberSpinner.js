@@ -24,13 +24,11 @@ export default class NumberSpinner extends React.Component {
             <View style={ container }>
                 <SpinnerButton
                     style={ button }
-                    width="20%"
                     content="-"
                     onPress={() => this.decrease(step)}
                     onHold={() => this.decrease(stepLarge)} />
                 <Text style={ valueStyle }>{ value }</Text>
                 <SpinnerButton
-                    width="20%"
                     style={ button }
                     content="+"
                     onPress={() => this.increase(step)}

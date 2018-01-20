@@ -60792,6 +60792,7 @@ var GameSettings = function (_React$Component) {
                 _react2.default.createElement(_NumberSpinner2.default, {
                     min: 1,
                     max: 6,
+                    stepLarge: 1,
                     value: state.numberOfPlayers,
                     onChange: function onChange(numberOfPlayers) {
                         return _this2.setState({ numberOfPlayers: numberOfPlayers });
@@ -60804,7 +60805,7 @@ var GameSettings = function (_React$Component) {
                     _reactNative.Text,
                     { style: styles.label, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 37
+                            lineNumber: 38
                         }
                     },
                     'Lifepoints'
@@ -60813,7 +60814,7 @@ var GameSettings = function (_React$Component) {
                     _reactNative.View,
                     { style: styles.buttonContainer, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 38
+                            lineNumber: 39
                         }
                     },
                     GameSettings.lifePoints.map(function (startingLifeTotal) {
@@ -60826,7 +60827,7 @@ var GameSettings = function (_React$Component) {
                                     return _this2.setState({ startingLifeTotal: startingLifeTotal });
                                 }, __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 40
+                                    lineNumber: 41
                                 }
                             },
                             startingLifeTotal
@@ -60841,7 +60842,7 @@ var GameSettings = function (_React$Component) {
                             return _this2.startRound();
                         }, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 49
+                            lineNumber: 50
                         }
                     },
                     'Start game'
@@ -60972,7 +60973,6 @@ var NumberSpinner = function (_React$Component) {
                 },
                 _react2.default.createElement(_SpinnerButton2.default, {
                     style: button,
-                    width: '20%',
                     content: '-',
                     onPress: function onPress() {
                         return _this2.decrease(step);
@@ -60988,13 +60988,12 @@ var NumberSpinner = function (_React$Component) {
                     _reactNative.Text,
                     { style: valueStyle, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 31
+                            lineNumber: 30
                         }
                     },
                     value
                 ),
                 _react2.default.createElement(_SpinnerButton2.default, {
-                    width: '20%',
                     style: button,
                     content: '+',
                     onPress: function onPress() {
@@ -61004,7 +61003,7 @@ var NumberSpinner = function (_React$Component) {
                         return _this2.increase(stepLarge);
                     }, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 32
+                        lineNumber: 31
                     }
                 })
             );
@@ -61127,7 +61126,10 @@ var SpinnerButton = function (_React$Component) {
     babelHelpers.createClass(SpinnerButton, [{
         key: 'render',
         value: function render() {
-            var props = this.props;
+            var content = this.props.content;
+            var button = styles.button,
+                buttonContainer = styles.buttonContainer;
+
 
             return _react2.default.createElement(
                 _reactNative.TouchableWithoutFeedback,
@@ -61136,24 +61138,24 @@ var SpinnerButton = function (_React$Component) {
                     onPressIn: this._onPressIn,
                     onPressOut: this._onPressOut, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 24
+                        lineNumber: 25
                     }
                 },
                 _react2.default.createElement(
                     _reactNative.View,
-                    { style: [styles.buttonContainer, { width: props.width }], __source: {
+                    { style: [buttonContainer], __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 28
+                            lineNumber: 29
                         }
                     },
                     _react2.default.createElement(
                         _reactNative.Text,
-                        { style: styles.button, __source: {
+                        { style: button, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 29
+                                lineNumber: 30
                             }
                         },
-                        props.content
+                        content
                     )
                 )
             );
@@ -61200,7 +61202,9 @@ SpinnerButton.propTypes = {
 };
 
 var styles = _reactNative.StyleSheet.create({
-    buttonContainer: {},
+    buttonContainer: {
+        width: '20%'
+    },
     button: {
         width: '100%',
         height: '100%',

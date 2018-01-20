@@ -18,15 +18,16 @@ export default class SpinnerButton extends React.Component {
     }
 
     render() {
-        const props = this.props;
+        const { content } = this.props;
+        const { button, buttonContainer } = styles;
 
         return (
             <TouchableWithoutFeedback
                 onPress={this._onPress}
                 onPressIn={this._onPressIn}
                 onPressOut={this._onPressOut}>
-                <View style={[styles.buttonContainer, { width: props.width }]}>
-                    <Text style={styles.button}>{props.content}</Text>
+                <View style={[ buttonContainer ]}>
+                    <Text style={ button }>{ content }</Text>
                 </View>
             </TouchableWithoutFeedback>
         );
@@ -62,7 +63,7 @@ SpinnerButton.propTypes = {
 
 const styles = StyleSheet.create({
     buttonContainer: {
-        // backgroundColor: 'gray'
+        width: '20%'
     },
     button: {
         width: '100%',
