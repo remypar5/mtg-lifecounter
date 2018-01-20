@@ -27,6 +27,14 @@ ShallowWrapper {
           content="-"
           onHold={[Function]}
           onPress={[Function]}
+          style={
+            Object {
+              "color": "#b2b2b0",
+              "fontFamily": "cloisterblack",
+              "fontSize": 32,
+              "height": "100%",
+            }
+          }
         />,
         <Text
           accessible={true}
@@ -36,12 +44,13 @@ ShallowWrapper {
           style={
             Object {
               "alignSelf": "center",
-              "color": "white",
-              "fontSize": 40,
+              "color": "#b2b2b0",
+              "fontFamily": "cloisterblack",
+              "fontSize": 42,
               "height": "100%",
               "textAlign": "center",
               "textAlignVertical": "center",
-              "width": "30%",
+              "width": "40%",
             }
           }
         >
@@ -51,13 +60,21 @@ ShallowWrapper {
           content="+"
           onHold={[Function]}
           onPress={[Function]}
+          style={
+            Object {
+              "color": "#b2b2b0",
+              "fontFamily": "cloisterblack",
+              "fontSize": 32,
+              "height": "100%",
+            }
+          }
         />,
       ],
       "style": Object {
         "alignItems": "center",
         "flex": 1,
         "flexDirection": "row",
-        "justifyContent": "center",
+        "justifyContent": "space-between",
       },
     },
     "ref": null,
@@ -70,6 +87,12 @@ ShallowWrapper {
           "content": "-",
           "onHold": [Function],
           "onPress": [Function],
+          "style": Object {
+            "color": "#b2b2b0",
+            "fontFamily": "cloisterblack",
+            "fontSize": 32,
+            "height": "100%",
+          },
         },
         "ref": null,
         "rendered": null,
@@ -87,12 +110,13 @@ ShallowWrapper {
           "ellipsizeMode": "tail",
           "style": Object {
             "alignSelf": "center",
-            "color": "white",
-            "fontSize": 40,
+            "color": "#b2b2b0",
+            "fontFamily": "cloisterblack",
+            "fontSize": 42,
             "height": "100%",
             "textAlign": "center",
             "textAlignVertical": "center",
-            "width": "30%",
+            "width": "40%",
           },
         },
         "ref": null,
@@ -107,6 +131,12 @@ ShallowWrapper {
           "content": "+",
           "onHold": [Function],
           "onPress": [Function],
+          "style": Object {
+            "color": "#b2b2b0",
+            "fontFamily": "cloisterblack",
+            "fontSize": 32,
+            "height": "100%",
+          },
         },
         "ref": null,
         "rendered": null,
@@ -126,6 +156,14 @@ ShallowWrapper {
             content="-"
             onHold={[Function]}
             onPress={[Function]}
+            style={
+              Object {
+                "color": "#b2b2b0",
+                "fontFamily": "cloisterblack",
+                "fontSize": 32,
+                "height": "100%",
+              }
+            }
           />,
           <Text
             accessible={true}
@@ -135,12 +173,13 @@ ShallowWrapper {
             style={
               Object {
                 "alignSelf": "center",
-                "color": "white",
-                "fontSize": 40,
+                "color": "#b2b2b0",
+                "fontFamily": "cloisterblack",
+                "fontSize": 42,
                 "height": "100%",
                 "textAlign": "center",
                 "textAlignVertical": "center",
-                "width": "30%",
+                "width": "40%",
               }
             }
           >
@@ -150,13 +189,21 @@ ShallowWrapper {
             content="+"
             onHold={[Function]}
             onPress={[Function]}
+            style={
+              Object {
+                "color": "#b2b2b0",
+                "fontFamily": "cloisterblack",
+                "fontSize": 32,
+                "height": "100%",
+              }
+            }
           />,
         ],
         "style": Object {
           "alignItems": "center",
           "flex": 1,
           "flexDirection": "row",
-          "justifyContent": "center",
+          "justifyContent": "space-between",
         },
       },
       "ref": null,
@@ -169,6 +216,12 @@ ShallowWrapper {
             "content": "-",
             "onHold": [Function],
             "onPress": [Function],
+            "style": Object {
+              "color": "#b2b2b0",
+              "fontFamily": "cloisterblack",
+              "fontSize": 32,
+              "height": "100%",
+            },
           },
           "ref": null,
           "rendered": null,
@@ -186,12 +239,13 @@ ShallowWrapper {
             "ellipsizeMode": "tail",
             "style": Object {
               "alignSelf": "center",
-              "color": "white",
-              "fontSize": 40,
+              "color": "#b2b2b0",
+              "fontFamily": "cloisterblack",
+              "fontSize": 42,
               "height": "100%",
               "textAlign": "center",
               "textAlignVertical": "center",
-              "width": "30%",
+              "width": "40%",
             },
           },
           "ref": null,
@@ -206,6 +260,12 @@ ShallowWrapper {
             "content": "+",
             "onHold": [Function],
             "onPress": [Function],
+            "style": Object {
+              "color": "#b2b2b0",
+              "fontFamily": "cloisterblack",
+              "fontSize": 32,
+              "height": "100%",
+            },
           },
           "ref": null,
           "rendered": null,

@@ -6,7 +6,6 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <GameRound
     numberOfPlayers={3}
-    onGameEnd={[Function]}
     startingLifeTotal={40}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -24,65 +23,59 @@ ShallowWrapper {
       "children": Array [
         <View
           style={
-            Array [
-              Object {
-                "width": "50%",
-              },
-              Object {},
-            ]
+            Object {
+              "width": "50%",
+            }
           }
         >
           <Player
             onGameOver={[Function]}
             player={
               Object {
+                "color": "#57719e",
                 "id": 0,
                 "isGameOver": false,
                 "life": 40,
                 "name": "Player 1",
               }
             }
-            style={Object {}}
           />
           <Player
             onGameOver={[Function]}
             player={
               Object {
+                "color": "#d83f2d",
                 "id": 1,
                 "isGameOver": false,
                 "life": 40,
                 "name": "Player 2",
               }
             }
-            style={Object {}}
           />
         </View>,
         <View
           style={
-            Array [
-              Object {
-                "width": "50%",
-              },
-              Object {},
-            ]
+            Object {
+              "width": "50%",
+            }
           }
         >
           <Player
             onGameOver={[Function]}
             player={
               Object {
+                "color": "#95b54c",
                 "id": 2,
                 "isGameOver": false,
                 "life": 40,
                 "name": "Player 3",
               }
             }
-            style={Object {}}
           />
         </View>,
       ],
       "style": Object {
-        "backgroundColor": "black",
+        "backgroundColor": "#161616",
         "flex": 1,
         "flexDirection": "row",
       },
@@ -99,49 +92,46 @@ ShallowWrapper {
               onGameOver={[Function]}
               player={
                 Object {
+                  "color": "#57719e",
                   "id": 0,
                   "isGameOver": false,
                   "life": 40,
                   "name": "Player 1",
                 }
               }
-              style={Object {}}
             />,
             <Player
               onGameOver={[Function]}
               player={
                 Object {
+                  "color": "#d83f2d",
                   "id": 1,
                   "isGameOver": false,
                   "life": 40,
                   "name": "Player 2",
                 }
               }
-              style={Object {}}
             />,
           ],
-          "style": Array [
-            Object {
-              "width": "50%",
-            },
-            Object {},
-          ],
+          "style": Object {
+            "width": "50%",
+          },
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "playerContainer0",
+            "key": "player0",
             "nodeType": "class",
             "props": Object {
               "onGameOver": [Function],
               "player": Object {
+                "color": "#57719e",
                 "id": 0,
                 "isGameOver": false,
                 "life": 40,
                 "name": "Player 1",
               },
-              "style": Object {},
             },
             "ref": null,
             "rendered": null,
@@ -149,17 +139,17 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "playerContainer1",
+            "key": "player1",
             "nodeType": "class",
             "props": Object {
               "onGameOver": [Function],
               "player": Object {
+                "color": "#d83f2d",
                 "id": 1,
                 "isGameOver": false,
                 "life": 40,
                 "name": "Player 2",
               },
-              "style": Object {},
             },
             "ref": null,
             "rendered": null,
@@ -178,37 +168,34 @@ ShallowWrapper {
               onGameOver={[Function]}
               player={
                 Object {
+                  "color": "#95b54c",
                   "id": 2,
                   "isGameOver": false,
                   "life": 40,
                   "name": "Player 3",
                 }
               }
-              style={Object {}}
             />,
           ],
-          "style": Array [
-            Object {
-              "width": "50%",
-            },
-            Object {},
-          ],
+          "style": Object {
+            "width": "50%",
+          },
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "playerContainer2",
+            "key": "player2",
             "nodeType": "class",
             "props": Object {
               "onGameOver": [Function],
               "player": Object {
+                "color": "#95b54c",
                 "id": 2,
                 "isGameOver": false,
                 "life": 40,
                 "name": "Player 3",
               },
-              "style": Object {},
             },
             "ref": null,
             "rendered": null,
@@ -229,65 +216,59 @@ ShallowWrapper {
         "children": Array [
           <View
             style={
-              Array [
-                Object {
-                  "width": "50%",
-                },
-                Object {},
-              ]
+              Object {
+                "width": "50%",
+              }
             }
           >
             <Player
               onGameOver={[Function]}
               player={
                 Object {
+                  "color": "#57719e",
                   "id": 0,
                   "isGameOver": false,
                   "life": 40,
                   "name": "Player 1",
                 }
               }
-              style={Object {}}
             />
             <Player
               onGameOver={[Function]}
               player={
                 Object {
+                  "color": "#d83f2d",
                   "id": 1,
                   "isGameOver": false,
                   "life": 40,
                   "name": "Player 2",
                 }
               }
-              style={Object {}}
             />
           </View>,
           <View
             style={
-              Array [
-                Object {
-                  "width": "50%",
-                },
-                Object {},
-              ]
+              Object {
+                "width": "50%",
+              }
             }
           >
             <Player
               onGameOver={[Function]}
               player={
                 Object {
+                  "color": "#95b54c",
                   "id": 2,
                   "isGameOver": false,
                   "life": 40,
                   "name": "Player 3",
                 }
               }
-              style={Object {}}
             />
           </View>,
         ],
         "style": Object {
-          "backgroundColor": "black",
+          "backgroundColor": "#161616",
           "flex": 1,
           "flexDirection": "row",
         },
@@ -304,49 +285,46 @@ ShallowWrapper {
                 onGameOver={[Function]}
                 player={
                   Object {
+                    "color": "#57719e",
                     "id": 0,
                     "isGameOver": false,
                     "life": 40,
                     "name": "Player 1",
                   }
                 }
-                style={Object {}}
               />,
               <Player
                 onGameOver={[Function]}
                 player={
                   Object {
+                    "color": "#d83f2d",
                     "id": 1,
                     "isGameOver": false,
                     "life": 40,
                     "name": "Player 2",
                   }
                 }
-                style={Object {}}
               />,
             ],
-            "style": Array [
-              Object {
-                "width": "50%",
-              },
-              Object {},
-            ],
+            "style": Object {
+              "width": "50%",
+            },
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "playerContainer0",
+              "key": "player0",
               "nodeType": "class",
               "props": Object {
                 "onGameOver": [Function],
                 "player": Object {
+                  "color": "#57719e",
                   "id": 0,
                   "isGameOver": false,
                   "life": 40,
                   "name": "Player 1",
                 },
-                "style": Object {},
               },
               "ref": null,
               "rendered": null,
@@ -354,17 +332,17 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "playerContainer1",
+              "key": "player1",
               "nodeType": "class",
               "props": Object {
                 "onGameOver": [Function],
                 "player": Object {
+                  "color": "#d83f2d",
                   "id": 1,
                   "isGameOver": false,
                   "life": 40,
                   "name": "Player 2",
                 },
-                "style": Object {},
               },
               "ref": null,
               "rendered": null,
@@ -383,37 +361,34 @@ ShallowWrapper {
                 onGameOver={[Function]}
                 player={
                   Object {
+                    "color": "#95b54c",
                     "id": 2,
                     "isGameOver": false,
                     "life": 40,
                     "name": "Player 3",
                   }
                 }
-                style={Object {}}
               />,
             ],
-            "style": Array [
-              Object {
-                "width": "50%",
-              },
-              Object {},
-            ],
+            "style": Object {
+              "width": "50%",
+            },
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "playerContainer2",
+              "key": "player2",
               "nodeType": "class",
               "props": Object {
                 "onGameOver": [Function],
                 "player": Object {
+                  "color": "#95b54c",
                   "id": 2,
                   "isGameOver": false,
                   "life": 40,
                   "name": "Player 3",
                 },
-                "style": Object {},
               },
               "ref": null,
               "rendered": null,

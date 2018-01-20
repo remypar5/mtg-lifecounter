@@ -38,12 +38,17 @@ ShallowWrapper {
           disabled={false}
           ellipsizeMode="tail"
           style={
-            Object {
-              "alignSelf": "center",
-              "color": "white",
-              "fontSize": 18,
-              "paddingVertical": 5,
-            }
+            Array [
+              Object {
+                "alignSelf": "center",
+                "color": "#b2b2b0",
+                "fontSize": 24,
+                "paddingVertical": 5,
+              },
+              Object {
+                "color": undefined,
+              },
+            ]
           }
         >
           John Doe
@@ -52,9 +57,9 @@ ShallowWrapper {
       "style": Array [
         Object {
           "alignItems": "stretch",
-          "borderColor": "white",
+          "borderColor": "#262626",
           "borderStyle": "solid",
-          "borderWidth": 1,
+          "borderWidth": 3,
           "flex": 1,
           "height": "100%",
           "justifyContent": "flex-start",
@@ -89,12 +94,17 @@ ShallowWrapper {
           "children": "John Doe",
           "disabled": false,
           "ellipsizeMode": "tail",
-          "style": Object {
-            "alignSelf": "center",
-            "color": "white",
-            "fontSize": 18,
-            "paddingVertical": 5,
-          },
+          "style": Array [
+            Object {
+              "alignSelf": "center",
+              "color": "#b2b2b0",
+              "fontSize": 24,
+              "paddingVertical": 5,
+            },
+            Object {
+              "color": undefined,
+            },
+          ],
         },
         "ref": null,
         "rendered": "John Doe",
@@ -122,12 +132,17 @@ ShallowWrapper {
             disabled={false}
             ellipsizeMode="tail"
             style={
-              Object {
-                "alignSelf": "center",
-                "color": "white",
-                "fontSize": 18,
-                "paddingVertical": 5,
-              }
+              Array [
+                Object {
+                  "alignSelf": "center",
+                  "color": "#b2b2b0",
+                  "fontSize": 24,
+                  "paddingVertical": 5,
+                },
+                Object {
+                  "color": undefined,
+                },
+              ]
             }
           >
             John Doe
@@ -136,9 +151,9 @@ ShallowWrapper {
         "style": Array [
           Object {
             "alignItems": "stretch",
-            "borderColor": "white",
+            "borderColor": "#262626",
             "borderStyle": "solid",
-            "borderWidth": 1,
+            "borderWidth": 3,
             "flex": 1,
             "height": "100%",
             "justifyContent": "flex-start",
@@ -173,12 +188,17 @@ ShallowWrapper {
             "children": "John Doe",
             "disabled": false,
             "ellipsizeMode": "tail",
-            "style": Object {
-              "alignSelf": "center",
-              "color": "white",
-              "fontSize": 18,
-              "paddingVertical": 5,
-            },
+            "style": Array [
+              Object {
+                "alignSelf": "center",
+                "color": "#b2b2b0",
+                "fontSize": 24,
+                "paddingVertical": 5,
+              },
+              Object {
+                "color": undefined,
+              },
+            ],
           },
           "ref": null,
           "rendered": "John Doe",

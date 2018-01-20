@@ -22,9 +22,11 @@ ShallowWrapper {
     "props": Object {
       "children": <View
         style={
-          Object {
-            "width": "35%",
-          }
+          Array [
+            Object {
+              "width": "20%",
+            },
+          ]
         }
       >
         <Text
@@ -34,12 +36,13 @@ ShallowWrapper {
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
-              "fontSize": 20,
-              "fontWeight": "bold",
+              "color": "#b2b2b0",
+              "fontFamily": "cloisterblack",
+              "fontSize": 32,
               "height": "100%",
               "textAlign": "center",
               "textAlignVertical": "center",
+              "width": "100%",
             }
           }
         >
@@ -63,20 +66,23 @@ ShallowWrapper {
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
-              "fontSize": 20,
-              "fontWeight": "bold",
+              "color": "#b2b2b0",
+              "fontFamily": "cloisterblack",
+              "fontSize": 32,
               "height": "100%",
               "textAlign": "center",
               "textAlignVertical": "center",
+              "width": "100%",
             }
           }
         >
           -
         </Text>,
-        "style": Object {
-          "width": "35%",
-        },
+        "style": Array [
+          Object {
+            "width": "20%",
+          },
+        ],
       },
       "ref": null,
       "rendered": Object {
@@ -90,12 +96,13 @@ ShallowWrapper {
           "disabled": false,
           "ellipsizeMode": "tail",
           "style": Object {
-            "color": "white",
-            "fontSize": 20,
-            "fontWeight": "bold",
+            "color": "#b2b2b0",
+            "fontFamily": "cloisterblack",
+            "fontSize": 32,
             "height": "100%",
             "textAlign": "center",
             "textAlignVertical": "center",
+            "width": "100%",
           },
         },
         "ref": null,
@@ -114,9 +121,11 @@ ShallowWrapper {
       "props": Object {
         "children": <View
           style={
-            Object {
-              "width": "35%",
-            }
+            Array [
+              Object {
+                "width": "20%",
+              },
+            ]
           }
         >
           <Text
@@ -126,12 +135,13 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
-                "fontSize": 20,
-                "fontWeight": "bold",
+                "color": "#b2b2b0",
+                "fontFamily": "cloisterblack",
+                "fontSize": 32,
                 "height": "100%",
                 "textAlign": "center",
                 "textAlignVertical": "center",
+                "width": "100%",
               }
             }
           >
@@ -155,20 +165,23 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
-                "fontSize": 20,
-                "fontWeight": "bold",
+                "color": "#b2b2b0",
+                "fontFamily": "cloisterblack",
+                "fontSize": 32,
                 "height": "100%",
                 "textAlign": "center",
                 "textAlignVertical": "center",
+                "width": "100%",
               }
             }
           >
             -
           </Text>,
-          "style": Object {
-            "width": "35%",
-          },
+          "style": Array [
+            Object {
+              "width": "20%",
+            },
+          ],
         },
         "ref": null,
         "rendered": Object {
@@ -182,12 +195,13 @@ ShallowWrapper {
             "disabled": false,
             "ellipsizeMode": "tail",
             "style": Object {
-              "color": "white",
-              "fontSize": 20,
-              "fontWeight": "bold",
+              "color": "#b2b2b0",
+              "fontFamily": "cloisterblack",
+              "fontSize": 32,
               "height": "100%",
               "textAlign": "center",
               "textAlignVertical": "center",
+              "width": "100%",
             },
           },
           "ref": null,
