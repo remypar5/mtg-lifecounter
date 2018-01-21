@@ -29,7 +29,8 @@
     "test:cov": "node node_modules/jest/bin/jest.js --coverage",
     "test:dev:cov": "node node_modules/jest/bin/jest.js --watch --coverage",
     "lint": "./node_modules/.bin/eslint js/",
-    "lint:no-ignore": "./node_modules/.bin/eslint --no-ignore js/"
+    "lint:no-ignore": "./node_modules/.bin/eslint --no-ignore js/",
+    "pre-commit": "yarn lint"
   },
   "jest": {
     "preset": "react-native",
