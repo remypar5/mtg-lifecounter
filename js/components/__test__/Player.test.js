@@ -13,4 +13,5 @@ describe('<Player />', () => {
     it('renders without crashing', () => {
         expect(component).toMatchSnapshot();
     });
+
 });
