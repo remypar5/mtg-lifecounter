@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 
 import GameSettings from '../GameSettings';
 
-
 describe('<GameSettings />' , () => {
 
     let component;

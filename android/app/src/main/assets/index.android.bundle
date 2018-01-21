@@ -60738,7 +60738,7 @@ var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
 
 var _constants = require(404                    ); // 404 = ../../utils/constants
 
-var _Dimensions$get = _reactNative.Dimensions.get('screen'),
+var _Dimensions$get = _reactNative.Dimensions.get('window'),
     screenHeight = _Dimensions$get.height;
 
 var GameSettings = function (_React$Component) {

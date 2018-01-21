@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import NumberSpinner from '../../components/NumberSpinner';
 import { FONT_FAMILY, COLOR_MARKED, COLOR_FOREGROUND, COLOR_BACKGROUND } from '../../utils/constants';
 
-const { height: screenHeight } = Dimensions.get('screen');
+const { height: screenHeight } = Dimensions.get('window');
 
 export default class GameSettings extends React.Component {
 
