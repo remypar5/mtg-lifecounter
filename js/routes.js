@@ -1,24 +1,17 @@
-import { StackNavigator } from "react-navigation";
+import { StackNavigator } from 'react-navigation';
 
-import Game from './screens/Game';
-import GameSettings from './screens/Game/GameSettings';
-import GameRound from './screens/Game/GameRound';
+import GameSettingsContainer from './screens/Game/GameSettings.container';
+import GameRoundContainer from './screens/Game/GameRound.container';
 
-export const AppRouter = StackNavigator({
-    Game: {
-        screen: Game
-    }
-}, {
-    initialRouteName: 'Game'
-});
-
-export const GameRouter = StackNavigator({
+const GameRouter = StackNavigator({
     GameSettings: {
-        screen: GameSettings
+        screen: GameSettingsContainer,
     },
     GameRound: {
-        screen: GameRound
-    }
+        screen: GameRoundContainer,
+    },
 }, {
-    initialRouteName: 'GameSettings'
+    initialRouteName: 'GameSettings',
 });
+
+export default GameRouter;

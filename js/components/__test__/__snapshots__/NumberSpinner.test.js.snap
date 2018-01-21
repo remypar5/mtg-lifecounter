@@ -5,6 +5,8 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NumberSpinner
+    max={9007199254740991}
+    min={-9007199254740991}
     onChange={[Function]}
     step={1}
     stepLarge={10}

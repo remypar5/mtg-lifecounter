@@ -1,68 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, Button, View, Alert, Image, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Image, Dimensions } from 'react-native';
 import PropTypes from 'prop-types';
 
 import NumberSpinner from '../../components/NumberSpinner';
 import { FONT_FAMILY, COLOR_MARKED, COLOR_FOREGROUND, COLOR_BACKGROUND } from '../../utils/constants';
+import bgiconSrc from './bgicon.png';
 
 const { height: screenHeight } = Dimensions.get('window');
-
-export default class GameSettings extends React.Component {
-
-    static lifePoints = [20, 30, 40];
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            numberOfPlayers: 2,
-            startingLifeTotal: GameSettings.lifePoints[0]
-        };
-    }
-
-    render() {
-        const { numberOfPlayers, startingLifeTotal } = this.state;
-        const { container, bgicon, label, buttonContainer, button, selected, startButton } = styles;
-
-        return (
-            <View style={ container }>
-                <Image source={require('./bgicon.png')} style={[StyleSheet.absoluteFill, bgicon]} />
-                <Text style={ label }>Players</Text>
-                <NumberSpinner
-                    min={ 1 }
-                    max={ 6 }
-                    stepLarge={ 1 }
-                    value={ numberOfPlayers }
-                    onChange={ (numberOfPlayers) => this.setState({numberOfPlayers}) } />
-
-                <Text style={ label }>Lifepoints</Text>
-                <View style={ buttonContainer }>
-                    { GameSettings.lifePoints.map((points) => (
-                        <Text
-                            key={`buttonLifePoints${points}`}
-                            style={[ button, startingLifeTotal === points ? selected : null ]}
-                            onPress={() => this.setState({ startingLifeTotal: points })}>
-                            { points }
-                        </Text>
-                    )) }
-                </View>
-
-                <Text
-                    style={ [button, startButton] }
-                    onPress={ () => this.startRound() }>
-                    Start game
-                </Text>
-            </View>
-        );
-    }
-
-    startRound() {
-        const { startingLifeTotal, numberOfPlayers } = this.state;
-
-        this.props.navigation.navigate('GameRound', { startingLifeTotal, numberOfPlayers });
-    }
-}
-
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#161616',
@@ -80,7 +24,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         textAlign: 'left',
         width: '95%',
-        alignSelf: 'center'
+        alignSelf: 'center',
     },
     buttonContainer: {
         height: '20%',
@@ -98,7 +42,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         textAlign: 'center',
         textAlignVertical: 'center',
-        alignSelf: 'baseline'
+        alignSelf: 'baseline',
     },
     startButton: {
         width: '100%',
@@ -108,6 +52,69 @@ const styles = StyleSheet.create({
         borderWidth: 6,
     },
     selected: {
-        backgroundColor: COLOR_MARKED
+        backgroundColor: COLOR_MARKED,
     },
 });
+
+export default class GameSettings extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            numberOfPlayers: 2,
+            startingLifeTotal: GameSettings.lifePoints[0],
+        };
+    }
+
+    startRound() {
+        const { startingLifeTotal, numberOfPlayers } = this.state;
+
+        this.props.navigation.navigate('GameRound', { startingLifeTotal, numberOfPlayers });
+    }
+
+    render() {
+        const { numberOfPlayers, startingLifeTotal } = this.state;
+        const {
+            container, bgicon, label, buttonContainer, button, selected, startButton,
+        } = styles;
+
+        return (
+            <View style={container}>
+                <Image source={bgiconSrc} style={[StyleSheet.absoluteFill, bgicon]} />
+                <Text style={label}>Players</Text>
+                <NumberSpinner
+                    min={1}
+                    max={6}
+                    stepLarge={1}
+                    value={numberOfPlayers}
+                    onChange={(nrPlayers) => this.setState({ numberOfPlayers: nrPlayers })}
+                />
+
+                <Text style={label}>Lifepoints</Text>
+                <View style={buttonContainer}>
+                    {GameSettings.lifePoints.map((points) => (
+                        <Text
+                            key={`buttonLifePoints${points}`}
+                            style={[button, startingLifeTotal === points ? selected : null]}
+                            onPress={() => this.setState({ startingLifeTotal: points })}
+                        >
+                            {points}
+                        </Text>
+                    ))}
+                </View>
+
+                <Text
+                    style={[button, startButton]}
+                    onPress={() => this.startRound()}
+                >
+                    Start game
+                </Text>
+            </View>
+        );
+    }
+}
+
+GameSettings.lifePoints = [20, 30, 40];
+GameSettings.propTypes = {
+    navigation: PropTypes.object.isRequired,
+};

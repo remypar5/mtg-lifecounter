@@ -4,17 +4,15 @@ import { shallow } from 'enzyme';
 import SpinnerButton from '../SpinnerButton';
 
 describe('<SpinnerButton />', () => {
-
     let component;
-    let onPressSpy = jest.fn();
-    let onHoldSpy = jest.fn();
+    const onPressSpy = jest.fn();
+    const onHoldSpy = jest.fn();
 
     beforeEach(() => {
-        component = shallow(
-            <SpinnerButton
-                content="-"
-                onPress={ onPressSpy } />
-            );
+        component = shallow(<SpinnerButton
+            content="-"
+            onPress={onPressSpy}
+        />);
 
         onPressSpy.mockReset();
     });
@@ -34,11 +32,11 @@ describe('<SpinnerButton />', () => {
         beforeEach(() => {
             jest.useFakeTimers();
 
-            component = shallow(
-                <SpinnerButton
-                    onPress={ onPressSpy }
-                    onHold={ onHoldSpy } />
-            );
+            component = shallow(<SpinnerButton
+                content="content"
+                onPress={onPressSpy}
+                onHold={onHoldSpy}
+            />);
 
             onPressSpy.mockReset();
             onHoldSpy.mockReset();

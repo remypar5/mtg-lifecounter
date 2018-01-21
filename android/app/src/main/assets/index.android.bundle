@@ -52758,7 +52758,7 @@ var _require = require(21           ), // 21 = ReactNative
 module.exports = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.takeSnapshot;
 }, 335, null, "takeSnapshot");
 __d(/* mtg-lifecounter/js/App.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/App.js';
 
@@ -52766,15 +52766,32 @@ var _react = require(38     ); // 38 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
-var _reactNative = require(12            ); // 12 = react-native
+var _routes = require(337       ); // 337 = ./routes
 
-var _reactNavigation = require(337               ); // 337 = react-navigation
+var _routes2 = babelHelpers.interopRequireDefault(_routes);
 
-var _GameSettings = require(400                                    ); // 400 = ./screens/Game/GameSettings.container
+var App = function App() {
+  return _react2.default.createElement(_routes2.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    }
+  });
+};
+
+exports.default = App;
+}, 336, null, "mtg-lifecounter/js/App.js");
+__d(/* mtg-lifecounter/js/routes.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _reactNavigation = require(338               ); // 338 = react-navigation
+
+var _GameSettings = require(401                                    ); // 401 = ./screens/Game/GameSettings.container
 
 var _GameSettings2 = babelHelpers.interopRequireDefault(_GameSettings);
 
-var _GameRound = require(406                                 ); // 406 = ./screens/Game/GameRound.container
+var _GameRound = require(407                                 ); // 407 = ./screens/Game/GameRound.container
 
 var _GameRound2 = babelHelpers.interopRequireDefault(_GameRound);
 
@@ -52789,114 +52806,92 @@ var GameRouter = (0, _reactNavigation.StackNavigator)({
     initialRouteName: 'GameSettings'
 });
 
-var App = function (_React$Component) {
-    babelHelpers.inherits(App, _React$Component);
-
-    function App() {
-        babelHelpers.classCallCheck(this, App);
-        return babelHelpers.possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-    }
-
-    babelHelpers.createClass(App, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(GameRouter, {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 22
-                }
-            });
-        }
-    }]);
-    return App;
-}(_react2.default.Component);
-
-exports.default = App;
-}, 336, null, "mtg-lifecounter/js/App.js");
+exports.default = GameRouter;
+}, 337, null, "mtg-lifecounter/js/routes.js");
 __d(/* react-navigation/src/react-navigation.js */function(global, require, module, exports) {
 
 module.exports = {
   get createNavigationContainer() {
-    return require(338                          ).default; // 338 = ./createNavigationContainer
+    return require(339                          ).default; // 339 = ./createNavigationContainer
   },
   get StateUtils() {
-    return require(343           ).default; // 343 = ./StateUtils
+    return require(344           ).default; // 344 = ./StateUtils
   },
   get addNavigationHelpers() {
-    return require(341                     ).default; // 341 = ./addNavigationHelpers
+    return require(342                     ).default; // 342 = ./addNavigationHelpers
   },
   get NavigationActions() {
-    return require(340                  ).default; // 340 = ./NavigationActions
+    return require(341                  ).default; // 341 = ./NavigationActions
   },
 
   get createNavigator() {
-    return require(344                           ).default; // 344 = ./navigators/createNavigator
+    return require(345                           ).default; // 345 = ./navigators/createNavigator
   },
   get StackNavigator() {
-    return require(345                          ).default; // 345 = ./navigators/StackNavigator
+    return require(346                          ).default; // 346 = ./navigators/StackNavigator
   },
   get TabNavigator() {
-    return require(377                        ).default; // 377 = ./navigators/TabNavigator
+    return require(378                        ).default; // 378 = ./navigators/TabNavigator
   },
   get DrawerNavigator() {
-    return require(393                           ).default; // 393 = ./navigators/DrawerNavigator
+    return require(394                           ).default; // 394 = ./navigators/DrawerNavigator
   },
 
   get StackRouter() {
-    return require(368                    ).default; // 368 = ./routers/StackRouter
+    return require(369                    ).default; // 369 = ./routers/StackRouter
   },
   get TabRouter() {
-    return require(378                  ).default; // 378 = ./routers/TabRouter
+    return require(379                  ).default; // 379 = ./routers/TabRouter
   },
 
   get Transitioner() {
-    return require(365                   ).default; // 365 = ./views/Transitioner
+    return require(366                   ).default; // 366 = ./views/Transitioner
   },
   get CardStackTransitioner() {
-    return require(346                                      ).default; // 346 = ./views/CardStack/CardStackTransitioner
+    return require(347                                      ).default; // 347 = ./views/CardStack/CardStackTransitioner
   },
   get CardStack() {
-    return require(347                          ).default; // 347 = ./views/CardStack/CardStack
+    return require(348                          ).default; // 348 = ./views/CardStack/CardStack
   },
   get Card() {
-    return require(349                     ).default; // 349 = ./views/CardStack/Card
+    return require(350                     ).default; // 350 = ./views/CardStack/Card
   },
   get SafeAreaView() {
-    return require(359                   ).default; // 359 = ./views/SafeAreaView
+    return require(360                   ).default; // 360 = ./views/SafeAreaView
   },
 
   get Header() {
-    return require(352                    ).default; // 352 = ./views/Header/Header
+    return require(353                    ).default; // 353 = ./views/Header/Header
   },
   get HeaderTitle() {
-    return require(353                         ).default; // 353 = ./views/Header/HeaderTitle
+    return require(354                         ).default; // 354 = ./views/Header/HeaderTitle
   },
   get HeaderBackButton() {
-    return require(354                              ).default; // 354 = ./views/Header/HeaderBackButton
+    return require(355                              ).default; // 355 = ./views/Header/HeaderBackButton
   },
 
   get DrawerView() {
-    return require(395                        ).default; // 395 = ./views/Drawer/DrawerView
+    return require(396                        ).default; // 396 = ./views/Drawer/DrawerView
   },
   get DrawerItems() {
-    return require(398                                  ).default; // 398 = ./views/Drawer/DrawerNavigatorItems
+    return require(399                                  ).default; // 399 = ./views/Drawer/DrawerNavigatorItems
   },
 
   get TabView() {
-    return require(379                      ).default; // 379 = ./views/TabView/TabView
+    return require(380                      ).default; // 380 = ./views/TabView/TabView
   },
   get TabBarTop() {
-    return require(390                        ).default; // 390 = ./views/TabView/TabBarTop
+    return require(391                        ).default; // 391 = ./views/TabView/TabBarTop
   },
   get TabBarBottom() {
-    return require(392                           ).default; // 392 = ./views/TabView/TabBarBottom
+    return require(393                           ).default; // 393 = ./views/TabView/TabBarBottom
   },
 
   get withNavigation() {
-    return require(399                     ).default; // 399 = ./views/withNavigation
+    return require(400                     ).default; // 400 = ./views/withNavigation
   }
 };
-}, 337, null, "react-navigation/src/react-navigation.js");
+}, 338, null, "react-navigation/src/react-navigation.js");
 __d(/* react-navigation/src/createNavigationContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -52907,17 +52902,17 @@ var _react = require(38     ); // 38 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
-var _PlatformHelpers = require(339                ); // 339 = ./PlatformHelpers
+var _PlatformHelpers = require(340                ); // 340 = ./PlatformHelpers
 
-var _NavigationActions = require(340                  ); // 340 = ./NavigationActions
+var _NavigationActions = require(341                  ); // 341 = ./NavigationActions
 
 var _NavigationActions2 = babelHelpers.interopRequireDefault(_NavigationActions);
 
-var _addNavigationHelpers = require(341                     ); // 341 = ./addNavigationHelpers
+var _addNavigationHelpers = require(342                     ); // 342 = ./addNavigationHelpers
 
 var _addNavigationHelpers2 = babelHelpers.interopRequireDefault(_addNavigationHelpers);
 
-var _invariant = require(342                ); // 342 = ./utils/invariant
+var _invariant = require(343                ); // 343 = ./utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
@@ -53095,7 +53090,7 @@ function createNavigationContainer(Component) {
 
   return NavigationContainer;
 }
-}, 338, null, "react-navigation/src/createNavigationContainer.js");
+}, 339, null, "react-navigation/src/createNavigationContainer.js");
 __d(/* react-navigation/src/PlatformHelpers.native.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -53107,7 +53102,7 @@ var BackHandler = _reactNative.BackHandler || _reactNative.BackAndroid;
 
 exports.BackHandler = BackHandler;
 exports.Linking = _reactNative.Linking;
-}, 339, null, "react-navigation/src/PlatformHelpers.native.js");
+}, 340, null, "react-navigation/src/PlatformHelpers.native.js");
 __d(/* react-navigation/src/NavigationActions.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -53233,7 +53228,7 @@ exports.default = {
 
   mapDeprecatedActionAndWarn: mapDeprecatedActionAndWarn
 };
-}, 340, null, "react-navigation/src/NavigationActions.js");
+}, 341, null, "react-navigation/src/NavigationActions.js");
 __d(/* react-navigation/src/addNavigationHelpers.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -53260,14 +53255,14 @@ exports.default = function (navigation) {
   });
 };
 
-var _NavigationActions = require(340                  ); // 340 = ./NavigationActions
+var _NavigationActions = require(341                  ); // 341 = ./NavigationActions
 
 var _NavigationActions2 = babelHelpers.interopRequireDefault(_NavigationActions);
 
-var _invariant = require(342                ); // 342 = ./utils/invariant
+var _invariant = require(343                ); // 343 = ./utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
-}, 341, null, "react-navigation/src/addNavigationHelpers.js");
+}, 342, null, "react-navigation/src/addNavigationHelpers.js");
 __d(/* react-navigation/src/utils/invariant.js */function(global, require, module, exports) {
 
 'use strict';
@@ -53304,12 +53299,12 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-}, 342, null, "react-navigation/src/utils/invariant.js");
+}, 343, null, "react-navigation/src/utils/invariant.js");
 __d(/* react-navigation/src/StateUtils.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _invariant = require(342                ); // 342 = ./utils/invariant
+var _invariant = require(343                ); // 343 = ./utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
@@ -53418,7 +53413,7 @@ var StateUtils = {
 };
 
 exports.default = StateUtils;
-}, 343, null, "react-navigation/src/StateUtils.js");
+}, 344, null, "react-navigation/src/StateUtils.js");
 __d(/* react-navigation/src/navigators/createNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -53460,7 +53455,7 @@ function createNavigator(router, routeConfigs, navigatorConfig, navigatorType) {
     return Navigator;
   };
 }
-}, 344, null, "react-navigation/src/navigators/createNavigator.js");
+}, 345, null, "react-navigation/src/navigators/createNavigator.js");
 __d(/* react-navigation/src/navigators/StackNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -53470,23 +53465,23 @@ var _react = require(38     ); // 38 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
-var _createNavigationContainer = require(338                           ); // 338 = ../createNavigationContainer
+var _createNavigationContainer = require(339                           ); // 339 = ../createNavigationContainer
 
 var _createNavigationContainer2 = babelHelpers.interopRequireDefault(_createNavigationContainer);
 
-var _createNavigator = require(344                ); // 344 = ./createNavigator
+var _createNavigator = require(345                ); // 345 = ./createNavigator
 
 var _createNavigator2 = babelHelpers.interopRequireDefault(_createNavigator);
 
-var _CardStackTransitioner = require(346                                       ); // 346 = ../views/CardStack/CardStackTransitioner
+var _CardStackTransitioner = require(347                                       ); // 347 = ../views/CardStack/CardStackTransitioner
 
 var _CardStackTransitioner2 = babelHelpers.interopRequireDefault(_CardStackTransitioner);
 
-var _StackRouter = require(368                     ); // 368 = ../routers/StackRouter
+var _StackRouter = require(369                     ); // 369 = ../routers/StackRouter
 
 var _StackRouter2 = babelHelpers.interopRequireDefault(_StackRouter);
 
-var _NavigatorTypes = require(376               ); // 376 = ./NavigatorTypes
+var _NavigatorTypes = require(377               ); // 377 = ./NavigatorTypes
 
 var _NavigatorTypes2 = babelHelpers.interopRequireDefault(_NavigatorTypes);
 
@@ -53530,7 +53525,7 @@ exports.default = function (routeConfigMap) {
 
   return (0, _createNavigationContainer2.default)(navigator);
 };
-}, 345, null, "react-navigation/src/navigators/StackNavigator.js");
+}, 346, null, "react-navigation/src/navigators/StackNavigator.js");
 __d(/* react-navigation/src/views/CardStack/CardStackTransitioner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -53542,19 +53537,19 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _CardStack = require(347          ); // 347 = ./CardStack
+var _CardStack = require(348          ); // 348 = ./CardStack
 
 var _CardStack2 = babelHelpers.interopRequireDefault(_CardStack);
 
-var _CardStackStyleInterpolator = require(364                           ); // 364 = ./CardStackStyleInterpolator
+var _CardStackStyleInterpolator = require(365                           ); // 365 = ./CardStackStyleInterpolator
 
 var _CardStackStyleInterpolator2 = babelHelpers.interopRequireDefault(_CardStackStyleInterpolator);
 
-var _Transitioner = require(365              ); // 365 = ../Transitioner
+var _Transitioner = require(366              ); // 366 = ../Transitioner
 
 var _Transitioner2 = babelHelpers.interopRequireDefault(_Transitioner);
 
-var _TransitionConfigs = require(363                  ); // 363 = ./TransitionConfigs
+var _TransitionConfigs = require(364                  ); // 364 = ./TransitionConfigs
 
 var _TransitionConfigs2 = babelHelpers.interopRequireDefault(_TransitionConfigs);
 
@@ -53630,7 +53625,7 @@ CardStackTransitioner.defaultProps = {
   mode: 'card'
 };
 exports.default = CardStackTransitioner;
-}, 346, null, "react-navigation/src/views/CardStack/CardStackTransitioner.js");
+}, 347, null, "react-navigation/src/views/CardStack/CardStackTransitioner.js");
 __d(/* react-navigation/src/views/CardStack/CardStack.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -53640,33 +53635,33 @@ var _react = require(38     ); // 38 = react
 
 var React = babelHelpers.interopRequireWildcard(_react);
 
-var _clamp = require(348    ); // 348 = clamp
+var _clamp = require(349    ); // 349 = clamp
 
 var _clamp2 = babelHelpers.interopRequireDefault(_clamp);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _Card = require(349     ); // 349 = ./Card
+var _Card = require(350     ); // 350 = ./Card
 
 var _Card2 = babelHelpers.interopRequireDefault(_Card);
 
-var _Header = require(352               ); // 352 = ../Header/Header
+var _Header = require(353               ); // 353 = ../Header/Header
 
 var _Header2 = babelHelpers.interopRequireDefault(_Header);
 
-var _NavigationActions = require(340                      ); // 340 = ../../NavigationActions
+var _NavigationActions = require(341                      ); // 341 = ../../NavigationActions
 
 var _NavigationActions2 = babelHelpers.interopRequireDefault(_NavigationActions);
 
-var _addNavigationHelpers = require(341                         ); // 341 = ../../addNavigationHelpers
+var _addNavigationHelpers = require(342                         ); // 342 = ../../addNavigationHelpers
 
 var _addNavigationHelpers2 = babelHelpers.interopRequireDefault(_addNavigationHelpers);
 
-var _SceneView = require(362           ); // 362 = ../SceneView
+var _SceneView = require(363           ); // 363 = ../SceneView
 
 var _SceneView2 = babelHelpers.interopRequireDefault(_SceneView);
 
-var _TransitionConfigs = require(363                  ); // 363 = ./TransitionConfigs
+var _TransitionConfigs = require(364                  ); // 364 = ./TransitionConfigs
 
 var _TransitionConfigs2 = babelHelpers.interopRequireDefault(_TransitionConfigs);
 
@@ -54049,13 +54044,13 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = CardStack;
-}, 347, null, "react-navigation/src/views/CardStack/CardStack.js");
+}, 348, null, "react-navigation/src/views/CardStack/CardStack.js");
 __d(/* clamp/index.js */function(global, require, module, exports) {module.exports = clamp;
 
 function clamp(value, min, max) {
   return min < max ? value < min ? min : value > max ? max : value : value < max ? max : value > min ? min : value;
 }
-}, 348, null, "clamp/index.js");
+}, 349, null, "clamp/index.js");
 __d(/* react-navigation/src/views/CardStack/Card.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -54067,7 +54062,7 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _PointerEventsContainer = require(350                       ); // 350 = ./PointerEventsContainer
+var _PointerEventsContainer = require(351                       ); // 351 = ./PointerEventsContainer
 
 var _PointerEventsContainer2 = babelHelpers.interopRequireDefault(_PointerEventsContainer);
 
@@ -54123,7 +54118,7 @@ var styles = _reactNative.StyleSheet.create({
 Card = (0, _PointerEventsContainer2.default)(Card);
 
 exports.default = Card;
-}, 349, null, "react-navigation/src/views/CardStack/Card.js");
+}, 350, null, "react-navigation/src/views/CardStack/Card.js");
 __d(/* react-navigation/src/views/CardStack/PointerEventsContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -54134,11 +54129,11 @@ var _react = require(38     ); // 38 = react
 
 var React = babelHelpers.interopRequireWildcard(_react);
 
-var _invariant = require(342                    ); // 342 = ../../utils/invariant
+var _invariant = require(343                    ); // 343 = ../../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
-var _AnimatedValueSubscription = require(351                           ); // 351 = ../AnimatedValueSubscription
+var _AnimatedValueSubscription = require(352                           ); // 352 = ../AnimatedValueSubscription
 
 var _AnimatedValueSubscription2 = babelHelpers.interopRequireDefault(_AnimatedValueSubscription);
 
@@ -54242,7 +54237,7 @@ function create(Component) {
 
   return Container;
 }
-}, 350, null, "react-navigation/src/views/CardStack/PointerEventsContainer.js");
+}, 351, null, "react-navigation/src/views/CardStack/PointerEventsContainer.js");
 __d(/* react-navigation/src/views/AnimatedValueSubscription.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -54267,7 +54262,7 @@ var AnimatedValueSubscription = function () {
 }();
 
 exports.default = AnimatedValueSubscription;
-}, 351, null, "react-navigation/src/views/AnimatedValueSubscription.js");
+}, 352, null, "react-navigation/src/views/AnimatedValueSubscription.js");
 __d(/* react-navigation/src/views/Header/Header.js */function(global, require, module, exports) {
 
 'no babel-plugin-flow-react-proptypes';
@@ -54283,23 +54278,23 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _HeaderTitle = require(353            ); // 353 = ./HeaderTitle
+var _HeaderTitle = require(354            ); // 354 = ./HeaderTitle
 
 var _HeaderTitle2 = babelHelpers.interopRequireDefault(_HeaderTitle);
 
-var _HeaderBackButton = require(354                 ); // 354 = ./HeaderBackButton
+var _HeaderBackButton = require(355                 ); // 355 = ./HeaderBackButton
 
 var _HeaderBackButton2 = babelHelpers.interopRequireDefault(_HeaderBackButton);
 
-var _HeaderStyleInterpolator = require(357                        ); // 357 = ./HeaderStyleInterpolator
+var _HeaderStyleInterpolator = require(358                        ); // 358 = ./HeaderStyleInterpolator
 
 var _HeaderStyleInterpolator2 = babelHelpers.interopRequireDefault(_HeaderStyleInterpolator);
 
-var _SafeAreaView = require(359              ); // 359 = ../SafeAreaView
+var _SafeAreaView = require(360              ); // 360 = ../SafeAreaView
 
 var _SafeAreaView2 = babelHelpers.interopRequireDefault(_SafeAreaView);
 
-var _withOrientation = require(360                 ); // 360 = ../withOrientation
+var _withOrientation = require(361                 ); // 361 = ../withOrientation
 
 var _withOrientation2 = babelHelpers.interopRequireDefault(_withOrientation);
 
@@ -54657,7 +54652,7 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = (0, _withOrientation2.default)(Header);
-}, 352, null, "react-navigation/src/views/Header/Header.js");
+}, 353, null, "react-navigation/src/views/Header/Header.js");
 __d(/* react-navigation/src/views/Header/HeaderTitle.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -54697,7 +54692,7 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = HeaderTitle;
-}, 353, null, "react-navigation/src/views/Header/HeaderTitle.js");
+}, 354, null, "react-navigation/src/views/Header/HeaderTitle.js");
 __d(/* react-navigation/src/views/Header/HeaderBackButton.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -54709,7 +54704,7 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _TouchableItem = require(355               ); // 355 = ../TouchableItem
+var _TouchableItem = require(356               ); // 356 = ../TouchableItem
 
 var _TouchableItem2 = babelHelpers.interopRequireDefault(_TouchableItem);
 
@@ -54754,7 +54749,7 @@ var HeaderBackButton = function (_React$PureComponent) {
 
       var backButtonTitle = renderTruncated ? truncatedTitle : title;
 
-      var asset = require(356                      ); // 356 = ../assets/back-icon.png
+      var asset = require(357                      ); // 357 = ../assets/back-icon.png
 
       return React.createElement(
         _TouchableItem2.default,
@@ -54848,7 +54843,7 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = HeaderBackButton;
-}, 354, null, "react-navigation/src/views/Header/HeaderBackButton.js");
+}, 355, null, "react-navigation/src/views/Header/HeaderBackButton.js");
 __d(/* react-navigation/src/views/TouchableItem.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -54920,16 +54915,16 @@ TouchableItem.defaultProps = {
   pressColor: 'rgba(0, 0, 0, .32)'
 };
 exports.default = TouchableItem;
-}, 355, null, "react-navigation/src/views/TouchableItem.js");
+}, 356, null, "react-navigation/src/views/TouchableItem.js");
 __d(/* react-navigation/src/views/assets/back-icon.png */function(global, require, module, exports) {module.exports=require(171                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/node_modules/react-navigation/src/views/assets","width":24,"height":24,"scales":[1,1.5,2,3,4],"hash":"a364dc7a784101f7c8f6791c7b4514ce","name":"back-icon","type":"png"}); // 171 = react-native/Libraries/Image/AssetRegistry
-}, 356, null, "react-navigation/src/views/assets/back-icon.png");
+}, 357, null, "react-navigation/src/views/assets/back-icon.png");
 __d(/* react-navigation/src/views/Header/HeaderStyleInterpolator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _getSceneIndicesForInterpolationInputRange = require(358                                                    ); // 358 = ../../utils/getSceneIndicesForInterpolationInputRange
+var _getSceneIndicesForInterpolationInputRange = require(359                                                    ); // 359 = ../../utils/getSceneIndicesForInterpolationInputRange
 
 var _getSceneIndicesForInterpolationInputRange2 = babelHelpers.interopRequireDefault(_getSceneIndicesForInterpolationInputRange);
 
@@ -55008,7 +55003,7 @@ exports.default = {
   forCenter: forCenter,
   forRight: forRight
 };
-}, 357, null, "react-navigation/src/views/Header/HeaderStyleInterpolator.js");
+}, 358, null, "react-navigation/src/views/Header/HeaderStyleInterpolator.js");
 __d(/* react-navigation/src/utils/getSceneIndicesForInterpolationInputRange.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -55053,7 +55048,7 @@ function getSceneIndicesForInterpolationInputRange(props) {
 }
 
 exports.default = getSceneIndicesForInterpolationInputRange;
-}, 358, null, "react-navigation/src/utils/getSceneIndicesForInterpolationInputRange.js");
+}, 359, null, "react-navigation/src/utils/getSceneIndicesForInterpolationInputRange.js");
 __d(/* react-navigation/src/views/SafeAreaView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -55065,7 +55060,7 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _withOrientation = require(360                ); // 360 = ./withOrientation
+var _withOrientation = require(361                ); // 361 = ./withOrientation
 
 var _withOrientation2 = babelHelpers.interopRequireDefault(_withOrientation);
 
@@ -55404,7 +55399,7 @@ var SafeView = function (_Component) {
 }(_react.Component);
 
 exports.default = (0, _withOrientation2.default)(SafeView);
-}, 359, null, "react-navigation/src/views/SafeAreaView.js");
+}, 360, null, "react-navigation/src/views/SafeAreaView.js");
 __d(/* react-navigation/src/views/withOrientation.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -55471,7 +55466,7 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _hoistNonReactStatics = require(361                      ); // 361 = hoist-non-react-statics
+var _hoistNonReactStatics = require(362                      ); // 362 = hoist-non-react-statics
 
 var _hoistNonReactStatics2 = babelHelpers.interopRequireDefault(_hoistNonReactStatics);
 
@@ -55480,7 +55475,7 @@ var isOrientationLandscape = exports.isOrientationLandscape = function isOrienta
       height = _ref.height;
   return width > height;
 };
-}, 360, null, "react-navigation/src/views/withOrientation.js");
+}, 361, null, "react-navigation/src/views/withOrientation.js");
 __d(/* hoist-non-react-statics/index.js */function(global, require, module, exports) {
 'use strict';
 
@@ -55543,7 +55538,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
     return targetComponent;
 };
-}, 361, null, "hoist-non-react-statics/index.js");
+}, 362, null, "hoist-non-react-statics/index.js");
 __d(/* react-navigation/src/views/SceneView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -55595,14 +55590,14 @@ SceneView.childContextTypes = {
   navigation: _propTypes2.default.object.isRequired
 };
 exports.default = SceneView;
-}, 362, null, "react-navigation/src/views/SceneView.js");
+}, 363, null, "react-navigation/src/views/SceneView.js");
 __d(/* react-navigation/src/views/CardStack/TransitionConfigs.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _CardStackStyleInterpolator = require(364                           ); // 364 = ./CardStackStyleInterpolator
+var _CardStackStyleInterpolator = require(365                           ); // 365 = ./CardStackStyleInterpolator
 
 var _CardStackStyleInterpolator2 = babelHelpers.interopRequireDefault(_CardStackStyleInterpolator);
 
@@ -55672,14 +55667,14 @@ exports.default = {
   defaultTransitionConfig: defaultTransitionConfig,
   getTransitionConfig: getTransitionConfig
 };
-}, 363, null, "react-navigation/src/views/CardStack/TransitionConfigs.js");
+}, 364, null, "react-navigation/src/views/CardStack/TransitionConfigs.js");
 __d(/* react-navigation/src/views/CardStack/CardStackStyleInterpolator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _getSceneIndicesForInterpolationInputRange = require(358                                                    ); // 358 = ../../utils/getSceneIndicesForInterpolationInputRange
+var _getSceneIndicesForInterpolationInputRange = require(359                                                    ); // 359 = ../../utils/getSceneIndicesForInterpolationInputRange
 
 var _getSceneIndicesForInterpolationInputRange2 = babelHelpers.interopRequireDefault(_getSceneIndicesForInterpolationInputRange);
 
@@ -55842,7 +55837,7 @@ exports.default = {
   forFade: forFade,
   canUseNativeDriver: canUseNativeDriver
 };
-}, 364, null, "react-navigation/src/views/CardStack/CardStackStyleInterpolator.js");
+}, 365, null, "react-navigation/src/views/CardStack/CardStackStyleInterpolator.js");
 __d(/* react-navigation/src/views/Transitioner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -55854,11 +55849,11 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _invariant = require(342                 ); // 342 = ../utils/invariant
+var _invariant = require(343                 ); // 343 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
-var _ScenesReducer = require(366              ); // 366 = ./ScenesReducer
+var _ScenesReducer = require(367              ); // 367 = ./ScenesReducer
 
 var _ScenesReducer2 = babelHelpers.interopRequireDefault(_ScenesReducer);
 
@@ -56081,17 +56076,17 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = Transitioner;
-}, 365, null, "react-navigation/src/views/Transitioner.js");
+}, 366, null, "react-navigation/src/views/Transitioner.js");
 __d(/* react-navigation/src/views/ScenesReducer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = ScenesReducer;
 
-var _invariant = require(342                 ); // 342 = ../utils/invariant
+var _invariant = require(343                 ); // 343 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
-var _shallowEqual = require(367                    ); // 367 = ../utils/shallowEqual
+var _shallowEqual = require(368                    ); // 368 = ../utils/shallowEqual
 
 var _shallowEqual2 = babelHelpers.interopRequireDefault(_shallowEqual);
 
@@ -56233,7 +56228,7 @@ function ScenesReducer(scenes, nextState, prevState) {
 
   return scenes;
 }
-}, 366, null, "react-navigation/src/views/ScenesReducer.js");
+}, 367, null, "react-navigation/src/views/ScenesReducer.js");
 __d(/* react-navigation/src/utils/shallowEqual.js */function(global, require, module, exports) {
 
 'use strict';
@@ -56273,36 +56268,36 @@ function shallowEqual(objA, objB) {
 }
 
 module.exports = shallowEqual;
-}, 367, null, "react-navigation/src/utils/shallowEqual.js");
+}, 368, null, "react-navigation/src/utils/shallowEqual.js");
 __d(/* react-navigation/src/routers/StackRouter.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _pathToRegexp = require(369             ); // 369 = path-to-regexp
+var _pathToRegexp = require(370             ); // 370 = path-to-regexp
 
 var _pathToRegexp2 = babelHelpers.interopRequireDefault(_pathToRegexp);
 
-var _NavigationActions = require(340                   ); // 340 = ../NavigationActions
+var _NavigationActions = require(341                   ); // 341 = ../NavigationActions
 
 var _NavigationActions2 = babelHelpers.interopRequireDefault(_NavigationActions);
 
-var _createConfigGetter = require(371                   ); // 371 = ./createConfigGetter
+var _createConfigGetter = require(372                   ); // 372 = ./createConfigGetter
 
 var _createConfigGetter2 = babelHelpers.interopRequireDefault(_createConfigGetter);
 
-var _getScreenForRouteName = require(372                      ); // 372 = ./getScreenForRouteName
+var _getScreenForRouteName = require(373                      ); // 373 = ./getScreenForRouteName
 
 var _getScreenForRouteName2 = babelHelpers.interopRequireDefault(_getScreenForRouteName);
 
-var _StateUtils = require(343            ); // 343 = ../StateUtils
+var _StateUtils = require(344            ); // 344 = ../StateUtils
 
 var _StateUtils2 = babelHelpers.interopRequireDefault(_StateUtils);
 
-var _validateRouteConfigMap = require(374                       ); // 374 = ./validateRouteConfigMap
+var _validateRouteConfigMap = require(375                       ); // 375 = ./validateRouteConfigMap
 
 var _validateRouteConfigMap2 = babelHelpers.interopRequireDefault(_validateRouteConfigMap);
 
-var _getScreenConfigDeprecated = require(375                          ); // 375 = ./getScreenConfigDeprecated
+var _getScreenConfigDeprecated = require(376                          ); // 376 = ./getScreenConfigDeprecated
 
 var _getScreenConfigDeprecated2 = babelHelpers.interopRequireDefault(_getScreenConfigDeprecated);
 
@@ -56631,8 +56626,8 @@ exports.default = function (routeConfigs) {
     getScreenConfig: _getScreenConfigDeprecated2.default
   };
 };
-}, 368, null, "react-navigation/src/routers/StackRouter.js");
-__d(/* path-to-regexp/index.js */function(global, require, module, exports) {var isarray = require(370      ); // 370 = isarray
+}, 369, null, "react-navigation/src/routers/StackRouter.js");
+__d(/* path-to-regexp/index.js */function(global, require, module, exports) {var isarray = require(371      ); // 371 = isarray
 
 module.exports = pathToRegexp;
 module.exports.parse = parse;
@@ -56927,28 +56922,28 @@ function pathToRegexp(path, keys, options) {
 
   return stringToRegexp(path, keys, options);
 }
-}, 369, null, "path-to-regexp/index.js");
+}, 370, null, "path-to-regexp/index.js");
 __d(/* isarray/index.js */function(global, require, module, exports) {module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
-}, 370, null, "isarray/index.js");
+}, 371, null, "isarray/index.js");
 __d(/* react-navigation/src/routers/createConfigGetter.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _invariant = require(342                 ); // 342 = ../utils/invariant
+var _invariant = require(343                 ); // 343 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
-var _getScreenForRouteName = require(372                      ); // 372 = ./getScreenForRouteName
+var _getScreenForRouteName = require(373                      ); // 373 = ./getScreenForRouteName
 
 var _getScreenForRouteName2 = babelHelpers.interopRequireDefault(_getScreenForRouteName);
 
-var _addNavigationHelpers = require(341                      ); // 341 = ../addNavigationHelpers
+var _addNavigationHelpers = require(342                      ); // 342 = ../addNavigationHelpers
 
 var _addNavigationHelpers2 = babelHelpers.interopRequireDefault(_addNavigationHelpers);
 
-var _validateScreenOptions = require(373                      ); // 373 = ./validateScreenOptions
+var _validateScreenOptions = require(374                      ); // 374 = ./validateScreenOptions
 
 var _validateScreenOptions2 = babelHelpers.interopRequireDefault(_validateScreenOptions);
 
@@ -57010,13 +57005,13 @@ exports.default = function (routeConfigs, navigatorScreenConfig) {
     return outputConfig;
   };
 };
-}, 371, null, "react-navigation/src/routers/createConfigGetter.js");
+}, 372, null, "react-navigation/src/routers/createConfigGetter.js");
 __d(/* react-navigation/src/routers/getScreenForRouteName.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = getScreenForRouteName;
 
-var _invariant = require(342                 ); // 342 = ../utils/invariant
+var _invariant = require(343                 ); // 343 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
@@ -57041,7 +57036,7 @@ function getScreenForRouteName(routeConfigs, routeName) {
 
   throw new Error('Route ' + routeName + ' must define a screen or a getScreen.');
 }
-}, 372, null, "react-navigation/src/routers/getScreenForRouteName.js");
+}, 373, null, "react-navigation/src/routers/getScreenForRouteName.js");
 __d(/* react-navigation/src/routers/validateScreenOptions.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -57072,12 +57067,12 @@ exports.default = function (screenOptions, route) {
     })), ['}']).join('\n'));
   }
 };
-}, 373, null, "react-navigation/src/routers/validateScreenOptions.js");
+}, 374, null, "react-navigation/src/routers/validateScreenOptions.js");
 __d(/* react-navigation/src/routers/validateRouteConfigMap.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _invariant = require(342                 ); // 342 = ../utils/invariant
+var _invariant = require(343                 ); // 343 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
@@ -57101,19 +57096,19 @@ function validateRouteConfigMap(routeConfigs) {
 }
 
 exports.default = validateRouteConfigMap;
-}, 374, null, "react-navigation/src/routers/validateRouteConfigMap.js");
+}, 375, null, "react-navigation/src/routers/validateRouteConfigMap.js");
 __d(/* react-navigation/src/routers/getScreenConfigDeprecated.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _invariant = require(342                 ); // 342 = ../utils/invariant
+var _invariant = require(343                 ); // 343 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
 exports.default = function () {
   return (0, _invariant2.default)(false, '`getScreenConfig` has been replaced with `getScreenOptions`');
 };
-}, 375, null, "react-navigation/src/routers/getScreenConfigDeprecated.js");
+}, 376, null, "react-navigation/src/routers/getScreenConfigDeprecated.js");
 __d(/* react-navigation/src/navigators/NavigatorTypes.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -57128,7 +57123,7 @@ exports.default = {
   TABS: TABS,
   DRAWER: DRAWER
 };
-}, 376, null, "react-navigation/src/navigators/NavigatorTypes.js");
+}, 377, null, "react-navigation/src/navigators/NavigatorTypes.js");
 __d(/* react-navigation/src/navigators/TabNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -57140,31 +57135,31 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _createNavigator = require(344                ); // 344 = ./createNavigator
+var _createNavigator = require(345                ); // 345 = ./createNavigator
 
 var _createNavigator2 = babelHelpers.interopRequireDefault(_createNavigator);
 
-var _createNavigationContainer = require(338                           ); // 338 = ../createNavigationContainer
+var _createNavigationContainer = require(339                           ); // 339 = ../createNavigationContainer
 
 var _createNavigationContainer2 = babelHelpers.interopRequireDefault(_createNavigationContainer);
 
-var _TabRouter = require(378                   ); // 378 = ../routers/TabRouter
+var _TabRouter = require(379                   ); // 379 = ../routers/TabRouter
 
 var _TabRouter2 = babelHelpers.interopRequireDefault(_TabRouter);
 
-var _TabView = require(379                       ); // 379 = ../views/TabView/TabView
+var _TabView = require(380                       ); // 380 = ../views/TabView/TabView
 
 var _TabView2 = babelHelpers.interopRequireDefault(_TabView);
 
-var _TabBarTop = require(390                         ); // 390 = ../views/TabView/TabBarTop
+var _TabBarTop = require(391                         ); // 391 = ../views/TabView/TabBarTop
 
 var _TabBarTop2 = babelHelpers.interopRequireDefault(_TabBarTop);
 
-var _TabBarBottom = require(392                            ); // 392 = ../views/TabView/TabBarBottom
+var _TabBarBottom = require(393                            ); // 393 = ../views/TabView/TabBarBottom
 
 var _TabBarBottom2 = babelHelpers.interopRequireDefault(_TabBarBottom);
 
-var _NavigatorTypes = require(376               ); // 376 = ./NavigatorTypes
+var _NavigatorTypes = require(377               ); // 377 = ./NavigatorTypes
 
 var _NavigatorTypes2 = babelHelpers.interopRequireDefault(_NavigatorTypes);
 
@@ -57229,32 +57224,32 @@ TabNavigator.Presets = {
 };
 
 exports.default = TabNavigator;
-}, 377, null, "react-navigation/src/navigators/TabNavigator.js");
+}, 378, null, "react-navigation/src/navigators/TabNavigator.js");
 __d(/* react-navigation/src/routers/TabRouter.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _invariant = require(342                 ); // 342 = ../utils/invariant
+var _invariant = require(343                 ); // 343 = ../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
-var _getScreenForRouteName = require(372                      ); // 372 = ./getScreenForRouteName
+var _getScreenForRouteName = require(373                      ); // 373 = ./getScreenForRouteName
 
 var _getScreenForRouteName2 = babelHelpers.interopRequireDefault(_getScreenForRouteName);
 
-var _createConfigGetter = require(371                   ); // 371 = ./createConfigGetter
+var _createConfigGetter = require(372                   ); // 372 = ./createConfigGetter
 
 var _createConfigGetter2 = babelHelpers.interopRequireDefault(_createConfigGetter);
 
-var _NavigationActions = require(340                   ); // 340 = ../NavigationActions
+var _NavigationActions = require(341                   ); // 341 = ../NavigationActions
 
 var _NavigationActions2 = babelHelpers.interopRequireDefault(_NavigationActions);
 
-var _validateRouteConfigMap = require(374                       ); // 374 = ./validateRouteConfigMap
+var _validateRouteConfigMap = require(375                       ); // 375 = ./validateRouteConfigMap
 
 var _validateRouteConfigMap2 = babelHelpers.interopRequireDefault(_validateRouteConfigMap);
 
-var _getScreenConfigDeprecated = require(375                          ); // 375 = ./getScreenConfigDeprecated
+var _getScreenConfigDeprecated = require(376                          ); // 376 = ./getScreenConfigDeprecated
 
 var _getScreenConfigDeprecated2 = babelHelpers.interopRequireDefault(_getScreenConfigDeprecated);
 
@@ -57499,7 +57494,7 @@ exports.default = function (routeConfigs) {
     getScreenConfig: _getScreenConfigDeprecated2.default
   };
 };
-}, 378, null, "react-navigation/src/routers/TabRouter.js");
+}, 379, null, "react-navigation/src/routers/TabRouter.js");
 __d(/* react-navigation/src/views/TabView/TabView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -57511,17 +57506,17 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _reactNativeTabView = require(380                    ); // 380 = react-native-tab-view
+var _reactNativeTabView = require(381                    ); // 381 = react-native-tab-view
 
-var _SceneView = require(362           ); // 362 = ../SceneView
+var _SceneView = require(363           ); // 363 = ../SceneView
 
 var _SceneView2 = babelHelpers.interopRequireDefault(_SceneView);
 
-var _withCachedChildNavigation = require(389                              ); // 389 = ../../withCachedChildNavigation
+var _withCachedChildNavigation = require(390                              ); // 390 = ../../withCachedChildNavigation
 
 var _withCachedChildNavigation2 = babelHelpers.interopRequireDefault(_withCachedChildNavigation);
 
-var _SafeAreaView = require(359              ); // 359 = ../SafeAreaView
+var _SafeAreaView = require(360              ); // 360 = ../SafeAreaView
 
 var _SafeAreaView2 = babelHelpers.interopRequireDefault(_SafeAreaView);
 
@@ -57716,30 +57711,30 @@ var styles = _reactNative.StyleSheet.create({
     overflow: 'hidden'
   }
 });
-}, 379, null, "react-navigation/src/views/TabView/TabView.js");
+}, 380, null, "react-navigation/src/views/TabView/TabView.js");
 __d(/* react-native-tab-view/src/index.js */function(global, require, module, exports) {
 
 module.exports = {
   get TabViewAnimated() {
-    return require(381                ).default; // 381 = ./TabViewAnimated
+    return require(382                ).default; // 382 = ./TabViewAnimated
   },
   get TabViewPagerPan() {
-    return require(385                ).default; // 385 = ./TabViewPagerPan
+    return require(386                ).default; // 386 = ./TabViewPagerPan
   },
   get TabViewPagerScroll() {
-    return require(384                   ).default; // 384 = ./TabViewPagerScroll
+    return require(385                   ).default; // 385 = ./TabViewPagerScroll
   },
   get TabViewPagerAndroid() {
-    return require(383                    ).default; // 383 = ./TabViewPagerAndroid
+    return require(384                    ).default; // 384 = ./TabViewPagerAndroid
   },
   get TabBar() {
-    return require(386       ).default; // 386 = ./TabBar
+    return require(387       ).default; // 387 = ./TabBar
   },
   get SceneMap() {
-    return require(388         ).default; // 388 = ./SceneMap
+    return require(389         ).default; // 389 = ./SceneMap
   }
 };
-}, 380, null, "react-native-tab-view/src/index.js");
+}, 381, null, "react-native-tab-view/src/index.js");
 __d(/* react-native-tab-view/src/TabViewAnimated.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -57755,19 +57750,19 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _TabViewPropTypes = require(382                 ); // 382 = ./TabViewPropTypes
+var _TabViewPropTypes = require(383                 ); // 383 = ./TabViewPropTypes
 
 var TabViewPager = void 0;
 
 switch (_reactNative.Platform.OS) {
   case 'android':
-    TabViewPager = require(383                    ).default; // 383 = ./TabViewPagerAndroid
+    TabViewPager = require(384                    ).default; // 384 = ./TabViewPagerAndroid
     break;
   case 'ios':
-    TabViewPager = require(384                   ).default; // 384 = ./TabViewPagerScroll
+    TabViewPager = require(385                   ).default; // 385 = ./TabViewPagerScroll
     break;
   default:
-    TabViewPager = require(385                ).default; // 385 = ./TabViewPagerPan
+    TabViewPager = require(386                ).default; // 386 = ./TabViewPagerPan
     break;
 }
 
@@ -58025,7 +58020,7 @@ var styles = _reactNative.StyleSheet.create({
     overflow: 'hidden'
   }
 });
-}, 381, null, "react-native-tab-view/src/TabViewAnimated.js");
+}, 382, null, "react-native-tab-view/src/TabViewAnimated.js");
 __d(/* react-native-tab-view/src/TabViewPropTypes.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58059,7 +58054,7 @@ var SceneRendererPropType = exports.SceneRendererPropType = {
   getLastPosition: _propTypes2.default.func.isRequired,
   subscribe: _propTypes2.default.func.isRequired
 };
-}, 382, null, "react-native-tab-view/src/TabViewPropTypes.js");
+}, 383, null, "react-native-tab-view/src/TabViewPropTypes.js");
 __d(/* react-native-tab-view/src/TabViewPagerAndroid.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58075,7 +58070,7 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _TabViewPropTypes = require(382                 ); // 382 = ./TabViewPropTypes
+var _TabViewPropTypes = require(383                 ); // 383 = ./TabViewPropTypes
 
 var TabViewPagerAndroid = function (_React$Component) {
   babelHelpers.inherits(TabViewPagerAndroid, _React$Component);
@@ -58252,7 +58247,7 @@ var styles = _reactNative.StyleSheet.create({
     overflow: 'hidden'
   }
 });
-}, 383, null, "react-native-tab-view/src/TabViewPagerAndroid.js");
+}, 384, null, "react-native-tab-view/src/TabViewPagerAndroid.js");
 __d(/* react-native-tab-view/src/TabViewPagerScroll.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58268,7 +58263,7 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _TabViewPropTypes = require(382                 ); // 382 = ./TabViewPropTypes
+var _TabViewPropTypes = require(383                 ); // 383 = ./TabViewPropTypes
 
 var TabViewPagerScroll = function (_React$Component) {
   babelHelpers.inherits(TabViewPagerScroll, _React$Component);
@@ -58418,7 +58413,7 @@ var styles = _reactNative.StyleSheet.create({
     overflow: 'hidden'
   }
 });
-}, 384, null, "react-native-tab-view/src/TabViewPagerScroll.js");
+}, 385, null, "react-native-tab-view/src/TabViewPagerScroll.js");
 __d(/* react-native-tab-view/src/TabViewPagerPan.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58434,7 +58429,7 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _TabViewPropTypes = require(382                 ); // 382 = ./TabViewPropTypes
+var _TabViewPropTypes = require(383                 ); // 383 = ./TabViewPropTypes
 
 var DEAD_ZONE = 12;
 
@@ -58684,7 +58679,7 @@ var styles = _reactNative.StyleSheet.create({
     alignItems: 'stretch'
   }
 });
-}, 385, null, "react-native-tab-view/src/TabViewPagerPan.js");
+}, 386, null, "react-native-tab-view/src/TabViewPagerPan.js");
 __d(/* react-native-tab-view/src/TabBar.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -58700,11 +58695,11 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _TouchableItem = require(387              ); // 387 = ./TouchableItem
+var _TouchableItem = require(388              ); // 388 = ./TouchableItem
 
 var _TouchableItem2 = babelHelpers.interopRequireDefault(_TouchableItem);
 
-var _TabViewPropTypes = require(382                 ); // 382 = ./TabViewPropTypes
+var _TabViewPropTypes = require(383                 ); // 383 = ./TabViewPropTypes
 
 var TabBar = function (_React$PureComponent) {
   babelHelpers.inherits(TabBar, _React$PureComponent);
@@ -59229,7 +59224,7 @@ var styles = _reactNative.StyleSheet.create({
     height: 2
   }
 });
-}, 386, null, "react-native-tab-view/src/TabBar.js");
+}, 387, null, "react-native-tab-view/src/TabBar.js");
 __d(/* react-native-tab-view/src/TouchableItem.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59330,7 +59325,7 @@ TouchableItem.defaultProps = {
   pressColor: 'rgba(255, 255, 255, .4)'
 };
 exports.default = TouchableItem;
-}, 387, null, "react-native-tab-view/src/TouchableItem.js");
+}, 388, null, "react-native-tab-view/src/TouchableItem.js");
 __d(/* react-native-tab-view/src/SceneMap.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59368,7 +59363,7 @@ function SceneMap(scenes) {
     });
   };
 }
-}, 388, null, "react-native-tab-view/src/SceneMap.js");
+}, 389, null, "react-native-tab-view/src/SceneMap.js");
 __d(/* react-navigation/src/withCachedChildNavigation.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59379,7 +59374,7 @@ var _react = require(38     ); // 38 = react
 
 var React = babelHelpers.interopRequireWildcard(_react);
 
-var _addNavigationHelpers = require(341                     ); // 341 = ./addNavigationHelpers
+var _addNavigationHelpers = require(342                     ); // 342 = ./addNavigationHelpers
 
 var _addNavigationHelpers2 = babelHelpers.interopRequireDefault(_addNavigationHelpers);
 
@@ -59443,7 +59438,7 @@ function withCachedChildNavigation(Comp) {
     return _class;
   }(React.PureComponent), _class.displayName = 'withCachedChildNavigation(' + displayName + ')', _temp2;
 }
-}, 389, null, "react-navigation/src/withCachedChildNavigation.js");
+}, 390, null, "react-navigation/src/withCachedChildNavigation.js");
 __d(/* react-navigation/src/views/TabView/TabBarTop.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59455,9 +59450,9 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _reactNativeTabView = require(380                    ); // 380 = react-native-tab-view
+var _reactNativeTabView = require(381                    ); // 381 = react-native-tab-view
 
-var _TabBarIcon = require(391           ); // 391 = ./TabBarIcon
+var _TabBarIcon = require(392           ); // 392 = ./TabBarIcon
 
 var _TabBarIcon2 = babelHelpers.interopRequireDefault(_TabBarIcon);
 
@@ -59609,7 +59604,7 @@ var styles = _reactNative.StyleSheet.create({
     backgroundColor: 'transparent'
   }
 });
-}, 390, null, "react-navigation/src/views/TabView/TabBarTop.js");
+}, 391, null, "react-navigation/src/views/TabView/TabBarTop.js");
 __d(/* react-navigation/src/views/TabView/TabBarIcon.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59714,7 +59709,7 @@ var styles = _reactNative.StyleSheet.create({
     justifyContent: 'center'
   }
 });
-}, 391, null, "react-navigation/src/views/TabView/TabBarIcon.js");
+}, 392, null, "react-navigation/src/views/TabView/TabBarIcon.js");
 __d(/* react-navigation/src/views/TabView/TabBarBottom.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -59726,15 +59721,15 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _TabBarIcon = require(391           ); // 391 = ./TabBarIcon
+var _TabBarIcon = require(392           ); // 392 = ./TabBarIcon
 
 var _TabBarIcon2 = babelHelpers.interopRequireDefault(_TabBarIcon);
 
-var _SafeAreaView = require(359              ); // 359 = ../SafeAreaView
+var _SafeAreaView = require(360              ); // 360 = ../SafeAreaView
 
 var _SafeAreaView2 = babelHelpers.interopRequireDefault(_SafeAreaView);
 
-var _withOrientation = require(360                 ); // 360 = ../withOrientation
+var _withOrientation = require(361                 ); // 361 = ../withOrientation
 
 var _withOrientation2 = babelHelpers.interopRequireDefault(_withOrientation);
 
@@ -59994,7 +59989,7 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = (0, _withOrientation2.default)(TabBarBottom);
-}, 392, null, "react-navigation/src/views/TabView/TabBarBottom.js");
+}, 393, null, "react-navigation/src/views/TabView/TabBarBottom.js");
 __d(/* react-navigation/src/navigators/DrawerNavigator.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60006,31 +60001,31 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _createNavigator = require(344                ); // 344 = ./createNavigator
+var _createNavigator = require(345                ); // 345 = ./createNavigator
 
 var _createNavigator2 = babelHelpers.interopRequireDefault(_createNavigator);
 
-var _createNavigationContainer = require(338                           ); // 338 = ../createNavigationContainer
+var _createNavigationContainer = require(339                           ); // 339 = ../createNavigationContainer
 
 var _createNavigationContainer2 = babelHelpers.interopRequireDefault(_createNavigationContainer);
 
-var _TabRouter = require(378                   ); // 378 = ../routers/TabRouter
+var _TabRouter = require(379                   ); // 379 = ../routers/TabRouter
 
 var _TabRouter2 = babelHelpers.interopRequireDefault(_TabRouter);
 
-var _DrawerScreen = require(394                           ); // 394 = ../views/Drawer/DrawerScreen
+var _DrawerScreen = require(395                           ); // 395 = ../views/Drawer/DrawerScreen
 
 var _DrawerScreen2 = babelHelpers.interopRequireDefault(_DrawerScreen);
 
-var _DrawerView = require(395                         ); // 395 = ../views/Drawer/DrawerView
+var _DrawerView = require(396                         ); // 396 = ../views/Drawer/DrawerView
 
 var _DrawerView2 = babelHelpers.interopRequireDefault(_DrawerView);
 
-var _DrawerNavigatorItems = require(398                                   ); // 398 = ../views/Drawer/DrawerNavigatorItems
+var _DrawerNavigatorItems = require(399                                   ); // 399 = ../views/Drawer/DrawerNavigatorItems
 
 var _DrawerNavigatorItems2 = babelHelpers.interopRequireDefault(_DrawerNavigatorItems);
 
-var _NavigatorTypes = require(376               ); // 376 = ./NavigatorTypes
+var _NavigatorTypes = require(377               ); // 377 = ./NavigatorTypes
 
 var _NavigatorTypes2 = babelHelpers.interopRequireDefault(_NavigatorTypes);
 
@@ -60108,7 +60103,7 @@ var DrawerNavigator = function DrawerNavigator(routeConfigs) {
 };
 
 exports.default = DrawerNavigator;
-}, 393, null, "react-navigation/src/navigators/DrawerNavigator.js");
+}, 394, null, "react-navigation/src/navigators/DrawerNavigator.js");
 __d(/* react-navigation/src/views/Drawer/DrawerScreen.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60118,11 +60113,11 @@ var _react = require(38     ); // 38 = react
 
 var React = babelHelpers.interopRequireWildcard(_react);
 
-var _SceneView = require(362           ); // 362 = ../SceneView
+var _SceneView = require(363           ); // 363 = ../SceneView
 
 var _SceneView2 = babelHelpers.interopRequireDefault(_SceneView);
 
-var _withCachedChildNavigation = require(389                              ); // 389 = ../../withCachedChildNavigation
+var _withCachedChildNavigation = require(390                              ); // 390 = ../../withCachedChildNavigation
 
 var _withCachedChildNavigation2 = babelHelpers.interopRequireDefault(_withCachedChildNavigation);
 
@@ -60163,7 +60158,7 @@ var DrawerScreen = function (_React$PureComponent) {
 }(React.PureComponent);
 
 exports.default = (0, _withCachedChildNavigation2.default)(DrawerScreen);
-}, 394, null, "react-navigation/src/views/Drawer/DrawerScreen.js");
+}, 395, null, "react-navigation/src/views/Drawer/DrawerScreen.js");
 __d(/* react-navigation/src/views/Drawer/DrawerView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60173,15 +60168,15 @@ var _react = require(38     ); // 38 = react
 
 var React = babelHelpers.interopRequireWildcard(_react);
 
-var _reactNativeDrawerLayoutPolyfill = require(396                                  ); // 396 = react-native-drawer-layout-polyfill
+var _reactNativeDrawerLayoutPolyfill = require(397                                  ); // 397 = react-native-drawer-layout-polyfill
 
 var _reactNativeDrawerLayoutPolyfill2 = babelHelpers.interopRequireDefault(_reactNativeDrawerLayoutPolyfill);
 
-var _addNavigationHelpers = require(341                         ); // 341 = ../../addNavigationHelpers
+var _addNavigationHelpers = require(342                         ); // 342 = ../../addNavigationHelpers
 
 var _addNavigationHelpers2 = babelHelpers.interopRequireDefault(_addNavigationHelpers);
 
-var _DrawerSidebar = require(397              ); // 397 = ./DrawerSidebar
+var _DrawerSidebar = require(398              ); // 398 = ./DrawerSidebar
 
 var _DrawerSidebar2 = babelHelpers.interopRequireDefault(_DrawerSidebar);
 
@@ -60324,9 +60319,9 @@ var DrawerView = function (_React$PureComponent) {
 }(React.PureComponent);
 
 exports.default = DrawerView;
-}, 395, null, "react-navigation/src/views/Drawer/DrawerView.js");
+}, 396, null, "react-navigation/src/views/Drawer/DrawerView.js");
 __d(/* react-native-drawer-layout-polyfill/dist/index.android.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", { value: true });var _reactNative = require(12            );exports.default = _reactNative.DrawerLayoutAndroid; // 12 = react-native
-}, 396, null, "react-native-drawer-layout-polyfill/dist/index.android.js");
+}, 397, null, "react-native-drawer-layout-polyfill/dist/index.android.js");
 __d(/* react-navigation/src/views/Drawer/DrawerSidebar.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60338,15 +60333,15 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _withCachedChildNavigation = require(389                              ); // 389 = ../../withCachedChildNavigation
+var _withCachedChildNavigation = require(390                              ); // 390 = ../../withCachedChildNavigation
 
 var _withCachedChildNavigation2 = babelHelpers.interopRequireDefault(_withCachedChildNavigation);
 
-var _NavigationActions = require(340                      ); // 340 = ../../NavigationActions
+var _NavigationActions = require(341                      ); // 341 = ../../NavigationActions
 
 var _NavigationActions2 = babelHelpers.interopRequireDefault(_NavigationActions);
 
-var _invariant = require(342                    ); // 342 = ../../utils/invariant
+var _invariant = require(343                    ); // 343 = ../../utils/invariant
 
 var _invariant2 = babelHelpers.interopRequireDefault(_invariant);
 
@@ -60466,7 +60461,7 @@ var styles = _reactNative.StyleSheet.create({
     flex: 1
   }
 });
-}, 397, null, "react-navigation/src/views/Drawer/DrawerSidebar.js");
+}, 398, null, "react-navigation/src/views/Drawer/DrawerSidebar.js");
 __d(/* react-navigation/src/views/Drawer/DrawerNavigatorItems.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60478,11 +60473,11 @@ var React = babelHelpers.interopRequireWildcard(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _SafeAreaView = require(359              ); // 359 = ../SafeAreaView
+var _SafeAreaView = require(360              ); // 360 = ../SafeAreaView
 
 var _SafeAreaView2 = babelHelpers.interopRequireDefault(_SafeAreaView);
 
-var _TouchableItem = require(355               ); // 355 = ../TouchableItem
+var _TouchableItem = require(356               ); // 356 = ../TouchableItem
 
 var _TouchableItem2 = babelHelpers.interopRequireDefault(_TouchableItem);
 
@@ -60614,7 +60609,7 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = DrawerNavigatorItems;
-}, 398, null, "react-navigation/src/views/Drawer/DrawerNavigatorItems.js");
+}, 399, null, "react-navigation/src/views/Drawer/DrawerNavigatorItems.js");
 __d(/* react-navigation/src/views/withNavigation.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -60629,7 +60624,7 @@ var _propTypes = require(127         ); // 127 = prop-types
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
-var _hoistNonReactStatics = require(361                      ); // 361 = hoist-non-react-statics
+var _hoistNonReactStatics = require(362                      ); // 362 = hoist-non-react-statics
 
 var _hoistNonReactStatics2 = babelHelpers.interopRequireDefault(_hoistNonReactStatics);
 
@@ -60652,7 +60647,7 @@ function withNavigation(Component) {
 
   return (0, _hoistNonReactStatics2.default)(componentWithNavigation, Component);
 }
-}, 399, null, "react-navigation/src/views/withNavigation.js");
+}, 400, null, "react-navigation/src/views/withNavigation.js");
 __d(/* mtg-lifecounter/js/screens/Game/GameSettings.container.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -60664,11 +60659,15 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _GameSettings = require(401             ); // 401 = ./GameSettings
+var _propTypes = require(127         ); // 127 = prop-types
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
+var _GameSettings = require(402             ); // 402 = ./GameSettings
 
 var _GameSettings2 = babelHelpers.interopRequireDefault(_GameSettings);
 
-var _constants = require(404                    ); // 404 = ../../utils/constants
+var _constants = require(405                    ); // 405 = ../../utils/constants
 
 var styles = _reactNative.StyleSheet.create({
     header: {
@@ -60695,7 +60694,7 @@ var GameSettingsContainer = function (_React$Component) {
 
             return _react2.default.createElement(_GameSettings2.default, { navigation: navigation, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 31
+                    lineNumber: 23
                 }
             });
         }
@@ -60703,20 +60702,27 @@ var GameSettingsContainer = function (_React$Component) {
     return GameSettingsContainer;
 }(_react2.default.Component);
 
+exports.default = GameSettingsContainer;
+
+
 GameSettingsContainer.navigationOptions = {
     title: 'Lifecounter',
     headerLeft: _react2.default.createElement(_reactNative.Image, {
         style: { width: 42, height: 42 },
-        source: { uri: 'mipmap/ic_launcher' }, __source: {
+        source: { uri: 'mipmap/ic_launcher' },
+        __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
+            lineNumber: 29
         }
     }),
     headerStyle: styles.header,
     headerTitleStyle: styles.headerTitle
 };
-exports.default = GameSettingsContainer;
-}, 400, null, "mtg-lifecounter/js/screens/Game/GameSettings.container.js");
+
+GameSettingsContainer.propTypes = {
+    navigation: _propTypes2.default.object.isRequired
+};
+}, 401, null, "mtg-lifecounter/js/screens/Game/GameSettings.container.js");
 __d(/* mtg-lifecounter/js/screens/Game/GameSettings.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -60732,145 +60738,18 @@ var _propTypes = require(127         ); // 127 = prop-types
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
-var _NumberSpinner = require(402                             ); // 402 = ../../components/NumberSpinner
+var _NumberSpinner = require(403                             ); // 403 = ../../components/NumberSpinner
 
 var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
 
-var _constants = require(404                    ); // 404 = ../../utils/constants
+var _constants = require(405                    ); // 405 = ../../utils/constants
+
+var _bgicon = require(406           ); // 406 = ./bgicon.png
+
+var _bgicon2 = babelHelpers.interopRequireDefault(_bgicon);
 
 var _Dimensions$get = _reactNative.Dimensions.get('window'),
     screenHeight = _Dimensions$get.height;
-
-var GameSettings = function (_React$Component) {
-    babelHelpers.inherits(GameSettings, _React$Component);
-
-    function GameSettings(props) {
-        babelHelpers.classCallCheck(this, GameSettings);
-
-        var _this = babelHelpers.possibleConstructorReturn(this, (GameSettings.__proto__ || Object.getPrototypeOf(GameSettings)).call(this, props));
-
-        _this.state = {
-            numberOfPlayers: 2,
-            startingLifeTotal: GameSettings.lifePoints[0]
-        };
-        return _this;
-    }
-
-    babelHelpers.createClass(GameSettings, [{
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            var _state = this.state,
-                numberOfPlayers = _state.numberOfPlayers,
-                startingLifeTotal = _state.startingLifeTotal;
-            var container = styles.container,
-                bgicon = styles.bgicon,
-                label = styles.label,
-                buttonContainer = styles.buttonContainer,
-                button = styles.button,
-                selected = styles.selected,
-                startButton = styles.startButton;
-
-
-            return _react2.default.createElement(
-                _reactNative.View,
-                { style: container, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 28
-                    }
-                },
-                _react2.default.createElement(_reactNative.Image, { source: require(405           ), style: [_reactNative.StyleSheet.absoluteFill, bgicon], __source: { // 405 = ./bgicon.png
-                        fileName: _jsxFileName,
-                        lineNumber: 29
-                    }
-                }),
-                _react2.default.createElement(
-                    _reactNative.Text,
-                    { style: label, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 30
-                        }
-                    },
-                    'Players'
-                ),
-                _react2.default.createElement(_NumberSpinner2.default, {
-                    min: 1,
-                    max: 6,
-                    stepLarge: 1,
-                    value: numberOfPlayers,
-                    onChange: function onChange(numberOfPlayers) {
-                        return _this2.setState({ numberOfPlayers: numberOfPlayers });
-                    }, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 31
-                    }
-                }),
-                _react2.default.createElement(
-                    _reactNative.Text,
-                    { style: label, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 38
-                        }
-                    },
-                    'Lifepoints'
-                ),
-                _react2.default.createElement(
-                    _reactNative.View,
-                    { style: buttonContainer, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 39
-                        }
-                    },
-                    GameSettings.lifePoints.map(function (points) {
-                        return _react2.default.createElement(
-                            _reactNative.Text,
-                            {
-                                key: 'buttonLifePoints' + points,
-                                style: [button, startingLifeTotal === points ? selected : null],
-                                onPress: function onPress() {
-                                    return _this2.setState({ startingLifeTotal: points });
-                                }, __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 41
-                                }
-                            },
-                            points
-                        );
-                    })
-                ),
-                _react2.default.createElement(
-                    _reactNative.Text,
-                    {
-                        style: [button, startButton],
-                        onPress: function onPress() {
-                            return _this2.startRound();
-                        }, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 50
-                        }
-                    },
-                    'Start game'
-                )
-            );
-        }
-    }, {
-        key: 'startRound',
-        value: function startRound() {
-            var _state2 = this.state,
-                startingLifeTotal = _state2.startingLifeTotal,
-                numberOfPlayers = _state2.numberOfPlayers;
-
-
-            this.props.navigation.navigate('GameRound', { startingLifeTotal: startingLifeTotal, numberOfPlayers: numberOfPlayers });
-        }
-    }]);
-    return GameSettings;
-}(_react2.default.Component);
-
-GameSettings.lifePoints = [20, 30, 40];
-exports.default = GameSettings;
-
 
 var styles = _reactNative.StyleSheet.create({
     container: {
@@ -60920,7 +60799,145 @@ var styles = _reactNative.StyleSheet.create({
         backgroundColor: _constants.COLOR_MARKED
     }
 });
-}, 401, null, "mtg-lifecounter/js/screens/Game/GameSettings.js");
+
+var GameSettings = function (_React$Component) {
+    babelHelpers.inherits(GameSettings, _React$Component);
+
+    function GameSettings(props) {
+        babelHelpers.classCallCheck(this, GameSettings);
+
+        var _this = babelHelpers.possibleConstructorReturn(this, (GameSettings.__proto__ || Object.getPrototypeOf(GameSettings)).call(this, props));
+
+        _this.state = {
+            numberOfPlayers: 2,
+            startingLifeTotal: GameSettings.lifePoints[0]
+        };
+        return _this;
+    }
+
+    babelHelpers.createClass(GameSettings, [{
+        key: 'startRound',
+        value: function startRound() {
+            var _state = this.state,
+                startingLifeTotal = _state.startingLifeTotal,
+                numberOfPlayers = _state.numberOfPlayers;
+
+
+            this.props.navigation.navigate('GameRound', { startingLifeTotal: startingLifeTotal, numberOfPlayers: numberOfPlayers });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var _state2 = this.state,
+                numberOfPlayers = _state2.numberOfPlayers,
+                startingLifeTotal = _state2.startingLifeTotal;
+            var container = styles.container,
+                bgicon = styles.bgicon,
+                label = styles.label,
+                buttonContainer = styles.buttonContainer,
+                button = styles.button,
+                selected = styles.selected,
+                startButton = styles.startButton;
+
+
+            return _react2.default.createElement(
+                _reactNative.View,
+                { style: container, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 82
+                    }
+                },
+                _react2.default.createElement(_reactNative.Image, { source: _bgicon2.default, style: [_reactNative.StyleSheet.absoluteFill, bgicon], __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 83
+                    }
+                }),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    { style: label, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 84
+                        }
+                    },
+                    'Players'
+                ),
+                _react2.default.createElement(_NumberSpinner2.default, {
+                    min: 1,
+                    max: 6,
+                    stepLarge: 1,
+                    value: numberOfPlayers,
+                    onChange: function onChange(nrPlayers) {
+                        return _this2.setState({ numberOfPlayers: nrPlayers });
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 85
+                    }
+                }),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    { style: label, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 93
+                        }
+                    },
+                    'Lifepoints'
+                ),
+                _react2.default.createElement(
+                    _reactNative.View,
+                    { style: buttonContainer, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 94
+                        }
+                    },
+                    GameSettings.lifePoints.map(function (points) {
+                        return _react2.default.createElement(
+                            _reactNative.Text,
+                            {
+                                key: 'buttonLifePoints' + points,
+                                style: [button, startingLifeTotal === points ? selected : null],
+                                onPress: function onPress() {
+                                    return _this2.setState({ startingLifeTotal: points });
+                                },
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 96
+                                }
+                            },
+                            points
+                        );
+                    })
+                ),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    {
+                        style: [button, startButton],
+                        onPress: function onPress() {
+                            return _this2.startRound();
+                        },
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 106
+                        }
+                    },
+                    'Start game'
+                )
+            );
+        }
+    }]);
+    return GameSettings;
+}(_react2.default.Component);
+
+exports.default = GameSettings;
+
+
+GameSettings.lifePoints = [20, 30, 40];
+GameSettings.propTypes = {
+    navigation: _propTypes2.default.object.isRequired
+};
+}, 402, null, "mtg-lifecounter/js/screens/Game/GameSettings.js");
 __d(/* mtg-lifecounter/js/components/NumberSpinner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -60936,145 +60953,11 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _SpinnerButton = require(403              ); // 403 = ./SpinnerButton
+var _SpinnerButton = require(404              ); // 404 = ./SpinnerButton
 
 var _SpinnerButton2 = babelHelpers.interopRequireDefault(_SpinnerButton);
 
-var _constants = require(404                 ); // 404 = ../utils/constants
-
-var NumberSpinner = function (_React$Component) {
-    babelHelpers.inherits(NumberSpinner, _React$Component);
-
-    function NumberSpinner(props) {
-        babelHelpers.classCallCheck(this, NumberSpinner);
-
-        var _this = babelHelpers.possibleConstructorReturn(this, (NumberSpinner.__proto__ || Object.getPrototypeOf(NumberSpinner)).call(this, props));
-
-        _this.state = {
-            value: props.value
-        };
-
-        _this.increase = _this.increase.bind(_this);
-        _this.decrease = _this.decrease.bind(_this);
-        return _this;
-    }
-
-    babelHelpers.createClass(NumberSpinner, [{
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            var _props = this.props,
-                step = _props.step,
-                stepLarge = _props.stepLarge;
-            var value = this.state.value;
-            var container = styles.container,
-                button = styles.button,
-                valueStyle = styles.value;
-
-
-            return _react2.default.createElement(
-                _reactNative.View,
-                { style: container, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 26
-                    }
-                },
-                _react2.default.createElement(_SpinnerButton2.default, {
-                    style: button,
-                    content: '-',
-                    onPress: function onPress() {
-                        return _this2.decrease(step);
-                    },
-                    onHold: function onHold() {
-                        return _this2.decrease(stepLarge);
-                    }, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 27
-                    }
-                }),
-                _react2.default.createElement(
-                    _reactNative.Text,
-                    { style: valueStyle, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 32
-                        }
-                    },
-                    value
-                ),
-                _react2.default.createElement(_SpinnerButton2.default, {
-                    style: button,
-                    content: '+',
-                    onPress: function onPress() {
-                        return _this2.increase(step);
-                    },
-                    onHold: function onHold() {
-                        return _this2.increase(stepLarge);
-                    }, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 33
-                    }
-                })
-            );
-        }
-    }, {
-        key: 'setValue',
-        value: function setValue(value) {
-            this.setState({
-                value: value
-            });
-
-            this.props.onChange(value);
-        }
-    }, {
-        key: 'increase',
-        value: function increase(points) {
-            var value = this.state.value;
-            var max = this.props.max;
-
-            var newValue = value + points;
-
-            if (max !== undefined) {
-                newValue = Math.min(max, newValue);
-            }
-
-            this.setValue(newValue);
-        }
-    }, {
-        key: 'decrease',
-        value: function decrease(points) {
-            var value = this.state.value;
-            var min = this.props.min;
-
-            var newValue = value - points;
-
-            if (min !== undefined) {
-                newValue = Math.max(min, newValue);
-            }
-
-            this.setValue(newValue);
-        }
-    }]);
-    return NumberSpinner;
-}(_react2.default.Component);
-
-exports.default = NumberSpinner;
-
-
-NumberSpinner.propTypes = {
-    value: _propTypes2.default.number.isRequired,
-    min: _propTypes2.default.number,
-    max: _propTypes2.default.number,
-    step: _propTypes2.default.number,
-    stepLarge: _propTypes2.default.number,
-    onChange: _propTypes2.default.func
-};
-
-NumberSpinner.defaultProps = {
-    step: 1,
-    stepLarge: 10,
-    onChange: function onChange() {}
-};
+var _constants = require(405                 ); // 405 = ../utils/constants
 
 var styles = _reactNative.StyleSheet.create({
     container: {
@@ -61099,7 +60982,127 @@ var styles = _reactNative.StyleSheet.create({
         fontFamily: _constants.FONT_FAMILY
     }
 });
-}, 402, null, "mtg-lifecounter/js/components/NumberSpinner.js");
+
+var NumberSpinner = function (_React$Component) {
+    babelHelpers.inherits(NumberSpinner, _React$Component);
+
+    function NumberSpinner(props) {
+        babelHelpers.classCallCheck(this, NumberSpinner);
+
+        var _this = babelHelpers.possibleConstructorReturn(this, (NumberSpinner.__proto__ || Object.getPrototypeOf(NumberSpinner)).call(this, props));
+
+        _this.state = {
+            value: props.value
+        };
+
+        _this.update = _this.update.bind(_this);
+        return _this;
+    }
+
+    babelHelpers.createClass(NumberSpinner, [{
+        key: 'setValue',
+        value: function setValue(value) {
+            this.setState({
+                value: value
+            });
+
+            this.props.onChange(value);
+        }
+    }, {
+        key: 'update',
+        value: function update(points) {
+            var value = this.state.value;
+            var _props = this.props,
+                min = _props.min,
+                max = _props.max;
+
+
+            this.setValue(Math.min(max, Math.max(min, value + points)));
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var _props2 = this.props,
+                step = _props2.step,
+                stepLarge = _props2.stepLarge;
+            var value = this.state.value;
+            var container = styles.container,
+                button = styles.button,
+                valueStyle = styles.value;
+
+
+            return _react2.default.createElement(
+                _reactNative.View,
+                { style: container, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 65
+                    }
+                },
+                _react2.default.createElement(_SpinnerButton2.default, {
+                    style: button,
+                    content: '-',
+                    onPress: function onPress() {
+                        return _this2.update(-step);
+                    },
+                    onHold: function onHold() {
+                        return _this2.update(-stepLarge);
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 66
+                    }
+                }),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    { style: valueStyle, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 72
+                        }
+                    },
+                    value
+                ),
+                _react2.default.createElement(_SpinnerButton2.default, {
+                    style: button,
+                    content: '+',
+                    onPress: function onPress() {
+                        return _this2.update(+step);
+                    },
+                    onHold: function onHold() {
+                        return _this2.update(+stepLarge);
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 73
+                    }
+                })
+            );
+        }
+    }]);
+    return NumberSpinner;
+}(_react2.default.Component);
+
+exports.default = NumberSpinner;
+
+
+NumberSpinner.propTypes = {
+    value: _propTypes2.default.number.isRequired,
+    min: _propTypes2.default.number,
+    max: _propTypes2.default.number,
+    step: _propTypes2.default.number,
+    stepLarge: _propTypes2.default.number,
+    onChange: _propTypes2.default.func
+};
+
+NumberSpinner.defaultProps = {
+    step: 1,
+    stepLarge: 10,
+    min: Number.MIN_SAFE_INTEGER,
+    max: Number.MAX_SAFE_INTEGER,
+    onChange: function onChange() {}
+};
+}, 403, null, "mtg-lifecounter/js/components/NumberSpinner.js");
 __d(/* mtg-lifecounter/js/components/SpinnerButton.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61115,105 +61118,7 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _constants = require(404                 ); // 404 = ../utils/constants
-
-var SpinnerButton = function (_React$Component) {
-    babelHelpers.inherits(SpinnerButton, _React$Component);
-
-    function SpinnerButton(props) {
-        babelHelpers.classCallCheck(this, SpinnerButton);
-
-        var _this = babelHelpers.possibleConstructorReturn(this, (SpinnerButton.__proto__ || Object.getPrototypeOf(SpinnerButton)).call(this, props));
-
-        _this._preventOnPress = false;
-
-
-        _this._onPress = _this._onPress.bind(_this);
-
-        if (props.onHold) {
-            _this._onPressIn = _this._onPressIn.bind(_this);
-            _this._onPressOut = _this._onPressOut.bind(_this);
-        }
-        return _this;
-    }
-
-    babelHelpers.createClass(SpinnerButton, [{
-        key: 'render',
-        value: function render() {
-            var content = this.props.content;
-            var button = styles.button,
-                buttonContainer = styles.buttonContainer;
-
-
-            return _react2.default.createElement(
-                _reactNative.TouchableWithoutFeedback,
-                {
-                    onPress: this._onPress,
-                    onPressIn: this._onPressIn,
-                    onPressOut: this._onPressOut, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 27
-                    }
-                },
-                _react2.default.createElement(
-                    _reactNative.View,
-                    { style: [buttonContainer], __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 31
-                        }
-                    },
-                    _react2.default.createElement(
-                        _reactNative.Text,
-                        { style: button, __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 32
-                            }
-                        },
-                        content
-                    )
-                )
-            );
-        }
-    }, {
-        key: '_onPress',
-        value: function _onPress(event) {
-            if (this._preventOnPress) {
-                return;
-            }
-            this.props.onPress(event);
-            this._preventOnPress = false;
-        }
-    }, {
-        key: '_onPressIn',
-        value: function _onPressIn() {
-            var _this2 = this;
-
-            this._onHoldInterval = setInterval(function () {
-                _this2._preventOnPress = true;
-                _this2.props.onHold();
-            }, 650);
-        }
-    }, {
-        key: '_onPressOut',
-        value: function _onPressOut() {
-            var _this3 = this;
-
-            clearInterval(this._onHoldInterval);
-            setTimeout(function () {
-                _this3._preventOnPress = false;
-            }, 100);
-        }
-    }]);
-    return SpinnerButton;
-}(_react2.default.Component);
-
-exports.default = SpinnerButton;
-
-
-SpinnerButton.propTypes = {
-    onPress: _propTypes2.default.func.isRequired,
-    onHold: _propTypes2.default.func
-};
+var _constants = require(405                 ); // 405 = ../utils/constants
 
 var styles = _reactNative.StyleSheet.create({
     buttonContainer: {
@@ -61229,7 +61134,109 @@ var styles = _reactNative.StyleSheet.create({
         textAlignVertical: 'center'
     }
 });
-}, 403, null, "mtg-lifecounter/js/components/SpinnerButton.js");
+
+var SpinnerButton = function (_React$Component) {
+    babelHelpers.inherits(SpinnerButton, _React$Component);
+
+    function SpinnerButton(props) {
+        babelHelpers.classCallCheck(this, SpinnerButton);
+
+        var _this = babelHelpers.possibleConstructorReturn(this, (SpinnerButton.__proto__ || Object.getPrototypeOf(SpinnerButton)).call(this, props));
+
+        _this.preventOnPress = false;
+        _this.onPress = _this.onPress.bind(_this);
+
+        if (props.onHold) {
+            _this.onPressIn = _this.onPressIn.bind(_this);
+            _this.onPressOut = _this.onPressOut.bind(_this);
+        }
+        return _this;
+    }
+
+    babelHelpers.createClass(SpinnerButton, [{
+        key: 'onPress',
+        value: function onPress(event) {
+            if (this.preventOnPress) {
+                return;
+            }
+            this.props.onPress(event);
+            this.preventOnPress = false;
+        }
+    }, {
+        key: 'onPressIn',
+        value: function onPressIn() {
+            var _this2 = this;
+
+            this.onHoldInterval = setInterval(function () {
+                _this2.preventOnPress = true;
+                _this2.props.onHold();
+            }, 650);
+        }
+    }, {
+        key: 'onPressOut',
+        value: function onPressOut() {
+            var _this3 = this;
+
+            clearInterval(this.onHoldInterval);
+            setTimeout(function () {
+                _this3.preventOnPress = false;
+            }, 100);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var content = this.props.content;
+            var button = styles.button,
+                buttonContainer = styles.buttonContainer;
+
+
+            return _react2.default.createElement(
+                _reactNative.TouchableWithoutFeedback,
+                {
+                    onPress: this.onPress,
+                    onPressIn: this.onPressIn,
+                    onPressOut: this.onPressOut,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 62
+                    }
+                },
+                _react2.default.createElement(
+                    _reactNative.View,
+                    { style: [buttonContainer], __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 67
+                        }
+                    },
+                    _react2.default.createElement(
+                        _reactNative.Text,
+                        { style: button, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 68
+                            }
+                        },
+                        content
+                    )
+                )
+            );
+        }
+    }]);
+    return SpinnerButton;
+}(_react2.default.Component);
+
+exports.default = SpinnerButton;
+
+
+SpinnerButton.propTypes = {
+    content: _propTypes2.default.string.isRequired,
+    onPress: _propTypes2.default.func.isRequired,
+    onHold: _propTypes2.default.func
+};
+
+SpinnerButton.defaultProps = {
+    onHold: null
+};
+}, 404, null, "mtg-lifecounter/js/components/SpinnerButton.js");
 __d(/* mtg-lifecounter/js/utils/constants.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -61237,9 +61244,9 @@ var COLOR_BACKGROUND = exports.COLOR_BACKGROUND = '#262626';
 var COLOR_FOREGROUND = exports.COLOR_FOREGROUND = '#b2b2b0';
 var COLOR_MARKED = exports.COLOR_MARKED = '#710000';
 var FONT_FAMILY = exports.FONT_FAMILY = 'cloisterblack';
-}, 404, null, "mtg-lifecounter/js/utils/constants.js");
+}, 405, null, "mtg-lifecounter/js/utils/constants.js");
 __d(/* mtg-lifecounter/js/screens/Game/bgicon.png */function(global, require, module, exports) {module.exports=require(171                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/js/screens/Game","width":312,"height":306,"scales":[1],"hash":"359060493314b32659ff3d81d6437580","name":"bgicon","type":"png"}); // 171 = react-native/Libraries/Image/AssetRegistry
-}, 405, null, "mtg-lifecounter/js/screens/Game/bgicon.png");
+}, 406, null, "mtg-lifecounter/js/screens/Game/bgicon.png");
 __d(/* mtg-lifecounter/js/screens/Game/GameRound.container.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61249,7 +61256,11 @@ var _react = require(38     ); // 38 = react
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
-var _GameRound = require(407          ); // 407 = ./GameRound
+var _propTypes = require(127         ); // 127 = prop-types
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
+var _GameRound = require(408          ); // 408 = ./GameRound
 
 var _GameRound2 = babelHelpers.interopRequireDefault(_GameRound);
 
@@ -61276,7 +61287,7 @@ var GameRoundContainer = function (_React$Component) {
                 startingLifeTotal: startingLifeTotal,
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 14
+                    lineNumber: 13
                 }
             });
         }
@@ -61284,11 +61295,17 @@ var GameRoundContainer = function (_React$Component) {
     return GameRoundContainer;
 }(_react2.default.Component);
 
+exports.default = GameRoundContainer;
+
+
 GameRoundContainer.navigationOptions = {
     header: null
 };
-exports.default = GameRoundContainer;
-}, 406, null, "mtg-lifecounter/js/screens/Game/GameRound.container.js");
+
+GameRoundContainer.propTypes = {
+    navigation: _propTypes2.default.object.isRequired
+};
+}, 407, null, "mtg-lifecounter/js/screens/Game/GameRound.container.js");
 __d(/* mtg-lifecounter/js/screens/Game/GameRound.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61304,15 +61321,43 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _reactNavigation = require(337               ); // 337 = react-navigation
+var _reactNavigation = require(338               ); // 338 = react-navigation
 
-var _Player = require(408                      ); // 408 = ../../components/Player
+var _Player = require(409                      ); // 409 = ../../components/Player
 
 var _Player2 = babelHelpers.interopRequireDefault(_Player);
 
-var _array = require(409                      ); // 409 = ../../utils/array.split
+var _array = require(410                      ); // 410 = ../../utils/array.split
 
 var _array2 = babelHelpers.interopRequireDefault(_array);
+
+var styles = _reactNative.StyleSheet.create({
+    container: {
+        backgroundColor: '#161616',
+        flex: 1,
+        flexDirection: 'row'
+    },
+    column: {
+        width: '50%'
+    },
+    asColumn: {
+        flex: 1,
+        flexDirection: 'column'
+    },
+    rotated180: {
+        transform: [{ rotate: '180deg' }]
+    }
+});
+
+var splitInHalf = function splitInHalf(arr) {
+    var half = Math.ceil(arr.length / 2);
+
+    return (0, _array2.default)(arr, [function (item, idx) {
+        return idx < half;
+    }, function (item, idx) {
+        return idx >= half;
+    }], true);
+};
 
 var GameRound = function (_React$Component) {
     babelHelpers.inherits(GameRound, _React$Component);
@@ -61323,23 +61368,6 @@ var GameRound = function (_React$Component) {
         var _this = babelHelpers.possibleConstructorReturn(this, (GameRound.__proto__ || Object.getPrototypeOf(GameRound)).call(this, props));
 
         _this.confirmGameOver = true;
-
-        _this.onBackPress = function () {
-            var _this$props$navigatio = _this.props.navigation,
-                index = _this$props$navigatio.index,
-                dispatch = _this$props$navigatio.dispatch;
-
-            if (index === 0) {
-                return false;
-            }
-
-            _reactNative.Alert.alert('Exit game', 'Are you sure?', [{ text: 'Yes', onPress: function onPress() {
-                    return dispatch(_reactNavigation.NavigationActions.back());
-                } }, { text: 'No' }]);
-
-            return true;
-        };
-
         _this.players = _this.generatePlayers();
 
         _this.state = {
@@ -61351,109 +61379,37 @@ var GameRound = function (_React$Component) {
     babelHelpers.createClass(GameRound, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            _reactNative.BackHandler.addEventListener('hardwareBackPress', this.onBackPress);
+            var _this2 = this;
+
+            _reactNative.BackHandler.addEventListener('hardwareBackPress', function () {
+                return _this2.onBackPress.call(_this2);
+            });
         }
     }, {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
-            _reactNative.BackHandler.removeEventListener('hardwareBackPress', this.onBackPress);
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var length = this.players.length;
-            var roundNumber = this.state.roundNumber;
-
-
-            return _react2.default.createElement(
-                _reactNative.View,
-                { style: styles.container, key: 'round' + roundNumber, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 36
-                    }
-                },
-                length === 1 ? this.renderSinglePlayer(this.players[0]) : length === 2 ? this.renderTwoPlayers() : this.renderPlayers()
-            );
-        }
-    }, {
-        key: 'renderSinglePlayer',
-        value: function renderSinglePlayer(player) {
-            var _this2 = this;
-
-            var playerProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-            return _react2.default.createElement(_Player2.default, babelHelpers.extends({}, playerProps, {
-                player: player,
-                onGameOver: function onGameOver(isGameOver) {
-                    return _this2.playerGameOver(player, isGameOver);
-                }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 48
-                }
-            }));
-        }
-    }, {
-        key: 'renderTwoPlayers',
-        value: function renderTwoPlayers() {
-            var _players = babelHelpers.slicedToArray(this.players, 2),
-                player1 = _players[0],
-                player2 = _players[1];
-
-            var asColumn = styles.asColumn,
-                rotated180 = styles.rotated180;
-
-
-            return _react2.default.createElement(
-                _reactNative.View,
-                { style: asColumn, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 60
-                    }
-                },
-                _react2.default.createElement(
-                    _reactNative.View,
-                    { style: [asColumn, rotated180], __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 61
-                        }
-                    },
-                    this.renderSinglePlayer(player2)
-                ),
-                _react2.default.createElement(
-                    _reactNative.View,
-                    { style: [asColumn], __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 64
-                        }
-                    },
-                    this.renderSinglePlayer(player1)
-                )
-            );
-        }
-    }, {
-        key: 'renderPlayers',
-        value: function renderPlayers() {
             var _this3 = this;
 
-            var columns = splitInHalf(this.players);
-            var columnStyle = styles.column;
-
-
-            return columns.map(function (players, column) {
-                return _react2.default.createElement(
-                    _reactNative.View,
-                    { key: 'playerColumn' + column, style: columnStyle, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 76
-                        }
-                    },
-                    players.map(function (player) {
-                        return _this3.renderSinglePlayer(player, {
-                            key: 'player' + player.id
-                        });
-                    })
-                );
+            _reactNative.BackHandler.removeEventListener('hardwareBackPress', function () {
+                return _this3.onBackPress.call(_this3);
             });
+        }
+    }, {
+        key: 'onBackPress',
+        value: function onBackPress() {
+            var _props$navigation = this.props.navigation,
+                index = _props$navigation.index,
+                dispatch = _props$navigation.dispatch;
+
+            if (index === 0) {
+                return false;
+            }
+
+            _reactNative.Alert.alert('Exit game', 'Are you sure?', [{ text: 'Yes', onPress: function onPress() {
+                    return dispatch(_reactNavigation.NavigationActions.back());
+                } }, { text: 'No' }]);
+
+            return true;
         }
     }, {
         key: 'generatePlayers',
@@ -61493,28 +61449,16 @@ var GameRound = function (_React$Component) {
 
             player.isGameOver = isGameOver;
 
-            for (var _iterator = this.players, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[typeof Symbol === 'function' ? Symbol.iterator : '@@iterator']();;) {
-                var _ref;
-
-                if (_isArray) {
-                    if (_i >= _iterator.length) break;
-                    _ref = _iterator[_i++];
-                } else {
-                    _i = _iterator.next();
-                    if (_i.done) break;
-                    _ref = _i.value;
-                }
-
-                var p = _ref;
-
+            this.players.forEach(function (p) {
                 if (p.isGameOver) {
                     gameOverPlayers++;
                 }
-            }
+            });
 
             if (this.confirmGameOver && numberOfPlayers - gameOverPlayers <= minDeadPlayers) {
                 _reactNative.Alert.alert('Game Over', 'What do you want to do?', [{
-                    text: 'Continue game', onPress: function onPress() {
+                    text: 'Continue game',
+                    onPress: function onPress() {
                         self.confirmGameOver = false;
                         _reactNative.Alert.alert('Continue game', 'Press the back button on your device to exit the game.');
                     }
@@ -61525,6 +61469,114 @@ var GameRound = function (_React$Component) {
                     } }], { cancelable: true });
             }
         }
+    }, {
+        key: 'renderSinglePlayer',
+        value: function renderSinglePlayer(player) {
+            var _this4 = this;
+
+            var playerProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+            return _react2.default.createElement(_Player2.default, babelHelpers.extends({}, playerProps, {
+                player: player,
+                onGameOver: function onGameOver(isGameOver) {
+                    return _this4.playerGameOver(player, isGameOver);
+                },
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 121
+                }
+            }));
+        }
+    }, {
+        key: 'renderTwoPlayers',
+        value: function renderTwoPlayers() {
+            var _players = babelHelpers.slicedToArray(this.players, 2),
+                player1 = _players[0],
+                player2 = _players[1];
+
+            var asColumn = styles.asColumn,
+                rotated180 = styles.rotated180;
+
+
+            return _react2.default.createElement(
+                _reactNative.View,
+                { style: asColumn, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 134
+                    }
+                },
+                _react2.default.createElement(
+                    _reactNative.View,
+                    { style: [asColumn, rotated180], __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 135
+                        }
+                    },
+                    this.renderSinglePlayer(player2)
+                ),
+                _react2.default.createElement(
+                    _reactNative.View,
+                    { style: [asColumn], __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 138
+                        }
+                    },
+                    this.renderSinglePlayer(player1)
+                )
+            );
+        }
+    }, {
+        key: 'renderMultiPlayer',
+        value: function renderMultiPlayer() {
+            var _this5 = this;
+
+            var sides = ['Left', 'Right'];
+            var columns = splitInHalf(this.players);
+            var columnStyle = styles.column;
+
+
+            return columns.map(function (players, column) {
+                return _react2.default.createElement(
+                    _reactNative.View,
+                    { key: 'playerColumn' + sides[column], style: columnStyle, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 151
+                        }
+                    },
+                    players.map(function (player) {
+                        return _this5.renderSinglePlayer(player, {
+                            key: 'player' + player.id
+                        });
+                    })
+                );
+            });
+        }
+    }, {
+        key: 'renderPlayers',
+        value: function renderPlayers() {
+            var length = this.players.length;
+
+
+            return length === 2 ? this.renderTwoPlayers() : this.renderMultiPlayer();
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var length = this.players.length;
+            var roundNumber = this.state.roundNumber;
+            var container = styles.container;
+
+
+            return _react2.default.createElement(
+                _reactNative.View,
+                { style: container, key: 'round' + roundNumber, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 171
+                    }
+                },
+                length === 1 ? this.renderSinglePlayer(this.players[0]) : this.renderPlayers()
+            );
+        }
     }]);
     return GameRound;
 }(_react2.default.Component);
@@ -61532,39 +61584,15 @@ var GameRound = function (_React$Component) {
 exports.default = GameRound;
 
 
-GameRound.propsTypes = {
+GameRound.propTypes = {
     numberOfPlayers: _propTypes2.default.number.isRequired,
-    startingLifeTotal: _propTypes2.default.number.isRequired
+    startingLifeTotal: _propTypes2.default.number.isRequired,
+    navigation: _propTypes2.default.shape({
+        dispatch: _propTypes2.default.func.isRequired,
+        index: _propTypes2.default.number
+    }).isRequired
 };
-
-var styles = _reactNative.StyleSheet.create({
-    container: {
-        backgroundColor: '#161616',
-        flex: 1,
-        flexDirection: 'row'
-    },
-    column: {
-        width: '50%'
-    },
-    asColumn: {
-        flex: 1,
-        flexDirection: 'column'
-    },
-    rotated180: {
-        transform: [{ rotate: '180deg' }]
-    }
-});
-
-var splitInHalf = function splitInHalf(arr) {
-    var half = Math.ceil(arr.length / 2);
-
-    return (0, _array2.default)(arr, [function (item, idx) {
-        return idx < half;
-    }, function (item, idx) {
-        return idx >= half;
-    }], true);
-};
-}, 407, null, "mtg-lifecounter/js/screens/Game/GameRound.js");
+}, 408, null, "mtg-lifecounter/js/screens/Game/GameRound.js");
 __d(/* mtg-lifecounter/js/components/Player.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61580,93 +61608,11 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _NumberSpinner = require(402              ); // 402 = ./NumberSpinner
+var _NumberSpinner = require(403              ); // 403 = ./NumberSpinner
 
 var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
 
-var _constants = require(404                 ); // 404 = ../utils/constants
-
-var Player = function (_React$Component) {
-    babelHelpers.inherits(Player, _React$Component);
-
-    function Player(props) {
-        babelHelpers.classCallCheck(this, Player);
-
-        var _this = babelHelpers.possibleConstructorReturn(this, (Player.__proto__ || Object.getPrototypeOf(Player)).call(this, props));
-
-        _this.state = {
-            life: props.player.life,
-            gameOver: false
-        };
-
-        _this.onLifeChange = _this.onLifeChange.bind(_this);
-        return _this;
-    }
-
-    babelHelpers.createClass(Player, [{
-        key: 'render',
-        value: function render() {
-            var _props$player = this.props.player,
-                color = _props$player.color,
-                name = _props$player.name;
-            var _state = this.state,
-                gameOver = _state.gameOver,
-                life = _state.life;
-            var tile = styles.tile,
-                playerName = styles.playerName,
-                gameOverStyle = styles.gameOver;
-
-
-            return _react2.default.createElement(
-                _reactNative.View,
-                { style: [tile, gameOver ? gameOverStyle : null], __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 26
-                    }
-                },
-                _react2.default.createElement(_NumberSpinner2.default, { value: life,
-                    onChange: this.onLifeChange, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 27
-                    }
-                }),
-                _react2.default.createElement(
-                    _reactNative.Text,
-                    { style: [playerName, { color: color }], __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 29
-                        }
-                    },
-                    name
-                )
-            );
-        }
-    }, {
-        key: 'onLifeChange',
-        value: function onLifeChange(life) {
-            var gameOver = life <= 0;
-
-            this.setState({
-                gameOver: gameOver
-            });
-
-            this.props.onGameOver(gameOver);
-        }
-    }]);
-    return Player;
-}(_react2.default.Component);
-
-exports.default = Player;
-;
-
-Player.propTypes = {
-    player: _propTypes2.default.object.isRequired,
-    onGameOver: _propTypes2.default.func
-};
-
-Player.defaultProps = {
-    onGameOver: function onGameOver() {}
-};
+var _constants = require(405                 ); // 405 = ../utils/constants
 
 var styles = _reactNative.StyleSheet.create({
     tile: {
@@ -61689,12 +61635,95 @@ var styles = _reactNative.StyleSheet.create({
         paddingVertical: 5
     }
 });
-}, 408, null, "mtg-lifecounter/js/components/Player.js");
+
+var Player = function (_React$Component) {
+    babelHelpers.inherits(Player, _React$Component);
+
+    function Player(props) {
+        babelHelpers.classCallCheck(this, Player);
+
+        var _this = babelHelpers.possibleConstructorReturn(this, (Player.__proto__ || Object.getPrototypeOf(Player)).call(this, props));
+
+        _this.state = {
+            life: props.player.life,
+            gameOver: false
+        };
+
+        _this.onLifeChange = _this.onLifeChange.bind(_this);
+        return _this;
+    }
+
+    babelHelpers.createClass(Player, [{
+        key: 'onLifeChange',
+        value: function onLifeChange(life) {
+            var gameOver = life <= 0;
+
+            this.setState({
+                gameOver: gameOver
+            });
+
+            this.props.onGameOver(gameOver);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _props$player = this.props.player,
+                color = _props$player.color,
+                name = _props$player.name;
+            var _state = this.state,
+                gameOver = _state.gameOver,
+                life = _state.life;
+            var tile = styles.tile,
+                playerName = styles.playerName,
+                gameOverStyle = styles.gameOver;
+
+
+            return _react2.default.createElement(
+                _reactNative.View,
+                { style: [tile, gameOver ? gameOverStyle : null], __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 58
+                    }
+                },
+                _react2.default.createElement(_NumberSpinner2.default, {
+                    value: life,
+                    onChange: this.onLifeChange,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 59
+                    }
+                }),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    { style: [playerName, { color: color }], __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 63
+                        }
+                    },
+                    name
+                )
+            );
+        }
+    }]);
+    return Player;
+}(_react2.default.Component);
+
+exports.default = Player;
+
+
+Player.propTypes = {
+    player: _propTypes2.default.object.isRequired,
+    onGameOver: _propTypes2.default.func
+};
+
+Player.defaultProps = {
+    onGameOver: function onGameOver() {}
+};
+}, 409, null, "mtg-lifecounter/js/components/Player.js");
 __d(/* mtg-lifecounter/js/utils/array.split.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-
-exports.default = arraySplit = function arraySplit(arr, splitters) {
+var arraySplit = function arraySplit(arr, splitters) {
     var unique = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
     var results = [];
@@ -61703,20 +61732,21 @@ exports.default = arraySplit = function arraySplit(arr, splitters) {
     });
 
     arr.forEach(function (item, idx) {
-        for (var i in splitters) {
-            var splitter = splitters[i];
+        splitters.some(function (splitter, i) {
             if (splitter(item, idx, arr)) {
                 results[i].push(item);
 
-                if (unique === true) {
-                    return;
-                }
+                return unique;
             }
-        }
+
+            return false;
+        });
     });
 
     return results;
 };
-}, 409, null, "mtg-lifecounter/js/utils/array.split.js");
+
+exports.default = arraySplit;
+}, 410, null, "mtg-lifecounter/js/utils/array.split.js");
 ;require(57);
 ;require(0);

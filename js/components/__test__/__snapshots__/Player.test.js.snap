@@ -27,6 +27,8 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <NumberSpinner
+          max={9007199254740991}
+          min={-9007199254740991}
           onChange={[Function]}
           step={1}
           stepLarge={10}
@@ -75,6 +77,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "max": 9007199254740991,
+          "min": -9007199254740991,
           "onChange": [Function],
           "step": 1,
           "stepLarge": 10,
@@ -121,6 +125,8 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <NumberSpinner
+            max={9007199254740991}
+            min={-9007199254740991}
             onChange={[Function]}
             step={1}
             stepLarge={10}
@@ -169,6 +175,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "max": 9007199254740991,
+            "min": -9007199254740991,
             "onChange": [Function],
             "step": 1,
             "stepLarge": 10,

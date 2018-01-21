@@ -4,68 +4,9 @@ import { StyleSheet, TouchableWithoutFeedback, Text, View } from 'react-native';
 
 import { FONT_FAMILY, COLOR_FOREGROUND } from '../utils/constants';
 
-export default class SpinnerButton extends React.Component {
-
-    _preventOnPress = false;
-
-    constructor(props) {
-        super(props);
-
-        this._onPress = this._onPress.bind(this);
-
-        if (props.onHold) {
-            this._onPressIn = this._onPressIn.bind(this);
-            this._onPressOut = this._onPressOut.bind(this);
-        }
-    }
-
-    render() {
-        const { content } = this.props;
-        const { button, buttonContainer } = styles;
-
-        return (
-            <TouchableWithoutFeedback
-                onPress={this._onPress}
-                onPressIn={this._onPressIn}
-                onPressOut={this._onPressOut}>
-                <View style={[ buttonContainer ]}>
-                    <Text style={ button }>{ content }</Text>
-                </View>
-            </TouchableWithoutFeedback>
-        );
-    }
-
-    _onPress(event) {
-        if (this._preventOnPress) {
-            return;
-        }
-        this.props.onPress(event);
-        this._preventOnPress = false;
-    }
-
-    _onPressIn() {
-        this._onHoldInterval = setInterval(() => {
-            this._preventOnPress = true;
-            this.props.onHold();
-        }, 650);
-    }
-
-    _onPressOut() {
-        clearInterval(this._onHoldInterval);
-        setTimeout(() => {
-            this._preventOnPress = false
-        }, 100);
-    }
-}
-
-SpinnerButton.propTypes = {
-    onPress: PropTypes.func.isRequired,
-    onHold: PropTypes.func
-};
-
 const styles = StyleSheet.create({
     buttonContainer: {
-        width: '20%'
+        width: '20%',
     },
     button: {
         fontSize: 32,
@@ -75,5 +16,68 @@ const styles = StyleSheet.create({
         color: COLOR_FOREGROUND,
         textAlign: 'center',
         textAlignVertical: 'center',
-    }
+    },
 });
+
+export default class SpinnerButton extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.preventOnPress = false;
+        this.onPress = this.onPress.bind(this);
+
+        if (props.onHold) {
+            this.onPressIn = this.onPressIn.bind(this);
+            this.onPressOut = this.onPressOut.bind(this);
+        }
+    }
+
+    onPress(event) {
+        if (this.preventOnPress) {
+            return;
+        }
+        this.props.onPress(event);
+        this.preventOnPress = false;
+    }
+
+    onPressIn() {
+        this.onHoldInterval = setInterval(() => {
+            this.preventOnPress = true;
+            this.props.onHold();
+        }, 650);
+    }
+
+    onPressOut() {
+        clearInterval(this.onHoldInterval);
+        setTimeout(() => {
+            this.preventOnPress = false;
+        }, 100);
+    }
+
+    render() {
+        const { content } = this.props;
+        const { button, buttonContainer } = styles;
+
+        return (
+            <TouchableWithoutFeedback
+                onPress={this.onPress}
+                onPressIn={this.onPressIn}
+                onPressOut={this.onPressOut}
+            >
+                <View style={[buttonContainer]}>
+                    <Text style={button}>{content}</Text>
+                </View>
+            </TouchableWithoutFeedback>
+        );
+    }
+}
+
+SpinnerButton.propTypes = {
+    content: PropTypes.string.isRequired,
+    onPress: PropTypes.func.isRequired,
+    onHold: PropTypes.func,
+};
+
+SpinnerButton.defaultProps = {
+    onHold: null,
+};
