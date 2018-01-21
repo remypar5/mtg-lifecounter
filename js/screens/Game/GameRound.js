@@ -42,14 +42,16 @@ export default class GameRound extends React.Component {
         this.state = {
             roundNumber: 1,
         };
+
+        this.onBackPress = this.onBackPress.bind(this);
     }
 
     componentDidMount() {
-        BackHandler.addEventListener('hardwareBackPress', () => this.onBackPress.call(this));
+        BackHandler.addEventListener('hardwareBackPress', this.onBackPress);
     }
 
     componentWillUnmount() {
-        BackHandler.removeEventListener('hardwareBackPress', () => this.onBackPress.call(this));
+        BackHandler.removeEventListener('hardwareBackPress', this.onBackPress);
     }
 
     onBackPress() {
