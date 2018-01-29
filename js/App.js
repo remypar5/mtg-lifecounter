@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GameRouter from './routes';
+import AppRouter from './routes';
 
-const App = () => <GameRouter />;
+const App = () => <AppRouter />;
 
 export default App;
