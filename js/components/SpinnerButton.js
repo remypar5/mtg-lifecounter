@@ -2,74 +2,82 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, TouchableWithoutFeedback, Text, View } from 'react-native';
 
+import { FONT_FAMILY, COLOR_FOREGROUND } from '../utils/constants';
+
+const styles = StyleSheet.create({
+    buttonContainer: {
+        width: '20%',
+    },
+    button: {
+        fontSize: 32,
+        fontFamily: FONT_FAMILY,
+        width: '100%',
+        height: '100%',
+        color: COLOR_FOREGROUND,
+        textAlign: 'center',
+        textAlignVertical: 'center',
+    },
+});
+
 export default class SpinnerButton extends React.Component {
-
-    _preventOnPress = false;
-
     constructor(props) {
         super(props);
 
-        this._onPress = this._onPress.bind(this);
+        this.preventOnPress = false;
+        this.onPress = this.onPress.bind(this);
 
         if (props.onHold) {
-            this._onPressIn = this._onPressIn.bind(this);
-            this._onPressOut = this._onPressOut.bind(this);
+            this.onPressIn = this.onPressIn.bind(this);
+            this.onPressOut = this.onPressOut.bind(this);
         }
     }
 
-    render() {
-        const props = this.props;
-
-        return (
-            <TouchableWithoutFeedback
-                onPress={this._onPress}
-                onPressIn={this._onPressIn}
-                onPressOut={this._onPressOut}>
-                <View style={[styles.buttonContainer, { width: props.width }]}>
-                    <Text style={styles.button}>{props.content}</Text>
-                </View>
-            </TouchableWithoutFeedback>
-        );
-    }
-
-    _onPress(event) {
-        if (this._preventOnPress) {
+    onPress(event) {
+        if (this.preventOnPress) {
             return;
         }
         this.props.onPress(event);
-        this._preventOnPress = false;
+        this.preventOnPress = false;
     }
 
-    _onPressIn() {
-        this._onHoldInterval = setInterval(() => {
-            this._preventOnPress = true;
+    onPressIn() {
+        this.onHoldInterval = setInterval(() => {
+            this.preventOnPress = true;
             this.props.onHold();
         }, 650);
     }
 
-    _onPressOut() {
-        clearInterval(this._onHoldInterval);
+    onPressOut() {
+        clearInterval(this.onHoldInterval);
         setTimeout(() => {
-            this._preventOnPress = false
+            this.preventOnPress = false;
         }, 100);
+    }
+
+    render() {
+        const { content } = this.props;
+        const { button, buttonContainer } = styles;
+
+        return (
+            <TouchableWithoutFeedback
+                onPress={this.onPress}
+                onPressIn={this.onPressIn}
+                onPressOut={this.onPressOut}
+            >
+                <View style={[buttonContainer]}>
+                    <Text style={button}>{content}</Text>
+                </View>
+            </TouchableWithoutFeedback>
+        );
     }
 }
 
 SpinnerButton.propTypes = {
+    content: PropTypes.string.isRequired,
     onPress: PropTypes.func.isRequired,
-    onHold: PropTypes.func
+    onHold: PropTypes.func,
 };
 
-const styles = StyleSheet.create({
-    buttonContainer: {
-        // backgroundColor: 'gray'
-    },
-    button: {
-        width: '100%',
-        height: '100%',
-        color: 'white',
-        fontWeight: 'bold',
-        textAlign: 'center',
-        textAlignVertical: 'center',
-    }
-});
+SpinnerButton.defaultProps = {
+    onHold: null,
+};

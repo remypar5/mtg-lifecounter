@@ -1,0 +1,16 @@
+{
+    "env": {
+        "es6": true,
+        "jest": true
+    },
+    "extends": "airbnb",
+    "rules": {
+        "indent": ["error", 4],
+        "arrow-parens": ["error", "always"],
+        "no-plusplus": 0,
+        "react/jsx-filename-extension": "allowed",
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/forbid-prop-types": [false]
+    }
+}

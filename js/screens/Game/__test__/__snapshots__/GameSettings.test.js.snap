@@ -4,7 +4,9 @@ exports[`<GameSettings /> renders without crashing 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <GameSettings />,
+  Symbol(enzyme.__unrendered__): <GameSettings
+    navigation={Object {}}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,6 +20,24 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "height": 1334,
+                "width": "100%",
+              },
+            ]
+          }
+        />,
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -25,20 +45,22 @@ ShallowWrapper {
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
-              "fontSize": 18,
-              "fontWeight": "bold",
+              "alignSelf": "center",
+              "color": "#b2b2b0",
+              "fontSize": 25,
+              "textAlign": "left",
+              "width": "95%",
             }
           }
         >
-          Number of players [1-6]
+          Players
         </Text>,
         <NumberSpinner
           max={6}
           min={1}
           onChange={[Function]}
           step={1}
-          stepLarge={10}
+          stepLarge={1}
           value={2}
         />,
         <Text
@@ -48,15 +70,15 @@ ShallowWrapper {
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "white",
-              "fontSize": 18,
-              "fontWeight": "bold",
+              "alignSelf": "center",
+              "color": "#b2b2b0",
+              "fontSize": 25,
+              "textAlign": "left",
+              "width": "95%",
             }
           }
         >
-          Starting lifepoints [
-          20
-          ]
+          Lifepoints
         </Text>,
         <View
           style={
@@ -65,88 +87,126 @@ ShallowWrapper {
               "flex": 1,
               "flexDirection": "row",
               "height": "20%",
-              "justifyContent": "center",
+              "justifyContent": "space-around",
             }
           }
         >
-          <Button
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
             onPress={[Function]}
             style={
               Array [
                 Object {
                   "alignSelf": "baseline",
-                  "backgroundColor": "steelblue",
-                  "color": "white",
+                  "backgroundColor": "#262626",
+                  "color": "#b2b2b0",
+                  "flex": 1,
+                  "fontFamily": "cloisterblack",
+                  "fontSize": 24,
                   "height": 50,
                   "textAlign": "center",
                   "textAlignVertical": "center",
-                  "width": "100%",
                 },
                 Object {
-                  "backgroundColor": "red",
+                  "backgroundColor": "#710000",
                 },
               ]
             }
-            title="20"
-          />
-          <Button
+          >
+            20
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
             onPress={[Function]}
             style={
               Array [
                 Object {
                   "alignSelf": "baseline",
-                  "backgroundColor": "steelblue",
-                  "color": "white",
+                  "backgroundColor": "#262626",
+                  "color": "#b2b2b0",
+                  "flex": 1,
+                  "fontFamily": "cloisterblack",
+                  "fontSize": 24,
                   "height": 50,
                   "textAlign": "center",
                   "textAlignVertical": "center",
-                  "width": "100%",
                 },
                 null,
               ]
             }
-            title="30"
-          />
-          <Button
+          >
+            30
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
             onPress={[Function]}
             style={
               Array [
                 Object {
                   "alignSelf": "baseline",
-                  "backgroundColor": "steelblue",
-                  "color": "white",
+                  "backgroundColor": "#262626",
+                  "color": "#b2b2b0",
+                  "flex": 1,
+                  "fontFamily": "cloisterblack",
+                  "fontSize": 24,
                   "height": 50,
                   "textAlign": "center",
                   "textAlignVertical": "center",
-                  "width": "100%",
                 },
                 null,
               ]
             }
-            title="40"
-          />
+          >
+            40
+          </Text>
         </View>,
-        <Button
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={false}
+          ellipsizeMode="tail"
           onPress={[Function]}
           style={
-            Object {
-              "alignSelf": "baseline",
-              "backgroundColor": "steelblue",
-              "color": "white",
-              "height": 50,
-              "textAlign": "center",
-              "textAlignVertical": "center",
-              "width": "100%",
-            }
+            Array [
+              Object {
+                "alignSelf": "baseline",
+                "backgroundColor": "#262626",
+                "color": "#b2b2b0",
+                "flex": 1,
+                "fontFamily": "cloisterblack",
+                "fontSize": 24,
+                "height": 50,
+                "textAlign": "center",
+                "textAlignVertical": "center",
+              },
+              Object {
+                "borderColor": "#161616",
+                "borderWidth": 6,
+                "fontSize": 36,
+                "height": 40,
+                "width": "100%",
+              },
+            ]
           }
-          title="Start game"
-        />,
+        >
+          Start game
+        </Text>,
       ],
       "style": Object {
         "alignItems": "stretch",
-        "backgroundColor": "black",
+        "backgroundColor": "#161616",
         "flex": 1,
         "flexDirection": "column",
+        "justifyContent": "flex-end",
       },
     },
     "ref": null,
@@ -156,19 +216,45 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "source": 1,
+          "style": Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "height": 1334,
+              "width": "100%",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
           "accessible": true,
           "allowFontScaling": true,
-          "children": "Number of players [1-6]",
+          "children": "Players",
           "disabled": false,
           "ellipsizeMode": "tail",
           "style": Object {
-            "color": "white",
-            "fontSize": 18,
-            "fontWeight": "bold",
+            "alignSelf": "center",
+            "color": "#b2b2b0",
+            "fontSize": 25,
+            "textAlign": "left",
+            "width": "95%",
           },
         },
         "ref": null,
-        "rendered": "Number of players [1-6]",
+        "rendered": "Players",
         "type": [Function],
       },
       Object {
@@ -180,7 +266,7 @@ ShallowWrapper {
           "min": 1,
           "onChange": [Function],
           "step": 1,
-          "stepLarge": 10,
+          "stepLarge": 1,
           "value": 2,
         },
         "ref": null,
@@ -194,25 +280,19 @@ ShallowWrapper {
         "props": Object {
           "accessible": true,
           "allowFontScaling": true,
-          "children": Array [
-            "Starting lifepoints [",
-            20,
-            "]",
-          ],
+          "children": "Lifepoints",
           "disabled": false,
           "ellipsizeMode": "tail",
           "style": Object {
-            "color": "white",
-            "fontSize": 18,
-            "fontWeight": "bold",
+            "alignSelf": "center",
+            "color": "#b2b2b0",
+            "fontSize": 25,
+            "textAlign": "left",
+            "width": "95%",
           },
         },
         "ref": null,
-        "rendered": Array [
-          "Starting lifepoints [",
-          20,
-          "]",
-        ],
+        "rendered": "Lifepoints",
         "type": [Function],
       },
       Object {
@@ -221,69 +301,90 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": Array [
-            <Button
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
                     "alignSelf": "baseline",
-                    "backgroundColor": "steelblue",
-                    "color": "white",
+                    "backgroundColor": "#262626",
+                    "color": "#b2b2b0",
+                    "flex": 1,
+                    "fontFamily": "cloisterblack",
+                    "fontSize": 24,
                     "height": 50,
                     "textAlign": "center",
                     "textAlignVertical": "center",
-                    "width": "100%",
                   },
                   Object {
-                    "backgroundColor": "red",
+                    "backgroundColor": "#710000",
                   },
                 ]
               }
-              title="20"
-            />,
-            <Button
+            >
+              20
+            </Text>,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
                     "alignSelf": "baseline",
-                    "backgroundColor": "steelblue",
-                    "color": "white",
+                    "backgroundColor": "#262626",
+                    "color": "#b2b2b0",
+                    "flex": 1,
+                    "fontFamily": "cloisterblack",
+                    "fontSize": 24,
                     "height": 50,
                     "textAlign": "center",
                     "textAlignVertical": "center",
-                    "width": "100%",
                   },
                   null,
                 ]
               }
-              title="30"
-            />,
-            <Button
+            >
+              30
+            </Text>,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
                     "alignSelf": "baseline",
-                    "backgroundColor": "steelblue",
-                    "color": "white",
+                    "backgroundColor": "#262626",
+                    "color": "#b2b2b0",
+                    "flex": 1,
+                    "fontFamily": "cloisterblack",
+                    "fontSize": 24,
                     "height": 50,
                     "textAlign": "center",
                     "textAlignVertical": "center",
-                    "width": "100%",
                   },
                   null,
                 ]
               }
-              title="40"
-            />,
+            >
+              40
+            </Text>,
           ],
           "style": Object {
             "alignItems": "center",
             "flex": 1,
             "flexDirection": "row",
             "height": "20%",
-            "justifyContent": "center",
+            "justifyContent": "space-around",
           },
         },
         "ref": null,
@@ -293,25 +394,31 @@ ShallowWrapper {
             "key": "buttonLifePoints20",
             "nodeType": "class",
             "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": 20,
+              "disabled": false,
+              "ellipsizeMode": "tail",
               "onPress": [Function],
               "style": Array [
                 Object {
                   "alignSelf": "baseline",
-                  "backgroundColor": "steelblue",
-                  "color": "white",
+                  "backgroundColor": "#262626",
+                  "color": "#b2b2b0",
+                  "flex": 1,
+                  "fontFamily": "cloisterblack",
+                  "fontSize": 24,
                   "height": 50,
                   "textAlign": "center",
                   "textAlignVertical": "center",
-                  "width": "100%",
                 },
                 Object {
-                  "backgroundColor": "red",
+                  "backgroundColor": "#710000",
                 },
               ],
-              "title": "20",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": 20,
             "type": [Function],
           },
           Object {
@@ -319,23 +426,29 @@ ShallowWrapper {
             "key": "buttonLifePoints30",
             "nodeType": "class",
             "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": 30,
+              "disabled": false,
+              "ellipsizeMode": "tail",
               "onPress": [Function],
               "style": Array [
                 Object {
                   "alignSelf": "baseline",
-                  "backgroundColor": "steelblue",
-                  "color": "white",
+                  "backgroundColor": "#262626",
+                  "color": "#b2b2b0",
+                  "flex": 1,
+                  "fontFamily": "cloisterblack",
+                  "fontSize": 24,
                   "height": 50,
                   "textAlign": "center",
                   "textAlignVertical": "center",
-                  "width": "100%",
                 },
                 null,
               ],
-              "title": "30",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": 30,
             "type": [Function],
           },
           Object {
@@ -343,23 +456,29 @@ ShallowWrapper {
             "key": "buttonLifePoints40",
             "nodeType": "class",
             "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": 40,
+              "disabled": false,
+              "ellipsizeMode": "tail",
               "onPress": [Function],
               "style": Array [
                 Object {
                   "alignSelf": "baseline",
-                  "backgroundColor": "steelblue",
-                  "color": "white",
+                  "backgroundColor": "#262626",
+                  "color": "#b2b2b0",
+                  "flex": 1,
+                  "fontFamily": "cloisterblack",
+                  "fontSize": 24,
                   "height": 50,
                   "textAlign": "center",
                   "textAlignVertical": "center",
-                  "width": "100%",
                 },
                 null,
               ],
-              "title": "40",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": 40,
             "type": [Function],
           },
         ],
@@ -370,20 +489,35 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
+          "children": "Start game",
+          "disabled": false,
+          "ellipsizeMode": "tail",
           "onPress": [Function],
-          "style": Object {
-            "alignSelf": "baseline",
-            "backgroundColor": "steelblue",
-            "color": "white",
-            "height": 50,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "width": "100%",
-          },
-          "title": "Start game",
+          "style": Array [
+            Object {
+              "alignSelf": "baseline",
+              "backgroundColor": "#262626",
+              "color": "#b2b2b0",
+              "flex": 1,
+              "fontFamily": "cloisterblack",
+              "fontSize": 24,
+              "height": 50,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+            },
+            Object {
+              "borderColor": "#161616",
+              "borderWidth": 6,
+              "fontSize": 36,
+              "height": 40,
+              "width": "100%",
+            },
+          ],
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "Start game",
         "type": [Function],
       },
     ],
@@ -396,6 +530,24 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "height": 1334,
+                  "width": "100%",
+                },
+              ]
+            }
+          />,
           <Text
             accessible={true}
             allowFontScaling={true}
@@ -403,20 +555,22 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
-                "fontSize": 18,
-                "fontWeight": "bold",
+                "alignSelf": "center",
+                "color": "#b2b2b0",
+                "fontSize": 25,
+                "textAlign": "left",
+                "width": "95%",
               }
             }
           >
-            Number of players [1-6]
+            Players
           </Text>,
           <NumberSpinner
             max={6}
             min={1}
             onChange={[Function]}
             step={1}
-            stepLarge={10}
+            stepLarge={1}
             value={2}
           />,
           <Text
@@ -426,15 +580,15 @@ ShallowWrapper {
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "white",
-                "fontSize": 18,
-                "fontWeight": "bold",
+                "alignSelf": "center",
+                "color": "#b2b2b0",
+                "fontSize": 25,
+                "textAlign": "left",
+                "width": "95%",
               }
             }
           >
-            Starting lifepoints [
-            20
-            ]
+            Lifepoints
           </Text>,
           <View
             style={
@@ -443,88 +597,126 @@ ShallowWrapper {
                 "flex": 1,
                 "flexDirection": "row",
                 "height": "20%",
-                "justifyContent": "center",
+                "justifyContent": "space-around",
               }
             }
           >
-            <Button
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
                     "alignSelf": "baseline",
-                    "backgroundColor": "steelblue",
-                    "color": "white",
+                    "backgroundColor": "#262626",
+                    "color": "#b2b2b0",
+                    "flex": 1,
+                    "fontFamily": "cloisterblack",
+                    "fontSize": 24,
                     "height": 50,
                     "textAlign": "center",
                     "textAlignVertical": "center",
-                    "width": "100%",
                   },
                   Object {
-                    "backgroundColor": "red",
+                    "backgroundColor": "#710000",
                   },
                 ]
               }
-              title="20"
-            />
-            <Button
+            >
+              20
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
                     "alignSelf": "baseline",
-                    "backgroundColor": "steelblue",
-                    "color": "white",
+                    "backgroundColor": "#262626",
+                    "color": "#b2b2b0",
+                    "flex": 1,
+                    "fontFamily": "cloisterblack",
+                    "fontSize": 24,
                     "height": 50,
                     "textAlign": "center",
                     "textAlignVertical": "center",
-                    "width": "100%",
                   },
                   null,
                 ]
               }
-              title="30"
-            />
-            <Button
+            >
+              30
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              disabled={false}
+              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
                     "alignSelf": "baseline",
-                    "backgroundColor": "steelblue",
-                    "color": "white",
+                    "backgroundColor": "#262626",
+                    "color": "#b2b2b0",
+                    "flex": 1,
+                    "fontFamily": "cloisterblack",
+                    "fontSize": 24,
                     "height": 50,
                     "textAlign": "center",
                     "textAlignVertical": "center",
-                    "width": "100%",
                   },
                   null,
                 ]
               }
-              title="40"
-            />
+            >
+              40
+            </Text>
           </View>,
-          <Button
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            disabled={false}
+            ellipsizeMode="tail"
             onPress={[Function]}
             style={
-              Object {
-                "alignSelf": "baseline",
-                "backgroundColor": "steelblue",
-                "color": "white",
-                "height": 50,
-                "textAlign": "center",
-                "textAlignVertical": "center",
-                "width": "100%",
-              }
+              Array [
+                Object {
+                  "alignSelf": "baseline",
+                  "backgroundColor": "#262626",
+                  "color": "#b2b2b0",
+                  "flex": 1,
+                  "fontFamily": "cloisterblack",
+                  "fontSize": 24,
+                  "height": 50,
+                  "textAlign": "center",
+                  "textAlignVertical": "center",
+                },
+                Object {
+                  "borderColor": "#161616",
+                  "borderWidth": 6,
+                  "fontSize": 36,
+                  "height": 40,
+                  "width": "100%",
+                },
+              ]
             }
-            title="Start game"
-          />,
+          >
+            Start game
+          </Text>,
         ],
         "style": Object {
           "alignItems": "stretch",
-          "backgroundColor": "black",
+          "backgroundColor": "#161616",
           "flex": 1,
           "flexDirection": "column",
+          "justifyContent": "flex-end",
         },
       },
       "ref": null,
@@ -534,19 +726,45 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "source": 1,
+            "style": Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "height": 1334,
+                "width": "100%",
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
             "accessible": true,
             "allowFontScaling": true,
-            "children": "Number of players [1-6]",
+            "children": "Players",
             "disabled": false,
             "ellipsizeMode": "tail",
             "style": Object {
-              "color": "white",
-              "fontSize": 18,
-              "fontWeight": "bold",
+              "alignSelf": "center",
+              "color": "#b2b2b0",
+              "fontSize": 25,
+              "textAlign": "left",
+              "width": "95%",
             },
           },
           "ref": null,
-          "rendered": "Number of players [1-6]",
+          "rendered": "Players",
           "type": [Function],
         },
         Object {
@@ -558,7 +776,7 @@ ShallowWrapper {
             "min": 1,
             "onChange": [Function],
             "step": 1,
-            "stepLarge": 10,
+            "stepLarge": 1,
             "value": 2,
           },
           "ref": null,
@@ -572,25 +790,19 @@ ShallowWrapper {
           "props": Object {
             "accessible": true,
             "allowFontScaling": true,
-            "children": Array [
-              "Starting lifepoints [",
-              20,
-              "]",
-            ],
+            "children": "Lifepoints",
             "disabled": false,
             "ellipsizeMode": "tail",
             "style": Object {
-              "color": "white",
-              "fontSize": 18,
-              "fontWeight": "bold",
+              "alignSelf": "center",
+              "color": "#b2b2b0",
+              "fontSize": 25,
+              "textAlign": "left",
+              "width": "95%",
             },
           },
           "ref": null,
-          "rendered": Array [
-            "Starting lifepoints [",
-            20,
-            "]",
-          ],
+          "rendered": "Lifepoints",
           "type": [Function],
         },
         Object {
@@ -599,69 +811,90 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": Array [
-              <Button
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                disabled={false}
+                ellipsizeMode="tail"
                 onPress={[Function]}
                 style={
                   Array [
                     Object {
                       "alignSelf": "baseline",
-                      "backgroundColor": "steelblue",
-                      "color": "white",
+                      "backgroundColor": "#262626",
+                      "color": "#b2b2b0",
+                      "flex": 1,
+                      "fontFamily": "cloisterblack",
+                      "fontSize": 24,
                       "height": 50,
                       "textAlign": "center",
                       "textAlignVertical": "center",
-                      "width": "100%",
                     },
                     Object {
-                      "backgroundColor": "red",
+                      "backgroundColor": "#710000",
                     },
                   ]
                 }
-                title="20"
-              />,
-              <Button
+              >
+                20
+              </Text>,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                disabled={false}
+                ellipsizeMode="tail"
                 onPress={[Function]}
                 style={
                   Array [
                     Object {
                       "alignSelf": "baseline",
-                      "backgroundColor": "steelblue",
-                      "color": "white",
+                      "backgroundColor": "#262626",
+                      "color": "#b2b2b0",
+                      "flex": 1,
+                      "fontFamily": "cloisterblack",
+                      "fontSize": 24,
                       "height": 50,
                       "textAlign": "center",
                       "textAlignVertical": "center",
-                      "width": "100%",
                     },
                     null,
                   ]
                 }
-                title="30"
-              />,
-              <Button
+              >
+                30
+              </Text>,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                disabled={false}
+                ellipsizeMode="tail"
                 onPress={[Function]}
                 style={
                   Array [
                     Object {
                       "alignSelf": "baseline",
-                      "backgroundColor": "steelblue",
-                      "color": "white",
+                      "backgroundColor": "#262626",
+                      "color": "#b2b2b0",
+                      "flex": 1,
+                      "fontFamily": "cloisterblack",
+                      "fontSize": 24,
                       "height": 50,
                       "textAlign": "center",
                       "textAlignVertical": "center",
-                      "width": "100%",
                     },
                     null,
                   ]
                 }
-                title="40"
-              />,
+              >
+                40
+              </Text>,
             ],
             "style": Object {
               "alignItems": "center",
               "flex": 1,
               "flexDirection": "row",
               "height": "20%",
-              "justifyContent": "center",
+              "justifyContent": "space-around",
             },
           },
           "ref": null,
@@ -671,25 +904,31 @@ ShallowWrapper {
               "key": "buttonLifePoints20",
               "nodeType": "class",
               "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": 20,
+                "disabled": false,
+                "ellipsizeMode": "tail",
                 "onPress": [Function],
                 "style": Array [
                   Object {
                     "alignSelf": "baseline",
-                    "backgroundColor": "steelblue",
-                    "color": "white",
+                    "backgroundColor": "#262626",
+                    "color": "#b2b2b0",
+                    "flex": 1,
+                    "fontFamily": "cloisterblack",
+                    "fontSize": 24,
                     "height": 50,
                     "textAlign": "center",
                     "textAlignVertical": "center",
-                    "width": "100%",
                   },
                   Object {
-                    "backgroundColor": "red",
+                    "backgroundColor": "#710000",
                   },
                 ],
-                "title": "20",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": 20,
               "type": [Function],
             },
             Object {
@@ -697,23 +936,29 @@ ShallowWrapper {
               "key": "buttonLifePoints30",
               "nodeType": "class",
               "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": 30,
+                "disabled": false,
+                "ellipsizeMode": "tail",
                 "onPress": [Function],
                 "style": Array [
                   Object {
                     "alignSelf": "baseline",
-                    "backgroundColor": "steelblue",
-                    "color": "white",
+                    "backgroundColor": "#262626",
+                    "color": "#b2b2b0",
+                    "flex": 1,
+                    "fontFamily": "cloisterblack",
+                    "fontSize": 24,
                     "height": 50,
                     "textAlign": "center",
                     "textAlignVertical": "center",
-                    "width": "100%",
                   },
                   null,
                 ],
-                "title": "30",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": 30,
               "type": [Function],
             },
             Object {
@@ -721,23 +966,29 @@ ShallowWrapper {
               "key": "buttonLifePoints40",
               "nodeType": "class",
               "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": 40,
+                "disabled": false,
+                "ellipsizeMode": "tail",
                 "onPress": [Function],
                 "style": Array [
                   Object {
                     "alignSelf": "baseline",
-                    "backgroundColor": "steelblue",
-                    "color": "white",
+                    "backgroundColor": "#262626",
+                    "color": "#b2b2b0",
+                    "flex": 1,
+                    "fontFamily": "cloisterblack",
+                    "fontSize": 24,
                     "height": 50,
                     "textAlign": "center",
                     "textAlignVertical": "center",
-                    "width": "100%",
                   },
                   null,
                 ],
-                "title": "40",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": 40,
               "type": [Function],
             },
           ],
@@ -748,20 +999,35 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Start game",
+            "disabled": false,
+            "ellipsizeMode": "tail",
             "onPress": [Function],
-            "style": Object {
-              "alignSelf": "baseline",
-              "backgroundColor": "steelblue",
-              "color": "white",
-              "height": 50,
-              "textAlign": "center",
-              "textAlignVertical": "center",
-              "width": "100%",
-            },
-            "title": "Start game",
+            "style": Array [
+              Object {
+                "alignSelf": "baseline",
+                "backgroundColor": "#262626",
+                "color": "#b2b2b0",
+                "flex": 1,
+                "fontFamily": "cloisterblack",
+                "fontSize": 24,
+                "height": 50,
+                "textAlign": "center",
+                "textAlignVertical": "center",
+              },
+              Object {
+                "borderColor": "#161616",
+                "borderWidth": 6,
+                "fontSize": 36,
+                "height": 40,
+                "width": "100%",
+              },
+            ],
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "Start game",
           "type": [Function],
         },
       ],

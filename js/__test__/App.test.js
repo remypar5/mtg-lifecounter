@@ -4,16 +4,13 @@ import { shallow } from 'enzyme';
 import App from '../App';
 
 describe('<App />', () => {
+    let component;
 
-	let component;
+    beforeEach(() => {
+        component = shallow(<App />);
+    });
 
-	beforeEach(() => {
-		component = shallow(
-			<App />
-		);
-	});
-
-	it('renders without crashing', () => {
-		expect(component).toMatchSnapshot();
-	});
+    it('renders without crashing', () => {
+        expect(component).toMatchSnapshot();
+    });
 });

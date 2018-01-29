@@ -1,86 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, View, Text, TextInput } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+
 import SpinnerButton from './SpinnerButton';
-
-export default class NumberSpinner extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            value: props.value
-        };
-
-        this.increase = this.increase.bind(this);
-        this.decrease = this.decrease.bind(this);
-    }
-
-    render() {
-        const props = this.props;
-
-        return (
-            <View style={styles.container}>
-                <SpinnerButton
-                    style={ styles.button }
-                    width="20%"
-                    content="-"
-                    onPress={() => this.decrease(props.step)}
-                    onHold={() => this.decrease(props.stepLarge)} />
-                <Text style={styles.value}>{this.state.value}</Text>
-                <SpinnerButton
-                    width="20%"
-                    style={ styles.button }
-                    content="+"
-                    onPress={() => this.increase(props.step)}
-                    onHold={() => this.increase(props.stepLarge)} />
-            </View>
-        );
-    }
-
-    setValue(value) {
-        this.setState({
-            value
-        });
-
-        this.props.onChange(value);
-    }
-
-    increase(points) {
-        let newValue = this.state.value + points;
-
-        if (this.props.max !== undefined) {
-            newValue = Math.min(this.props.max, newValue);
-        }
-
-        this.setValue(newValue);
-    }
-
-    decrease(points) {
-        let newValue = this.state.value - points;
-
-        if (this.props.min !== undefined) {
-            newValue = Math.max(this.props.min, newValue);
-        }
-
-        this.setValue(newValue);
-    }
-
-}
-
-NumberSpinner.propTypes = {
-    value: PropTypes.number.isRequired,
-    min: PropTypes.number,
-    max: PropTypes.number,
-    step: PropTypes.number,
-    stepLarge: PropTypes.number,
-    onChange: PropTypes.func
-};
-
-NumberSpinner.defaultProps = {
-    step: 1,
-    stepLarge: 10,
-    onChange: () => { }
-};
+import { FONT_FAMILY, COLOR_FOREGROUND } from '../utils/constants';
 
 const styles = StyleSheet.create({
     container: {
@@ -90,19 +13,87 @@ const styles = StyleSheet.create({
         alignItems: 'center', // Vertical
     },
     button: {
-        // flexGrow: 3,
-        // width: '20%',
         height: '100%',
-        color: '#b2b2b0',
+        color: COLOR_FOREGROUND,
+        fontSize: 32,
+        fontFamily: FONT_FAMILY,
     },
     value: {
-        // backgroundColor: 'red',
         width: '40%',
         height: '100%',
         textAlignVertical: 'center',
         textAlign: 'center',
         alignSelf: 'center',
-        color: '#b2b2b0',
-        fontSize: 40,
-    }
+        color: COLOR_FOREGROUND,
+        fontSize: 42,
+        fontFamily: FONT_FAMILY,
+    },
 });
+
+export default class NumberSpinner extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            value: props.value,
+        };
+
+        this.update = this.update.bind(this);
+    }
+
+    setValue(value) {
+        this.setState({
+            value,
+        });
+
+        this.props.onChange(value);
+    }
+
+    update(points) {
+        const { value } = this.state;
+        const { min, max } = this.props;
+
+        this.setValue(Math.min(max, Math.max(min, value + points)));
+    }
+
+    render() {
+        const { step, stepLarge } = this.props;
+        const { value } = this.state;
+        const { container, button, value: valueStyle } = styles;
+
+        return (
+            <View style={container}>
+                <SpinnerButton
+                    style={button}
+                    content="-"
+                    onPress={() => this.update(-step)}
+                    onHold={() => this.update(-stepLarge)}
+                />
+                <Text style={valueStyle}>{value}</Text>
+                <SpinnerButton
+                    style={button}
+                    content="+"
+                    onPress={() => this.update(+step)}
+                    onHold={() => this.update(+stepLarge)}
+                />
+            </View>
+        );
+    }
+}
+
+NumberSpinner.propTypes = {
+    value: PropTypes.number.isRequired,
+    min: PropTypes.number,
+    max: PropTypes.number,
+    step: PropTypes.number,
+    stepLarge: PropTypes.number,
+    onChange: PropTypes.func,
+};
+
+NumberSpinner.defaultProps = {
+    step: 1,
+    stepLarge: 10,
+    min: Number.MIN_SAFE_INTEGER,
+    max: Number.MAX_SAFE_INTEGER,
+    onChange: () => { },
+};

@@ -3,15 +3,11 @@ import { shallow } from 'enzyme';
 
 import GameSettings from '../GameSettings';
 
-
-describe('<GameSettings />' , () => {
-
+describe('<GameSettings />', () => {
     let component;
 
     beforeEach(() => {
-        component = shallow(
-            <GameSettings />
-        );
+        component = shallow(<GameSettings navigation={{}} />);
     });
 
     it('renders without crashing', () => {

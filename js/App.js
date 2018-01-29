@@ -1,25 +1,7 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
 
-import { StackNavigator } from 'react-navigation';
-import GameSettingsContainer from './screens/Game/GameSettings.container';
-import GameRoundContainer from './screens/Game/GameRound.container';
+import AppRouter from './routes';
 
-const GameRouter = StackNavigator({
-    GameSettings: {
-        screen: GameSettingsContainer
-    },
-    GameRound: {
-        screen: GameRoundContainer
-    }
-}, {
-    initialRouteName: 'GameSettings'
-});
+const App = () => <AppRouter />;
 
-export default class App extends React.Component {
-    render() {
-        return (
-            <GameRouter />
-        );
-    }
-}
+export default App;
