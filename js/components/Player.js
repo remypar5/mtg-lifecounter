@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { StyleSheet, Text, View } from 'react-native';
 
 import NumberSpinner from './NumberSpinner';
@@ -67,8 +67,8 @@ export default class Player extends React.Component {
 }
 
 Player.propTypes = {
-    player: propTypes.object.isRequired,
-    onGameOver: propTypes.func,
+    player: PropTypes.object.isRequired,
+    onGameOver: PropTypes.func,
 };
 
 Player.defaultProps = {
