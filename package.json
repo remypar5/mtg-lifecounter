@@ -47,7 +47,7 @@
         "lines": 85,
         "statements": 85
       },
-      "./js/**/*.container.js": {
+      "./js/**/*Container.js": {
         "lines": 0
       }
     }
