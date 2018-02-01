@@ -61323,7 +61323,7 @@ var _GameRound = require(413          ); // 413 = ./GameRound
 
 var _GameRound2 = babelHelpers.interopRequireDefault(_GameRound);
 
-var _GameRoundContainer = require(419                   ); // 419 = ./GameRoundContainer
+var _GameRoundContainer = require(421                   ); // 421 = ./GameRoundContainer
 
 var _GameRoundContainer2 = babelHelpers.interopRequireDefault(_GameRoundContainer);
 
@@ -61676,10 +61676,26 @@ var arraySplit = function arraySplit(arr, splitters) {
 
 exports.default = arraySplit;
 }, 417, null, "mtg-lifecounter/js/utils/array.split.js");
-__d(/* mtg-lifecounter/js/components/Player.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+__d(/* mtg-lifecounter/js/components/Player/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/components/Player.js';
+exports.styles = undefined;
+
+var _Player = require(419       ); // 419 = ./Player
+
+var _Player2 = babelHelpers.interopRequireDefault(_Player);
+
+var _styles = require(420       ); // 420 = ./styles
+
+var _styles2 = babelHelpers.interopRequireDefault(_styles);
+
+exports.default = _Player2.default;
+exports.styles = _styles2.default;
+}, 418, null, "mtg-lifecounter/js/components/Player/index.js");
+__d(/* mtg-lifecounter/js/components/Player/Player.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/components/Player/Player.js';
 
 var _react = require(38     ); // 38 = react
 
@@ -61691,33 +61707,13 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _NumberSpinner = require(406              ); // 406 = ./NumberSpinner
+var _styles = require(420       ); // 420 = ./styles
+
+var _styles2 = babelHelpers.interopRequireDefault(_styles);
+
+var _NumberSpinner = require(406               ); // 406 = ../NumberSpinner
 
 var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
-
-var _constants = require(405                 ); // 405 = ../utils/constants
-
-var styles = _reactNative.StyleSheet.create({
-    tile: {
-        flex: 1,
-        alignItems: 'stretch',
-        justifyContent: 'flex-start',
-        borderColor: _constants.COLOR_BACKGROUND,
-        borderWidth: 3,
-        borderStyle: 'solid',
-        width: '100%',
-        height: '100%'
-    },
-    gameOver: {
-        backgroundColor: _constants.COLOR_MARKED
-    },
-    playerName: {
-        color: _constants.COLOR_FOREGROUND,
-        fontSize: 24,
-        alignSelf: 'center',
-        paddingVertical: 5
-    }
-});
 
 var Player = function (_React$Component) {
     babelHelpers.inherits(Player, _React$Component);
@@ -61756,16 +61752,16 @@ var Player = function (_React$Component) {
             var _state = this.state,
                 gameOver = _state.gameOver,
                 life = _state.life;
-            var tile = styles.tile,
-                playerName = styles.playerName,
-                gameOverStyle = styles.gameOver;
+            var tile = _styles2.default.tile,
+                playerName = _styles2.default.playerName,
+                gameOverStyle = _styles2.default.gameOver;
 
 
             return _react2.default.createElement(
                 _reactNative.View,
                 { style: [tile, gameOver ? gameOverStyle : null], __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 58
+                        lineNumber: 36
                     }
                 },
                 _react2.default.createElement(_NumberSpinner2.default, {
@@ -61773,14 +61769,14 @@ var Player = function (_React$Component) {
                     onChange: this.onLifeChange,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 59
+                        lineNumber: 37
                     }
                 }),
                 _react2.default.createElement(
                     _reactNative.Text,
                     { style: [playerName, { color: color }], __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 63
+                            lineNumber: 41
                         }
                     },
                     name
@@ -61802,7 +61798,39 @@ Player.propTypes = {
 Player.defaultProps = {
     onGameOver: function onGameOver() {}
 };
-}, 418, null, "mtg-lifecounter/js/components/Player.js");
+}, 419, null, "mtg-lifecounter/js/components/Player/Player.js");
+__d(/* mtg-lifecounter/js/components/Player/styles.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _reactNative = require(12            ); // 12 = react-native
+
+var _constants = require(405                    ); // 405 = ../../utils/constants
+
+var styles = _reactNative.StyleSheet.create({
+    tile: {
+        flex: 1,
+        alignItems: 'stretch',
+        justifyContent: 'flex-start',
+        borderColor: _constants.COLOR_BACKGROUND,
+        borderWidth: 3,
+        borderStyle: 'solid',
+        width: '100%',
+        height: '100%'
+    },
+    gameOver: {
+        backgroundColor: _constants.COLOR_MARKED
+    },
+    playerName: {
+        color: _constants.COLOR_FOREGROUND,
+        fontSize: 24,
+        alignSelf: 'center',
+        paddingVertical: 5
+    }
+});
+
+exports.default = styles;
+}, 420, null, "mtg-lifecounter/js/components/Player/styles.js");
 __d(/* mtg-lifecounter/js/screens/Game/GameRound/GameRoundContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61861,6 +61889,6 @@ GameRoundContainer.navigationOptions = {
 GameRoundContainer.propTypes = {
     navigation: _propTypes2.default.object.isRequired
 };
-}, 419, null, "mtg-lifecounter/js/screens/Game/GameRound/GameRoundContainer.js");
+}, 421, null, "mtg-lifecounter/js/screens/Game/GameRound/GameRoundContainer.js");
 ;require(57);
 ;require(0);
