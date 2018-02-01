@@ -1,34 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 
-import SpinnerButton from './SpinnerButton';
-import { FONT_FAMILY, COLOR_FOREGROUND } from '../utils/constants';
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between', // Horizontal
-        alignItems: 'center', // Vertical
-    },
-    button: {
-        height: '100%',
-        color: COLOR_FOREGROUND,
-        fontSize: 32,
-        fontFamily: FONT_FAMILY,
-    },
-    value: {
-        width: '40%',
-        height: '100%',
-        textAlignVertical: 'center',
-        textAlign: 'center',
-        alignSelf: 'center',
-        color: COLOR_FOREGROUND,
-        fontSize: 42,
-        fontFamily: FONT_FAMILY,
-    },
-});
+import styles from './styles';
+import SpinnerButton from '../SpinnerButton';
 
 export default class NumberSpinner extends React.Component {
     constructor(props) {
