@@ -52797,17 +52797,15 @@ __d(/* mtg-lifecounter/js/routes/AppRouter.js */function(global, require, module
 
 var _reactNavigation = require(339               ); // 339 = react-navigation
 
-var _GameSettings = require(402                                     ); // 402 = ../screens/Game/GameSettings.container
+var _GameSettings = require(402                           ); // 402 = ../screens/Game/GameSettings
 
-var _GameSettings2 = babelHelpers.interopRequireDefault(_GameSettings);
-
-var _GameRound = require(408                                  ); // 408 = ../screens/Game/GameRound.container
+var _GameRound = require(410                                  ); // 410 = ../screens/Game/GameRound.container
 
 var _GameRound2 = babelHelpers.interopRequireDefault(_GameRound);
 
 var AppRouter = (0, _reactNavigation.StackNavigator)({
     GameSettings: {
-        screen: _GameSettings2.default
+        screen: _GameSettings.GameSettingsContainer
     },
     GameRound: {
         screen: _GameRound2.default
@@ -60658,85 +60656,31 @@ function withNavigation(Component) {
   return (0, _hoistNonReactStatics2.default)(componentWithNavigation, Component);
 }
 }, 401, null, "react-navigation/src/views/withNavigation.js");
-__d(/* mtg-lifecounter/js/screens/Game/GameSettings.container.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+__d(/* mtg-lifecounter/js/screens/Game/GameSettings/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/screens/Game/GameSettings.container.js';
-
-var _react = require(38     ); // 38 = react
-
-var _react2 = babelHelpers.interopRequireDefault(_react);
-
-var _reactNative = require(12            ); // 12 = react-native
-
-var _propTypes = require(127         ); // 127 = prop-types
-
-var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+exports.styles = exports.GameSettingsContainer = exports.GameSettings = undefined;
 
 var _GameSettings = require(403             ); // 403 = ./GameSettings
 
 var _GameSettings2 = babelHelpers.interopRequireDefault(_GameSettings);
 
-var _constants = require(406                    ); // 406 = ../../utils/constants
+var _GameSettingsContainer = require(409                      ); // 409 = ./GameSettingsContainer
 
-var styles = _reactNative.StyleSheet.create({
-    header: {
-        backgroundColor: '#101011'
-    },
-    headerTitle: {
-        color: _constants.COLOR_FOREGROUND
-    }
-});
+var _GameSettingsContainer2 = babelHelpers.interopRequireDefault(_GameSettingsContainer);
 
-var GameSettingsContainer = function (_React$Component) {
-    babelHelpers.inherits(GameSettingsContainer, _React$Component);
+var _styles = require(404       ); // 404 = ./styles
 
-    function GameSettingsContainer() {
-        babelHelpers.classCallCheck(this, GameSettingsContainer);
-        return babelHelpers.possibleConstructorReturn(this, (GameSettingsContainer.__proto__ || Object.getPrototypeOf(GameSettingsContainer)).apply(this, arguments));
-    }
+var _styles2 = babelHelpers.interopRequireDefault(_styles);
 
-    babelHelpers.createClass(GameSettingsContainer, [{
-        key: 'render',
-        value: function render() {
-            var navigation = this.props.navigation;
-
-
-            return _react2.default.createElement(_GameSettings2.default, { navigation: navigation, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 23
-                }
-            });
-        }
-    }]);
-    return GameSettingsContainer;
-}(_react2.default.Component);
-
-exports.default = GameSettingsContainer;
-
-
-GameSettingsContainer.navigationOptions = {
-    title: 'Lifecounter',
-    headerLeft: _react2.default.createElement(_reactNative.Image, {
-        style: { width: 42, height: 42 },
-        source: { uri: 'mipmap/ic_launcher' },
-        __source: {
-            fileName: _jsxFileName,
-            lineNumber: 29
-        }
-    }),
-    headerStyle: styles.header,
-    headerTitleStyle: styles.headerTitle
-};
-
-GameSettingsContainer.propTypes = {
-    navigation: _propTypes2.default.object.isRequired
-};
-}, 402, null, "mtg-lifecounter/js/screens/Game/GameSettings.container.js");
-__d(/* mtg-lifecounter/js/screens/Game/GameSettings.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+exports.GameSettings = _GameSettings2.default;
+exports.GameSettingsContainer = _GameSettingsContainer2.default;
+exports.styles = _styles2.default;
+}, 402, null, "mtg-lifecounter/js/screens/Game/GameSettings/index.js");
+__d(/* mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/screens/Game/GameSettings.js';
+var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.js';
 
 var _react = require(38     ); // 38 = react
 
@@ -60748,15 +60692,163 @@ var _propTypes = require(127         ); // 127 = prop-types
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
-var _NumberSpinner = require(404                             ); // 404 = ../../components/NumberSpinner
+var _styles = require(404       ); // 404 = ./styles
+
+var _styles2 = babelHelpers.interopRequireDefault(_styles);
+
+var _NumberSpinner = require(406                                ); // 406 = ../../../components/NumberSpinner
 
 var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
 
-var _constants = require(406                    ); // 406 = ../../utils/constants
-
-var _bgicon = require(407           ); // 407 = ./bgicon.png
+var _bgicon = require(408            ); // 408 = ../bgicon.png
 
 var _bgicon2 = babelHelpers.interopRequireDefault(_bgicon);
+
+var GameSettings = function (_React$Component) {
+    babelHelpers.inherits(GameSettings, _React$Component);
+
+    function GameSettings(props) {
+        babelHelpers.classCallCheck(this, GameSettings);
+
+        var _this = babelHelpers.possibleConstructorReturn(this, (GameSettings.__proto__ || Object.getPrototypeOf(GameSettings)).call(this, props));
+
+        _this.state = {
+            numberOfPlayers: 2,
+            startingLifeTotal: GameSettings.lifePoints[0]
+        };
+        return _this;
+    }
+
+    babelHelpers.createClass(GameSettings, [{
+        key: 'startRound',
+        value: function startRound() {
+            var _state = this.state,
+                startingLifeTotal = _state.startingLifeTotal,
+                numberOfPlayers = _state.numberOfPlayers;
+
+
+            this.props.navigation.navigate('GameRound', { startingLifeTotal: startingLifeTotal, numberOfPlayers: numberOfPlayers });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            var _state2 = this.state,
+                numberOfPlayers = _state2.numberOfPlayers,
+                startingLifeTotal = _state2.startingLifeTotal;
+            var container = _styles2.default.container,
+                bgicon = _styles2.default.bgicon,
+                label = _styles2.default.label,
+                buttonContainer = _styles2.default.buttonContainer,
+                button = _styles2.default.button,
+                selected = _styles2.default.selected,
+                startButton = _styles2.default.startButton;
+
+
+            return _react2.default.createElement(
+                _reactNative.View,
+                { style: container, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 32
+                    }
+                },
+                _react2.default.createElement(_reactNative.Image, { source: _bgicon2.default, style: [_reactNative.StyleSheet.absoluteFill, bgicon], __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 33
+                    }
+                }),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    { style: label, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 34
+                        }
+                    },
+                    'Players'
+                ),
+                _react2.default.createElement(_NumberSpinner2.default, {
+                    min: 1,
+                    max: 6,
+                    stepLarge: 1,
+                    value: numberOfPlayers,
+                    onChange: function onChange(nrPlayers) {
+                        return _this2.setState({ numberOfPlayers: nrPlayers });
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 35
+                    }
+                }),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    { style: label, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 43
+                        }
+                    },
+                    'Lifepoints'
+                ),
+                _react2.default.createElement(
+                    _reactNative.View,
+                    { style: buttonContainer, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 44
+                        }
+                    },
+                    GameSettings.lifePoints.map(function (points) {
+                        return _react2.default.createElement(
+                            _reactNative.Text,
+                            {
+                                key: 'buttonLifePoints' + points,
+                                style: [button, startingLifeTotal === points ? selected : null],
+                                onPress: function onPress() {
+                                    return _this2.setState({ startingLifeTotal: points });
+                                },
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 46
+                                }
+                            },
+                            points
+                        );
+                    })
+                ),
+                _react2.default.createElement(
+                    _reactNative.Text,
+                    {
+                        style: [button, startButton],
+                        onPress: function onPress() {
+                            return _this2.startRound();
+                        },
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 56
+                        }
+                    },
+                    'Start game'
+                )
+            );
+        }
+    }]);
+    return GameSettings;
+}(_react2.default.Component);
+
+exports.default = GameSettings;
+
+
+GameSettings.lifePoints = [20, 30, 40];
+GameSettings.propTypes = {
+    navigation: _propTypes2.default.object.isRequired
+};
+}, 403, null, "mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.js");
+__d(/* mtg-lifecounter/js/screens/Game/GameSettings/styles.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _reactNative = require(12            ); // 12 = react-native
+
+var _constants = require(405                       ); // 405 = ../../../utils/constants
 
 var _Dimensions$get = _reactNative.Dimensions.get('window'),
     screenHeight = _Dimensions$get.height;
@@ -60810,144 +60902,16 @@ var styles = _reactNative.StyleSheet.create({
     }
 });
 
-var GameSettings = function (_React$Component) {
-    babelHelpers.inherits(GameSettings, _React$Component);
-
-    function GameSettings(props) {
-        babelHelpers.classCallCheck(this, GameSettings);
-
-        var _this = babelHelpers.possibleConstructorReturn(this, (GameSettings.__proto__ || Object.getPrototypeOf(GameSettings)).call(this, props));
-
-        _this.state = {
-            numberOfPlayers: 2,
-            startingLifeTotal: GameSettings.lifePoints[0]
-        };
-        return _this;
-    }
-
-    babelHelpers.createClass(GameSettings, [{
-        key: 'startRound',
-        value: function startRound() {
-            var _state = this.state,
-                startingLifeTotal = _state.startingLifeTotal,
-                numberOfPlayers = _state.numberOfPlayers;
-
-
-            this.props.navigation.navigate('GameRound', { startingLifeTotal: startingLifeTotal, numberOfPlayers: numberOfPlayers });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            var _state2 = this.state,
-                numberOfPlayers = _state2.numberOfPlayers,
-                startingLifeTotal = _state2.startingLifeTotal;
-            var container = styles.container,
-                bgicon = styles.bgicon,
-                label = styles.label,
-                buttonContainer = styles.buttonContainer,
-                button = styles.button,
-                selected = styles.selected,
-                startButton = styles.startButton;
-
-
-            return _react2.default.createElement(
-                _reactNative.View,
-                { style: container, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 82
-                    }
-                },
-                _react2.default.createElement(_reactNative.Image, { source: _bgicon2.default, style: [_reactNative.StyleSheet.absoluteFill, bgicon], __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 83
-                    }
-                }),
-                _react2.default.createElement(
-                    _reactNative.Text,
-                    { style: label, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 84
-                        }
-                    },
-                    'Players'
-                ),
-                _react2.default.createElement(_NumberSpinner2.default, {
-                    min: 1,
-                    max: 6,
-                    stepLarge: 1,
-                    value: numberOfPlayers,
-                    onChange: function onChange(nrPlayers) {
-                        return _this2.setState({ numberOfPlayers: nrPlayers });
-                    },
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 85
-                    }
-                }),
-                _react2.default.createElement(
-                    _reactNative.Text,
-                    { style: label, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 93
-                        }
-                    },
-                    'Lifepoints'
-                ),
-                _react2.default.createElement(
-                    _reactNative.View,
-                    { style: buttonContainer, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 94
-                        }
-                    },
-                    GameSettings.lifePoints.map(function (points) {
-                        return _react2.default.createElement(
-                            _reactNative.Text,
-                            {
-                                key: 'buttonLifePoints' + points,
-                                style: [button, startingLifeTotal === points ? selected : null],
-                                onPress: function onPress() {
-                                    return _this2.setState({ startingLifeTotal: points });
-                                },
-                                __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 96
-                                }
-                            },
-                            points
-                        );
-                    })
-                ),
-                _react2.default.createElement(
-                    _reactNative.Text,
-                    {
-                        style: [button, startButton],
-                        onPress: function onPress() {
-                            return _this2.startRound();
-                        },
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 106
-                        }
-                    },
-                    'Start game'
-                )
-            );
-        }
-    }]);
-    return GameSettings;
-}(_react2.default.Component);
-
-exports.default = GameSettings;
-
-
-GameSettings.lifePoints = [20, 30, 40];
-GameSettings.propTypes = {
-    navigation: _propTypes2.default.object.isRequired
-};
-}, 403, null, "mtg-lifecounter/js/screens/Game/GameSettings.js");
+exports.default = styles;
+}, 404, null, "mtg-lifecounter/js/screens/Game/GameSettings/styles.js");
+__d(/* mtg-lifecounter/js/utils/constants.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var COLOR_BACKGROUND = exports.COLOR_BACKGROUND = '#262626';
+var COLOR_FOREGROUND = exports.COLOR_FOREGROUND = '#b2b2b0';
+var COLOR_MARKED = exports.COLOR_MARKED = '#710000';
+var FONT_FAMILY = exports.FONT_FAMILY = 'cloisterblack';
+}, 405, null, "mtg-lifecounter/js/utils/constants.js");
 __d(/* mtg-lifecounter/js/components/NumberSpinner.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -60963,11 +60927,11 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _SpinnerButton = require(405              ); // 405 = ./SpinnerButton
+var _SpinnerButton = require(407              ); // 407 = ./SpinnerButton
 
 var _SpinnerButton2 = babelHelpers.interopRequireDefault(_SpinnerButton);
 
-var _constants = require(406                 ); // 406 = ../utils/constants
+var _constants = require(405                 ); // 405 = ../utils/constants
 
 var styles = _reactNative.StyleSheet.create({
     container: {
@@ -61112,7 +61076,7 @@ NumberSpinner.defaultProps = {
     max: Number.MAX_SAFE_INTEGER,
     onChange: function onChange() {}
 };
-}, 404, null, "mtg-lifecounter/js/components/NumberSpinner.js");
+}, 406, null, "mtg-lifecounter/js/components/NumberSpinner.js");
 __d(/* mtg-lifecounter/js/components/SpinnerButton.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61128,7 +61092,7 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _constants = require(406                 ); // 406 = ../utils/constants
+var _constants = require(405                 ); // 405 = ../utils/constants
 
 var styles = _reactNative.StyleSheet.create({
     buttonContainer: {
@@ -61246,17 +61210,84 @@ SpinnerButton.propTypes = {
 SpinnerButton.defaultProps = {
     onHold: null
 };
-}, 405, null, "mtg-lifecounter/js/components/SpinnerButton.js");
-__d(/* mtg-lifecounter/js/utils/constants.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var COLOR_BACKGROUND = exports.COLOR_BACKGROUND = '#262626';
-var COLOR_FOREGROUND = exports.COLOR_FOREGROUND = '#b2b2b0';
-var COLOR_MARKED = exports.COLOR_MARKED = '#710000';
-var FONT_FAMILY = exports.FONT_FAMILY = 'cloisterblack';
-}, 406, null, "mtg-lifecounter/js/utils/constants.js");
+}, 407, null, "mtg-lifecounter/js/components/SpinnerButton.js");
 __d(/* mtg-lifecounter/js/screens/Game/bgicon.png */function(global, require, module, exports) {module.exports=require(171                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/js/screens/Game","width":312,"height":306,"scales":[1],"hash":"359060493314b32659ff3d81d6437580","name":"bgicon","type":"png"}); // 171 = react-native/Libraries/Image/AssetRegistry
-}, 407, null, "mtg-lifecounter/js/screens/Game/bgicon.png");
+}, 408, null, "mtg-lifecounter/js/screens/Game/bgicon.png");
+__d(/* mtg-lifecounter/js/screens/Game/GameSettings/GameSettingsContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/screens/Game/GameSettings/GameSettingsContainer.js';
+
+var _react = require(38     ); // 38 = react
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require(12            ); // 12 = react-native
+
+var _propTypes = require(127         ); // 127 = prop-types
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
+var _GameSettings = require(403             ); // 403 = ./GameSettings
+
+var _GameSettings2 = babelHelpers.interopRequireDefault(_GameSettings);
+
+var _constants = require(405                       ); // 405 = ../../../utils/constants
+
+var styles = _reactNative.StyleSheet.create({
+    header: {
+        backgroundColor: '#101011'
+    },
+    headerTitle: {
+        color: _constants.COLOR_FOREGROUND
+    }
+});
+
+var GameSettingsContainer = function (_React$Component) {
+    babelHelpers.inherits(GameSettingsContainer, _React$Component);
+
+    function GameSettingsContainer() {
+        babelHelpers.classCallCheck(this, GameSettingsContainer);
+        return babelHelpers.possibleConstructorReturn(this, (GameSettingsContainer.__proto__ || Object.getPrototypeOf(GameSettingsContainer)).apply(this, arguments));
+    }
+
+    babelHelpers.createClass(GameSettingsContainer, [{
+        key: 'render',
+        value: function render() {
+            var navigation = this.props.navigation;
+
+
+            return _react2.default.createElement(_GameSettings2.default, { navigation: navigation, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 23
+                }
+            });
+        }
+    }]);
+    return GameSettingsContainer;
+}(_react2.default.Component);
+
+exports.default = GameSettingsContainer;
+
+
+GameSettingsContainer.navigationOptions = {
+    title: 'Lifecounter',
+    headerLeft: _react2.default.createElement(_reactNative.Image, {
+        style: { width: 42, height: 42 },
+        source: { uri: 'mipmap/ic_launcher' },
+        __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29
+        }
+    }),
+    headerStyle: styles.header,
+    headerTitleStyle: styles.headerTitle
+};
+
+GameSettingsContainer.propTypes = {
+    navigation: _propTypes2.default.object.isRequired
+};
+}, 409, null, "mtg-lifecounter/js/screens/Game/GameSettings/GameSettingsContainer.js");
 __d(/* mtg-lifecounter/js/screens/Game/GameRound.container.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61270,7 +61301,7 @@ var _propTypes = require(127         ); // 127 = prop-types
 
 var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
-var _GameRound = require(409          ); // 409 = ./GameRound
+var _GameRound = require(411          ); // 411 = ./GameRound
 
 var _GameRound2 = babelHelpers.interopRequireDefault(_GameRound);
 
@@ -61315,7 +61346,7 @@ GameRoundContainer.navigationOptions = {
 GameRoundContainer.propTypes = {
     navigation: _propTypes2.default.object.isRequired
 };
-}, 408, null, "mtg-lifecounter/js/screens/Game/GameRound.container.js");
+}, 410, null, "mtg-lifecounter/js/screens/Game/GameRound.container.js");
 __d(/* mtg-lifecounter/js/screens/Game/GameRound.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61333,11 +61364,11 @@ var _reactNative = require(12            ); // 12 = react-native
 
 var _reactNavigation = require(339               ); // 339 = react-navigation
 
-var _Player = require(410                      ); // 410 = ../../components/Player
+var _Player = require(412                      ); // 412 = ../../components/Player
 
 var _Player2 = babelHelpers.interopRequireDefault(_Player);
 
-var _utils = require(411          ); // 411 = ../../utils
+var _utils = require(413          ); // 413 = ../../utils
 
 var _utils2 = babelHelpers.interopRequireDefault(_utils);
 
@@ -61596,7 +61627,7 @@ GameRound.propTypes = {
         index: _propTypes2.default.number
     }).isRequired
 };
-}, 409, null, "mtg-lifecounter/js/screens/Game/GameRound.js");
+}, 411, null, "mtg-lifecounter/js/screens/Game/GameRound.js");
 __d(/* mtg-lifecounter/js/components/Player.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61612,11 +61643,11 @@ var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require(12            ); // 12 = react-native
 
-var _NumberSpinner = require(404              ); // 404 = ./NumberSpinner
+var _NumberSpinner = require(406              ); // 406 = ./NumberSpinner
 
 var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
 
-var _constants = require(406                 ); // 406 = ../utils/constants
+var _constants = require(405                 ); // 405 = ../utils/constants
 
 var styles = _reactNative.StyleSheet.create({
     tile: {
@@ -61723,17 +61754,17 @@ Player.propTypes = {
 Player.defaultProps = {
     onGameOver: function onGameOver() {}
 };
-}, 410, null, "mtg-lifecounter/js/components/Player.js");
+}, 412, null, "mtg-lifecounter/js/components/Player.js");
 __d(/* mtg-lifecounter/js/utils/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _array = require(412            ); // 412 = ./array.split
+var _array = require(414            ); // 414 = ./array.split
 
 var _array2 = babelHelpers.interopRequireDefault(_array);
 
 exports.default = _array2.default;
-}, 411, null, "mtg-lifecounter/js/utils/index.js");
+}, 413, null, "mtg-lifecounter/js/utils/index.js");
 __d(/* mtg-lifecounter/js/utils/array.split.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61761,6 +61792,6 @@ var arraySplit = function arraySplit(arr, splitters) {
 };
 
 exports.default = arraySplit;
-}, 412, null, "mtg-lifecounter/js/utils/array.split.js");
+}, 414, null, "mtg-lifecounter/js/utils/array.split.js");
 ;require(57);
 ;require(0);
