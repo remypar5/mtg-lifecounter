@@ -1,23 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, TouchableWithoutFeedback, Text, View } from 'react-native';
+import { TouchableWithoutFeedback, Text, View } from 'react-native';
 
-import { FONT_FAMILY, COLOR_FOREGROUND } from '../utils/constants';
-
-const styles = StyleSheet.create({
-    buttonContainer: {
-        width: '20%',
-    },
-    button: {
-        fontSize: 32,
-        fontFamily: FONT_FAMILY,
-        width: '100%',
-        height: '100%',
-        color: COLOR_FOREGROUND,
-        textAlign: 'center',
-        textAlignVertical: 'center',
-    },
-});
+import styles from './styles';
 
 export default class SpinnerButton extends React.Component {
     constructor(props) {
