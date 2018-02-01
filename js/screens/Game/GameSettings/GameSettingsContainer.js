@@ -3,7 +3,7 @@ import { StyleSheet, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import GameSettings from './GameSettings';
-import { COLOR_FOREGROUND } from '../../utils/constants';
+import { COLOR_FOREGROUND } from '../../../utils/constants';
 
 const styles = StyleSheet.create({
     header: {
