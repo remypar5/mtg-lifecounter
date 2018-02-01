@@ -52799,16 +52799,14 @@ var _reactNavigation = require(339               ); // 339 = react-navigation
 
 var _GameSettings = require(402                           ); // 402 = ../screens/Game/GameSettings
 
-var _GameRound = require(410                                  ); // 410 = ../screens/Game/GameRound.container
-
-var _GameRound2 = babelHelpers.interopRequireDefault(_GameRound);
+var _GameRound = require(410                        ); // 410 = ../screens/Game/GameRound
 
 var AppRouter = (0, _reactNavigation.StackNavigator)({
     GameSettings: {
         screen: _GameSettings.GameSettingsContainer
     },
     GameRound: {
-        screen: _GameRound2.default
+        screen: _GameRound.GameRoundContainer
     }
 }, {
     initialRouteName: 'GameSettings'
@@ -61288,69 +61286,31 @@ GameSettingsContainer.propTypes = {
     navigation: _propTypes2.default.object.isRequired
 };
 }, 409, null, "mtg-lifecounter/js/screens/Game/GameSettings/GameSettingsContainer.js");
-__d(/* mtg-lifecounter/js/screens/Game/GameRound.container.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+__d(/* mtg-lifecounter/js/screens/Game/GameRound/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/screens/Game/GameRound.container.js';
-
-var _react = require(38     ); // 38 = react
-
-var _react2 = babelHelpers.interopRequireDefault(_react);
-
-var _propTypes = require(127         ); // 127 = prop-types
-
-var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+exports.styles = exports.GameRoundContainer = exports.GameRound = undefined;
 
 var _GameRound = require(411          ); // 411 = ./GameRound
 
 var _GameRound2 = babelHelpers.interopRequireDefault(_GameRound);
 
-var GameRoundContainer = function (_React$Component) {
-    babelHelpers.inherits(GameRoundContainer, _React$Component);
+var _GameRoundContainer = require(417                   ); // 417 = ./GameRoundContainer
 
-    function GameRoundContainer() {
-        babelHelpers.classCallCheck(this, GameRoundContainer);
-        return babelHelpers.possibleConstructorReturn(this, (GameRoundContainer.__proto__ || Object.getPrototypeOf(GameRoundContainer)).apply(this, arguments));
-    }
+var _GameRoundContainer2 = babelHelpers.interopRequireDefault(_GameRoundContainer);
 
-    babelHelpers.createClass(GameRoundContainer, [{
-        key: 'render',
-        value: function render() {
-            var navigation = this.props.navigation;
-            var _navigation$state$par = navigation.state.params,
-                numberOfPlayers = _navigation$state$par.numberOfPlayers,
-                startingLifeTotal = _navigation$state$par.startingLifeTotal;
+var _styles = require(412       ); // 412 = ./styles
 
+var _styles2 = babelHelpers.interopRequireDefault(_styles);
 
-            return _react2.default.createElement(_GameRound2.default, {
-                navigation: navigation,
-                numberOfPlayers: numberOfPlayers,
-                startingLifeTotal: startingLifeTotal,
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 13
-                }
-            });
-        }
-    }]);
-    return GameRoundContainer;
-}(_react2.default.Component);
-
-exports.default = GameRoundContainer;
-
-
-GameRoundContainer.navigationOptions = {
-    header: null
-};
-
-GameRoundContainer.propTypes = {
-    navigation: _propTypes2.default.object.isRequired
-};
-}, 410, null, "mtg-lifecounter/js/screens/Game/GameRound.container.js");
-__d(/* mtg-lifecounter/js/screens/Game/GameRound.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+exports.GameRound = _GameRound2.default;
+exports.GameRoundContainer = _GameRoundContainer2.default;
+exports.styles = _styles2.default;
+}, 410, null, "mtg-lifecounter/js/screens/Game/GameRound/index.js");
+__d(/* mtg-lifecounter/js/screens/Game/GameRound/GameRound.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/screens/Game/GameRound.js';
+var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/screens/Game/GameRound/GameRound.js';
 
 var _react = require(38     ); // 38 = react
 
@@ -61364,41 +61324,17 @@ var _reactNative = require(12            ); // 12 = react-native
 
 var _reactNavigation = require(339               ); // 339 = react-navigation
 
-var _Player = require(412                      ); // 412 = ../../components/Player
+var _styles = require(412       ); // 412 = ./styles
 
-var _Player2 = babelHelpers.interopRequireDefault(_Player);
+var _styles2 = babelHelpers.interopRequireDefault(_styles);
 
-var _utils = require(413          ); // 413 = ../../utils
+var _utils = require(413      ); // 413 = ./utils
 
 var _utils2 = babelHelpers.interopRequireDefault(_utils);
 
-var styles = _reactNative.StyleSheet.create({
-    container: {
-        backgroundColor: '#161616',
-        flex: 1,
-        flexDirection: 'row'
-    },
-    column: {
-        width: '50%'
-    },
-    asColumn: {
-        flex: 1,
-        flexDirection: 'column'
-    },
-    rotated180: {
-        transform: [{ rotate: '180deg' }]
-    }
-});
+var _Player = require(416                         ); // 416 = ../../../components/Player
 
-var splitInHalf = function splitInHalf(arr) {
-    var half = Math.ceil(arr.length / 2);
-
-    return (0, _utils2.default)(arr, [function (item, idx) {
-        return idx < half;
-    }, function (item, idx) {
-        return idx >= half;
-    }], true);
-};
+var _Player2 = babelHelpers.interopRequireDefault(_Player);
 
 var GameRound = function (_React$Component) {
     babelHelpers.inherits(GameRound, _React$Component);
@@ -61518,7 +61454,7 @@ var GameRound = function (_React$Component) {
                 },
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 123
+                    lineNumber: 98
                 }
             }));
         }
@@ -61529,22 +61465,22 @@ var GameRound = function (_React$Component) {
                 player1 = _players[0],
                 player2 = _players[1];
 
-            var asColumn = styles.asColumn,
-                rotated180 = styles.rotated180;
+            var asColumn = _styles2.default.asColumn,
+                rotated180 = _styles2.default.rotated180;
 
 
             return _react2.default.createElement(
                 _reactNative.View,
                 { style: asColumn, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 136
+                        lineNumber: 111
                     }
                 },
                 _react2.default.createElement(
                     _reactNative.View,
                     { style: [asColumn, rotated180], __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 137
+                            lineNumber: 112
                         }
                     },
                     this.renderSinglePlayer(player2)
@@ -61553,7 +61489,7 @@ var GameRound = function (_React$Component) {
                     _reactNative.View,
                     { style: [asColumn], __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 140
+                            lineNumber: 115
                         }
                     },
                     this.renderSinglePlayer(player1)
@@ -61566,8 +61502,8 @@ var GameRound = function (_React$Component) {
             var _this3 = this;
 
             var sides = ['Left', 'Right'];
-            var columns = splitInHalf(this.players);
-            var columnStyle = styles.column;
+            var columns = (0, _utils2.default)(this.players);
+            var columnStyle = _styles2.default.column;
 
 
             return columns.map(function (players, column) {
@@ -61575,7 +61511,7 @@ var GameRound = function (_React$Component) {
                     _reactNative.View,
                     { key: 'playerColumn' + sides[column], style: columnStyle, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 153
+                            lineNumber: 128
                         }
                     },
                     players.map(function (player) {
@@ -61599,14 +61535,14 @@ var GameRound = function (_React$Component) {
         value: function render() {
             var length = this.players.length;
             var roundNumber = this.state.roundNumber;
-            var container = styles.container;
+            var container = _styles2.default.container;
 
 
             return _react2.default.createElement(
                 _reactNative.View,
                 { style: container, key: 'round' + roundNumber, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 173
+                        lineNumber: 148
                     }
                 },
                 length === 1 ? this.renderSinglePlayer(this.players[0]) : this.renderPlayers()
@@ -61627,7 +61563,91 @@ GameRound.propTypes = {
         index: _propTypes2.default.number
     }).isRequired
 };
-}, 411, null, "mtg-lifecounter/js/screens/Game/GameRound.js");
+}, 411, null, "mtg-lifecounter/js/screens/Game/GameRound/GameRound.js");
+__d(/* mtg-lifecounter/js/screens/Game/GameRound/styles.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _reactNative = require(12            ); // 12 = react-native
+
+var styles = _reactNative.StyleSheet.create({
+    container: {
+        backgroundColor: '#161616',
+        flex: 1,
+        flexDirection: 'row'
+    },
+    column: {
+        width: '50%'
+    },
+    asColumn: {
+        flex: 1,
+        flexDirection: 'column'
+    },
+    rotated180: {
+        transform: [{ rotate: '180deg' }]
+    }
+});
+
+exports.default = styles;
+}, 412, null, "mtg-lifecounter/js/screens/Game/GameRound/styles.js");
+__d(/* mtg-lifecounter/js/screens/Game/GameRound/utils.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _utils = require(414             ); // 414 = ../../../utils
+
+var _utils2 = babelHelpers.interopRequireDefault(_utils);
+
+var splitInHalf = function splitInHalf(arr) {
+    var half = Math.ceil(arr.length / 2);
+
+    return (0, _utils2.default)(arr, [function (item, idx) {
+        return idx < half;
+    }, function (item, idx) {
+        return idx >= half;
+    }], true);
+};
+
+exports.default = splitInHalf;
+}, 413, null, "mtg-lifecounter/js/screens/Game/GameRound/utils.js");
+__d(/* mtg-lifecounter/js/utils/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _array = require(415            ); // 415 = ./array.split
+
+var _array2 = babelHelpers.interopRequireDefault(_array);
+
+exports.default = _array2.default;
+}, 414, null, "mtg-lifecounter/js/utils/index.js");
+__d(/* mtg-lifecounter/js/utils/array.split.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var arraySplit = function arraySplit(arr, splitters) {
+    var unique = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+    var results = [];
+    splitters.forEach(function () {
+        results.push([]);
+    });
+
+    arr.forEach(function (item, idx) {
+        splitters.some(function (splitter, i) {
+            if (splitter(item, idx, arr)) {
+                results[i].push(item);
+
+                return unique;
+            }
+
+            return false;
+        });
+    });
+
+    return results;
+};
+
+exports.default = arraySplit;
+}, 415, null, "mtg-lifecounter/js/utils/array.split.js");
 __d(/* mtg-lifecounter/js/components/Player.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61754,44 +61774,65 @@ Player.propTypes = {
 Player.defaultProps = {
     onGameOver: function onGameOver() {}
 };
-}, 412, null, "mtg-lifecounter/js/components/Player.js");
-__d(/* mtg-lifecounter/js/utils/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _array = require(414            ); // 414 = ./array.split
-
-var _array2 = babelHelpers.interopRequireDefault(_array);
-
-exports.default = _array2.default;
-}, 413, null, "mtg-lifecounter/js/utils/index.js");
-__d(/* mtg-lifecounter/js/utils/array.split.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+}, 416, null, "mtg-lifecounter/js/components/Player.js");
+__d(/* mtg-lifecounter/js/screens/Game/GameRound/GameRoundContainer.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var arraySplit = function arraySplit(arr, splitters) {
-    var unique = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+var _jsxFileName = '/home/remy/Projects/mtg-lifecounter/js/screens/Game/GameRound/GameRoundContainer.js';
 
-    var results = [];
-    splitters.forEach(function () {
-        results.push([]);
-    });
+var _react = require(38     ); // 38 = react
 
-    arr.forEach(function (item, idx) {
-        splitters.some(function (splitter, i) {
-            if (splitter(item, idx, arr)) {
-                results[i].push(item);
+var _react2 = babelHelpers.interopRequireDefault(_react);
 
-                return unique;
-            }
+var _propTypes = require(127         ); // 127 = prop-types
 
-            return false;
-        });
-    });
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
-    return results;
+var _GameRound = require(411          ); // 411 = ./GameRound
+
+var _GameRound2 = babelHelpers.interopRequireDefault(_GameRound);
+
+var GameRoundContainer = function (_React$Component) {
+    babelHelpers.inherits(GameRoundContainer, _React$Component);
+
+    function GameRoundContainer() {
+        babelHelpers.classCallCheck(this, GameRoundContainer);
+        return babelHelpers.possibleConstructorReturn(this, (GameRoundContainer.__proto__ || Object.getPrototypeOf(GameRoundContainer)).apply(this, arguments));
+    }
+
+    babelHelpers.createClass(GameRoundContainer, [{
+        key: 'render',
+        value: function render() {
+            var navigation = this.props.navigation;
+            var _navigation$state$par = navigation.state.params,
+                numberOfPlayers = _navigation$state$par.numberOfPlayers,
+                startingLifeTotal = _navigation$state$par.startingLifeTotal;
+
+
+            return _react2.default.createElement(_GameRound2.default, {
+                navigation: navigation,
+                numberOfPlayers: numberOfPlayers,
+                startingLifeTotal: startingLifeTotal,
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 13
+                }
+            });
+        }
+    }]);
+    return GameRoundContainer;
+}(_react2.default.Component);
+
+exports.default = GameRoundContainer;
+
+
+GameRoundContainer.navigationOptions = {
+    header: null
 };
 
-exports.default = arraySplit;
-}, 414, null, "mtg-lifecounter/js/utils/array.split.js");
+GameRoundContainer.propTypes = {
+    navigation: _propTypes2.default.object.isRequired
+};
+}, 417, null, "mtg-lifecounter/js/screens/Game/GameRound/GameRoundContainer.js");
 ;require(57);
 ;require(0);

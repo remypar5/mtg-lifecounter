@@ -1,36 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, StyleSheet, Alert, BackHandler } from 'react-native';
+import { View, Alert, BackHandler } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
-import Player from '../../components/Player';
-import arraySplit from '../../utils';
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#161616',
-        flex: 1,
-        flexDirection: 'row',
-    },
-    column: {
-        width: '50%',
-    },
-    asColumn: {
-        flex: 1,
-        flexDirection: 'column',
-    },
-    rotated180: {
-        transform: [
-            { rotate: '180deg' },
-        ],
-    },
-});
-
-const splitInHalf = (arr) => {
-    const half = Math.ceil(arr.length / 2);
-
-    return arraySplit(arr, [(item, idx) => idx < half, (item, idx) => idx >= half], true);
-};
+import styles from './styles';
+import splitInHalf from './utils';
+import Player from '../../../components/Player';
 
 export default class GameRound extends React.Component {
     constructor(props) {

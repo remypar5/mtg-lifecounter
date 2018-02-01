@@ -1,7 +1,7 @@
 import { StackNavigator } from 'react-navigation';
 
 import { GameSettingsContainer } from '../screens/Game/GameSettings';
-import GameRoundContainer from '../screens/Game/GameRound.container';
+import { GameRoundContainer } from '../screens/Game/GameRound';
 
 const AppRouter = StackNavigator({
     GameSettings: {
