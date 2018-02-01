@@ -5,7 +5,7 @@ import { NavigationActions } from 'react-navigation';
 
 import styles from './styles';
 import splitInHalf from './utils';
-import Player from '../../../components/Player';
+import { Player } from '../../../components';
 
 export default class GameRound extends React.Component {
     constructor(props) {

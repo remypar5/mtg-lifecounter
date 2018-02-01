@@ -3,7 +3,7 @@ import { Text, View, Image, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import NumberSpinner from '../../../components/NumberSpinner';
+import { NumberSpinner } from '../../../components';
 import bgiconSrc from '../bgicon.png';
 
 export default class GameSettings extends React.Component {
