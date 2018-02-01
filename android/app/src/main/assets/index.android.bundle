@@ -61327,9 +61327,7 @@ var _Player = require(409                      ); // 409 = ../../components/Play
 
 var _Player2 = babelHelpers.interopRequireDefault(_Player);
 
-var _array = require(410                      ); // 410 = ../../utils/array.split
-
-var _array2 = babelHelpers.interopRequireDefault(_array);
+var _utils = require(410          ); // 410 = ../../utils
 
 var styles = _reactNative.StyleSheet.create({
     container: {
@@ -61352,7 +61350,7 @@ var styles = _reactNative.StyleSheet.create({
 var splitInHalf = function splitInHalf(arr) {
     var half = Math.ceil(arr.length / 2);
 
-    return (0, _array2.default)(arr, [function (item, idx) {
+    return (0, _utils.arraySplit)(arr, [function (item, idx) {
         return idx < half;
     }, function (item, idx) {
         return idx >= half;
@@ -61714,6 +61712,17 @@ Player.defaultProps = {
     onGameOver: function onGameOver() {}
 };
 }, 409, null, "mtg-lifecounter/js/components/Player.js");
+__d(/* mtg-lifecounter/js/utils/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.arraySplit = undefined;
+
+var _array = require(411            ); // 411 = ./array.split
+
+var _array2 = babelHelpers.interopRequireDefault(_array);
+
+exports.arraySplit = _array2.default;
+}, 410, null, "mtg-lifecounter/js/utils/index.js");
 __d(/* mtg-lifecounter/js/utils/array.split.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -61741,6 +61750,6 @@ var arraySplit = function arraySplit(arr, splitters) {
 };
 
 exports.default = arraySplit;
-}, 410, null, "mtg-lifecounter/js/utils/array.split.js");
+}, 411, null, "mtg-lifecounter/js/utils/array.split.js");
 ;require(57);
 ;require(0);

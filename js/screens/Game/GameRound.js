@@ -4,7 +4,7 @@ import { View, StyleSheet, Alert, BackHandler } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
 import Player from '../../components/Player';
-import splitArray from '../../utils/array.split';
+import arraySplit from '../../utils';
 
 const styles = StyleSheet.create({
     container: {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 const splitInHalf = (arr) => {
     const half = Math.ceil(arr.length / 2);
 
-    return splitArray(arr, [(item, idx) => idx < half, (item, idx) => idx >= half], true);
+    return arraySplit(arr, [(item, idx) => idx < half, (item, idx) => idx >= half], true);
 };
 
 export default class GameRound extends React.Component {
