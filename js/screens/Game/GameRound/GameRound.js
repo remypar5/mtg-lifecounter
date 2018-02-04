@@ -61,12 +61,20 @@ export default class GameRound extends React.Component {
         return players;
     }
 
+    restart() {
+        this.players = this.generatePlayers();
+
+        const { roundNumber } = this.state;
+        this.setState({
+            roundNumber: roundNumber + 1,
+        });
+    }
+
     playerGameOver(player, isGameOver) {
         const self = this;
         const { numberOfPlayers, navigation } = this.props;
         const { goBack } = navigation;
         const minDeadPlayers = this.players.length === 1 ? 0 : 1;
-        const { roundNumber } = this.state;
         let gameOverPlayers = 0;
 
         // eslint-disable-next-line no-param-reassign
@@ -88,7 +96,7 @@ export default class GameRound extends React.Component {
                     },
                 },
                 { text: 'Exit', onPress: () => goBack() },
-                { text: 'Restart', onPress: () => self.setState({ roundNumber: roundNumber + 1 }) },
+                { text: 'Restart', onPress: () => self.restart() },
             ], { cancelable: true });
         }
     }
