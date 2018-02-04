@@ -7,7 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <SpinnerButton
     content="-"
     onHold={null}
-    onPress={[Function]}
+    onPress={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -33,7 +33,6 @@ ShallowWrapper {
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -50,9 +49,21 @@ ShallowWrapper {
           -
         </Text>
       </View>,
+      "hitSlop": Object {
+        "bottom": 100,
+        "left": 100,
+        "right": 100,
+        "top": 100,
+      },
       "onPress": [Function],
       "onPressIn": [Function],
       "onPressOut": [Function],
+      "pressRetentionOffset": Object {
+        "bottom": 100,
+        "left": 100,
+        "right": 100,
+        "top": 100,
+      },
     },
     "ref": null,
     "rendered": Object {
@@ -63,7 +74,6 @@ ShallowWrapper {
         "children": <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -94,7 +104,6 @@ ShallowWrapper {
           "accessible": true,
           "allowFontScaling": true,
           "children": "-",
-          "disabled": false,
           "ellipsizeMode": "tail",
           "style": Object {
             "color": "#b2b2b0",
@@ -132,7 +141,6 @@ ShallowWrapper {
           <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -149,9 +157,21 @@ ShallowWrapper {
             -
           </Text>
         </View>,
+        "hitSlop": Object {
+          "bottom": 100,
+          "left": 100,
+          "right": 100,
+          "top": 100,
+        },
         "onPress": [Function],
         "onPressIn": [Function],
         "onPressOut": [Function],
+        "pressRetentionOffset": Object {
+          "bottom": 100,
+          "left": 100,
+          "right": 100,
+          "top": 100,
+        },
       },
       "ref": null,
       "rendered": Object {
@@ -162,7 +182,6 @@ ShallowWrapper {
           "children": <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -193,7 +212,6 @@ ShallowWrapper {
             "accessible": true,
             "allowFontScaling": true,
             "children": "-",
-            "disabled": false,
             "ellipsizeMode": "tail",
             "style": Object {
               "color": "#b2b2b0",

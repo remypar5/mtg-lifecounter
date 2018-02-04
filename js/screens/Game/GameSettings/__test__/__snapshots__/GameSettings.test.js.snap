@@ -21,7 +21,11 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Image
-          source={1}
+          source={
+            Object {
+              "testUri": "../../../js/screens/Game/bgicon.png",
+            }
+          }
           style={
             Array [
               Object {
@@ -41,7 +45,6 @@ ShallowWrapper {
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -66,7 +69,6 @@ ShallowWrapper {
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           style={
             Object {
@@ -94,7 +96,6 @@ ShallowWrapper {
           <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             onPress={[Function]}
             style={
@@ -121,7 +122,6 @@ ShallowWrapper {
           <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             onPress={[Function]}
             style={
@@ -146,7 +146,6 @@ ShallowWrapper {
           <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             onPress={[Function]}
             style={
@@ -172,7 +171,6 @@ ShallowWrapper {
         <Text
           accessible={true}
           allowFontScaling={true}
-          disabled={false}
           ellipsizeMode="tail"
           onPress={[Function]}
           style={
@@ -216,7 +214,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "source": 1,
+          "source": Object {
+            "testUri": "../../../js/screens/Game/bgicon.png",
+          },
           "style": Array [
             Object {
               "bottom": 0,
@@ -243,7 +243,6 @@ ShallowWrapper {
           "accessible": true,
           "allowFontScaling": true,
           "children": "Players",
-          "disabled": false,
           "ellipsizeMode": "tail",
           "style": Object {
             "alignSelf": "center",
@@ -281,7 +280,6 @@ ShallowWrapper {
           "accessible": true,
           "allowFontScaling": true,
           "children": "Lifepoints",
-          "disabled": false,
           "ellipsizeMode": "tail",
           "style": Object {
             "alignSelf": "center",
@@ -304,7 +302,6 @@ ShallowWrapper {
             <Text
               accessible={true}
               allowFontScaling={true}
-              disabled={false}
               ellipsizeMode="tail"
               onPress={[Function]}
               style={
@@ -331,7 +328,6 @@ ShallowWrapper {
             <Text
               accessible={true}
               allowFontScaling={true}
-              disabled={false}
               ellipsizeMode="tail"
               onPress={[Function]}
               style={
@@ -356,7 +352,6 @@ ShallowWrapper {
             <Text
               accessible={true}
               allowFontScaling={true}
-              disabled={false}
               ellipsizeMode="tail"
               onPress={[Function]}
               style={
@@ -397,7 +392,6 @@ ShallowWrapper {
               "accessible": true,
               "allowFontScaling": true,
               "children": 20,
-              "disabled": false,
               "ellipsizeMode": "tail",
               "onPress": [Function],
               "style": Array [
@@ -429,7 +423,6 @@ ShallowWrapper {
               "accessible": true,
               "allowFontScaling": true,
               "children": 30,
-              "disabled": false,
               "ellipsizeMode": "tail",
               "onPress": [Function],
               "style": Array [
@@ -459,7 +452,6 @@ ShallowWrapper {
               "accessible": true,
               "allowFontScaling": true,
               "children": 40,
-              "disabled": false,
               "ellipsizeMode": "tail",
               "onPress": [Function],
               "style": Array [
@@ -492,7 +484,6 @@ ShallowWrapper {
           "accessible": true,
           "allowFontScaling": true,
           "children": "Start game",
-          "disabled": false,
           "ellipsizeMode": "tail",
           "onPress": [Function],
           "style": Array [
@@ -531,7 +522,11 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Image
-            source={1}
+            source={
+              Object {
+                "testUri": "../../../js/screens/Game/bgicon.png",
+              }
+            }
             style={
               Array [
                 Object {
@@ -551,7 +546,6 @@ ShallowWrapper {
           <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -576,7 +570,6 @@ ShallowWrapper {
           <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             style={
               Object {
@@ -604,7 +597,6 @@ ShallowWrapper {
             <Text
               accessible={true}
               allowFontScaling={true}
-              disabled={false}
               ellipsizeMode="tail"
               onPress={[Function]}
               style={
@@ -631,7 +623,6 @@ ShallowWrapper {
             <Text
               accessible={true}
               allowFontScaling={true}
-              disabled={false}
               ellipsizeMode="tail"
               onPress={[Function]}
               style={
@@ -656,7 +647,6 @@ ShallowWrapper {
             <Text
               accessible={true}
               allowFontScaling={true}
-              disabled={false}
               ellipsizeMode="tail"
               onPress={[Function]}
               style={
@@ -682,7 +672,6 @@ ShallowWrapper {
           <Text
             accessible={true}
             allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             onPress={[Function]}
             style={
@@ -726,7 +715,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "source": 1,
+            "source": Object {
+              "testUri": "../../../js/screens/Game/bgicon.png",
+            },
             "style": Array [
               Object {
                 "bottom": 0,
@@ -753,7 +744,6 @@ ShallowWrapper {
             "accessible": true,
             "allowFontScaling": true,
             "children": "Players",
-            "disabled": false,
             "ellipsizeMode": "tail",
             "style": Object {
               "alignSelf": "center",
@@ -791,7 +781,6 @@ ShallowWrapper {
             "accessible": true,
             "allowFontScaling": true,
             "children": "Lifepoints",
-            "disabled": false,
             "ellipsizeMode": "tail",
             "style": Object {
               "alignSelf": "center",
@@ -814,7 +803,6 @@ ShallowWrapper {
               <Text
                 accessible={true}
                 allowFontScaling={true}
-                disabled={false}
                 ellipsizeMode="tail"
                 onPress={[Function]}
                 style={
@@ -841,7 +829,6 @@ ShallowWrapper {
               <Text
                 accessible={true}
                 allowFontScaling={true}
-                disabled={false}
                 ellipsizeMode="tail"
                 onPress={[Function]}
                 style={
@@ -866,7 +853,6 @@ ShallowWrapper {
               <Text
                 accessible={true}
                 allowFontScaling={true}
-                disabled={false}
                 ellipsizeMode="tail"
                 onPress={[Function]}
                 style={
@@ -907,7 +893,6 @@ ShallowWrapper {
                 "accessible": true,
                 "allowFontScaling": true,
                 "children": 20,
-                "disabled": false,
                 "ellipsizeMode": "tail",
                 "onPress": [Function],
                 "style": Array [
@@ -939,7 +924,6 @@ ShallowWrapper {
                 "accessible": true,
                 "allowFontScaling": true,
                 "children": 30,
-                "disabled": false,
                 "ellipsizeMode": "tail",
                 "onPress": [Function],
                 "style": Array [
@@ -969,7 +953,6 @@ ShallowWrapper {
                 "accessible": true,
                 "allowFontScaling": true,
                 "children": 40,
-                "disabled": false,
                 "ellipsizeMode": "tail",
                 "onPress": [Function],
                 "style": Array [
@@ -1002,7 +985,6 @@ ShallowWrapper {
             "accessible": true,
             "allowFontScaling": true,
             "children": "Start game",
-            "disabled": false,
             "ellipsizeMode": "tail",
             "onPress": [Function],
             "style": Array [

@@ -42,9 +42,17 @@ export default class SpinnerButton extends React.Component {
     render() {
         const { content } = this.props;
         const { button, buttonContainer } = styles;
+        const hitSlop = {
+            top: 100,
+            bottom: 100,
+            left: 100,
+            right: 100,
+        };
 
         return (
             <TouchableWithoutFeedback
+                hitSlop={hitSlop}
+                pressRetentionOffset={hitSlop}
                 onPress={this.onPress}
                 onPressIn={this.onPressIn}
                 onPressOut={this.onPressOut}

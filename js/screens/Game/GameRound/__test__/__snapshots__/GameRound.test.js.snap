@@ -7,7 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <GameRound
     navigation={
       Object {
-        "dispatch": [Function],
+        "dispatch": [MockFunction],
       }
     }
     numberOfPlayers={3}
