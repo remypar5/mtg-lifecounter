@@ -43,18 +43,8 @@ ShallowWrapper {
           }
         />,
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "alignSelf": "center",
-              "color": "#b2b2b0",
-              "fontSize": 25,
-              "textAlign": "left",
-              "width": "95%",
-            }
-          }
+          style={null}
+          type="label"
         >
           Players
         </Text>,
@@ -67,18 +57,8 @@ ShallowWrapper {
           value={2}
         />,
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "alignSelf": "center",
-              "color": "#b2b2b0",
-              "fontSize": 25,
-              "textAlign": "left",
-              "width": "95%",
-            }
-          }
+          style={null}
+          type="label"
         >
           Lifepoints
         </Text>,
@@ -94,110 +74,81 @@ ShallowWrapper {
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             onPress={[Function]}
             style={
               Array [
                 Object {
-                  "alignSelf": "baseline",
-                  "backgroundColor": "#262626",
-                  "color": "#b2b2b0",
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 24,
-                  "height": 50,
-                  "textAlign": "center",
-                  "textAlignVertical": "center",
+                  "fontSize": 57.5,
+                  "paddingVertical": 12,
                 },
                 Object {
                   "backgroundColor": "#710000",
                 },
               ]
             }
+            type="button"
           >
             20
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             onPress={[Function]}
             style={
               Array [
                 Object {
-                  "alignSelf": "baseline",
-                  "backgroundColor": "#262626",
-                  "color": "#b2b2b0",
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 24,
-                  "height": 50,
-                  "textAlign": "center",
-                  "textAlignVertical": "center",
+                  "fontSize": 57.5,
+                  "paddingVertical": 12,
                 },
                 null,
               ]
             }
+            type="button"
           >
             30
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             onPress={[Function]}
             style={
               Array [
                 Object {
-                  "alignSelf": "baseline",
-                  "backgroundColor": "#262626",
-                  "color": "#b2b2b0",
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 24,
-                  "height": 50,
-                  "textAlign": "center",
-                  "textAlignVertical": "center",
+                  "fontSize": 57.5,
+                  "paddingVertical": 12,
                 },
                 null,
               ]
             }
+            type="button"
           >
             40
           </Text>
         </View>,
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          onPress={[Function]}
+        <View
           style={
-            Array [
-              Object {
-                "alignSelf": "baseline",
-                "backgroundColor": "#262626",
-                "color": "#b2b2b0",
-                "flex": 1,
-                "fontFamily": "cloisterblack",
-                "fontSize": 24,
-                "height": 50,
-                "textAlign": "center",
-                "textAlignVertical": "center",
-              },
-              Object {
-                "borderColor": "#161616",
-                "borderWidth": 6,
-                "fontSize": 36,
-                "height": 40,
-                "width": "100%",
-              },
-            ]
+            Object {
+              "padding": 6,
+              "width": "100%",
+            }
           }
         >
-          Start game
-        </Text>,
+          <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "fontSize": 77,
+                "paddingVertical": 12,
+                "width": "100%",
+              }
+            }
+            type="button"
+          >
+            Start game
+          </Text>
+        </View>,
       ],
       "style": Object {
         "alignItems": "stretch",
@@ -238,19 +189,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
           "children": "Players",
-          "ellipsizeMode": "tail",
-          "style": Object {
-            "alignSelf": "center",
-            "color": "#b2b2b0",
-            "fontSize": 25,
-            "textAlign": "left",
-            "width": "95%",
-          },
+          "style": null,
+          "type": "label",
         },
         "ref": null,
         "rendered": "Players",
@@ -275,19 +218,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
           "children": "Lifepoints",
-          "ellipsizeMode": "tail",
-          "style": Object {
-            "alignSelf": "center",
-            "color": "#b2b2b0",
-            "fontSize": 25,
-            "textAlign": "left",
-            "width": "95%",
-          },
+          "style": null,
+          "type": "label",
         },
         "ref": null,
         "rendered": "Lifepoints",
@@ -300,76 +235,55 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
-                    "alignSelf": "baseline",
-                    "backgroundColor": "#262626",
-                    "color": "#b2b2b0",
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 24,
-                    "height": 50,
-                    "textAlign": "center",
-                    "textAlignVertical": "center",
+                    "fontSize": 57.5,
+                    "paddingVertical": 12,
                   },
                   Object {
                     "backgroundColor": "#710000",
                   },
                 ]
               }
+              type="button"
             >
               20
             </Text>,
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
-                    "alignSelf": "baseline",
-                    "backgroundColor": "#262626",
-                    "color": "#b2b2b0",
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 24,
-                    "height": 50,
-                    "textAlign": "center",
-                    "textAlignVertical": "center",
+                    "fontSize": 57.5,
+                    "paddingVertical": 12,
                   },
                   null,
                 ]
               }
+              type="button"
             >
               30
             </Text>,
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
-                    "alignSelf": "baseline",
-                    "backgroundColor": "#262626",
-                    "color": "#b2b2b0",
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 24,
-                    "height": 50,
-                    "textAlign": "center",
-                    "textAlignVertical": "center",
+                    "fontSize": 57.5,
+                    "paddingVertical": 12,
                   },
                   null,
                 ]
               }
+              type="button"
             >
               40
             </Text>,
@@ -387,29 +301,22 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": "buttonLifePoints20",
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
-              "accessible": true,
-              "allowFontScaling": true,
               "children": 20,
-              "ellipsizeMode": "tail",
               "onPress": [Function],
               "style": Array [
                 Object {
-                  "alignSelf": "baseline",
-                  "backgroundColor": "#262626",
-                  "color": "#b2b2b0",
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 24,
-                  "height": 50,
-                  "textAlign": "center",
-                  "textAlignVertical": "center",
+                  "fontSize": 57.5,
+                  "paddingVertical": 12,
                 },
                 Object {
                   "backgroundColor": "#710000",
                 },
               ],
+              "type": "button",
             },
             "ref": null,
             "rendered": 20,
@@ -418,27 +325,20 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": "buttonLifePoints30",
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
-              "accessible": true,
-              "allowFontScaling": true,
               "children": 30,
-              "ellipsizeMode": "tail",
               "onPress": [Function],
               "style": Array [
                 Object {
-                  "alignSelf": "baseline",
-                  "backgroundColor": "#262626",
-                  "color": "#b2b2b0",
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 24,
-                  "height": 50,
-                  "textAlign": "center",
-                  "textAlignVertical": "center",
+                  "fontSize": 57.5,
+                  "paddingVertical": 12,
                 },
                 null,
               ],
+              "type": "button",
             },
             "ref": null,
             "rendered": 30,
@@ -447,27 +347,20 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": "buttonLifePoints40",
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
-              "accessible": true,
-              "allowFontScaling": true,
               "children": 40,
-              "ellipsizeMode": "tail",
               "onPress": [Function],
               "style": Array [
                 Object {
-                  "alignSelf": "baseline",
-                  "backgroundColor": "#262626",
-                  "color": "#b2b2b0",
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 24,
-                  "height": 50,
-                  "textAlign": "center",
-                  "textAlignVertical": "center",
+                  "fontSize": 57.5,
+                  "paddingVertical": 12,
                 },
                 null,
               ],
+              "type": "button",
             },
             "ref": null,
             "rendered": 40,
@@ -481,34 +374,43 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
-          "children": "Start game",
-          "ellipsizeMode": "tail",
-          "onPress": [Function],
-          "style": Array [
-            Object {
-              "alignSelf": "baseline",
-              "backgroundColor": "#262626",
-              "color": "#b2b2b0",
-              "flex": 1,
-              "fontFamily": "cloisterblack",
-              "fontSize": 24,
-              "height": 50,
-              "textAlign": "center",
-              "textAlignVertical": "center",
-            },
-            Object {
-              "borderColor": "#161616",
-              "borderWidth": 6,
-              "fontSize": 36,
-              "height": 40,
-              "width": "100%",
-            },
-          ],
+          "children": <Text
+            onPress={[Function]}
+            style={
+              Object {
+                "fontSize": 77,
+                "paddingVertical": 12,
+                "width": "100%",
+              }
+            }
+            type="button"
+          >
+            Start game
+          </Text>,
+          "style": Object {
+            "padding": 6,
+            "width": "100%",
+          },
         },
         "ref": null,
-        "rendered": "Start game",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Start game",
+            "onPress": [Function],
+            "style": Object {
+              "fontSize": 77,
+              "paddingVertical": 12,
+              "width": "100%",
+            },
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": "Start game",
+          "type": [Function],
+        },
         "type": [Function],
       },
     ],
@@ -544,18 +446,8 @@ ShallowWrapper {
             }
           />,
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "#b2b2b0",
-                "fontSize": 25,
-                "textAlign": "left",
-                "width": "95%",
-              }
-            }
+            style={null}
+            type="label"
           >
             Players
           </Text>,
@@ -568,18 +460,8 @@ ShallowWrapper {
             value={2}
           />,
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "alignSelf": "center",
-                "color": "#b2b2b0",
-                "fontSize": 25,
-                "textAlign": "left",
-                "width": "95%",
-              }
-            }
+            style={null}
+            type="label"
           >
             Lifepoints
           </Text>,
@@ -595,110 +477,81 @@ ShallowWrapper {
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
-                    "alignSelf": "baseline",
-                    "backgroundColor": "#262626",
-                    "color": "#b2b2b0",
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 24,
-                    "height": 50,
-                    "textAlign": "center",
-                    "textAlignVertical": "center",
+                    "fontSize": 57.5,
+                    "paddingVertical": 12,
                   },
                   Object {
                     "backgroundColor": "#710000",
                   },
                 ]
               }
+              type="button"
             >
               20
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
-                    "alignSelf": "baseline",
-                    "backgroundColor": "#262626",
-                    "color": "#b2b2b0",
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 24,
-                    "height": 50,
-                    "textAlign": "center",
-                    "textAlignVertical": "center",
+                    "fontSize": 57.5,
+                    "paddingVertical": 12,
                   },
                   null,
                 ]
               }
+              type="button"
             >
               30
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               onPress={[Function]}
               style={
                 Array [
                   Object {
-                    "alignSelf": "baseline",
-                    "backgroundColor": "#262626",
-                    "color": "#b2b2b0",
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 24,
-                    "height": 50,
-                    "textAlign": "center",
-                    "textAlignVertical": "center",
+                    "fontSize": 57.5,
+                    "paddingVertical": 12,
                   },
                   null,
                 ]
               }
+              type="button"
             >
               40
             </Text>
           </View>,
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            onPress={[Function]}
+          <View
             style={
-              Array [
-                Object {
-                  "alignSelf": "baseline",
-                  "backgroundColor": "#262626",
-                  "color": "#b2b2b0",
-                  "flex": 1,
-                  "fontFamily": "cloisterblack",
-                  "fontSize": 24,
-                  "height": 50,
-                  "textAlign": "center",
-                  "textAlignVertical": "center",
-                },
-                Object {
-                  "borderColor": "#161616",
-                  "borderWidth": 6,
-                  "fontSize": 36,
-                  "height": 40,
-                  "width": "100%",
-                },
-              ]
+              Object {
+                "padding": 6,
+                "width": "100%",
+              }
             }
           >
-            Start game
-          </Text>,
+            <Text
+              onPress={[Function]}
+              style={
+                Object {
+                  "fontSize": 77,
+                  "paddingVertical": 12,
+                  "width": "100%",
+                }
+              }
+              type="button"
+            >
+              Start game
+            </Text>
+          </View>,
         ],
         "style": Object {
           "alignItems": "stretch",
@@ -739,19 +592,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
             "children": "Players",
-            "ellipsizeMode": "tail",
-            "style": Object {
-              "alignSelf": "center",
-              "color": "#b2b2b0",
-              "fontSize": 25,
-              "textAlign": "left",
-              "width": "95%",
-            },
+            "style": null,
+            "type": "label",
           },
           "ref": null,
           "rendered": "Players",
@@ -776,19 +621,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
             "children": "Lifepoints",
-            "ellipsizeMode": "tail",
-            "style": Object {
-              "alignSelf": "center",
-              "color": "#b2b2b0",
-              "fontSize": 25,
-              "textAlign": "left",
-              "width": "95%",
-            },
+            "style": null,
+            "type": "label",
           },
           "ref": null,
           "rendered": "Lifepoints",
@@ -801,76 +638,55 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 onPress={[Function]}
                 style={
                   Array [
                     Object {
-                      "alignSelf": "baseline",
-                      "backgroundColor": "#262626",
-                      "color": "#b2b2b0",
                       "flex": 1,
                       "fontFamily": "cloisterblack",
-                      "fontSize": 24,
-                      "height": 50,
-                      "textAlign": "center",
-                      "textAlignVertical": "center",
+                      "fontSize": 57.5,
+                      "paddingVertical": 12,
                     },
                     Object {
                       "backgroundColor": "#710000",
                     },
                   ]
                 }
+                type="button"
               >
                 20
               </Text>,
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 onPress={[Function]}
                 style={
                   Array [
                     Object {
-                      "alignSelf": "baseline",
-                      "backgroundColor": "#262626",
-                      "color": "#b2b2b0",
                       "flex": 1,
                       "fontFamily": "cloisterblack",
-                      "fontSize": 24,
-                      "height": 50,
-                      "textAlign": "center",
-                      "textAlignVertical": "center",
+                      "fontSize": 57.5,
+                      "paddingVertical": 12,
                     },
                     null,
                   ]
                 }
+                type="button"
               >
                 30
               </Text>,
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 onPress={[Function]}
                 style={
                   Array [
                     Object {
-                      "alignSelf": "baseline",
-                      "backgroundColor": "#262626",
-                      "color": "#b2b2b0",
                       "flex": 1,
                       "fontFamily": "cloisterblack",
-                      "fontSize": 24,
-                      "height": 50,
-                      "textAlign": "center",
-                      "textAlignVertical": "center",
+                      "fontSize": 57.5,
+                      "paddingVertical": 12,
                     },
                     null,
                   ]
                 }
+                type="button"
               >
                 40
               </Text>,
@@ -888,29 +704,22 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": "buttonLifePoints20",
-              "nodeType": "class",
+              "nodeType": "function",
               "props": Object {
-                "accessible": true,
-                "allowFontScaling": true,
                 "children": 20,
-                "ellipsizeMode": "tail",
                 "onPress": [Function],
                 "style": Array [
                   Object {
-                    "alignSelf": "baseline",
-                    "backgroundColor": "#262626",
-                    "color": "#b2b2b0",
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 24,
-                    "height": 50,
-                    "textAlign": "center",
-                    "textAlignVertical": "center",
+                    "fontSize": 57.5,
+                    "paddingVertical": 12,
                   },
                   Object {
                     "backgroundColor": "#710000",
                   },
                 ],
+                "type": "button",
               },
               "ref": null,
               "rendered": 20,
@@ -919,27 +728,20 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": "buttonLifePoints30",
-              "nodeType": "class",
+              "nodeType": "function",
               "props": Object {
-                "accessible": true,
-                "allowFontScaling": true,
                 "children": 30,
-                "ellipsizeMode": "tail",
                 "onPress": [Function],
                 "style": Array [
                   Object {
-                    "alignSelf": "baseline",
-                    "backgroundColor": "#262626",
-                    "color": "#b2b2b0",
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 24,
-                    "height": 50,
-                    "textAlign": "center",
-                    "textAlignVertical": "center",
+                    "fontSize": 57.5,
+                    "paddingVertical": 12,
                   },
                   null,
                 ],
+                "type": "button",
               },
               "ref": null,
               "rendered": 30,
@@ -948,27 +750,20 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": "buttonLifePoints40",
-              "nodeType": "class",
+              "nodeType": "function",
               "props": Object {
-                "accessible": true,
-                "allowFontScaling": true,
                 "children": 40,
-                "ellipsizeMode": "tail",
                 "onPress": [Function],
                 "style": Array [
                   Object {
-                    "alignSelf": "baseline",
-                    "backgroundColor": "#262626",
-                    "color": "#b2b2b0",
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 24,
-                    "height": 50,
-                    "textAlign": "center",
-                    "textAlignVertical": "center",
+                    "fontSize": 57.5,
+                    "paddingVertical": 12,
                   },
                   null,
                 ],
+                "type": "button",
               },
               "ref": null,
               "rendered": 40,
@@ -982,34 +777,43 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
-            "children": "Start game",
-            "ellipsizeMode": "tail",
-            "onPress": [Function],
-            "style": Array [
-              Object {
-                "alignSelf": "baseline",
-                "backgroundColor": "#262626",
-                "color": "#b2b2b0",
-                "flex": 1,
-                "fontFamily": "cloisterblack",
-                "fontSize": 24,
-                "height": 50,
-                "textAlign": "center",
-                "textAlignVertical": "center",
-              },
-              Object {
-                "borderColor": "#161616",
-                "borderWidth": 6,
-                "fontSize": 36,
-                "height": 40,
-                "width": "100%",
-              },
-            ],
+            "children": <Text
+              onPress={[Function]}
+              style={
+                Object {
+                  "fontSize": 77,
+                  "paddingVertical": 12,
+                  "width": "100%",
+                }
+              }
+              type="button"
+            >
+              Start game
+            </Text>,
+            "style": Object {
+              "padding": 6,
+              "width": "100%",
+            },
           },
           "ref": null,
-          "rendered": "Start game",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Start game",
+              "onPress": [Function],
+              "style": Object {
+                "fontSize": 77,
+                "paddingVertical": 12,
+                "width": "100%",
+              },
+              "type": "button",
+            },
+            "ref": null,
+            "rendered": "Start game",
+            "type": [Function],
+          },
           "type": [Function],
         },
       ],

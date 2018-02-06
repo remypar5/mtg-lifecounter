@@ -1,6 +1,7 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
-import { COLOR_BACKGROUND, COLOR_FOREGROUND, COLOR_MARKED, FONT_FAMILY } from '../../../utils/constants';
+import { COLOR_FOREGROUND, COLOR_MARKED, FONT_FAMILY } from '../../../utils/constants';
+import { normalizeFontSize } from '../../../utils';
 
 const { height: screenHeight } = Dimensions.get('window');
 const styles = StyleSheet.create({
@@ -31,21 +32,18 @@ const styles = StyleSheet.create({
     },
     button: {
         flex: 1,
-        height: 50,
-        backgroundColor: COLOR_BACKGROUND,
-        color: COLOR_FOREGROUND,
+        fontSize: normalizeFontSize(18),
+        paddingVertical: 12,
         fontFamily: FONT_FAMILY,
-        fontSize: 24,
-        textAlign: 'center',
-        textAlignVertical: 'center',
-        alignSelf: 'baseline',
+    },
+    startButtonContainer: {
+        width: '100%',
+        padding: 6,
     },
     startButton: {
         width: '100%',
-        height: 40,
-        fontSize: 36,
-        borderColor: '#161616',
-        borderWidth: 6,
+        fontSize: normalizeFontSize(24),
+        paddingVertical: 12,
     },
     selected: {
         backgroundColor: COLOR_MARKED,

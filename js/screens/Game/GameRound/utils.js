@@ -1,4 +1,4 @@
-import arraySplit from '../../../utils';
+import { arraySplit } from '../../../utils';
 
 const splitInHalf = (arr) => {
     const half = Math.ceil(arr.length / 2);

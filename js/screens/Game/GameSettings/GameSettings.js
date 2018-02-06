@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import { NumberSpinner } from '../../../components';
+import { NumberSpinner, Text } from '../../../components';
 import bgiconSrc from '../bgicon.png';
 
 export default class GameSettings extends React.Component {
@@ -25,13 +25,13 @@ export default class GameSettings extends React.Component {
     render() {
         const { numberOfPlayers, startingLifeTotal } = this.state;
         const {
-            container, bgicon, label, buttonContainer, button, selected, startButton,
+            container, bgicon, buttonContainer, button, selected, startButtonContainer, startButton,
         } = styles;
 
         return (
             <View style={container}>
                 <Image source={bgiconSrc} style={[StyleSheet.absoluteFill, bgicon]} />
-                <Text style={label}>Players</Text>
+                <Text type="label">Players</Text>
                 <NumberSpinner
                     min={1}
                     max={6}
@@ -40,10 +40,11 @@ export default class GameSettings extends React.Component {
                     onChange={(nrPlayers) => this.setState({ numberOfPlayers: nrPlayers })}
                 />
 
-                <Text style={label}>Lifepoints</Text>
+                <Text type="label">Lifepoints</Text>
                 <View style={buttonContainer}>
                     {GameSettings.lifePoints.map((points) => (
                         <Text
+                            type="button"
                             key={`buttonLifePoints${points}`}
                             style={[button, startingLifeTotal === points ? selected : null]}
                             onPress={() => this.setState({ startingLifeTotal: points })}
@@ -53,12 +54,15 @@ export default class GameSettings extends React.Component {
                     ))}
                 </View>
 
-                <Text
-                    style={[button, startButton]}
-                    onPress={() => this.startRound()}
-                >
-                    Start game
-                </Text>
+                <View style={startButtonContainer}>
+                    <Text
+                        type="button"
+                        style={startButton}
+                        onPress={() => this.startRound()}
+                    >
+                        Start game
+                    </Text>
+                </View>
             </View>
         );
     }
