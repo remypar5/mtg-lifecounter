@@ -11,7 +11,13 @@ const Text = (props) => {
 
 Text.propTypes = {
     children: PropTypes.node.isRequired,
-    type: PropTypes.string,
+    type: PropTypes.oneOf([
+        'heading',
+        'paragraph',
+        'label',
+        'value',
+        'button',
+    ]),
     style: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.number,

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import styles from './styles';
 import NumberSpinner from '../NumberSpinner';
+import Text from '../Text';
 
 export default class Player extends React.Component {
     constructor(props) {
@@ -31,14 +32,18 @@ export default class Player extends React.Component {
         const { color, name } = this.props.player;
         const { gameOver, life } = this.state;
         const { tile, playerName, gameOver: gameOverStyle } = styles;
+        const { size } = this.props;
 
         return (
             <View style={[tile, gameOver ? gameOverStyle : null]}>
                 <NumberSpinner
                     value={life}
+                    step={1}
+                    stepLarge={10}
+                    size={size}
                     onChange={this.onLifeChange}
                 />
-                <Text style={[playerName, { color }]}>{name}</Text>
+                <Text type="label" style={[playerName, { color }]}>{name}</Text>
             </View>
         );
     }
@@ -46,6 +51,7 @@ export default class Player extends React.Component {
 
 Player.propTypes = {
     player: PropTypes.object.isRequired,
+    size: PropTypes.oneOf(['small', 'large']).isRequired,
     onGameOver: PropTypes.func,
 };
 

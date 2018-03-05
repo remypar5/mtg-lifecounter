@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { COLOR_FOREGROUND, COLOR_BACKGROUND, COLOR_MARKED } from '../../utils/constants';
+import { COLOR_BACKGROUND, COLOR_MARKED } from '../../utils/constants';
 
 const styles = StyleSheet.create({
     tile: {
@@ -16,8 +16,6 @@ const styles = StyleSheet.create({
         backgroundColor: COLOR_MARKED,
     },
     playerName: {
-        color: COLOR_FOREGROUND,
-        fontSize: 24,
         alignSelf: 'center',
         paddingVertical: 5,
     },

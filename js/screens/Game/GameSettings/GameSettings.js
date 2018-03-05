@@ -35,6 +35,7 @@ export default class GameSettings extends React.Component {
                 <NumberSpinner
                     min={1}
                     max={6}
+                    size="large"
                     stepLarge={1}
                     value={numberOfPlayers}
                     onChange={(nrPlayers) => this.setState({ numberOfPlayers: nrPlayers })}
@@ -60,7 +61,7 @@ export default class GameSettings extends React.Component {
                         style={startButton}
                         onPress={() => this.startRound()}
                     >
-                        Start game
+                        Start
                     </Text>
                 </View>
             </View>

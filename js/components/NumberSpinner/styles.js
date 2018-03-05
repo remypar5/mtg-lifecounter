@@ -1,29 +1,22 @@
 import { StyleSheet } from 'react-native';
-
-import { FONT_FAMILY, COLOR_FOREGROUND } from '../../utils/constants';
+import { normalizeFontSize } from '../../utils';
+import { FONT_SIZE_HUGE, FONT_SIZE } from '../../utils/constants';
 
 const styles = StyleSheet.create({
     container: {
+        width: '100%',
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-between', // Horizontal
+        justifyContent: 'flex-start', // Horizontal
         alignItems: 'center', // Vertical
     },
-    button: {
-        height: '100%',
-        color: COLOR_FOREGROUND,
-        fontSize: 32,
-        fontFamily: FONT_FAMILY,
+    valueNormal: {
+        flex: 2,
+        fontSize: normalizeFontSize(FONT_SIZE),
     },
-    value: {
-        width: '40%',
-        height: '100%',
-        textAlignVertical: 'center',
-        textAlign: 'center',
-        alignSelf: 'center',
-        color: COLOR_FOREGROUND,
-        fontSize: 42,
-        fontFamily: FONT_FAMILY,
+    valueLarge: {
+        flex: 3,
+        fontSize: normalizeFontSize(FONT_SIZE_HUGE),
     },
 });
 

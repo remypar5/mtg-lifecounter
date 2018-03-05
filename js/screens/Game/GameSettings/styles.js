@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
-import { COLOR_FOREGROUND, COLOR_MARKED, FONT_FAMILY } from '../../../utils/constants';
+import { COLOR_MARKED, FONT_FAMILY, FONT_SIZE_SMALL, FONT_SIZE } from '../../../utils/constants';
 import { normalizeFontSize } from '../../../utils';
 
 const { height: screenHeight } = Dimensions.get('window');
@@ -16,13 +16,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: screenHeight,
     },
-    label: {
-        color: COLOR_FOREGROUND,
-        fontSize: 25,
-        textAlign: 'left',
-        width: '95%',
-        alignSelf: 'center',
-    },
     buttonContainer: {
         height: '20%',
         flex: 1,
@@ -32,18 +25,18 @@ const styles = StyleSheet.create({
     },
     button: {
         flex: 1,
-        fontSize: normalizeFontSize(18),
-        paddingVertical: 12,
         fontFamily: FONT_FAMILY,
+        paddingVertical: normalizeFontSize(3),
+        fontSize: normalizeFontSize(FONT_SIZE_SMALL),
     },
     startButtonContainer: {
         width: '100%',
-        padding: 6,
+        padding: normalizeFontSize(2),
     },
     startButton: {
         width: '100%',
-        fontSize: normalizeFontSize(24),
-        paddingVertical: 12,
+        fontSize: normalizeFontSize(FONT_SIZE),
+        paddingVertical: normalizeFontSize(6),
     },
     selected: {
         backgroundColor: COLOR_MARKED,
