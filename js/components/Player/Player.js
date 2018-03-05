@@ -31,8 +31,11 @@ export default class Player extends React.Component {
     render() {
         const { color, name } = this.props.player;
         const { gameOver, life } = this.state;
-        const { tile, playerName, gameOver: gameOverStyle } = styles;
+        const {
+            tile, playerName, playerNameSmall, playerNameLarge, gameOver: gameOverStyle,
+        } = styles;
         const { size } = this.props;
+        const playerNameSizeStyle = size === 'small' ? playerNameSmall : playerNameLarge;
 
         return (
             <View style={[tile, gameOver ? gameOverStyle : null]}>
@@ -43,7 +46,12 @@ export default class Player extends React.Component {
                     size={size}
                     onChange={this.onLifeChange}
                 />
-                <Text type="label" style={[playerName, { color }]}>{name}</Text>
+                <Text
+                    type="label"
+                    style={[playerName, playerNameSizeStyle, { color }]}
+                >
+                    {name}
+                </Text>
             </View>
         );
     }
