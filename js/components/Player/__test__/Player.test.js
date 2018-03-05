@@ -7,7 +7,7 @@ describe('<Player />', () => {
     let component;
 
     beforeEach(() => {
-        component = shallow(<Player player={{ name: 'John Doe', life: 40 }} />);
+        component = shallow(<Player size="small" player={{ name: 'John Doe', life: 40 }} />);
     });
 
     it('renders without crashing', () => {

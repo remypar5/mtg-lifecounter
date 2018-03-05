@@ -52,6 +52,7 @@ ShallowWrapper {
           max={6}
           min={1}
           onChange={[Function]}
+          size="large"
           step={1}
           stepLarge={1}
           value={2}
@@ -80,8 +81,8 @@ ShallowWrapper {
                 Object {
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 57.5,
-                  "paddingVertical": 12,
+                  "fontSize": 135,
+                  "paddingVertical": 34,
                 },
                 Object {
                   "backgroundColor": "#710000",
@@ -99,8 +100,8 @@ ShallowWrapper {
                 Object {
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 57.5,
-                  "paddingVertical": 12,
+                  "fontSize": 135,
+                  "paddingVertical": 34,
                 },
                 null,
               ]
@@ -116,8 +117,8 @@ ShallowWrapper {
                 Object {
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 57.5,
-                  "paddingVertical": 12,
+                  "fontSize": 135,
+                  "paddingVertical": 34,
                 },
                 null,
               ]
@@ -130,7 +131,7 @@ ShallowWrapper {
         <View
           style={
             Object {
-              "padding": 6,
+              "padding": 22.5,
               "width": "100%",
             }
           }
@@ -139,14 +140,14 @@ ShallowWrapper {
             onPress={[Function]}
             style={
               Object {
-                "fontSize": 77,
-                "paddingVertical": 12,
+                "fontSize": 180,
+                "paddingVertical": 67.5,
                 "width": "100%",
               }
             }
             type="button"
           >
-            Start game
+            Start
           </Text>
         </View>,
       ],
@@ -207,6 +208,7 @@ ShallowWrapper {
           "max": 6,
           "min": 1,
           "onChange": [Function],
+          "size": "large",
           "step": 1,
           "stepLarge": 1,
           "value": 2,
@@ -241,8 +243,8 @@ ShallowWrapper {
                   Object {
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 57.5,
-                    "paddingVertical": 12,
+                    "fontSize": 135,
+                    "paddingVertical": 34,
                   },
                   Object {
                     "backgroundColor": "#710000",
@@ -260,8 +262,8 @@ ShallowWrapper {
                   Object {
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 57.5,
-                    "paddingVertical": 12,
+                    "fontSize": 135,
+                    "paddingVertical": 34,
                   },
                   null,
                 ]
@@ -277,8 +279,8 @@ ShallowWrapper {
                   Object {
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 57.5,
-                    "paddingVertical": 12,
+                    "fontSize": 135,
+                    "paddingVertical": 34,
                   },
                   null,
                 ]
@@ -309,8 +311,8 @@ ShallowWrapper {
                 Object {
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 57.5,
-                  "paddingVertical": 12,
+                  "fontSize": 135,
+                  "paddingVertical": 34,
                 },
                 Object {
                   "backgroundColor": "#710000",
@@ -333,8 +335,8 @@ ShallowWrapper {
                 Object {
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 57.5,
-                  "paddingVertical": 12,
+                  "fontSize": 135,
+                  "paddingVertical": 34,
                 },
                 null,
               ],
@@ -355,8 +357,8 @@ ShallowWrapper {
                 Object {
                   "flex": 1,
                   "fontFamily": "cloisterblack",
-                  "fontSize": 57.5,
-                  "paddingVertical": 12,
+                  "fontSize": 135,
+                  "paddingVertical": 34,
                 },
                 null,
               ],
@@ -378,17 +380,17 @@ ShallowWrapper {
             onPress={[Function]}
             style={
               Object {
-                "fontSize": 77,
-                "paddingVertical": 12,
+                "fontSize": 180,
+                "paddingVertical": 67.5,
                 "width": "100%",
               }
             }
             type="button"
           >
-            Start game
+            Start
           </Text>,
           "style": Object {
-            "padding": 6,
+            "padding": 22.5,
             "width": "100%",
           },
         },
@@ -398,17 +400,17 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": "Start game",
+            "children": "Start",
             "onPress": [Function],
             "style": Object {
-              "fontSize": 77,
-              "paddingVertical": 12,
+              "fontSize": 180,
+              "paddingVertical": 67.5,
               "width": "100%",
             },
             "type": "button",
           },
           "ref": null,
-          "rendered": "Start game",
+          "rendered": "Start",
           "type": [Function],
         },
         "type": [Function],
@@ -455,6 +457,7 @@ ShallowWrapper {
             max={6}
             min={1}
             onChange={[Function]}
+            size="large"
             step={1}
             stepLarge={1}
             value={2}
@@ -483,8 +486,8 @@ ShallowWrapper {
                   Object {
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 57.5,
-                    "paddingVertical": 12,
+                    "fontSize": 135,
+                    "paddingVertical": 34,
                   },
                   Object {
                     "backgroundColor": "#710000",
@@ -502,8 +505,8 @@ ShallowWrapper {
                   Object {
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 57.5,
-                    "paddingVertical": 12,
+                    "fontSize": 135,
+                    "paddingVertical": 34,
                   },
                   null,
                 ]
@@ -519,8 +522,8 @@ ShallowWrapper {
                   Object {
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 57.5,
-                    "paddingVertical": 12,
+                    "fontSize": 135,
+                    "paddingVertical": 34,
                   },
                   null,
                 ]
@@ -533,7 +536,7 @@ ShallowWrapper {
           <View
             style={
               Object {
-                "padding": 6,
+                "padding": 22.5,
                 "width": "100%",
               }
             }
@@ -542,14 +545,14 @@ ShallowWrapper {
               onPress={[Function]}
               style={
                 Object {
-                  "fontSize": 77,
-                  "paddingVertical": 12,
+                  "fontSize": 180,
+                  "paddingVertical": 67.5,
                   "width": "100%",
                 }
               }
               type="button"
             >
-              Start game
+              Start
             </Text>
           </View>,
         ],
@@ -610,6 +613,7 @@ ShallowWrapper {
             "max": 6,
             "min": 1,
             "onChange": [Function],
+            "size": "large",
             "step": 1,
             "stepLarge": 1,
             "value": 2,
@@ -644,8 +648,8 @@ ShallowWrapper {
                     Object {
                       "flex": 1,
                       "fontFamily": "cloisterblack",
-                      "fontSize": 57.5,
-                      "paddingVertical": 12,
+                      "fontSize": 135,
+                      "paddingVertical": 34,
                     },
                     Object {
                       "backgroundColor": "#710000",
@@ -663,8 +667,8 @@ ShallowWrapper {
                     Object {
                       "flex": 1,
                       "fontFamily": "cloisterblack",
-                      "fontSize": 57.5,
-                      "paddingVertical": 12,
+                      "fontSize": 135,
+                      "paddingVertical": 34,
                     },
                     null,
                   ]
@@ -680,8 +684,8 @@ ShallowWrapper {
                     Object {
                       "flex": 1,
                       "fontFamily": "cloisterblack",
-                      "fontSize": 57.5,
-                      "paddingVertical": 12,
+                      "fontSize": 135,
+                      "paddingVertical": 34,
                     },
                     null,
                   ]
@@ -712,8 +716,8 @@ ShallowWrapper {
                   Object {
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 57.5,
-                    "paddingVertical": 12,
+                    "fontSize": 135,
+                    "paddingVertical": 34,
                   },
                   Object {
                     "backgroundColor": "#710000",
@@ -736,8 +740,8 @@ ShallowWrapper {
                   Object {
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 57.5,
-                    "paddingVertical": 12,
+                    "fontSize": 135,
+                    "paddingVertical": 34,
                   },
                   null,
                 ],
@@ -758,8 +762,8 @@ ShallowWrapper {
                   Object {
                     "flex": 1,
                     "fontFamily": "cloisterblack",
-                    "fontSize": 57.5,
-                    "paddingVertical": 12,
+                    "fontSize": 135,
+                    "paddingVertical": 34,
                   },
                   null,
                 ],
@@ -781,17 +785,17 @@ ShallowWrapper {
               onPress={[Function]}
               style={
                 Object {
-                  "fontSize": 77,
-                  "paddingVertical": 12,
+                  "fontSize": 180,
+                  "paddingVertical": 67.5,
                   "width": "100%",
                 }
               }
               type="button"
             >
-              Start game
+              Start
             </Text>,
             "style": Object {
-              "padding": 6,
+              "padding": 22.5,
               "width": "100%",
             },
           },
@@ -801,17 +805,17 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": "Start game",
+              "children": "Start",
               "onPress": [Function],
               "style": Object {
-                "fontSize": 77,
-                "paddingVertical": 12,
+                "fontSize": 180,
+                "paddingVertical": 67.5,
                 "width": "100%",
               },
               "type": "button",
             },
             "ref": null,
-            "rendered": "Start game",
+            "rendered": "Start",
             "type": [Function],
           },
           "type": [Function],
