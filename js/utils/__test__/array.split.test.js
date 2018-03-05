@@ -12,6 +12,27 @@ function isThird(x) {
     return x % 3 === 0;
 }
 
+describe('test utilities', () => {
+    it('correctly checks if input for isEven() is an even number', () => {
+        expect(isEven(0)).toBe(true);
+        expect(isEven(1)).toBe(false);
+        expect(isEven(2)).toBe(true);
+    });
+
+    it('correctly checks if input for isOdd() is an odd number', () => {
+        expect(isOdd(0)).toBe(false);
+        expect(isOdd(1)).toBe(true);
+        expect(isOdd(2)).toBe(false);
+    });
+
+    it('correctly checks if input for isThird() is divisible by 3', () => {
+        expect(isThird(0)).toBe(true);
+        expect(isThird(1)).toBe(false);
+        expect(isThird(2)).toBe(false);
+        expect(isThird(3)).toBe(true);
+    });
+});
+
 describe('splitArray()', () => {
     it('splits an array into arrays based on the provided splitters', () => {
         const arr = '0123456789'.split('');
