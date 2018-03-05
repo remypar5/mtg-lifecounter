@@ -44,6 +44,9 @@ ShallowWrapper {
                 "paddingVertical": 5,
               },
               Object {
+                "fontSize": 90,
+              },
+              Object {
                 "color": undefined,
               },
             ]
@@ -98,6 +101,9 @@ ShallowWrapper {
               "paddingVertical": 5,
             },
             Object {
+              "fontSize": 90,
+            },
+            Object {
               "color": undefined,
             },
           ],
@@ -132,6 +138,9 @@ ShallowWrapper {
                 Object {
                   "alignSelf": "center",
                   "paddingVertical": 5,
+                },
+                Object {
+                  "fontSize": 90,
                 },
                 Object {
                   "color": undefined,
@@ -186,6 +195,9 @@ ShallowWrapper {
               Object {
                 "alignSelf": "center",
                 "paddingVertical": 5,
+              },
+              Object {
+                "fontSize": 90,
               },
               Object {
                 "color": undefined,

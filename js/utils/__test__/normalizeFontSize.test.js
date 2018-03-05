@@ -23,7 +23,7 @@ describe('getBaseFontSize()', () => {
 describe('normalizeFontSize()', () => {
     // TODO: Also magic numbers. No clue what they are based on
     it('creates a scaled font size based on the input', () => {
-        expect(normalizeFontSize(FONT_SIZE_TINY)).toBe(112.5);
+        expect(normalizeFontSize(FONT_SIZE_TINY)).toBe(90);
         expect(normalizeFontSize(FONT_SIZE_SMALL)).toBe(135);
         expect(normalizeFontSize(FONT_SIZE)).toBe(180);
         expect(normalizeFontSize(FONT_SIZE_LARGE)).toBe(225);
