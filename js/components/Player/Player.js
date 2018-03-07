@@ -29,16 +29,17 @@ export default class Player extends React.Component {
     }
 
     render() {
-        const { color, name } = this.props.player;
+        const { size, player } = this.props;
+        const { color, name } = player;
         const { gameOver, life } = this.state;
         const {
             tile, playerName, playerNameSmall, playerNameLarge, gameOver: gameOverStyle,
         } = styles;
-        const { size } = this.props;
         const playerNameSizeStyle = size === 'small' ? playerNameSmall : playerNameLarge;
+        const containerStyle = [tile, gameOver ? gameOverStyle : null];
 
         return (
-            <View style={[tile, gameOver ? gameOverStyle : null]}>
+            <View style={containerStyle}>
                 <NumberSpinner
                     value={life}
                     step={1}
