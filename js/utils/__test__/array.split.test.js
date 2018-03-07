@@ -9,7 +9,7 @@ function isOdd(x) {
 }
 
 function isThird(x) {
-    return x % 3 === 0;
+    return x > 0 && x % 3 === 0;
 }
 
 describe('test utilities', () => {
@@ -26,7 +26,7 @@ describe('test utilities', () => {
     });
 
     it('correctly checks if input for isThird() is divisible by 3', () => {
-        expect(isThird(0)).toBe(true);
+        expect(isThird(0)).toBe(false);
         expect(isThird(1)).toBe(false);
         expect(isThird(2)).toBe(false);
         expect(isThird(3)).toBe(true);
@@ -49,7 +49,7 @@ describe('splitArray()', () => {
 
         expect(split[0]).toEqual(['0', '2', '4', '6', '8']);
         expect(split[1]).toEqual(['1', '3', '5', '7', '9']);
-        expect(split[2]).toEqual(['0', '3', '6', '9']);
+        expect(split[2]).toEqual(['3', '6', '9']);
 
         const splitUnique = splitArray(arr, [isEven, isOdd, isThird], true);
 
