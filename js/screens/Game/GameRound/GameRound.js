@@ -102,10 +102,15 @@ export default class GameRound extends React.Component {
     }
 
     renderSinglePlayer(player, playerProps = {}) {
+        const props = {
+            size: this.players.length > 2 ? 'small' : 'large',
+            ...playerProps,
+            player,
+        };
+
         return (
             <Player
-                {...playerProps}
-                player={player}
+                {...props}
                 onGameOver={(isGameOver) => this.playerGameOver(player, isGameOver)}
             />
         );

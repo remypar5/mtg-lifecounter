@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Player from '../Player';
+import Text from '../Text';
 
-describe('<Player />', () => {
+describe('<Text />', () => {
     let component;
 
     beforeEach(() => {
-        component = shallow(<Player size="small" player={{ name: 'John Doe', life: 40 }} />);
+        component = shallow(<Text type="heading">Heading</Text>);
     });
 
     it('renders without crashing', () => {

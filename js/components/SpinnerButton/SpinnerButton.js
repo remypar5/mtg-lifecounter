@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableWithoutFeedback, Text, View } from 'react-native';
+import { TouchableWithoutFeedback, View } from 'react-native';
 
 import styles from './styles';
+import Text from '../Text';
 
 export default class SpinnerButton extends React.Component {
     constructor(props) {
@@ -52,13 +53,12 @@ export default class SpinnerButton extends React.Component {
         return (
             <TouchableWithoutFeedback
                 hitSlop={hitSlop}
-                pressRetentionOffset={hitSlop}
                 onPress={this.onPress}
                 onPressIn={this.onPressIn}
                 onPressOut={this.onPressOut}
             >
                 <View style={[buttonContainer]}>
-                    <Text style={button}>{content}</Text>
+                    <Text type="label" style={button}>{content}</Text>
                 </View>
             </TouchableWithoutFeedback>
         );

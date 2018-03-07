@@ -12,6 +12,7 @@ ShallowWrapper {
         "name": "John Doe",
       }
     }
+    size="small"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -30,27 +31,27 @@ ShallowWrapper {
           max={9007199254740991}
           min={-9007199254740991}
           onChange={[Function]}
+          size="small"
           step={1}
           stepLarge={10}
           value={40}
         />,
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
                 "alignSelf": "center",
-                "color": "#b2b2b0",
-                "fontSize": 24,
                 "paddingVertical": 5,
+              },
+              Object {
+                "fontSize": 90,
               },
               Object {
                 "color": undefined,
               },
             ]
           }
+          type="label"
         >
           John Doe
         </Text>,
@@ -79,6 +80,7 @@ ShallowWrapper {
           "max": 9007199254740991,
           "min": -9007199254740991,
           "onChange": [Function],
+          "size": "small",
           "step": 1,
           "stepLarge": 10,
           "value": 40,
@@ -90,23 +92,22 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
           "children": "John Doe",
-          "ellipsizeMode": "tail",
           "style": Array [
             Object {
               "alignSelf": "center",
-              "color": "#b2b2b0",
-              "fontSize": 24,
               "paddingVertical": 5,
+            },
+            Object {
+              "fontSize": 90,
             },
             Object {
               "color": undefined,
             },
           ],
+          "type": "label",
         },
         "ref": null,
         "rendered": "John Doe",
@@ -126,27 +127,27 @@ ShallowWrapper {
             max={9007199254740991}
             min={-9007199254740991}
             onChange={[Function]}
+            size="small"
             step={1}
             stepLarge={10}
             value={40}
           />,
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
                   "alignSelf": "center",
-                  "color": "#b2b2b0",
-                  "fontSize": 24,
                   "paddingVertical": 5,
+                },
+                Object {
+                  "fontSize": 90,
                 },
                 Object {
                   "color": undefined,
                 },
               ]
             }
+            type="label"
           >
             John Doe
           </Text>,
@@ -175,6 +176,7 @@ ShallowWrapper {
             "max": 9007199254740991,
             "min": -9007199254740991,
             "onChange": [Function],
+            "size": "small",
             "step": 1,
             "stepLarge": 10,
             "value": 40,
@@ -186,23 +188,22 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
             "children": "John Doe",
-            "ellipsizeMode": "tail",
             "style": Array [
               Object {
                 "alignSelf": "center",
-                "color": "#b2b2b0",
-                "fontSize": 24,
                 "paddingVertical": 5,
+              },
+              Object {
+                "fontSize": 90,
               },
               Object {
                 "color": undefined,
               },
             ],
+            "type": "label",
           },
           "ref": null,
           "rendered": "John Doe",

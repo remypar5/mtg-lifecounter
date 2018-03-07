@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 import styles from './styles';
 import SpinnerButton from '../SpinnerButton';
+import Text from '../Text';
 
 export default class NumberSpinner extends React.Component {
     constructor(props) {
@@ -32,21 +33,25 @@ export default class NumberSpinner extends React.Component {
     }
 
     render() {
-        const { step, stepLarge } = this.props;
+        const { step, stepLarge, size } = this.props;
         const { value } = this.state;
-        const { container, button, value: valueStyle } = styles;
+        const { container, valueLarge, valueNormal } = styles;
+        const valueStyle = size === 'large' ? valueLarge : valueNormal;
 
         return (
             <View style={container}>
                 <SpinnerButton
-                    style={button}
                     content="-"
                     onPress={() => this.update(-step)}
                     onHold={() => this.update(-stepLarge)}
                 />
-                <Text style={valueStyle}>{value}</Text>
+                <Text
+                    type="value"
+                    style={valueStyle}
+                >
+                    {value}
+                </Text>
                 <SpinnerButton
-                    style={button}
                     content="+"
                     onPress={() => this.update(+step)}
                     onHold={() => this.update(+stepLarge)}
@@ -62,6 +67,7 @@ NumberSpinner.propTypes = {
     max: PropTypes.number,
     step: PropTypes.number,
     stepLarge: PropTypes.number,
+    size: PropTypes.oneOf(['small', 'large']),
     onChange: PropTypes.func,
 };
 
@@ -70,5 +76,6 @@ NumberSpinner.defaultProps = {
     stepLarge: 10,
     min: Number.MIN_SAFE_INTEGER,
     max: Number.MAX_SAFE_INTEGER,
+    size: 'small',
     onChange: () => { },
 };

@@ -1,3 +1,7 @@
 import arraySplit from './array.split';
+import normalizeFontSize from './normalizeFontSize';
 
-export default arraySplit;
+export {
+    arraySplit,
+    normalizeFontSize,
+};

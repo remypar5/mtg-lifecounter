@@ -1,6 +1,7 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
-import { COLOR_BACKGROUND, COLOR_FOREGROUND, COLOR_MARKED, FONT_FAMILY } from '../../../utils/constants';
+import { COLOR_MARKED, FONT_FAMILY, FONT_SIZE_SMALL, FONT_SIZE } from '../../../utils/constants';
+import { normalizeFontSize } from '../../../utils';
 
 const { height: screenHeight } = Dimensions.get('window');
 const styles = StyleSheet.create({
@@ -15,13 +16,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: screenHeight,
     },
-    label: {
-        color: COLOR_FOREGROUND,
-        fontSize: 25,
-        textAlign: 'left',
-        width: '95%',
-        alignSelf: 'center',
-    },
     buttonContainer: {
         height: '20%',
         flex: 1,
@@ -31,21 +25,18 @@ const styles = StyleSheet.create({
     },
     button: {
         flex: 1,
-        height: 50,
-        backgroundColor: COLOR_BACKGROUND,
-        color: COLOR_FOREGROUND,
         fontFamily: FONT_FAMILY,
-        fontSize: 24,
-        textAlign: 'center',
-        textAlignVertical: 'center',
-        alignSelf: 'baseline',
+        paddingVertical: normalizeFontSize(3),
+        fontSize: normalizeFontSize(FONT_SIZE_SMALL),
+    },
+    startButtonContainer: {
+        width: '100%',
+        padding: normalizeFontSize(2),
     },
     startButton: {
         width: '100%',
-        height: 40,
-        fontSize: 36,
-        borderColor: '#161616',
-        borderWidth: 6,
+        fontSize: normalizeFontSize(FONT_SIZE),
+        paddingVertical: normalizeFontSize(6),
     },
     selected: {
         backgroundColor: COLOR_MARKED,

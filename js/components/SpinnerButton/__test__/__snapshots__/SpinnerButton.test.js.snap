@@ -25,26 +25,20 @@ ShallowWrapper {
         style={
           Array [
             Object {
-              "width": "20%",
+              "flex": 1,
             },
           ]
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
-              "color": "#b2b2b0",
               "fontFamily": "cloisterblack",
-              "fontSize": 32,
-              "height": "100%",
               "textAlign": "center",
-              "textAlignVertical": "center",
               "width": "100%",
             }
           }
+          type="label"
         >
           -
         </Text>
@@ -58,12 +52,6 @@ ShallowWrapper {
       "onPress": [Function],
       "onPressIn": [Function],
       "onPressOut": [Function],
-      "pressRetentionOffset": Object {
-        "bottom": 100,
-        "left": 100,
-        "right": 100,
-        "top": 100,
-      },
     },
     "ref": null,
     "rendered": Object {
@@ -72,26 +60,20 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
-              "color": "#b2b2b0",
               "fontFamily": "cloisterblack",
-              "fontSize": 32,
-              "height": "100%",
               "textAlign": "center",
-              "textAlignVertical": "center",
               "width": "100%",
             }
           }
+          type="label"
         >
           -
         </Text>,
         "style": Array [
           Object {
-            "width": "20%",
+            "flex": 1,
           },
         ],
       },
@@ -99,21 +81,15 @@ ShallowWrapper {
       "rendered": Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
           "children": "-",
-          "ellipsizeMode": "tail",
           "style": Object {
-            "color": "#b2b2b0",
             "fontFamily": "cloisterblack",
-            "fontSize": 32,
-            "height": "100%",
             "textAlign": "center",
-            "textAlignVertical": "center",
             "width": "100%",
           },
+          "type": "label",
         },
         "ref": null,
         "rendered": "-",
@@ -133,26 +109,20 @@ ShallowWrapper {
           style={
             Array [
               Object {
-                "width": "20%",
+                "flex": 1,
               },
             ]
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
-                "color": "#b2b2b0",
                 "fontFamily": "cloisterblack",
-                "fontSize": 32,
-                "height": "100%",
                 "textAlign": "center",
-                "textAlignVertical": "center",
                 "width": "100%",
               }
             }
+            type="label"
           >
             -
           </Text>
@@ -166,12 +136,6 @@ ShallowWrapper {
         "onPress": [Function],
         "onPressIn": [Function],
         "onPressOut": [Function],
-        "pressRetentionOffset": Object {
-          "bottom": 100,
-          "left": 100,
-          "right": 100,
-          "top": 100,
-        },
       },
       "ref": null,
       "rendered": Object {
@@ -180,26 +144,20 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
-                "color": "#b2b2b0",
                 "fontFamily": "cloisterblack",
-                "fontSize": 32,
-                "height": "100%",
                 "textAlign": "center",
-                "textAlignVertical": "center",
                 "width": "100%",
               }
             }
+            type="label"
           >
             -
           </Text>,
           "style": Array [
             Object {
-              "width": "20%",
+              "flex": 1,
             },
           ],
         },
@@ -207,21 +165,15 @@ ShallowWrapper {
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
             "children": "-",
-            "ellipsizeMode": "tail",
             "style": Object {
-              "color": "#b2b2b0",
               "fontFamily": "cloisterblack",
-              "fontSize": 32,
-              "height": "100%",
               "textAlign": "center",
-              "textAlignVertical": "center",
               "width": "100%",
             },
+            "type": "label",
           },
           "ref": null,
           "rendered": "-",

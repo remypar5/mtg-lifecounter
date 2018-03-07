@@ -44,6 +44,7 @@ ShallowWrapper {
                 "name": "Player 1",
               }
             }
+            size="small"
           />
           <Player
             onGameOver={[Function]}
@@ -56,6 +57,7 @@ ShallowWrapper {
                 "name": "Player 2",
               }
             }
+            size="small"
           />
         </View>,
         <View
@@ -76,6 +78,7 @@ ShallowWrapper {
                 "name": "Player 3",
               }
             }
+            size="small"
           />
         </View>,
       ],
@@ -104,6 +107,7 @@ ShallowWrapper {
                   "name": "Player 1",
                 }
               }
+              size="small"
             />,
             <Player
               onGameOver={[Function]}
@@ -116,6 +120,7 @@ ShallowWrapper {
                   "name": "Player 2",
                 }
               }
+              size="small"
             />,
           ],
           "style": Object {
@@ -137,6 +142,7 @@ ShallowWrapper {
                 "life": 40,
                 "name": "Player 1",
               },
+              "size": "small",
             },
             "ref": null,
             "rendered": null,
@@ -155,6 +161,7 @@ ShallowWrapper {
                 "life": 40,
                 "name": "Player 2",
               },
+              "size": "small",
             },
             "ref": null,
             "rendered": null,
@@ -180,6 +187,7 @@ ShallowWrapper {
                   "name": "Player 3",
                 }
               }
+              size="small"
             />,
           ],
           "style": Object {
@@ -201,6 +209,7 @@ ShallowWrapper {
                 "life": 40,
                 "name": "Player 3",
               },
+              "size": "small",
             },
             "ref": null,
             "rendered": null,
@@ -237,6 +246,7 @@ ShallowWrapper {
                   "name": "Player 1",
                 }
               }
+              size="small"
             />
             <Player
               onGameOver={[Function]}
@@ -249,6 +259,7 @@ ShallowWrapper {
                   "name": "Player 2",
                 }
               }
+              size="small"
             />
           </View>,
           <View
@@ -269,6 +280,7 @@ ShallowWrapper {
                   "name": "Player 3",
                 }
               }
+              size="small"
             />
           </View>,
         ],
@@ -297,6 +309,7 @@ ShallowWrapper {
                     "name": "Player 1",
                   }
                 }
+                size="small"
               />,
               <Player
                 onGameOver={[Function]}
@@ -309,6 +322,7 @@ ShallowWrapper {
                     "name": "Player 2",
                   }
                 }
+                size="small"
               />,
             ],
             "style": Object {
@@ -330,6 +344,7 @@ ShallowWrapper {
                   "life": 40,
                   "name": "Player 1",
                 },
+                "size": "small",
               },
               "ref": null,
               "rendered": null,
@@ -348,6 +363,7 @@ ShallowWrapper {
                   "life": 40,
                   "name": "Player 2",
                 },
+                "size": "small",
               },
               "ref": null,
               "rendered": null,
@@ -373,6 +389,7 @@ ShallowWrapper {
                     "name": "Player 3",
                   }
                 }
+                size="small"
               />,
             ],
             "style": Object {
@@ -394,6 +411,7 @@ ShallowWrapper {
                   "life": 40,
                   "name": "Player 3",
                 },
+                "size": "small",
               },
               "ref": null,
               "rendered": null,
