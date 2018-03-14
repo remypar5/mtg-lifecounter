@@ -5,7 +5,7 @@ import { NavigationActions } from 'react-navigation';
 
 import styles from './styles';
 import splitInHalf from './utils';
-import { Player } from '../../../components';
+import { Player, PageContainer } from '../../../components';
 
 export default class GameRound extends React.Component {
     constructor(props) {
@@ -155,12 +155,11 @@ export default class GameRound extends React.Component {
     render() {
         const { length } = this.players;
         const { roundNumber } = this.state;
-        const { container } = styles;
 
         return (
-            <View style={container} key={`round${roundNumber}`}>
+            <PageContainer key={`round${roundNumber}`}>
                 { length === 1 ? this.renderSinglePlayer(this.players[0]) : this.renderPlayers() }
-            </View>
+            </PageContainer>
         );
     }
 }

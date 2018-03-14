@@ -3,7 +3,7 @@ import { View, Image, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import { NumberSpinner, Text } from '../../../components';
+import { NumberSpinner, Text, PageContainer } from '../../../components';
 import bgiconSrc from '../bgicon.png';
 
 export default class GameSettings extends React.Component {
@@ -29,7 +29,7 @@ export default class GameSettings extends React.Component {
         } = styles;
 
         return (
-            <View style={container}>
+            <PageContainer style={container}>
                 <Image source={bgiconSrc} style={[StyleSheet.absoluteFill, bgicon]} />
                 <Text type="label">Players</Text>
                 <NumberSpinner
@@ -64,7 +64,7 @@ export default class GameSettings extends React.Component {
                         Start
                     </Text>
                 </View>
-            </View>
+            </PageContainer>
         );
     }
 }

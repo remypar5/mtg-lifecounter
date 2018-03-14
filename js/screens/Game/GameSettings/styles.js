@@ -6,11 +6,7 @@ import { normalizeFontSize } from '../../../utils';
 const { height: screenHeight } = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#161616',
-        flex: 1,
         flexDirection: 'column',
-        alignItems: 'stretch',
-        justifyContent: 'flex-end',
     },
     bgicon: {
         width: '100%',
