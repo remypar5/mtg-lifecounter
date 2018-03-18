@@ -17,7 +17,10 @@ const BackgroundImage = ({ source, style }) => {
 };
 
 BackgroundImage.propTypes = {
-    source: PropTypes.object.isRequired,
+    source: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.number,
+    ]).isRequired,
     style: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.number,

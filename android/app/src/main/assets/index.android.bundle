@@ -52679,7 +52679,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         initialRouteName: 'GameSettings'
     });
     exports.default = AppRouter;
-},335,[336,402,427],"mtg-lifecounter/js/routes/AppRouter.js");
+},335,[336,402,430],"mtg-lifecounter/js/routes/AppRouter.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   module.exports = {
     get createNavigationContainer() {
@@ -61588,7 +61588,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     exports.GameSettings = _GameSettings2.default;
     exports.GameSettingsContainer = _GameSettings4.default;
     exports.styles = _styles2.default;
-},402,[403,426,404],"mtg-lifecounter/js/screens/Game/GameSettings/index.js");
+},402,[403,429,404],"mtg-lifecounter/js/screens/Game/GameSettings/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -61624,7 +61624,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             var _this = babelHelpers.possibleConstructorReturn(this, (GameSettings.__proto__ || Object.getPrototypeOf(GameSettings)).call(this, props));
 
             _this.state = {
-                numberOfPlayers: 6,
+                numberOfPlayers: 2,
                 startingLifeTotal: GameSettings.lifePoints[0]
             };
             return _this;
@@ -61665,9 +61665,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             lineNumber: 32
                         }
                     },
-                    _react2.default.createElement(_reactNative.Image, {
+                    _react2.default.createElement(_components.BackgroundImage, {
                         source: _bgicon2.default,
-                        style: [_reactNative.StyleSheet.absoluteFill, bgicon],
                         __source: {
                             fileName: _jsxFileName,
                             lineNumber: 33
@@ -61777,7 +61776,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     GameSettings.propTypes = {
         navigation: _propTypes2.default.object.isRequired
     };
-},403,[108,12,127,404,409,425],"mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.js");
+},403,[108,12,127,404,409,428],"mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -61939,34 +61938,125 @@ __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
-    exports.Text = exports.SpinnerButton = exports.PageContainer = exports.Player = exports.NumberSpinner = undefined;
+    exports.Text = exports.SpinnerButton = exports.PageContainer = exports.Player = exports.NumberSpinner = exports.BackgroundImage = undefined;
 
-    var _NumberSpinner = require(_dependencyMap[0], "./NumberSpinner");
+    var _BackgroundImage = require(_dependencyMap[0], "./BackgroundImage");
+
+    var _BackgroundImage2 = babelHelpers.interopRequireDefault(_BackgroundImage);
+
+    var _NumberSpinner = require(_dependencyMap[1], "./NumberSpinner");
 
     var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
 
-    var _Player = require(_dependencyMap[1], "./Player");
+    var _Player = require(_dependencyMap[2], "./Player");
 
     var _Player2 = babelHelpers.interopRequireDefault(_Player);
 
-    var _PageContainer = require(_dependencyMap[2], "./PageContainer");
+    var _PageContainer = require(_dependencyMap[3], "./PageContainer");
 
     var _PageContainer2 = babelHelpers.interopRequireDefault(_PageContainer);
 
-    var _SpinnerButton = require(_dependencyMap[3], "./SpinnerButton");
+    var _SpinnerButton = require(_dependencyMap[4], "./SpinnerButton");
 
     var _SpinnerButton2 = babelHelpers.interopRequireDefault(_SpinnerButton);
 
-    var _Text = require(_dependencyMap[4], "./Text");
+    var _Text = require(_dependencyMap[5], "./Text");
 
     var _Text2 = babelHelpers.interopRequireDefault(_Text);
 
+    exports.BackgroundImage = _BackgroundImage2.default;
     exports.NumberSpinner = _NumberSpinner2.default;
     exports.Player = _Player2.default;
     exports.PageContainer = _PageContainer2.default;
     exports.SpinnerButton = _SpinnerButton2.default;
     exports.Text = _Text2.default;
-},409,[410,419,422,413,416],"mtg-lifecounter/js/components/index.js");
+},409,[410,413,422,425,416,419],"mtg-lifecounter/js/components/index.js");
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.styles = undefined;
+
+    var _BackgroundImage = require(_dependencyMap[0], "./BackgroundImage");
+
+    var _BackgroundImage2 = babelHelpers.interopRequireDefault(_BackgroundImage);
+
+    var _styles = require(_dependencyMap[1], "./styles");
+
+    var _styles2 = babelHelpers.interopRequireDefault(_styles);
+
+    exports.default = _BackgroundImage2.default;
+    exports.styles = _styles2.default;
+},410,[411,412],"mtg-lifecounter/js/components/BackgroundImage/index.js");
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var _jsxFileName = "/home/remy/Projects/mtg-lifecounter/js/components/BackgroundImage/BackgroundImage.js";
+
+    var _react = require(_dependencyMap[0], "react");
+
+    var _react2 = babelHelpers.interopRequireDefault(_react);
+
+    var _reactNative = require(_dependencyMap[1], "react-native");
+
+    var _propTypes = require(_dependencyMap[2], "prop-types");
+
+    var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
+    var _styles = require(_dependencyMap[3], "./styles");
+
+    var _styles2 = babelHelpers.interopRequireDefault(_styles);
+
+    var image = _styles2.default.image;
+
+    var BackgroundImage = function BackgroundImage(_ref) {
+        var source = _ref.source,
+            style = _ref.style;
+        var imageStyle = [image];
+
+        if (style) {
+            imageStyle.push(style);
+        }
+
+        return _react2.default.createElement(_reactNative.Image, {
+            source: source,
+            style: imageStyle,
+            __source: {
+                fileName: _jsxFileName,
+                lineNumber: 16
+            }
+        });
+    };
+
+    BackgroundImage.propTypes = {
+        source: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.number]).isRequired,
+        style: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.number, _propTypes2.default.arrayOf([_propTypes2.default.object, _propTypes2.default.number])])
+    };
+    BackgroundImage.defaultProps = {
+        style: null
+    };
+    exports.default = BackgroundImage;
+},411,[108,12,127,412],"mtg-lifecounter/js/components/BackgroundImage/BackgroundImage.js");
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var _reactNative = require(_dependencyMap[0], "react-native");
+
+    var _Dimensions$get = _reactNative.Dimensions.get('window'),
+        height = _Dimensions$get.height;
+
+    var styles = _reactNative.StyleSheet.create({
+        image: babelHelpers.extends({}, _reactNative.StyleSheet.absoluteFillObject, {
+            width: '100%',
+            height: height
+        })
+    });
+
+    exports.default = styles;
+},412,[12],"mtg-lifecounter/js/components/BackgroundImage/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -61983,7 +62073,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.default = _NumberSpinner2.default;
     exports.styles = _styles2.default;
-},410,[411,412],"mtg-lifecounter/js/components/NumberSpinner/index.js");
+},413,[414,415],"mtg-lifecounter/js/components/NumberSpinner/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62129,7 +62219,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         size: 'small',
         onChange: function onChange() {}
     };
-},411,[108,127,12,412,413,416],"mtg-lifecounter/js/components/NumberSpinner/NumberSpinner.js");
+},414,[108,127,12,415,416,419],"mtg-lifecounter/js/components/NumberSpinner/NumberSpinner.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62160,7 +62250,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},412,[12,406,405],"mtg-lifecounter/js/components/NumberSpinner/styles.js");
+},415,[12,406,405],"mtg-lifecounter/js/components/NumberSpinner/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62177,7 +62267,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.default = _SpinnerButton2.default;
     exports.styles = _styles2.default;
-},413,[414,415],"mtg-lifecounter/js/components/SpinnerButton/index.js");
+},416,[417,418],"mtg-lifecounter/js/components/SpinnerButton/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62313,7 +62403,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     SpinnerButton.defaultProps = {
         onHold: null
     };
-},414,[108,127,12,415,416],"mtg-lifecounter/js/components/SpinnerButton/SpinnerButton.js");
+},417,[108,127,12,418,419],"mtg-lifecounter/js/components/SpinnerButton/SpinnerButton.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62335,7 +62425,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},415,[12,405],"mtg-lifecounter/js/components/SpinnerButton/styles.js");
+},418,[12,405],"mtg-lifecounter/js/components/SpinnerButton/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62352,7 +62442,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.default = _Text2.default;
     exports.styles = _styles2.default;
-},416,[417,418],"mtg-lifecounter/js/components/Text/index.js");
+},419,[420,421],"mtg-lifecounter/js/components/Text/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62400,7 +62490,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         style: null
     };
     exports.default = Text;
-},417,[108,12,127,418],"mtg-lifecounter/js/components/Text/Text.js");
+},420,[108,12,127,421],"mtg-lifecounter/js/components/Text/Text.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62450,7 +62540,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},418,[12,406,405],"mtg-lifecounter/js/components/Text/styles.js");
+},421,[12,406,405],"mtg-lifecounter/js/components/Text/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62467,7 +62557,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.default = _Player2.default;
     exports.styles = _styles2.default;
-},419,[420,421],"mtg-lifecounter/js/components/Player/index.js");
+},422,[423,424],"mtg-lifecounter/js/components/Player/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62588,7 +62678,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     Player.defaultProps = {
         onGameOver: function onGameOver() {}
     };
-},420,[108,127,12,421,410,416],"mtg-lifecounter/js/components/Player/Player.js");
+},423,[108,127,12,424,413,419],"mtg-lifecounter/js/components/Player/Player.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62627,7 +62717,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},421,[12,405,406],"mtg-lifecounter/js/components/Player/styles.js");
+},424,[12,405,406],"mtg-lifecounter/js/components/Player/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62644,7 +62734,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.default = _PageContainer2.default;
     exports.styles = _styles2.default;
-},422,[423,424],"mtg-lifecounter/js/components/PageContainer/index.js");
+},425,[426,427],"mtg-lifecounter/js/components/PageContainer/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62695,7 +62785,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         style: null
     };
     exports.default = PageContainer;
-},423,[108,127,12,424],"mtg-lifecounter/js/components/PageContainer/PageContainer.js");
+},426,[108,127,12,427],"mtg-lifecounter/js/components/PageContainer/PageContainer.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62714,7 +62804,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},424,[12],"mtg-lifecounter/js/components/PageContainer/styles.js");
+},427,[12],"mtg-lifecounter/js/components/PageContainer/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
 	module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
 		"__packager_asset": true,
@@ -62726,7 +62816,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 		"name": "bgicon",
 		"type": "png"
 	});
-},425,[161],"js/screens/Game/bgicon.png");
+},428,[161],"js/screens/Game/bgicon.png");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62804,7 +62894,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     GameSettingsContainer.propTypes = {
         navigation: _propTypes2.default.object.isRequired
     };
-},426,[108,12,127,403,405],"mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.container.js");
+},429,[108,12,127,403,405],"mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.container.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62826,7 +62916,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     exports.GameRound = _GameRound2.default;
     exports.GameRoundContainer = _GameRound4.default;
     exports.styles = _styles2.default;
-},427,[428,431,429],"mtg-lifecounter/js/screens/Game/GameRound/index.js");
+},430,[431,434,432],"mtg-lifecounter/js/screens/Game/GameRound/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -63100,7 +63190,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             index: _propTypes2.default.number
         }).isRequired
     };
-},428,[108,127,12,336,429,430,409],"mtg-lifecounter/js/screens/Game/GameRound/GameRound.js");
+},431,[108,127,12,336,432,433,409],"mtg-lifecounter/js/screens/Game/GameRound/GameRound.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -63124,7 +63214,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},429,[12],"mtg-lifecounter/js/screens/Game/GameRound/styles.js");
+},432,[12],"mtg-lifecounter/js/screens/Game/GameRound/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -63142,7 +63232,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     };
 
     exports.default = splitInHalf;
-},430,[406],"mtg-lifecounter/js/screens/Game/GameRound/utils.js");
+},433,[406],"mtg-lifecounter/js/screens/Game/GameRound/utils.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -63197,6 +63287,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
     GameRoundContainer.propTypes = {
         navigation: _propTypes2.default.object.isRequired
     };
-},431,[108,127,428],"mtg-lifecounter/js/screens/Game/GameRound/GameRound.container.js");
+},434,[108,127,431],"mtg-lifecounter/js/screens/Game/GameRound/GameRound.container.js");
 require(23);
 require(11);

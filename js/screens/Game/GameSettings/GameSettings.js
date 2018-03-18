@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
-import { NumberSpinner, Text, PageContainer } from '../../../components';
+import { NumberSpinner, Text, PageContainer, BackgroundImage } from '../../../components';
 import bgiconSrc from '../bgicon.png';
 
 export default class GameSettings extends React.Component {
@@ -25,12 +25,12 @@ export default class GameSettings extends React.Component {
     render() {
         const { numberOfPlayers, startingLifeTotal } = this.state;
         const {
-            container, bgicon, buttonContainer, button, selected, startButtonContainer, startButton,
+            container, buttonContainer, button, selected, startButtonContainer, startButton,
         } = styles;
 
         return (
             <PageContainer style={container}>
-                <Image source={bgiconSrc} style={[StyleSheet.absoluteFill, bgicon]} />
+                <BackgroundImage source={bgiconSrc} />
                 <Text type="label">Players</Text>
                 <NumberSpinner
                     min={1}

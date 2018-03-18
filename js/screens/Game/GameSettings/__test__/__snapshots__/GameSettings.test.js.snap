@@ -20,27 +20,13 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Image
+        <BackgroundImage
           source={
             Object {
               "testUri": "../../../js/screens/Game/bgicon.png",
             }
           }
-          style={
-            Array [
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              },
-              Object {
-                "height": 1334,
-                "width": "100%",
-              },
-            ]
-          }
+          style={null}
         />,
         <Text
           style={null}
@@ -160,24 +146,12 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "source": Object {
             "testUri": "../../../js/screens/Game/bgicon.png",
           },
-          "style": Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "height": 1334,
-              "width": "100%",
-            },
-          ],
+          "style": null,
         },
         "ref": null,
         "rendered": null,
@@ -421,27 +395,13 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Image
+          <BackgroundImage
             source={
               Object {
                 "testUri": "../../../js/screens/Game/bgicon.png",
               }
             }
-            style={
-              Array [
-                Object {
-                  "bottom": 0,
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                },
-                Object {
-                  "height": 1334,
-                  "width": "100%",
-                },
-              ]
-            }
+            style={null}
           />,
           <Text
             style={null}
@@ -561,24 +521,12 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "source": Object {
               "testUri": "../../../js/screens/Game/bgicon.png",
             },
-            "style": Array [
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              },
-              Object {
-                "height": 1334,
-                "width": "100%",
-              },
-            ],
+            "style": null,
           },
           "ref": null,
           "rendered": null,
