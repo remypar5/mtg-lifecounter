@@ -26,18 +26,14 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": "Hallo",
-      "style": Array [
-        Object {
-          "alignItems": "stretch",
-          "backgroundColor": "#161616",
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "flex-end",
-        },
-        Object {
-          "width": "50%",
-        },
-      ],
+      "style": Object {
+        "alignItems": "stretch",
+        "backgroundColor": "#161616",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "flex-end",
+        "width": "50%",
+      },
     },
     "ref": null,
     "rendered": "Hallo",
@@ -50,18 +46,14 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": "Hallo",
-        "style": Array [
-          Object {
-            "alignItems": "stretch",
-            "backgroundColor": "#161616",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "flex-end",
-          },
-          Object {
-            "width": "50%",
-          },
-        ],
+        "style": Object {
+          "alignItems": "stretch",
+          "backgroundColor": "#161616",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "width": "50%",
+        },
       },
       "ref": null,
       "rendered": "Hallo",
@@ -100,15 +92,13 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": "Hallo",
-      "style": Array [
-        Object {
-          "alignItems": "stretch",
-          "backgroundColor": "#161616",
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "flex-end",
-        },
-      ],
+      "style": Object {
+        "alignItems": "stretch",
+        "backgroundColor": "#161616",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "flex-end",
+      },
     },
     "ref": null,
     "rendered": "Hallo",
@@ -121,15 +111,13 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": "Hallo",
-        "style": Array [
-          Object {
-            "alignItems": "stretch",
-            "backgroundColor": "#161616",
-            "flex": 1,
-            "flexDirection": "row",
-            "justifyContent": "flex-end",
-          },
-        ],
+        "style": Object {
+          "alignItems": "stretch",
+          "backgroundColor": "#161616",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+        },
       },
       "ref": null,
       "rendered": "Hallo",

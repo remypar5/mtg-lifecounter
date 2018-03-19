@@ -47,7 +47,7 @@ export default class GameSettings extends React.Component {
                         <Text
                             type="button"
                             key={`buttonLifePoints${points}`}
-                            style={[button, startingLifeTotal === points ? selected : null]}
+                            style={[button, startingLifeTotal === points ? selected : 0]}
                             onPress={() => this.setState({ startingLifeTotal: points })}
                         >
                             {points}

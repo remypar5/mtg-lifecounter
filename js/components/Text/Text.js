@@ -3,10 +3,14 @@ import { Text as NativeText } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
+import { StylePropType } from '../../types';
+import { flattenStyles } from '../../utils';
 
 const Text = (props) => {
     const { type, style, children } = props;
-    return (<NativeText {...props} style={[styles[type], style]}>{children}</NativeText>);
+    const textStyles = flattenStyles(styles[type], style);
+
+    return (<NativeText {...props} style={textStyles}>{children}</NativeText>);
 };
 
 Text.propTypes = {
@@ -18,14 +22,7 @@ Text.propTypes = {
         'value',
         'button',
     ]),
-    style: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.number,
-        PropTypes.arrayOf(PropTypes.oneOfType([
-            PropTypes.object,
-            PropTypes.number,
-        ])),
-    ]),
+    style: StylePropType,
 };
 
 Text.defaultProps = {

@@ -3,15 +3,13 @@ import { Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
+import { StylePropType } from '../../types';
+import { flattenStyles } from '../../utils';
 
 const { image } = styles;
 
 const BackgroundImage = ({ source, style }) => {
-    const imageStyle = [image];
-
-    if (style) {
-        imageStyle.push(style);
-    }
+    const imageStyle = flattenStyles(image, style);
 
     return <Image source={source} style={imageStyle} />;
 };
@@ -21,14 +19,7 @@ BackgroundImage.propTypes = {
         PropTypes.object,
         PropTypes.number,
     ]).isRequired,
-    style: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.number,
-        PropTypes.arrayOf([
-            PropTypes.object,
-            PropTypes.number,
-        ]),
-    ]),
+    style: StylePropType,
 };
 
 BackgroundImage.defaultProps = {

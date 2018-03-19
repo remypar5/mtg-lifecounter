@@ -3,15 +3,11 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 import styles from './styles';
+import { StylePropType } from '../../types';
+import { flattenStyles } from '../../utils';
 
 const PageContainer = ({ style, children }) => {
-    const containerStyles = [
-        styles.container,
-    ];
-
-    if (style) {
-        containerStyles.push(style);
-    }
+    const containerStyles = flattenStyles(styles.container, style);
 
     return (
         <View style={containerStyles}>
@@ -22,14 +18,7 @@ const PageContainer = ({ style, children }) => {
 
 PageContainer.propTypes = {
     children: PropTypes.node.isRequired,
-    style: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.number,
-        PropTypes.arrayOf([
-            PropTypes.object,
-            PropTypes.number,
-        ]),
-    ]),
+    style: StylePropType,
 };
 
 PageContainer.defaultProps = {

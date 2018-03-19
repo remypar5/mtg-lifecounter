@@ -5,6 +5,7 @@ import { View } from 'react-native';
 import styles from './styles';
 import NumberSpinner from '../NumberSpinner';
 import Text from '../Text';
+import { flattenStyles } from '../../utils';
 
 export default class Player extends React.Component {
     constructor(props) {
@@ -36,7 +37,8 @@ export default class Player extends React.Component {
             tile, playerName, playerNameSmall, playerNameLarge, gameOver: gameOverStyle,
         } = styles;
         const playerNameSizeStyle = size === 'small' ? playerNameSmall : playerNameLarge;
-        const containerStyle = [tile, gameOver ? gameOverStyle : null];
+        const containerStyle = flattenStyles(tile, gameOver ? gameOverStyle : null);
+        const textStyles = flattenStyles(playerName, playerNameSizeStyle, { color });
 
         return (
             <View style={containerStyle}>
@@ -49,7 +51,7 @@ export default class Player extends React.Component {
                 />
                 <Text
                     type="label"
-                    style={[playerName, playerNameSizeStyle, { color }]}
+                    style={textStyles}
                 >
                     {name}
                 </Text>

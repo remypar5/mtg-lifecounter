@@ -31,20 +31,15 @@ ShallowWrapper {
       "source": Object {
         "testUri": "../../../js/screens/Game/bgicon.png",
       },
-      "style": Array [
-        Object {
-          "bottom": 0,
-          "height": 1334,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "width": "100%",
-        },
-        Object {
-          "width": "50%",
-        },
-      ],
+      "style": Object {
+        "bottom": 0,
+        "height": 1334,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": "50%",
+      },
     },
     "ref": null,
     "rendered": null,
@@ -59,20 +54,15 @@ ShallowWrapper {
         "source": Object {
           "testUri": "../../../js/screens/Game/bgicon.png",
         },
-        "style": Array [
-          Object {
-            "bottom": 0,
-            "height": 1334,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          },
-          Object {
-            "width": "50%",
-          },
-        ],
+        "style": Object {
+          "bottom": 0,
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "50%",
+        },
       },
       "ref": null,
       "rendered": null,
@@ -116,17 +106,15 @@ ShallowWrapper {
       "source": Object {
         "testUri": "../../../js/screens/Game/bgicon.png",
       },
-      "style": Array [
-        Object {
-          "bottom": 0,
-          "height": 1334,
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-          "top": 0,
-          "width": "100%",
-        },
-      ],
+      "style": Object {
+        "bottom": 0,
+        "height": 1334,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": "100%",
+      },
     },
     "ref": null,
     "rendered": null,
@@ -141,17 +129,15 @@ ShallowWrapper {
         "source": Object {
           "testUri": "../../../js/screens/Game/bgicon.png",
         },
-        "style": Array [
-          Object {
-            "bottom": 0,
-            "height": 1334,
-            "left": 0,
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "width": "100%",
-          },
-        ],
+        "style": Object {
+          "bottom": 0,
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": "100%",
+        },
       },
       "ref": null,
       "rendered": null,
