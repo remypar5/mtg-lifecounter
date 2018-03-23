@@ -6,6 +6,7 @@ import styles from './styles';
 import NumberSpinner from '../NumberSpinner';
 import Text from '../Text';
 import { flattenStyles } from '../../utils';
+import { PlayerPropType } from '../../types';
 
 export default class Player extends React.Component {
     constructor(props) {
@@ -61,7 +62,7 @@ export default class Player extends React.Component {
 }
 
 Player.propTypes = {
-    player: PropTypes.object.isRequired,
+    player: PlayerPropType.isRequired,
     size: PropTypes.oneOf(['small', 'large']).isRequired,
     onGameOver: PropTypes.func,
 };

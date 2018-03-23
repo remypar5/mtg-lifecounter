@@ -8,6 +8,7 @@ ShallowWrapper {
     onGameOver={[Function]}
     player={
       Object {
+        "id": 0,
         "life": 40,
         "name": "John Doe",
       }
