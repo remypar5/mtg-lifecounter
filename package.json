@@ -47,12 +47,6 @@
         "lines": 85,
         "statements": 85
       },
-      "js/types/**/*.js": {
-        "branches": 0,
-        "functions": 0,
-        "lines": 0,
-        "statements": 0
-      },
       "js/components/**/index.js": {
         "branches": 0,
         "functions": 0,
