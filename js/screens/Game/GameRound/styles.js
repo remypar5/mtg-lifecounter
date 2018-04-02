@@ -8,6 +8,10 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
     },
+    asRow: {
+        flex: 1,
+        flexDirection: 'row',
+    },
     rotated180: {
         transform: [
             { rotate: '180deg' },

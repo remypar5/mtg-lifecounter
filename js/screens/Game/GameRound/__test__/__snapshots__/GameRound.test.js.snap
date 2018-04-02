@@ -29,7 +29,9 @@ ShallowWrapper {
         <View
           style={
             Object {
-              "width": "50%",
+              "flex": 2,
+              "flexDirection": "row",
+              "width": "100%",
             }
           }
         >
@@ -63,7 +65,9 @@ ShallowWrapper {
         <View
           style={
             Object {
-              "width": "50%",
+              "flex": 1,
+              "flexDirection": "row",
+              "width": "100%",
             }
           }
         >
@@ -82,13 +86,16 @@ ShallowWrapper {
           />
         </View>,
       ],
-      "style": null,
+      "style": Object {
+        "flex": 1,
+        "flexDirection": "column",
+      },
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "playerColumnLeft",
+        "key": "playersRow0",
         "nodeType": "class",
         "props": Object {
           "children": Array [
@@ -120,7 +127,9 @@ ShallowWrapper {
             />,
           ],
           "style": Object {
-            "width": "50%",
+            "flex": 2,
+            "flexDirection": "row",
+            "width": "100%",
           },
         },
         "ref": null,
@@ -168,7 +177,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "playerColumnRight",
+        "key": "playersRow1",
         "nodeType": "class",
         "props": Object {
           "children": Array [
@@ -187,7 +196,9 @@ ShallowWrapper {
             />,
           ],
           "style": Object {
-            "width": "50%",
+            "flex": 1,
+            "flexDirection": "row",
+            "width": "100%",
           },
         },
         "ref": null,
@@ -227,7 +238,9 @@ ShallowWrapper {
           <View
             style={
               Object {
-                "width": "50%",
+                "flex": 2,
+                "flexDirection": "row",
+                "width": "100%",
               }
             }
           >
@@ -261,7 +274,9 @@ ShallowWrapper {
           <View
             style={
               Object {
-                "width": "50%",
+                "flex": 1,
+                "flexDirection": "row",
+                "width": "100%",
               }
             }
           >
@@ -280,13 +295,16 @@ ShallowWrapper {
             />
           </View>,
         ],
-        "style": null,
+        "style": Object {
+          "flex": 1,
+          "flexDirection": "column",
+        },
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "playerColumnLeft",
+          "key": "playersRow0",
           "nodeType": "class",
           "props": Object {
             "children": Array [
@@ -318,7 +336,9 @@ ShallowWrapper {
               />,
             ],
             "style": Object {
-              "width": "50%",
+              "flex": 2,
+              "flexDirection": "row",
+              "width": "100%",
             },
           },
           "ref": null,
@@ -366,7 +386,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "playerColumnRight",
+          "key": "playersRow1",
           "nodeType": "class",
           "props": Object {
             "children": Array [
@@ -385,7 +405,9 @@ ShallowWrapper {
               />,
             ],
             "style": Object {
-              "width": "50%",
+              "flex": 1,
+              "flexDirection": "row",
+              "width": "100%",
             },
           },
           "ref": null,
