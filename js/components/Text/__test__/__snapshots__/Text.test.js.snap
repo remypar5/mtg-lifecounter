@@ -26,15 +26,12 @@ ShallowWrapper {
       "allowFontScaling": true,
       "children": "Heading",
       "ellipsizeMode": "tail",
-      "style": Array [
-        Object {
-          "color": "#b2b2b0",
-          "fontSize": 225,
-          "fontWeight": "bold",
-          "textAlign": "left",
-        },
-        null,
-      ],
+      "style": Object {
+        "color": "#b2b2b0",
+        "fontSize": 225,
+        "fontWeight": "bold",
+        "textAlign": "left",
+      },
       "type": "heading",
     },
     "ref": null,
@@ -51,15 +48,12 @@ ShallowWrapper {
         "allowFontScaling": true,
         "children": "Heading",
         "ellipsizeMode": "tail",
-        "style": Array [
-          Object {
-            "color": "#b2b2b0",
-            "fontSize": 225,
-            "fontWeight": "bold",
-            "textAlign": "left",
-          },
-          null,
-        ],
+        "style": Object {
+          "color": "#b2b2b0",
+          "fontSize": 225,
+          "fontWeight": "bold",
+          "textAlign": "left",
+        },
         "type": "heading",
       },
       "ref": null,

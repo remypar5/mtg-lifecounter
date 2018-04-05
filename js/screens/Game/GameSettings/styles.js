@@ -1,20 +1,16 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import { COLOR_MARKED, FONT_FAMILY, FONT_SIZE_SMALL, FONT_SIZE } from '../../../utils/constants';
 import { normalizeFontSize } from '../../../utils';
 
-const { height: screenHeight } = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#161616',
-        flex: 1,
         flexDirection: 'column',
-        alignItems: 'stretch',
-        justifyContent: 'flex-end',
     },
-    bgicon: {
-        width: '100%',
-        height: screenHeight,
+    switchContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
     },
     buttonContainer: {
         height: '20%',
