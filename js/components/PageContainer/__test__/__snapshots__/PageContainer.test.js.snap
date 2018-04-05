@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageContainer /> accepts a style attribute 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PageContainer
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    Hallo
+  </PageContainer>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": "Hallo",
+      "style": Object {
+        "alignItems": "stretch",
+        "backgroundColor": "#161616",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "flex-end",
+        "width": "50%",
+      },
+    },
+    "ref": null,
+    "rendered": "Hallo",
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": "Hallo",
+        "style": Object {
+          "alignItems": "stretch",
+          "backgroundColor": "#161616",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "width": "50%",
+        },
+      },
+      "ref": null,
+      "rendered": "Hallo",
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<PageContainer /> renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PageContainer
+    style={null}
+  >
+    Hallo
+  </PageContainer>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": "Hallo",
+      "style": Object {
+        "alignItems": "stretch",
+        "backgroundColor": "#161616",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "flex-end",
+      },
+    },
+    "ref": null,
+    "rendered": "Hallo",
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": "Hallo",
+        "style": Object {
+          "alignItems": "stretch",
+          "backgroundColor": "#161616",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+        },
+      },
+      "ref": null,
+      "rendered": "Hallo",
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

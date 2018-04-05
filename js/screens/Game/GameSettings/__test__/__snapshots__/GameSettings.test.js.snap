@@ -17,30 +17,16 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Image
+        <BackgroundImage
           source={
             Object {
               "testUri": "../../../js/screens/Game/bgicon.png",
             }
           }
-          style={
-            Array [
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              },
-              Object {
-                "height": 1334,
-                "width": "100%",
-              },
-            ]
-          }
+          style={null}
         />,
         <Text
           style={null}
@@ -103,7 +89,7 @@ ShallowWrapper {
                   "fontSize": 135,
                   "paddingVertical": 34,
                 },
-                null,
+                0,
               ]
             }
             type="button"
@@ -120,12 +106,37 @@ ShallowWrapper {
                   "fontSize": 135,
                   "paddingVertical": 34,
                 },
-                null,
+                0,
               ]
             }
             type="button"
           >
             40
+          </Text>
+        </View>,
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Switch
+            disabled={false}
+            onTintColor="#710000"
+            onValueChange={[Function]}
+            thumbTintColor="#b2b2b0"
+            tintColor="#b2b2b0"
+            value={true}
+          />
+          <Text
+            onPress={[Function]}
+            style={null}
+            type="label"
+          >
+            Keep Screen on
           </Text>
         </View>,
         <View
@@ -152,11 +163,7 @@ ShallowWrapper {
         </View>,
       ],
       "style": Object {
-        "alignItems": "stretch",
-        "backgroundColor": "#161616",
-        "flex": 1,
         "flexDirection": "column",
-        "justifyContent": "flex-end",
       },
     },
     "ref": null,
@@ -164,24 +171,12 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "source": Object {
             "testUri": "../../../js/screens/Game/bgicon.png",
           },
-          "style": Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "height": 1334,
-              "width": "100%",
-            },
-          ],
+          "style": null,
         },
         "ref": null,
         "rendered": null,
@@ -265,7 +260,7 @@ ShallowWrapper {
                     "fontSize": 135,
                     "paddingVertical": 34,
                   },
-                  null,
+                  0,
                 ]
               }
               type="button"
@@ -282,7 +277,7 @@ ShallowWrapper {
                     "fontSize": 135,
                     "paddingVertical": 34,
                   },
-                  null,
+                  0,
                 ]
               }
               type="button"
@@ -338,7 +333,7 @@ ShallowWrapper {
                   "fontSize": 135,
                   "paddingVertical": 34,
                 },
-                null,
+                0,
               ],
               "type": "button",
             },
@@ -360,12 +355,75 @@ ShallowWrapper {
                   "fontSize": 135,
                   "paddingVertical": 34,
                 },
-                null,
+                0,
               ],
               "type": "button",
             },
             "ref": null,
             "rendered": 40,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Switch
+              disabled={false}
+              onTintColor="#710000"
+              onValueChange={[Function]}
+              thumbTintColor="#b2b2b0"
+              tintColor="#b2b2b0"
+              value={true}
+            />,
+            <Text
+              onPress={[Function]}
+              style={null}
+              type="label"
+            >
+              Keep Screen on
+            </Text>,
+          ],
+          "style": Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "disabled": false,
+              "onTintColor": "#710000",
+              "onValueChange": [Function],
+              "thumbTintColor": "#b2b2b0",
+              "tintColor": "#b2b2b0",
+              "value": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Keep Screen on",
+              "onPress": [Function],
+              "style": null,
+              "type": "label",
+            },
+            "ref": null,
+            "rendered": "Keep Screen on",
             "type": [Function],
           },
         ],
@@ -422,30 +480,16 @@ ShallowWrapper {
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Image
+          <BackgroundImage
             source={
               Object {
                 "testUri": "../../../js/screens/Game/bgicon.png",
               }
             }
-            style={
-              Array [
-                Object {
-                  "bottom": 0,
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                },
-                Object {
-                  "height": 1334,
-                  "width": "100%",
-                },
-              ]
-            }
+            style={null}
           />,
           <Text
             style={null}
@@ -508,7 +552,7 @@ ShallowWrapper {
                     "fontSize": 135,
                     "paddingVertical": 34,
                   },
-                  null,
+                  0,
                 ]
               }
               type="button"
@@ -525,12 +569,37 @@ ShallowWrapper {
                     "fontSize": 135,
                     "paddingVertical": 34,
                   },
-                  null,
+                  0,
                 ]
               }
               type="button"
             >
               40
+            </Text>
+          </View>,
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Switch
+              disabled={false}
+              onTintColor="#710000"
+              onValueChange={[Function]}
+              thumbTintColor="#b2b2b0"
+              tintColor="#b2b2b0"
+              value={true}
+            />
+            <Text
+              onPress={[Function]}
+              style={null}
+              type="label"
+            >
+              Keep Screen on
             </Text>
           </View>,
           <View
@@ -557,11 +626,7 @@ ShallowWrapper {
           </View>,
         ],
         "style": Object {
-          "alignItems": "stretch",
-          "backgroundColor": "#161616",
-          "flex": 1,
           "flexDirection": "column",
-          "justifyContent": "flex-end",
         },
       },
       "ref": null,
@@ -569,24 +634,12 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "source": Object {
               "testUri": "../../../js/screens/Game/bgicon.png",
             },
-            "style": Array [
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              },
-              Object {
-                "height": 1334,
-                "width": "100%",
-              },
-            ],
+            "style": null,
           },
           "ref": null,
           "rendered": null,
@@ -670,7 +723,7 @@ ShallowWrapper {
                       "fontSize": 135,
                       "paddingVertical": 34,
                     },
-                    null,
+                    0,
                   ]
                 }
                 type="button"
@@ -687,7 +740,7 @@ ShallowWrapper {
                       "fontSize": 135,
                       "paddingVertical": 34,
                     },
-                    null,
+                    0,
                   ]
                 }
                 type="button"
@@ -743,7 +796,7 @@ ShallowWrapper {
                     "fontSize": 135,
                     "paddingVertical": 34,
                   },
-                  null,
+                  0,
                 ],
                 "type": "button",
               },
@@ -765,12 +818,75 @@ ShallowWrapper {
                     "fontSize": 135,
                     "paddingVertical": 34,
                   },
-                  null,
+                  0,
                 ],
                 "type": "button",
               },
               "ref": null,
               "rendered": 40,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Switch
+                disabled={false}
+                onTintColor="#710000"
+                onValueChange={[Function]}
+                thumbTintColor="#b2b2b0"
+                tintColor="#b2b2b0"
+                value={true}
+              />,
+              <Text
+                onPress={[Function]}
+                style={null}
+                type="label"
+              >
+                Keep Screen on
+              </Text>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "disabled": false,
+                "onTintColor": "#710000",
+                "onValueChange": [Function],
+                "thumbTintColor": "#b2b2b0",
+                "tintColor": "#b2b2b0",
+                "value": true,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Keep Screen on",
+                "onPress": [Function],
+                "style": null,
+                "type": "label",
+              },
+              "ref": null,
+              "rendered": "Keep Screen on",
               "type": [Function],
             },
           ],

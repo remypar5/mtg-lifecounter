@@ -1,5 +1,5 @@
 import GameRound from './GameRound';
-import GameRoundContainer from './GameRoundContainer';
+import GameRoundContainer from './GameRound.container';
 import styles from './styles';
 
 export {

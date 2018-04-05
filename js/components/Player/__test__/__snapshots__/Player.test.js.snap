@@ -8,6 +8,7 @@ ShallowWrapper {
     onGameOver={[Function]}
     player={
       Object {
+        "id": 0,
         "life": 40,
         "name": "John Doe",
       }
@@ -38,37 +39,28 @@ ShallowWrapper {
         />,
         <Text
           style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "paddingVertical": 5,
-              },
-              Object {
-                "fontSize": 90,
-              },
-              Object {
-                "color": undefined,
-              },
-            ]
+            Object {
+              "alignSelf": "center",
+              "color": undefined,
+              "fontSize": 90,
+              "paddingVertical": 5,
+            }
           }
           type="label"
         >
           John Doe
         </Text>,
       ],
-      "style": Array [
-        Object {
-          "alignItems": "stretch",
-          "borderColor": "#262626",
-          "borderStyle": "solid",
-          "borderWidth": 3,
-          "flex": 1,
-          "height": "100%",
-          "justifyContent": "flex-start",
-          "width": "100%",
-        },
-        null,
-      ],
+      "style": Object {
+        "alignItems": "stretch",
+        "borderColor": "#262626",
+        "borderStyle": "solid",
+        "borderWidth": 3,
+        "flex": 1,
+        "height": "100%",
+        "justifyContent": "flex-start",
+        "width": "100%",
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -95,18 +87,12 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": "John Doe",
-          "style": Array [
-            Object {
-              "alignSelf": "center",
-              "paddingVertical": 5,
-            },
-            Object {
-              "fontSize": 90,
-            },
-            Object {
-              "color": undefined,
-            },
-          ],
+          "style": Object {
+            "alignSelf": "center",
+            "color": undefined,
+            "fontSize": 90,
+            "paddingVertical": 5,
+          },
           "type": "label",
         },
         "ref": null,
@@ -134,37 +120,28 @@ ShallowWrapper {
           />,
           <Text
             style={
-              Array [
-                Object {
-                  "alignSelf": "center",
-                  "paddingVertical": 5,
-                },
-                Object {
-                  "fontSize": 90,
-                },
-                Object {
-                  "color": undefined,
-                },
-              ]
+              Object {
+                "alignSelf": "center",
+                "color": undefined,
+                "fontSize": 90,
+                "paddingVertical": 5,
+              }
             }
             type="label"
           >
             John Doe
           </Text>,
         ],
-        "style": Array [
-          Object {
-            "alignItems": "stretch",
-            "borderColor": "#262626",
-            "borderStyle": "solid",
-            "borderWidth": 3,
-            "flex": 1,
-            "height": "100%",
-            "justifyContent": "flex-start",
-            "width": "100%",
-          },
-          null,
-        ],
+        "style": Object {
+          "alignItems": "stretch",
+          "borderColor": "#262626",
+          "borderStyle": "solid",
+          "borderWidth": 3,
+          "flex": 1,
+          "height": "100%",
+          "justifyContent": "flex-start",
+          "width": "100%",
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -191,18 +168,12 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "John Doe",
-            "style": Array [
-              Object {
-                "alignSelf": "center",
-                "paddingVertical": 5,
-              },
-              Object {
-                "fontSize": 90,
-              },
-              Object {
-                "color": undefined,
-              },
-            ],
+            "style": Object {
+              "alignSelf": "center",
+              "color": undefined,
+              "fontSize": 90,
+              "paddingVertical": 5,
+            },
             "type": "label",
           },
           "ref": null,

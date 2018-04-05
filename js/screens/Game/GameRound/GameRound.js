@@ -4,8 +4,9 @@ import { View, Alert, BackHandler } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
 import styles from './styles';
-import splitInHalf from './utils';
-import { Player } from '../../../components';
+import { makePairs } from './utils';
+import { KeepAlive, Player, PageContainer } from '../../../components';
+import { flattenStyles } from '../../../utils';
 
 export default class GameRound extends React.Component {
     constructor(props) {
@@ -46,13 +47,13 @@ export default class GameRound extends React.Component {
     generatePlayers() {
         const colors = ['#57719e', '#d83f2d', '#95b54c', '#efd86f', '#b2b2b0', '#cb8034'];
         const players = [];
-        const { numberOfPlayers, startingLifeTotal } = this.props;
+        const { numberOfPlayers, startingLifeTotal: life } = this.props;
 
         for (let id = 0; id < numberOfPlayers; id++) {
             players.push({
                 id,
                 name: `Player ${id + 1}`,
-                life: startingLifeTotal,
+                life,
                 isGameOver: false,
                 color: colors[id],
             });
@@ -64,10 +65,10 @@ export default class GameRound extends React.Component {
     restart() {
         this.players = this.generatePlayers();
 
-        const { roundNumber } = this.state;
-        this.setState({
+        this.setState(({ roundNumber }) => ({
             roundNumber: roundNumber + 1,
-        });
+        }));
+        this.confirmGameOver = true;
     }
 
     playerGameOver(player, isGameOver) {
@@ -122,10 +123,10 @@ export default class GameRound extends React.Component {
 
         return (
             <View style={asColumn}>
-                <View style={[asColumn, rotated180]}>
+                <View style={flattenStyles(asColumn, rotated180)}>
                     {this.renderSinglePlayer(player2)}
                 </View>
-                <View style={[asColumn]}>
+                <View style={asColumn}>
                     {this.renderSinglePlayer(player1)}
                 </View>
             </View>
@@ -133,12 +134,13 @@ export default class GameRound extends React.Component {
     }
 
     renderMultiPlayer() {
-        const sides = ['Left', 'Right'];
-        const columns = splitInHalf(this.players);
-        const { column: columnStyle } = styles;
+        const { length: nrOfPlayers } = this.players;
+        const rows = makePairs(this.players);
+        const { asRow } = styles;
+        const rowStyle = [asRow, { width: '100%' }];
 
-        return columns.map((players, column) => (
-            <View key={`playerColumn${sides[column]}`} style={columnStyle}>
+        return rows.map((players, row) => (
+            <View key={`playersRow${`${row}`}`} style={flattenStyles(rowStyle, { flex: nrOfPlayers === 3 ? players.length : 1 })}>
                 { players.map((player) => this.renderSinglePlayer(player, {
                     key: `player${player.id}`,
                 })) }
@@ -148,28 +150,39 @@ export default class GameRound extends React.Component {
 
     renderPlayers() {
         const { length } = this.players;
+        const renderMorePlayers = length === 2
+            ? this.renderTwoPlayers.bind(this)
+            : this.renderMultiPlayer.bind(this);
 
-        return length === 2 ? this.renderTwoPlayers() : this.renderMultiPlayer();
+        return length === 1
+            ? this.renderSinglePlayer(this.players[0])
+            : renderMorePlayers();
     }
 
     render() {
-        const { length } = this.players;
+        const { stayAwake } = this.props;
         const { roundNumber } = this.state;
-        const { container } = styles;
+        const { asColumn } = styles;
 
         return (
-            <View style={container} key={`round${roundNumber}`}>
-                { length === 1 ? this.renderSinglePlayer(this.players[0]) : this.renderPlayers() }
-            </View>
+            <PageContainer key={`round${roundNumber}`} style={asColumn}>
+                { stayAwake ? <KeepAlive /> : null }
+                { this.renderPlayers() }
+            </PageContainer>
         );
     }
 }
 
 GameRound.propTypes = {
+    stayAwake: PropTypes.bool,
     numberOfPlayers: PropTypes.number.isRequired,
     startingLifeTotal: PropTypes.number.isRequired,
     navigation: PropTypes.shape({
         dispatch: PropTypes.func.isRequired,
         index: PropTypes.number,
     }).isRequired,
+};
+
+GameRound.defaultProps = {
+    stayAwake: false,
 };

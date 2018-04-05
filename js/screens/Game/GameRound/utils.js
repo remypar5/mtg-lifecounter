@@ -6,4 +6,14 @@ const splitInHalf = (arr) => {
     return arraySplit(arr, [(item, idx) => idx < half, (item, idx) => idx >= half], true);
 };
 
-export default splitInHalf;
+const makePairs = (arr) => arr.reduce((result, value, index, array) => {
+    if (index % 2 === 0) {
+        result.push(array.slice(index, index + 2));
+    }
+    return result;
+}, []);
+
+export {
+    splitInHalf,
+    makePairs,
+};

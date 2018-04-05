@@ -47,7 +47,19 @@
         "lines": 85,
         "statements": 85
       },
-      "./js/**/*Container.js": {
+      "js/components/**/index.js": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      },
+      "js/components/**/styles.js": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      },
+      "js/**/*.container.js": {
         "lines": 0
       }
     }
