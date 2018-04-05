@@ -117,6 +117,31 @@ ShallowWrapper {
         <View
           style={
             Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Switch
+            disabled={false}
+            onTintColor="#710000"
+            onValueChange={[Function]}
+            thumbTintColor="#b2b2b0"
+            tintColor="#b2b2b0"
+            value={true}
+          />
+          <Text
+            onPress={[Function]}
+            style={null}
+            type="label"
+          >
+            Keep Screen on
+          </Text>
+        </View>,
+        <View
+          style={
+            Object {
               "padding": 22.5,
               "width": "100%",
             }
@@ -346,6 +371,69 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "children": Array [
+            <Switch
+              disabled={false}
+              onTintColor="#710000"
+              onValueChange={[Function]}
+              thumbTintColor="#b2b2b0"
+              tintColor="#b2b2b0"
+              value={true}
+            />,
+            <Text
+              onPress={[Function]}
+              style={null}
+              type="label"
+            >
+              Keep Screen on
+            </Text>,
+          ],
+          "style": Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "disabled": false,
+              "onTintColor": "#710000",
+              "onValueChange": [Function],
+              "thumbTintColor": "#b2b2b0",
+              "tintColor": "#b2b2b0",
+              "value": true,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Keep Screen on",
+              "onPress": [Function],
+              "style": null,
+              "type": "label",
+            },
+            "ref": null,
+            "rendered": "Keep Screen on",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
           "children": <Text
             onPress={[Function]}
             style={
@@ -487,6 +575,31 @@ ShallowWrapper {
               type="button"
             >
               40
+            </Text>
+          </View>,
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Switch
+              disabled={false}
+              onTintColor="#710000"
+              onValueChange={[Function]}
+              thumbTintColor="#b2b2b0"
+              tintColor="#b2b2b0"
+              value={true}
+            />
+            <Text
+              onPress={[Function]}
+              style={null}
+              type="label"
+            >
+              Keep Screen on
             </Text>
           </View>,
           <View
@@ -711,6 +824,69 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": 40,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Switch
+                disabled={false}
+                onTintColor="#710000"
+                onValueChange={[Function]}
+                thumbTintColor="#b2b2b0"
+                tintColor="#b2b2b0"
+                value={true}
+              />,
+              <Text
+                onPress={[Function]}
+                style={null}
+                type="label"
+              >
+                Keep Screen on
+              </Text>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "disabled": false,
+                "onTintColor": "#710000",
+                "onValueChange": [Function],
+                "thumbTintColor": "#b2b2b0",
+                "tintColor": "#b2b2b0",
+                "value": true,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Keep Screen on",
+                "onPress": [Function],
+                "style": null,
+                "type": "label",
+              },
+              "ref": null,
+              "rendered": "Keep Screen on",
               "type": [Function],
             },
           ],

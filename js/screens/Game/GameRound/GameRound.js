@@ -5,7 +5,7 @@ import { NavigationActions } from 'react-navigation';
 
 import styles from './styles';
 import { makePairs } from './utils';
-import { Player, PageContainer } from '../../../components';
+import { KeepAlive, Player, PageContainer } from '../../../components';
 import { flattenStyles } from '../../../utils';
 
 export default class GameRound extends React.Component {
@@ -160,11 +160,13 @@ export default class GameRound extends React.Component {
     }
 
     render() {
+        const { stayAwake } = this.props;
         const { roundNumber } = this.state;
         const { asColumn } = styles;
 
         return (
             <PageContainer key={`round${roundNumber}`} style={asColumn}>
+                { stayAwake ? <KeepAlive /> : null }
                 { this.renderPlayers() }
             </PageContainer>
         );
@@ -172,10 +174,15 @@ export default class GameRound extends React.Component {
 }
 
 GameRound.propTypes = {
+    stayAwake: PropTypes.bool,
     numberOfPlayers: PropTypes.number.isRequired,
     startingLifeTotal: PropTypes.number.isRequired,
     navigation: PropTypes.shape({
         dispatch: PropTypes.func.isRequired,
         index: PropTypes.number,
     }).isRequired,
+};
+
+GameRound.defaultProps = {
+    stayAwake: false,
 };

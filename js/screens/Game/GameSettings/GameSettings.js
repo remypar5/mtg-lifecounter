@@ -1,10 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Switch } from 'react-native';
 import PropTypes from 'prop-types';
 
 import styles from './styles';
 import { NumberSpinner, Text, PageContainer, BackgroundImage } from '../../../components';
 import bgiconSrc from '../bgicon.png';
+import { COLOR_FOREGROUND, COLOR_MARKED } from '../../../utils/constants';
 
 export default class GameSettings extends React.Component {
     constructor(props) {
@@ -13,19 +14,26 @@ export default class GameSettings extends React.Component {
         this.state = {
             numberOfPlayers: 2,
             startingLifeTotal: GameSettings.lifePoints[0],
+            stayAwake: true,
         };
     }
 
     startRound() {
-        const { startingLifeTotal, numberOfPlayers } = this.state;
+        const { startingLifeTotal, numberOfPlayers, stayAwake } = this.state;
 
-        this.props.navigation.navigate('GameRound', { startingLifeTotal, numberOfPlayers });
+        this.props.navigation.navigate('GameRound', { startingLifeTotal, numberOfPlayers, stayAwake });
     }
 
     render() {
-        const { numberOfPlayers, startingLifeTotal } = this.state;
+        const { numberOfPlayers, startingLifeTotal, stayAwake } = this.state;
         const {
-            container, buttonContainer, button, selected, startButtonContainer, startButton,
+            container,
+            buttonContainer,
+            button,
+            selected,
+            startButtonContainer,
+            startButton,
+            switchContainer,
         } = styles;
 
         return (
@@ -53,6 +61,22 @@ export default class GameSettings extends React.Component {
                             {points}
                         </Text>
                     ))}
+                </View>
+
+                <View style={switchContainer}>
+                    <Switch
+                        value={stayAwake}
+                        onValueChange={(value) => this.setState({ stayAwake: value })}
+                        thumbTintColor={COLOR_FOREGROUND}
+                        tintColor={COLOR_FOREGROUND}
+                        onTintColor={COLOR_MARKED}
+                    />
+                    <Text
+                        type="label"
+                        onPress={() => this.setState({ stayAwake: !stayAwake })}
+                    >
+                        Keep Screen on
+                    </Text>
                 </View>
 
                 <View style={startButtonContainer}>
