@@ -11,7 +11,7 @@ describe('<BackgroundImage />', () => {
     });
 
     it('accepts a style attribute', () => {
-        const component = shallow(<BackgroundImage source={source} style={{ width: '50%' }} />);
+        const component = shallow(<BackgroundImage source={source} style={{ tintColor: '#0f0' }} />);
         expect(component).toMatchSnapshot();
     });
 });
