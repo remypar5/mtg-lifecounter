@@ -14,6 +14,11 @@ describe('<NumberSpinner />', () => {
         expect(component).toMatchSnapshot();
     });
 
+    it('renders a large version without crashing', () => {
+        const largeComponent = shallow(<NumberSpinner value={2000} size="large" />);
+        expect(largeComponent).toMatchSnapshot();
+    });
+
     it('should initialize with the provided value', () => {
         expect(component.find('Text').get(0).props.children)
             .toBe(20);

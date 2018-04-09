@@ -1,5 +1,203 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<NumberSpinner /> renders a large version without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NumberSpinner
+    max={9007199254740991}
+    min={-9007199254740991}
+    onChange={[Function]}
+    size="large"
+    step={1}
+    stepLarge={10}
+    value={2000}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <SpinnerButton
+          content="-"
+          onHold={[Function]}
+          onPress={[Function]}
+        />,
+        <Text
+          style={
+            Object {
+              "flex": 3,
+              "fontSize": 337.5,
+            }
+          }
+          type="value"
+        >
+          2000
+        </Text>,
+        <SpinnerButton
+          content="+"
+          onHold={[Function]}
+          onPress={[Function]}
+        />,
+      ],
+      "style": Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "width": "100%",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "content": "-",
+          "onHold": [Function],
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": 2000,
+          "style": Object {
+            "flex": 3,
+            "fontSize": 337.5,
+          },
+          "type": "value",
+        },
+        "ref": null,
+        "rendered": 2000,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "content": "+",
+          "onHold": [Function],
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <SpinnerButton
+            content="-"
+            onHold={[Function]}
+            onPress={[Function]}
+          />,
+          <Text
+            style={
+              Object {
+                "flex": 3,
+                "fontSize": 337.5,
+              }
+            }
+            type="value"
+          >
+            2000
+          </Text>,
+          <SpinnerButton
+            content="+"
+            onHold={[Function]}
+            onPress={[Function]}
+          />,
+        ],
+        "style": Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "width": "100%",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "content": "-",
+            "onHold": [Function],
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": 2000,
+            "style": Object {
+              "flex": 3,
+              "fontSize": 337.5,
+            },
+            "type": "value",
+          },
+          "ref": null,
+          "rendered": 2000,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "content": "+",
+            "onHold": [Function],
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`<NumberSpinner /> renders without crashing 1`] = `
 ShallowWrapper {
   "length": 1,
