@@ -14,7 +14,7 @@ export default class Player extends React.Component {
 
         this.state = {
             life: props.player.life,
-            gameOver: false,
+            gameOver: props.player.life <= 0,
         };
 
         this.onLifeChange = this.onLifeChange.bind(this);
