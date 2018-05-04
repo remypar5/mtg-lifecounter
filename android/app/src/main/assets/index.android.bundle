@@ -52670,8 +52670,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     var _About = require(_dependencyMap[3], "../screens/About");
 
-    var _constants = require(_dependencyMap[4], "../utils/constants");
-
     var AppRouter = (0, _reactNavigation.StackNavigator)({
         GameSettings: {
             screen: _GameSettings.GameSettingsContainer
@@ -52686,7 +52684,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         initialRouteName: 'GameSettings'
     });
     exports.default = AppRouter;
-},335,[336,402,611,616,405],"mtg-lifecounter/js/routes/AppRouter.js");
+},335,[336,402,614,619],"mtg-lifecounter/js/routes/AppRouter.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   module.exports = {
     get createNavigationContainer() {
@@ -61595,7 +61593,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     exports.GameSettings = _GameSettings2.default;
     exports.GameSettingsContainer = _GameSettings4.default;
     exports.styles = _styles2.default;
-},402,[403,439,404],"mtg-lifecounter/js/screens/Game/GameSettings/index.js");
+},402,[403,442,404],"mtg-lifecounter/js/screens/Game/GameSettings/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -61830,7 +61828,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     GameSettings.propTypes = {
         navigation: _propTypes2.default.object.isRequired
     };
-},403,[108,12,127,404,410,438,405],"mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.js");
+},403,[108,12,127,404,410,441,405],"mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62016,7 +62014,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
-    exports.Text = exports.SpinnerButton = exports.Player = exports.PageContainer = exports.NumberSpinner = exports.KeepAlive = exports.IconButton = exports.BackgroundImage = undefined;
+    exports.Text = exports.SpinnerButton = exports.Player = exports.PageContainer = exports.NumberSpinner = exports.Link = exports.KeepAlive = exports.IconButton = exports.BackgroundImage = undefined;
 
     var _BackgroundImage = require(_dependencyMap[0], "./BackgroundImage");
 
@@ -62030,35 +62028,40 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     var _KeepAlive2 = babelHelpers.interopRequireDefault(_KeepAlive);
 
-    var _NumberSpinner = require(_dependencyMap[3], "./NumberSpinner");
+    var _Link = require(_dependencyMap[3], "./Link");
+
+    var _Link2 = babelHelpers.interopRequireDefault(_Link);
+
+    var _NumberSpinner = require(_dependencyMap[4], "./NumberSpinner");
 
     var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
 
-    var _PageContainer = require(_dependencyMap[4], "./PageContainer");
+    var _PageContainer = require(_dependencyMap[5], "./PageContainer");
 
     var _PageContainer2 = babelHelpers.interopRequireDefault(_PageContainer);
 
-    var _Player = require(_dependencyMap[5], "./Player");
+    var _Player = require(_dependencyMap[6], "./Player");
 
     var _Player2 = babelHelpers.interopRequireDefault(_Player);
 
-    var _SpinnerButton = require(_dependencyMap[6], "./SpinnerButton");
+    var _SpinnerButton = require(_dependencyMap[7], "./SpinnerButton");
 
     var _SpinnerButton2 = babelHelpers.interopRequireDefault(_SpinnerButton);
 
-    var _Text = require(_dependencyMap[7], "./Text");
+    var _Text = require(_dependencyMap[8], "./Text");
 
     var _Text2 = babelHelpers.interopRequireDefault(_Text);
 
     exports.BackgroundImage = _BackgroundImage2.default;
     exports.IconButton = _IconButton2.default;
     exports.KeepAlive = _KeepAlive2.default;
+    exports.Link = _Link2.default;
     exports.NumberSpinner = _NumberSpinner2.default;
     exports.PageContainer = _PageContainer2.default;
     exports.Player = _Player2.default;
     exports.SpinnerButton = _SpinnerButton2.default;
     exports.Text = _Text2.default;
-},410,[411,417,420,423,432,435,426,429],"mtg-lifecounter/js/components/index.js");
+},410,[411,417,420,423,426,435,438,429,432],"mtg-lifecounter/js/components/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62346,6 +62349,106 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
     exports.styles = undefined;
 
+    var _Link = require(_dependencyMap[0], "./Link");
+
+    var _Link2 = babelHelpers.interopRequireDefault(_Link);
+
+    var _styles = require(_dependencyMap[1], "./styles");
+
+    var _styles2 = babelHelpers.interopRequireDefault(_styles);
+
+    exports.default = _Link2.default;
+    exports.styles = _styles2.default;
+},423,[424,425],"mtg-lifecounter/js/components/Link/index.js");
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    var _jsxFileName = "/home/remy/Projects/mtg-lifecounter/js/components/Link/Link.js";
+
+    var _react = require(_dependencyMap[0], "react");
+
+    var _react2 = babelHelpers.interopRequireDefault(_react);
+
+    var _propTypes = require(_dependencyMap[1], "prop-types");
+
+    var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
+    var _reactNative = require(_dependencyMap[2], "react-native");
+
+    var _types = require(_dependencyMap[3], "../../types");
+
+    var _utils = require(_dependencyMap[4], "../../utils");
+
+    var _styles = require(_dependencyMap[5], "./styles");
+
+    var _styles2 = babelHelpers.interopRequireDefault(_styles);
+
+    var link = _styles2.default.link;
+
+    var openURL = function openURL(url) {
+        return _reactNative.Linking.canOpenURL(url).then(function (supported) {
+            if (supported) {
+                return _reactNative.Linking.openURL(url);
+            }
+
+            return Promise.reject(url);
+        });
+    };
+
+    var Link = function Link(_ref) {
+        var href = _ref.href,
+            children = _ref.children,
+            style = _ref.style;
+        return _react2.default.createElement(
+            _reactNative.Text,
+            {
+                onPress: function onPress() {
+                    return openURL(href);
+                },
+                style: (0, _utils.flattenStyles)(link, style),
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 22
+                }
+            },
+            children
+        );
+    };
+
+    Link.propTypes = {
+        href: _propTypes2.default.string.isRequired,
+        children: _propTypes2.default.string.isRequired,
+        style: _types.StylePropType
+    };
+    Link.defaultProps = {
+        style: null
+    };
+    exports.default = Link;
+},424,[108,127,12,414,406,425],"mtg-lifecounter/js/components/Link/Link.js");
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var _reactNative = require(_dependencyMap[0], "react-native");
+
+    var _constants = require(_dependencyMap[1], "../../utils/constants");
+
+    var styles = _reactNative.StyleSheet.create({
+        link: {
+            color: _constants.COLOR_MARKED
+        }
+    });
+
+    exports.default = styles;
+},425,[12,405],"mtg-lifecounter/js/components/Link/styles.js");
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.styles = undefined;
+
     var _NumberSpinner = require(_dependencyMap[0], "./NumberSpinner");
 
     var _NumberSpinner2 = babelHelpers.interopRequireDefault(_NumberSpinner);
@@ -62356,7 +62459,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.default = _NumberSpinner2.default;
     exports.styles = _styles2.default;
-},423,[424,425],"mtg-lifecounter/js/components/NumberSpinner/index.js");
+},426,[427,428],"mtg-lifecounter/js/components/NumberSpinner/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62502,7 +62605,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         size: 'small',
         onChange: function onChange() {}
     };
-},424,[108,127,12,425,426,429],"mtg-lifecounter/js/components/NumberSpinner/NumberSpinner.js");
+},427,[108,127,12,428,429,432],"mtg-lifecounter/js/components/NumberSpinner/NumberSpinner.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62533,7 +62636,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},425,[12,406,405],"mtg-lifecounter/js/components/NumberSpinner/styles.js");
+},428,[12,406,405],"mtg-lifecounter/js/components/NumberSpinner/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62550,7 +62653,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.default = _SpinnerButton2.default;
     exports.styles = _styles2.default;
-},426,[427,428],"mtg-lifecounter/js/components/SpinnerButton/index.js");
+},429,[430,431],"mtg-lifecounter/js/components/SpinnerButton/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62686,7 +62789,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     SpinnerButton.defaultProps = {
         onHold: null
     };
-},427,[108,127,12,428,429],"mtg-lifecounter/js/components/SpinnerButton/SpinnerButton.js");
+},430,[108,127,12,431,432],"mtg-lifecounter/js/components/SpinnerButton/SpinnerButton.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62708,7 +62811,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},428,[12,405],"mtg-lifecounter/js/components/SpinnerButton/styles.js");
+},431,[12,405],"mtg-lifecounter/js/components/SpinnerButton/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62725,7 +62828,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.default = _Text2.default;
     exports.styles = _styles2.default;
-},429,[430,431],"mtg-lifecounter/js/components/Text/index.js");
+},432,[433,434],"mtg-lifecounter/js/components/Text/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62778,7 +62881,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         style: null
     };
     exports.default = Text;
-},430,[108,12,127,431,414,406],"mtg-lifecounter/js/components/Text/Text.js");
+},433,[108,12,127,434,414,406],"mtg-lifecounter/js/components/Text/Text.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62828,7 +62931,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},431,[12,406,405],"mtg-lifecounter/js/components/Text/styles.js");
+},434,[12,406,405],"mtg-lifecounter/js/components/Text/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62845,7 +62948,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.default = _PageContainer2.default;
     exports.styles = _styles2.default;
-},432,[433,434],"mtg-lifecounter/js/components/PageContainer/index.js");
+},435,[436,437],"mtg-lifecounter/js/components/PageContainer/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62895,7 +62998,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         style: null
     };
     exports.default = PageContainer;
-},433,[108,127,12,434,414,406],"mtg-lifecounter/js/components/PageContainer/PageContainer.js");
+},436,[108,127,12,437,414,406],"mtg-lifecounter/js/components/PageContainer/PageContainer.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62914,7 +63017,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},434,[12],"mtg-lifecounter/js/components/PageContainer/styles.js");
+},437,[12],"mtg-lifecounter/js/components/PageContainer/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -62931,7 +63034,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.default = _Player2.default;
     exports.styles = _styles2.default;
-},435,[436,437],"mtg-lifecounter/js/components/Player/index.js");
+},438,[439,440],"mtg-lifecounter/js/components/Player/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -63057,7 +63160,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     Player.defaultProps = {
         onGameOver: function onGameOver() {}
     };
-},436,[108,127,12,437,423,429,406,414],"mtg-lifecounter/js/components/Player/Player.js");
+},439,[108,127,12,440,426,432,406,414],"mtg-lifecounter/js/components/Player/Player.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -63096,7 +63199,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},437,[12,405,406],"mtg-lifecounter/js/components/Player/styles.js");
+},440,[12,405,406],"mtg-lifecounter/js/components/Player/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
 	module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
 		"__packager_asset": true,
@@ -63108,7 +63211,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 		"name": "bgicon",
 		"type": "png"
 	});
-},438,[161],"js/screens/Game/bgicon.png");
+},441,[161],"js/screens/Game/bgicon.png");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -63220,7 +63323,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     GameSettingsContainer.propTypes = {
         navigation: _propTypes2.default.object.isRequired
     };
-},439,[108,12,127,440,609,403,410,405],"mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.container.js");
+},442,[108,12,127,443,612,403,410,405],"mtg-lifecounter/js/screens/Game/GameSettings/GameSettings.container.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -63229,7 +63332,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var _HeaderButtons = require(_dependencyMap[0], "./HeaderButtons");
 
   exports.default = _HeaderButtons.HeaderButtons;
-},440,[441],"react-navigation-header-buttons/index.js");
+},443,[444],"react-navigation-header-buttons/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -63441,7 +63544,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       }
     }))
   });
-},441,[108,442,12,444],"react-navigation-header-buttons/HeaderButtons.js");
+},444,[108,445,12,447],"react-navigation-header-buttons/HeaderButtons.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -63516,7 +63619,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       justifyContent: 'center'
     }
   });
-},442,[108,12,443],"react-navigation-header-buttons/HeaderButton.js");
+},445,[108,12,446],"react-navigation-header-buttons/HeaderButton.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -63649,7 +63752,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   PlatformTouchable.Ripple = TouchableComponent.Ripple;
   PlatformTouchable.canUseNativeForeground = TouchableComponent.canUseNativeForeground;
   exports.default = PlatformTouchable;
-},443,[108,12],"react-native-platform-touchable/PlatformTouchable.js");
+},446,[108,12],"react-native-platform-touchable/PlatformTouchable.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -63795,7 +63898,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       }
     }))
   });
-},444,[108,12,445,442],"react-navigation-header-buttons/OverflowButton.js");
+},447,[108,12,448,445],"react-navigation-header-buttons/OverflowButton.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -63817,7 +63920,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var TabBarItemIOS = exports.TabBarItemIOS = iconSet.TabBarItemIOS;
   var ToolbarAndroid = exports.ToolbarAndroid = iconSet.ToolbarAndroid;
   var getImageSource = exports.getImageSource = iconSet.getImageSource;
-},445,[446,608],"react-native-vector-icons/MaterialIcons.js");
+},448,[449,611],"react-native-vector-icons/MaterialIcons.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -64029,7 +64132,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     Icon.hasIcon = hasIcon;
     return Icon;
   }
-},446,[108,127,447,448,593,607],"react-native-vector-icons/lib/create-icon-set.js");
+},449,[108,127,450,451,596,610],"react-native-vector-icons/lib/create-icon-set.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -64046,7 +64149,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       }
     });
   });
-},447,[12],"react-native-vector-icons/lib/react-native.js");
+},450,[12],"react-native-vector-icons/lib/react-native.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -64179,7 +64282,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       size: 20
     }, _temp;
   }
-},448,[449,458,586,108,127,447],"react-native-vector-icons/lib/icon-button.js");
+},451,[452,461,589,108,127,450],"react-native-vector-icons/lib/icon-button.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var baseGetTag = require(_dependencyMap[0], './_baseGetTag'),
         isArray = require(_dependencyMap[1], './isArray'),
@@ -64192,7 +64295,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     module.exports = isString;
-},449,[450,456,457],"lodash/isString.js");
+},452,[453,459,460],"lodash/isString.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var Symbol = require(_dependencyMap[0], './_Symbol'),
         getRawTag = require(_dependencyMap[1], './_getRawTag'),
@@ -64211,24 +64314,24 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     module.exports = baseGetTag;
-},450,[451,454,455],"lodash/_baseGetTag.js");
+},453,[454,457,458],"lodash/_baseGetTag.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var root = require(_dependencyMap[0], './_root');
 
   var Symbol = root.Symbol;
   module.exports = Symbol;
-},451,[452],"lodash/_Symbol.js");
+},454,[455],"lodash/_Symbol.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var freeGlobal = require(_dependencyMap[0], './_freeGlobal');
 
   var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
   var root = freeGlobal || freeSelf || Function('return this')();
   module.exports = root;
-},452,[453],"lodash/_root.js");
+},455,[456],"lodash/_root.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
   module.exports = freeGlobal;
-},453,[],"lodash/_freeGlobal.js");
+},456,[],"lodash/_freeGlobal.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var Symbol = require(_dependencyMap[0], './_Symbol');
 
@@ -64260,7 +64363,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = getRawTag;
-},454,[451],"lodash/_getRawTag.js");
+},457,[454],"lodash/_getRawTag.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var objectProto = Object.prototype;
   var nativeObjectToString = objectProto.toString;
@@ -64270,18 +64373,18 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = objectToString;
-},455,[],"lodash/_objectToString.js");
+},458,[],"lodash/_objectToString.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isArray = Array.isArray;
   module.exports = isArray;
-},456,[],"lodash/isArray.js");
+},459,[],"lodash/isArray.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function isObjectLike(value) {
     return value != null && typeof value == 'object';
   }
 
   module.exports = isObjectLike;
-},457,[],"lodash/isObjectLike.js");
+},460,[],"lodash/isObjectLike.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var arrayMap = require(_dependencyMap[0], './_arrayMap'),
       baseClone = require(_dependencyMap[1], './_baseClone'),
@@ -64323,7 +64426,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     return result;
   });
   module.exports = omit;
-},458,[459,460,559,560,504,573,575,539],"lodash/omit.js");
+},461,[462,463,562,563,507,576,578,542],"lodash/omit.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function arrayMap(array, iteratee) {
     var index = -1,
@@ -64338,7 +64441,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = arrayMap;
-},459,[],"lodash/_arrayMap.js");
+},462,[],"lodash/_arrayMap.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var Stack = require(_dependencyMap[0], './_Stack'),
       arrayEach = require(_dependencyMap[1], './_arrayEach'),
@@ -64481,7 +64584,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseClone;
-},460,[461,499,500,503,523,527,528,529,533,537,539,540,545,546,553,456,510,555,479,557,505],"lodash/_baseClone.js");
+},463,[464,502,503,506,526,530,531,532,536,540,542,543,548,549,556,459,513,558,482,560,508],"lodash/_baseClone.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var ListCache = require(_dependencyMap[0], './_ListCache'),
       stackClear = require(_dependencyMap[1], './_stackClear'),
@@ -64501,7 +64604,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   Stack.prototype.has = stackHas;
   Stack.prototype.set = stackSet;
   module.exports = Stack;
-},461,[462,470,471,472,473,474],"lodash/_Stack.js");
+},464,[465,473,474,475,476,477],"lodash/_Stack.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var listCacheClear = require(_dependencyMap[0], './_listCacheClear'),
         listCacheDelete = require(_dependencyMap[1], './_listCacheDelete'),
@@ -64526,7 +64629,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     ListCache.prototype.has = listCacheHas;
     ListCache.prototype.set = listCacheSet;
     module.exports = ListCache;
-},462,[463,464,467,468,469],"lodash/_ListCache.js");
+},465,[466,467,470,471,472],"lodash/_ListCache.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function listCacheClear() {
     this.__data__ = [];
@@ -64534,7 +64637,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = listCacheClear;
-},463,[],"lodash/_listCacheClear.js");
+},466,[],"lodash/_listCacheClear.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var assocIndexOf = require(_dependencyMap[0], './_assocIndexOf');
 
@@ -64562,7 +64665,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = listCacheDelete;
-},464,[465],"lodash/_listCacheDelete.js");
+},467,[468],"lodash/_listCacheDelete.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var eq = require(_dependencyMap[0], './eq');
 
@@ -64579,14 +64682,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = assocIndexOf;
-},465,[466],"lodash/_assocIndexOf.js");
+},468,[469],"lodash/_assocIndexOf.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function eq(value, other) {
     return value === other || value !== value && other !== other;
   }
 
   module.exports = eq;
-},466,[],"lodash/eq.js");
+},469,[],"lodash/eq.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var assocIndexOf = require(_dependencyMap[0], './_assocIndexOf');
 
@@ -64597,7 +64700,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = listCacheGet;
-},467,[465],"lodash/_listCacheGet.js");
+},470,[468],"lodash/_listCacheGet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var assocIndexOf = require(_dependencyMap[0], './_assocIndexOf');
 
@@ -64606,7 +64709,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = listCacheHas;
-},468,[465],"lodash/_listCacheHas.js");
+},471,[468],"lodash/_listCacheHas.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var assocIndexOf = require(_dependencyMap[0], './_assocIndexOf');
 
@@ -64625,7 +64728,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = listCacheSet;
-},469,[465],"lodash/_listCacheSet.js");
+},472,[468],"lodash/_listCacheSet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var ListCache = require(_dependencyMap[0], './_ListCache');
 
@@ -64635,7 +64738,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = stackClear;
-},470,[462],"lodash/_stackClear.js");
+},473,[465],"lodash/_stackClear.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function stackDelete(key) {
     var data = this.__data__,
@@ -64645,21 +64748,21 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = stackDelete;
-},471,[],"lodash/_stackDelete.js");
+},474,[],"lodash/_stackDelete.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function stackGet(key) {
     return this.__data__.get(key);
   }
 
   module.exports = stackGet;
-},472,[],"lodash/_stackGet.js");
+},475,[],"lodash/_stackGet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function stackHas(key) {
     return this.__data__.has(key);
   }
 
   module.exports = stackHas;
-},473,[],"lodash/_stackHas.js");
+},476,[],"lodash/_stackHas.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var ListCache = require(_dependencyMap[0], './_ListCache'),
       Map = require(_dependencyMap[1], './_Map'),
@@ -64688,14 +64791,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = stackSet;
-},474,[462,475,484],"lodash/_stackSet.js");
+},477,[465,478,487],"lodash/_stackSet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var getNative = require(_dependencyMap[0], './_getNative'),
         root = require(_dependencyMap[1], './_root');
 
     var Map = getNative(root, 'Map');
     module.exports = Map;
-},475,[476,452],"lodash/_Map.js");
+},478,[479,455],"lodash/_Map.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseIsNative = require(_dependencyMap[0], './_baseIsNative'),
       getValue = require(_dependencyMap[1], './_getValue');
@@ -64706,7 +64809,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = getNative;
-},476,[477,483],"lodash/_getNative.js");
+},479,[480,486],"lodash/_getNative.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isFunction = require(_dependencyMap[0], './isFunction'),
       isMasked = require(_dependencyMap[1], './_isMasked'),
@@ -64731,7 +64834,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseIsNative;
-},477,[478,480,479,482],"lodash/_baseIsNative.js");
+},480,[481,483,482,485],"lodash/_baseIsNative.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var baseGetTag = require(_dependencyMap[0], './_baseGetTag'),
         isObject = require(_dependencyMap[1], './isObject');
@@ -64751,7 +64854,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     module.exports = isFunction;
-},478,[450,479],"lodash/isFunction.js");
+},481,[453,482],"lodash/isFunction.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function isObject(value) {
     var type = typeof value;
@@ -64759,7 +64862,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = isObject;
-},479,[],"lodash/isObject.js");
+},482,[],"lodash/isObject.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var coreJsData = require(_dependencyMap[0], './_coreJsData');
 
@@ -64773,13 +64876,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = isMasked;
-},480,[481],"lodash/_isMasked.js");
+},483,[484],"lodash/_isMasked.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var root = require(_dependencyMap[0], './_root');
 
   var coreJsData = root['__core-js_shared__'];
   module.exports = coreJsData;
-},481,[452],"lodash/_coreJsData.js");
+},484,[455],"lodash/_coreJsData.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var funcProto = Function.prototype;
   var funcToString = funcProto.toString;
@@ -64799,14 +64902,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = toSource;
-},482,[],"lodash/_toSource.js");
+},485,[],"lodash/_toSource.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function getValue(object, key) {
     return object == null ? undefined : object[key];
   }
 
   module.exports = getValue;
-},483,[],"lodash/_getValue.js");
+},486,[],"lodash/_getValue.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var mapCacheClear = require(_dependencyMap[0], './_mapCacheClear'),
         mapCacheDelete = require(_dependencyMap[1], './_mapCacheDelete'),
@@ -64831,7 +64934,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     MapCache.prototype.has = mapCacheHas;
     MapCache.prototype.set = mapCacheSet;
     module.exports = MapCache;
-},484,[485,493,496,497,498],"lodash/_MapCache.js");
+},487,[488,496,499,500,501],"lodash/_MapCache.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var Hash = require(_dependencyMap[0], './_Hash'),
       ListCache = require(_dependencyMap[1], './_ListCache'),
@@ -64847,7 +64950,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = mapCacheClear;
-},485,[486,462,475],"lodash/_mapCacheClear.js");
+},488,[489,465,478],"lodash/_mapCacheClear.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var hashClear = require(_dependencyMap[0], './_hashClear'),
         hashDelete = require(_dependencyMap[1], './_hashDelete'),
@@ -64872,7 +64975,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     Hash.prototype.has = hashHas;
     Hash.prototype.set = hashSet;
     module.exports = Hash;
-},486,[487,489,490,491,492],"lodash/_Hash.js");
+},489,[490,492,493,494,495],"lodash/_Hash.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var nativeCreate = require(_dependencyMap[0], './_nativeCreate');
 
@@ -64882,13 +64985,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = hashClear;
-},487,[488],"lodash/_hashClear.js");
+},490,[491],"lodash/_hashClear.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var getNative = require(_dependencyMap[0], './_getNative');
 
   var nativeCreate = getNative(Object, 'create');
   module.exports = nativeCreate;
-},488,[476],"lodash/_nativeCreate.js");
+},491,[479],"lodash/_nativeCreate.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function hashDelete(key) {
     var result = this.has(key) && delete this.__data__[key];
@@ -64897,7 +65000,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = hashDelete;
-},489,[],"lodash/_hashDelete.js");
+},492,[],"lodash/_hashDelete.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var nativeCreate = require(_dependencyMap[0], './_nativeCreate');
 
@@ -64917,7 +65020,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = hashGet;
-},490,[488],"lodash/_hashGet.js");
+},493,[491],"lodash/_hashGet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var nativeCreate = require(_dependencyMap[0], './_nativeCreate');
 
@@ -64930,7 +65033,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = hashHas;
-},491,[488],"lodash/_hashHas.js");
+},494,[491],"lodash/_hashHas.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var nativeCreate = require(_dependencyMap[0], './_nativeCreate');
 
@@ -64944,7 +65047,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = hashSet;
-},492,[488],"lodash/_hashSet.js");
+},495,[491],"lodash/_hashSet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var getMapData = require(_dependencyMap[0], './_getMapData');
 
@@ -64955,7 +65058,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = mapCacheDelete;
-},493,[494],"lodash/_mapCacheDelete.js");
+},496,[497],"lodash/_mapCacheDelete.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isKeyable = require(_dependencyMap[0], './_isKeyable');
 
@@ -64965,7 +65068,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = getMapData;
-},494,[495],"lodash/_getMapData.js");
+},497,[498],"lodash/_getMapData.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function isKeyable(value) {
     var type = typeof value;
@@ -64973,7 +65076,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = isKeyable;
-},495,[],"lodash/_isKeyable.js");
+},498,[],"lodash/_isKeyable.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var getMapData = require(_dependencyMap[0], './_getMapData');
 
@@ -64982,7 +65085,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = mapCacheGet;
-},496,[494],"lodash/_mapCacheGet.js");
+},499,[497],"lodash/_mapCacheGet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var getMapData = require(_dependencyMap[0], './_getMapData');
 
@@ -64991,7 +65094,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = mapCacheHas;
-},497,[494],"lodash/_mapCacheHas.js");
+},500,[497],"lodash/_mapCacheHas.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var getMapData = require(_dependencyMap[0], './_getMapData');
 
@@ -65004,7 +65107,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = mapCacheSet;
-},498,[494],"lodash/_mapCacheSet.js");
+},501,[497],"lodash/_mapCacheSet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function arrayEach(array, iteratee) {
     var index = -1,
@@ -65020,7 +65123,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = arrayEach;
-},499,[],"lodash/_arrayEach.js");
+},502,[],"lodash/_arrayEach.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseAssignValue = require(_dependencyMap[0], './_baseAssignValue'),
       eq = require(_dependencyMap[1], './eq');
@@ -65037,7 +65140,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = assignValue;
-},500,[501,466],"lodash/_assignValue.js");
+},503,[504,469],"lodash/_assignValue.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var defineProperty = require(_dependencyMap[0], './_defineProperty');
 
@@ -65055,7 +65158,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseAssignValue;
-},501,[502],"lodash/_baseAssignValue.js");
+},504,[505],"lodash/_baseAssignValue.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var getNative = require(_dependencyMap[0], './_getNative');
 
@@ -65068,7 +65171,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }();
 
   module.exports = defineProperty;
-},502,[476],"lodash/_defineProperty.js");
+},505,[479],"lodash/_defineProperty.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var copyObject = require(_dependencyMap[0], './_copyObject'),
       keys = require(_dependencyMap[1], './keys');
@@ -65078,7 +65181,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseAssign;
-},503,[504,505],"lodash/_baseAssign.js");
+},506,[507,508],"lodash/_baseAssign.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var assignValue = require(_dependencyMap[0], './_assignValue'),
       baseAssignValue = require(_dependencyMap[1], './_baseAssignValue');
@@ -65108,7 +65211,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = copyObject;
-},504,[500,501],"lodash/_copyObject.js");
+},507,[503,504],"lodash/_copyObject.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var arrayLikeKeys = require(_dependencyMap[0], './_arrayLikeKeys'),
       baseKeys = require(_dependencyMap[1], './_baseKeys'),
@@ -65119,7 +65222,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = keys;
-},505,[506,518,522],"lodash/keys.js");
+},508,[509,521,525],"lodash/keys.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseTimes = require(_dependencyMap[0], './_baseTimes'),
       isArguments = require(_dependencyMap[1], './isArguments'),
@@ -65150,7 +65253,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = arrayLikeKeys;
-},506,[507,508,456,510,512,513],"lodash/_arrayLikeKeys.js");
+},509,[510,511,459,513,515,516],"lodash/_arrayLikeKeys.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function baseTimes(n, iteratee) {
     var index = -1,
@@ -65164,7 +65267,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseTimes;
-},507,[],"lodash/_baseTimes.js");
+},510,[],"lodash/_baseTimes.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var baseIsArguments = require(_dependencyMap[0], './_baseIsArguments'),
         isObjectLike = require(_dependencyMap[1], './isObjectLike');
@@ -65178,7 +65281,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         return isObjectLike(value) && hasOwnProperty.call(value, 'callee') && !propertyIsEnumerable.call(value, 'callee');
     };
     module.exports = isArguments;
-},508,[509,457],"lodash/isArguments.js");
+},511,[512,460],"lodash/isArguments.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseGetTag = require(_dependencyMap[0], './_baseGetTag'),
       isObjectLike = require(_dependencyMap[1], './isObjectLike');
@@ -65190,7 +65293,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseIsArguments;
-},509,[450,457],"lodash/_baseIsArguments.js");
+},512,[453,460],"lodash/_baseIsArguments.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var root = require(_dependencyMap[0], './_root'),
       stubFalse = require(_dependencyMap[1], './stubFalse');
@@ -65202,14 +65305,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
   var isBuffer = nativeIsBuffer || stubFalse;
   module.exports = isBuffer;
-},510,[452,511],"lodash/isBuffer.js");
+},513,[455,514],"lodash/isBuffer.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function stubFalse() {
     return false;
   }
 
   module.exports = stubFalse;
-},511,[],"lodash/stubFalse.js");
+},514,[],"lodash/stubFalse.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var MAX_SAFE_INTEGER = 9007199254740991;
   var reIsUint = /^(?:0|[1-9]\d*)$/;
@@ -65221,7 +65324,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = isIndex;
-},512,[],"lodash/_isIndex.js");
+},515,[],"lodash/_isIndex.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseIsTypedArray = require(_dependencyMap[0], './_baseIsTypedArray'),
       baseUnary = require(_dependencyMap[1], './_baseUnary'),
@@ -65230,7 +65333,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
   var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
   module.exports = isTypedArray;
-},513,[514,516,517],"lodash/isTypedArray.js");
+},516,[517,519,520],"lodash/isTypedArray.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var baseGetTag = require(_dependencyMap[0], './_baseGetTag'),
         isLength = require(_dependencyMap[1], './isLength'),
@@ -65269,7 +65372,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     module.exports = baseIsTypedArray;
-},514,[450,515,457],"lodash/_baseIsTypedArray.js");
+},517,[453,518,460],"lodash/_baseIsTypedArray.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -65278,7 +65381,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = isLength;
-},515,[],"lodash/isLength.js");
+},518,[],"lodash/isLength.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function baseUnary(func) {
     return function (value) {
@@ -65287,7 +65390,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseUnary;
-},516,[],"lodash/_baseUnary.js");
+},519,[],"lodash/_baseUnary.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var freeGlobal = require(_dependencyMap[0], './_freeGlobal');
 
@@ -65303,7 +65406,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }();
 
   module.exports = nodeUtil;
-},517,[453],"lodash/_nodeUtil.js");
+},520,[456],"lodash/_nodeUtil.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isPrototype = require(_dependencyMap[0], './_isPrototype'),
       nativeKeys = require(_dependencyMap[1], './_nativeKeys');
@@ -65328,7 +65431,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseKeys;
-},518,[519,520],"lodash/_baseKeys.js");
+},521,[522,523],"lodash/_baseKeys.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var objectProto = Object.prototype;
 
@@ -65339,13 +65442,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = isPrototype;
-},519,[],"lodash/_isPrototype.js");
+},522,[],"lodash/_isPrototype.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var overArg = require(_dependencyMap[0], './_overArg');
 
   var nativeKeys = overArg(Object.keys, Object);
   module.exports = nativeKeys;
-},520,[521],"lodash/_nativeKeys.js");
+},523,[524],"lodash/_nativeKeys.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function overArg(func, transform) {
     return function (arg) {
@@ -65354,7 +65457,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = overArg;
-},521,[],"lodash/_overArg.js");
+},524,[],"lodash/_overArg.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isFunction = require(_dependencyMap[0], './isFunction'),
       isLength = require(_dependencyMap[1], './isLength');
@@ -65364,7 +65467,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = isArrayLike;
-},522,[478,515],"lodash/isArrayLike.js");
+},525,[481,518],"lodash/isArrayLike.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var copyObject = require(_dependencyMap[0], './_copyObject'),
       keysIn = require(_dependencyMap[1], './keysIn');
@@ -65374,7 +65477,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseAssignIn;
-},523,[504,524],"lodash/_baseAssignIn.js");
+},526,[507,527],"lodash/_baseAssignIn.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var arrayLikeKeys = require(_dependencyMap[0], './_arrayLikeKeys'),
       baseKeysIn = require(_dependencyMap[1], './_baseKeysIn'),
@@ -65385,7 +65488,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = keysIn;
-},524,[506,525,522],"lodash/keysIn.js");
+},527,[509,528,525],"lodash/keysIn.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isObject = require(_dependencyMap[0], './isObject'),
       isPrototype = require(_dependencyMap[1], './_isPrototype'),
@@ -65412,7 +65515,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseKeysIn;
-},525,[479,519,526],"lodash/_baseKeysIn.js");
+},528,[482,522,529],"lodash/_baseKeysIn.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function nativeKeysIn(object) {
     var result = [];
@@ -65427,7 +65530,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = nativeKeysIn;
-},526,[],"lodash/_nativeKeysIn.js");
+},529,[],"lodash/_nativeKeysIn.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var root = require(_dependencyMap[0], './_root');
 
@@ -65449,7 +65552,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneBuffer;
-},527,[452],"lodash/_cloneBuffer.js");
+},530,[455],"lodash/_cloneBuffer.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function copyArray(source, array) {
     var index = -1,
@@ -65464,7 +65567,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = copyArray;
-},528,[],"lodash/_copyArray.js");
+},531,[],"lodash/_copyArray.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var copyObject = require(_dependencyMap[0], './_copyObject'),
       getSymbols = require(_dependencyMap[1], './_getSymbols');
@@ -65474,7 +65577,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = copySymbols;
-},529,[504,530],"lodash/_copySymbols.js");
+},532,[507,533],"lodash/_copySymbols.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var arrayFilter = require(_dependencyMap[0], './_arrayFilter'),
       stubArray = require(_dependencyMap[1], './stubArray');
@@ -65493,7 +65596,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
   };
   module.exports = getSymbols;
-},530,[531,532],"lodash/_getSymbols.js");
+},533,[534,535],"lodash/_getSymbols.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function arrayFilter(array, predicate) {
     var index = -1,
@@ -65513,14 +65616,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = arrayFilter;
-},531,[],"lodash/_arrayFilter.js");
+},534,[],"lodash/_arrayFilter.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function stubArray() {
     return [];
   }
 
   module.exports = stubArray;
-},532,[],"lodash/stubArray.js");
+},535,[],"lodash/stubArray.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var copyObject = require(_dependencyMap[0], './_copyObject'),
       getSymbolsIn = require(_dependencyMap[1], './_getSymbolsIn');
@@ -65530,7 +65633,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = copySymbolsIn;
-},533,[504,534],"lodash/_copySymbolsIn.js");
+},536,[507,537],"lodash/_copySymbolsIn.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var arrayPush = require(_dependencyMap[0], './_arrayPush'),
       getPrototype = require(_dependencyMap[1], './_getPrototype'),
@@ -65549,7 +65652,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     return result;
   };
   module.exports = getSymbolsIn;
-},534,[535,536,530,532],"lodash/_getSymbolsIn.js");
+},537,[538,539,533,535],"lodash/_getSymbolsIn.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function arrayPush(array, values) {
     var index = -1,
@@ -65564,13 +65667,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = arrayPush;
-},535,[],"lodash/_arrayPush.js");
+},538,[],"lodash/_arrayPush.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var overArg = require(_dependencyMap[0], './_overArg');
 
   var getPrototype = overArg(Object.getPrototypeOf, Object);
   module.exports = getPrototype;
-},536,[521],"lodash/_getPrototype.js");
+},539,[524],"lodash/_getPrototype.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseGetAllKeys = require(_dependencyMap[0], './_baseGetAllKeys'),
       getSymbols = require(_dependencyMap[1], './_getSymbols'),
@@ -65581,7 +65684,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = getAllKeys;
-},537,[538,530,505],"lodash/_getAllKeys.js");
+},540,[541,533,508],"lodash/_getAllKeys.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var arrayPush = require(_dependencyMap[0], './_arrayPush'),
       isArray = require(_dependencyMap[1], './isArray');
@@ -65592,7 +65695,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseGetAllKeys;
-},538,[535,456],"lodash/_baseGetAllKeys.js");
+},541,[538,459],"lodash/_baseGetAllKeys.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseGetAllKeys = require(_dependencyMap[0], './_baseGetAllKeys'),
       getSymbolsIn = require(_dependencyMap[1], './_getSymbolsIn'),
@@ -65603,7 +65706,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = getAllKeysIn;
-},539,[538,534,524],"lodash/_getAllKeysIn.js");
+},542,[541,537,527],"lodash/_getAllKeysIn.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var DataView = require(_dependencyMap[0], './_DataView'),
         Map = require(_dependencyMap[1], './_Map'),
@@ -65656,35 +65759,35 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     module.exports = getTag;
-},540,[541,475,542,543,544,450,482],"lodash/_getTag.js");
+},543,[544,478,545,546,547,453,485],"lodash/_getTag.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var getNative = require(_dependencyMap[0], './_getNative'),
         root = require(_dependencyMap[1], './_root');
 
     var DataView = getNative(root, 'DataView');
     module.exports = DataView;
-},541,[476,452],"lodash/_DataView.js");
+},544,[479,455],"lodash/_DataView.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var getNative = require(_dependencyMap[0], './_getNative'),
         root = require(_dependencyMap[1], './_root');
 
     var Promise = getNative(root, 'Promise');
     module.exports = Promise;
-},542,[476,452],"lodash/_Promise.js");
+},545,[479,455],"lodash/_Promise.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var getNative = require(_dependencyMap[0], './_getNative'),
         root = require(_dependencyMap[1], './_root');
 
     var Set = getNative(root, 'Set');
     module.exports = Set;
-},543,[476,452],"lodash/_Set.js");
+},546,[479,455],"lodash/_Set.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var getNative = require(_dependencyMap[0], './_getNative'),
         root = require(_dependencyMap[1], './_root');
 
     var WeakMap = getNative(root, 'WeakMap');
     module.exports = WeakMap;
-},544,[476,452],"lodash/_WeakMap.js");
+},547,[479,455],"lodash/_WeakMap.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var objectProto = Object.prototype;
   var hasOwnProperty = objectProto.hasOwnProperty;
@@ -65702,7 +65805,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = initCloneArray;
-},545,[],"lodash/_initCloneArray.js");
+},548,[],"lodash/_initCloneArray.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var cloneArrayBuffer = require(_dependencyMap[0], './_cloneArrayBuffer'),
       cloneDataView = require(_dependencyMap[1], './_cloneDataView'),
@@ -65774,7 +65877,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = initCloneByTag;
-},546,[547,549,550,551,552],"lodash/_initCloneByTag.js");
+},549,[550,552,553,554,555],"lodash/_initCloneByTag.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var Uint8Array = require(_dependencyMap[0], './_Uint8Array');
 
@@ -65785,13 +65888,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneArrayBuffer;
-},547,[548],"lodash/_cloneArrayBuffer.js");
+},550,[551],"lodash/_cloneArrayBuffer.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var root = require(_dependencyMap[0], './_root');
 
   var Uint8Array = root.Uint8Array;
   module.exports = Uint8Array;
-},548,[452],"lodash/_Uint8Array.js");
+},551,[455],"lodash/_Uint8Array.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var cloneArrayBuffer = require(_dependencyMap[0], './_cloneArrayBuffer');
 
@@ -65801,7 +65904,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneDataView;
-},549,[547],"lodash/_cloneDataView.js");
+},552,[550],"lodash/_cloneDataView.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var reFlags = /\w*$/;
 
@@ -65812,7 +65915,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneRegExp;
-},550,[],"lodash/_cloneRegExp.js");
+},553,[],"lodash/_cloneRegExp.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var Symbol = require(_dependencyMap[0], './_Symbol');
 
@@ -65824,7 +65927,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneSymbol;
-},551,[451],"lodash/_cloneSymbol.js");
+},554,[454],"lodash/_cloneSymbol.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var cloneArrayBuffer = require(_dependencyMap[0], './_cloneArrayBuffer');
 
@@ -65834,7 +65937,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = cloneTypedArray;
-},552,[547],"lodash/_cloneTypedArray.js");
+},555,[550],"lodash/_cloneTypedArray.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var baseCreate = require(_dependencyMap[0], './_baseCreate'),
         getPrototype = require(_dependencyMap[1], './_getPrototype'),
@@ -65845,7 +65948,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     module.exports = initCloneObject;
-},553,[554,536,519],"lodash/_initCloneObject.js");
+},556,[557,539,522],"lodash/_initCloneObject.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isObject = require(_dependencyMap[0], './isObject');
 
@@ -65871,7 +65974,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }();
 
   module.exports = baseCreate;
-},554,[479],"lodash/_baseCreate.js");
+},557,[482],"lodash/_baseCreate.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseIsMap = require(_dependencyMap[0], './_baseIsMap'),
       baseUnary = require(_dependencyMap[1], './_baseUnary'),
@@ -65880,7 +65983,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var nodeIsMap = nodeUtil && nodeUtil.isMap;
   var isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
   module.exports = isMap;
-},555,[556,516,517],"lodash/isMap.js");
+},558,[559,519,520],"lodash/isMap.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var getTag = require(_dependencyMap[0], './_getTag'),
       isObjectLike = require(_dependencyMap[1], './isObjectLike');
@@ -65892,7 +65995,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseIsMap;
-},556,[540,457],"lodash/_baseIsMap.js");
+},559,[543,460],"lodash/_baseIsMap.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseIsSet = require(_dependencyMap[0], './_baseIsSet'),
       baseUnary = require(_dependencyMap[1], './_baseUnary'),
@@ -65901,7 +66004,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var nodeIsSet = nodeUtil && nodeUtil.isSet;
   var isSet = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;
   module.exports = isSet;
-},557,[558,516,517],"lodash/isSet.js");
+},560,[561,519,520],"lodash/isSet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var getTag = require(_dependencyMap[0], './_getTag'),
       isObjectLike = require(_dependencyMap[1], './isObjectLike');
@@ -65913,7 +66016,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseIsSet;
-},558,[540,457],"lodash/_baseIsSet.js");
+},561,[543,460],"lodash/_baseIsSet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var castPath = require(_dependencyMap[0], './_castPath'),
       last = require(_dependencyMap[1], './last'),
@@ -65927,7 +66030,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseUnset;
-},559,[560,568,569,571],"lodash/_baseUnset.js");
+},562,[563,571,572,574],"lodash/_baseUnset.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isArray = require(_dependencyMap[0], './isArray'),
       isKey = require(_dependencyMap[1], './_isKey'),
@@ -65943,7 +66046,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = castPath;
-},560,[456,561,563,566],"lodash/_castPath.js");
+},563,[459,564,566,569],"lodash/_castPath.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isArray = require(_dependencyMap[0], './isArray'),
       isSymbol = require(_dependencyMap[1], './isSymbol');
@@ -65966,7 +66069,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = isKey;
-},561,[456,562],"lodash/_isKey.js");
+},564,[459,565],"lodash/_isKey.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var baseGetTag = require(_dependencyMap[0], './_baseGetTag'),
         isObjectLike = require(_dependencyMap[1], './isObjectLike');
@@ -65978,7 +66081,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     module.exports = isSymbol;
-},562,[450,457],"lodash/isSymbol.js");
+},565,[453,460],"lodash/isSymbol.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var memoizeCapped = require(_dependencyMap[0], './_memoizeCapped');
 
@@ -65997,7 +66100,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     return result;
   });
   module.exports = stringToPath;
-},563,[564],"lodash/_stringToPath.js");
+},566,[567],"lodash/_stringToPath.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var memoize = require(_dependencyMap[0], './memoize');
 
@@ -66016,7 +66119,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = memoizeCapped;
-},564,[565],"lodash/_memoizeCapped.js");
+},567,[568],"lodash/_memoizeCapped.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var MapCache = require(_dependencyMap[0], './_MapCache');
 
@@ -66047,7 +66150,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   memoize.Cache = MapCache;
   module.exports = memoize;
-},565,[484],"lodash/memoize.js");
+},568,[487],"lodash/memoize.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseToString = require(_dependencyMap[0], './_baseToString');
 
@@ -66056,7 +66159,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = toString;
-},566,[567],"lodash/toString.js");
+},569,[570],"lodash/toString.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var Symbol = require(_dependencyMap[0], './_Symbol'),
       arrayMap = require(_dependencyMap[1], './_arrayMap'),
@@ -66085,7 +66188,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseToString;
-},567,[451,459,456,562],"lodash/_baseToString.js");
+},570,[454,462,459,565],"lodash/_baseToString.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function last(array) {
     var length = array == null ? 0 : array.length;
@@ -66093,7 +66196,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = last;
-},568,[],"lodash/last.js");
+},571,[],"lodash/last.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseGet = require(_dependencyMap[0], './_baseGet'),
       baseSlice = require(_dependencyMap[1], './_baseSlice');
@@ -66103,7 +66206,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = parent;
-},569,[570,572],"lodash/_parent.js");
+},572,[573,575],"lodash/_parent.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var castPath = require(_dependencyMap[0], './_castPath'),
       toKey = require(_dependencyMap[1], './_toKey');
@@ -66121,7 +66224,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseGet;
-},570,[560,571],"lodash/_baseGet.js");
+},573,[563,574],"lodash/_baseGet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isSymbol = require(_dependencyMap[0], './isSymbol');
 
@@ -66137,7 +66240,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = toKey;
-},571,[562],"lodash/_toKey.js");
+},574,[565],"lodash/_toKey.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function baseSlice(array, start, end) {
     var index = -1,
@@ -66165,7 +66268,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseSlice;
-},572,[],"lodash/_baseSlice.js");
+},575,[],"lodash/_baseSlice.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var isPlainObject = require(_dependencyMap[0], './isPlainObject');
 
@@ -66174,7 +66277,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = customOmitClone;
-},573,[574],"lodash/_customOmitClone.js");
+},576,[577],"lodash/_customOmitClone.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseGetTag = require(_dependencyMap[0], './_baseGetTag'),
       getPrototype = require(_dependencyMap[1], './_getPrototype'),
@@ -66203,7 +66306,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = isPlainObject;
-},574,[450,536,457],"lodash/isPlainObject.js");
+},577,[453,539,460],"lodash/isPlainObject.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var flatten = require(_dependencyMap[0], './flatten'),
       overRest = require(_dependencyMap[1], './_overRest'),
@@ -66214,7 +66317,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = flatRest;
-},575,[576,579,581],"lodash/_flatRest.js");
+},578,[579,582,584],"lodash/_flatRest.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseFlatten = require(_dependencyMap[0], './_baseFlatten');
 
@@ -66224,7 +66327,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = flatten;
-},576,[577],"lodash/flatten.js");
+},579,[580],"lodash/flatten.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var arrayPush = require(_dependencyMap[0], './_arrayPush'),
       isFlattenable = require(_dependencyMap[1], './_isFlattenable');
@@ -66253,7 +66356,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseFlatten;
-},577,[535,578],"lodash/_baseFlatten.js");
+},580,[538,581],"lodash/_baseFlatten.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var Symbol = require(_dependencyMap[0], './_Symbol'),
         isArguments = require(_dependencyMap[1], './isArguments'),
@@ -66266,7 +66369,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     module.exports = isFlattenable;
-},578,[451,508,456],"lodash/_isFlattenable.js");
+},581,[454,511,459],"lodash/_isFlattenable.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var apply = require(_dependencyMap[0], './_apply');
 
@@ -66297,7 +66400,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = overRest;
-},579,[580],"lodash/_overRest.js");
+},582,[583],"lodash/_overRest.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function apply(func, thisArg, args) {
     switch (args.length) {
@@ -66318,14 +66421,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = apply;
-},580,[],"lodash/_apply.js");
+},583,[],"lodash/_apply.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseSetToString = require(_dependencyMap[0], './_baseSetToString'),
       shortOut = require(_dependencyMap[1], './_shortOut');
 
   var setToString = shortOut(baseSetToString);
   module.exports = setToString;
-},581,[582,585],"lodash/_setToString.js");
+},584,[585,588],"lodash/_setToString.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var constant = require(_dependencyMap[0], './constant'),
       defineProperty = require(_dependencyMap[1], './_defineProperty'),
@@ -66340,7 +66443,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
   };
   module.exports = baseSetToString;
-},582,[583,502,584],"lodash/_baseSetToString.js");
+},585,[586,505,587],"lodash/_baseSetToString.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function constant(value) {
     return function () {
@@ -66349,14 +66452,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = constant;
-},583,[],"lodash/constant.js");
+},586,[],"lodash/constant.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function identity(value) {
     return value;
   }
 
   module.exports = identity;
-},584,[],"lodash/identity.js");
+},587,[],"lodash/identity.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var HOT_COUNT = 800,
       HOT_SPAN = 16;
@@ -66383,7 +66486,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = shortOut;
-},585,[],"lodash/_shortOut.js");
+},588,[],"lodash/_shortOut.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var basePick = require(_dependencyMap[0], './_basePick'),
       flatRest = require(_dependencyMap[1], './_flatRest');
@@ -66392,7 +66495,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     return object == null ? {} : basePick(object, paths);
   });
   module.exports = pick;
-},586,[587,575],"lodash/pick.js");
+},589,[590,578],"lodash/pick.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var basePickBy = require(_dependencyMap[0], './_basePickBy'),
       hasIn = require(_dependencyMap[1], './hasIn');
@@ -66404,7 +66507,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = basePick;
-},587,[588,590],"lodash/_basePick.js");
+},590,[591,593],"lodash/_basePick.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var baseGet = require(_dependencyMap[0], './_baseGet'),
         baseSet = require(_dependencyMap[1], './_baseSet'),
@@ -66428,7 +66531,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     module.exports = basePickBy;
-},588,[570,589,560],"lodash/_basePickBy.js");
+},591,[573,592,563],"lodash/_basePickBy.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var assignValue = require(_dependencyMap[0], './_assignValue'),
       castPath = require(_dependencyMap[1], './_castPath'),
@@ -66468,7 +66571,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseSet;
-},589,[500,560,512,479,571],"lodash/_baseSet.js");
+},592,[503,563,515,482,574],"lodash/_baseSet.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseHasIn = require(_dependencyMap[0], './_baseHasIn'),
       hasPath = require(_dependencyMap[1], './_hasPath');
@@ -66478,14 +66581,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = hasIn;
-},590,[591,592],"lodash/hasIn.js");
+},593,[594,595],"lodash/hasIn.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function baseHasIn(object, key) {
     return object != null && key in Object(object);
   }
 
   module.exports = baseHasIn;
-},591,[],"lodash/_baseHasIn.js");
+},594,[],"lodash/_baseHasIn.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var castPath = require(_dependencyMap[0], './_castPath'),
       isArguments = require(_dependencyMap[1], './isArguments'),
@@ -66519,7 +66622,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = hasPath;
-},592,[560,508,456,512,515,571],"lodash/_hasPath.js");
+},595,[563,511,459,515,518,574],"lodash/_hasPath.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -66615,7 +66718,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       iconSize: 30
     }, _temp;
   }
-},593,[594,586,108,127,447],"react-native-vector-icons/lib/tab-bar-item-ios.js");
+},596,[597,589,108,127,450],"react-native-vector-icons/lib/tab-bar-item-ios.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseIsEqual = require(_dependencyMap[0], './_baseIsEqual');
 
@@ -66624,7 +66727,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = isEqual;
-},594,[595],"lodash/isEqual.js");
+},597,[598],"lodash/isEqual.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var baseIsEqualDeep = require(_dependencyMap[0], './_baseIsEqualDeep'),
       isObjectLike = require(_dependencyMap[1], './isObjectLike');
@@ -66642,7 +66745,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseIsEqual;
-},595,[596,457],"lodash/_baseIsEqual.js");
+},598,[599,460],"lodash/_baseIsEqual.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var Stack = require(_dependencyMap[0], './_Stack'),
       equalArrays = require(_dependencyMap[1], './_equalArrays'),
@@ -66706,7 +66809,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = baseIsEqualDeep;
-},596,[461,597,603,606,540,456,510,513],"lodash/_baseIsEqualDeep.js");
+},599,[464,600,606,609,543,459,513,516],"lodash/_baseIsEqualDeep.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var SetCache = require(_dependencyMap[0], './_SetCache'),
       arraySome = require(_dependencyMap[1], './_arraySome'),
@@ -66774,7 +66877,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = equalArrays;
-},597,[598,601,602],"lodash/_equalArrays.js");
+},600,[601,604,605],"lodash/_equalArrays.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     var MapCache = require(_dependencyMap[0], './_MapCache'),
         setCacheAdd = require(_dependencyMap[1], './_setCacheAdd'),
@@ -66793,7 +66896,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
     SetCache.prototype.has = setCacheHas;
     module.exports = SetCache;
-},598,[484,599,600],"lodash/_SetCache.js");
+},601,[487,602,603],"lodash/_SetCache.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var HASH_UNDEFINED = '__lodash_hash_undefined__';
 
@@ -66804,14 +66907,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = setCacheAdd;
-},599,[],"lodash/_setCacheAdd.js");
+},602,[],"lodash/_setCacheAdd.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function setCacheHas(value) {
     return this.__data__.has(value);
   }
 
   module.exports = setCacheHas;
-},600,[],"lodash/_setCacheHas.js");
+},603,[],"lodash/_setCacheHas.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function arraySome(array, predicate) {
     var index = -1,
@@ -66827,14 +66930,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = arraySome;
-},601,[],"lodash/_arraySome.js");
+},604,[],"lodash/_arraySome.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function cacheHas(cache, key) {
     return cache.has(key);
   }
 
   module.exports = cacheHas;
-},602,[],"lodash/_cacheHas.js");
+},605,[],"lodash/_cacheHas.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var Symbol = require(_dependencyMap[0], './_Symbol'),
       Uint8Array = require(_dependencyMap[1], './_Uint8Array'),
@@ -66922,7 +67025,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = equalByTag;
-},603,[451,548,466,597,604,605],"lodash/_equalByTag.js");
+},606,[454,551,469,600,607,608],"lodash/_equalByTag.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function mapToArray(map) {
     var index = -1,
@@ -66934,7 +67037,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = mapToArray;
-},604,[],"lodash/_mapToArray.js");
+},607,[],"lodash/_mapToArray.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   function setToArray(set) {
     var index = -1,
@@ -66946,7 +67049,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = setToArray;
-},605,[],"lodash/_setToArray.js");
+},608,[],"lodash/_setToArray.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   var getAllKeys = require(_dependencyMap[0], './_getAllKeys');
 
@@ -67018,7 +67121,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }
 
   module.exports = equalObjects;
-},606,[537],"lodash/_equalObjects.js");
+},609,[540],"lodash/_equalObjects.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -67169,7 +67272,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       iconSize: 24
     }, _temp;
   }
-},607,[594,586,108,127,447],"react-native-vector-icons/lib/toolbar-android.js");
+},610,[597,589,108,127,450],"react-native-vector-icons/lib/toolbar-android.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   module.exports = {
     "3d-rotation": 59469,
@@ -68105,7 +68208,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     "zoom-out": 59648,
     "zoom-out-map": 58731
   };
-},608,[],"react-native-vector-icons/glyphmaps/MaterialIcons.json");
+},611,[],"react-native-vector-icons/glyphmaps/MaterialIcons.json");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -68127,7 +68230,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var TabBarItemIOS = exports.TabBarItemIOS = iconSet.TabBarItemIOS;
   var ToolbarAndroid = exports.ToolbarAndroid = iconSet.ToolbarAndroid;
   var getImageSource = exports.getImageSource = iconSet.getImageSource;
-},609,[446,610],"react-native-vector-icons/Feather.js");
+},612,[449,613],"react-native-vector-icons/Feather.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   module.exports = {
     "activity": 59648,
@@ -68371,7 +68474,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     "zoom-in": 59886,
     "zoom-out": 59887
   };
-},610,[],"react-native-vector-icons/glyphmaps/Feather.json");
+},613,[],"react-native-vector-icons/glyphmaps/Feather.json");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -68393,7 +68496,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     exports.GameRound = _GameRound2.default;
     exports.GameRoundContainer = _GameRound4.default;
     exports.styles = _styles2.default;
-},611,[612,615,613],"mtg-lifecounter/js/screens/Game/GameRound/index.js");
+},614,[615,618,616],"mtg-lifecounter/js/screens/Game/GameRound/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -68688,7 +68791,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     GameRound.defaultProps = {
         stayAwake: false
     };
-},612,[108,127,12,336,613,614,410,406],"mtg-lifecounter/js/screens/Game/GameRound/GameRound.js");
+},615,[108,127,12,336,616,617,410,406],"mtg-lifecounter/js/screens/Game/GameRound/GameRound.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -68716,7 +68819,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = styles;
-},613,[12],"mtg-lifecounter/js/screens/Game/GameRound/styles.js");
+},616,[12],"mtg-lifecounter/js/screens/Game/GameRound/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -68746,7 +68849,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     exports.splitInHalf = splitInHalf;
     exports.makePairs = makePairs;
-},614,[406],"mtg-lifecounter/js/screens/Game/GameRound/utils.js");
+},617,[406],"mtg-lifecounter/js/screens/Game/GameRound/utils.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -68803,7 +68906,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     GameRoundContainer.propTypes = {
         navigation: _propTypes2.default.object.isRequired
     };
-},615,[108,127,612],"mtg-lifecounter/js/screens/Game/GameRound/GameRound.container.js");
+},618,[108,127,615],"mtg-lifecounter/js/screens/Game/GameRound/GameRound.container.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -68825,7 +68928,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     exports.About = _About2.default;
     exports.AboutScreen = _About4.default;
     exports.styles = _styles2.default;
-},616,[617,619,618],"mtg-lifecounter/js/screens/About/index.js");
+},619,[620,622,621],"mtg-lifecounter/js/screens/About/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -68848,26 +68951,40 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     var _components = require(_dependencyMap[4], "../../components");
 
-    var openContactLink = function openContactLink() {};
+    var container = _styles2.default.container,
+        heading = _styles2.default.heading,
+        paragraph = _styles2.default.paragraph;
+    var subject = 'Suggestion%20to%20improve%20the%20MTG%20Lifecounter%20app';
 
-    var heading = _styles2.default.heading,
-        paragraph = _styles2.default.paragraph,
-        link = _styles2.default.link;
+    var ContactMe = function ContactMe() {
+        return _react2.default.createElement(
+            _components.Link,
+            {
+                href: "mailto:dev@parzinski.nl?subject=" + subject,
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 12
+                }
+            },
+            "contact me"
+        );
+    };
 
     var About = function About() {
         return _react2.default.createElement(
             _components.PageContainer,
             {
+                style: container,
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 15
+                    lineNumber: 16
                 }
             },
             _react2.default.createElement(_components.BackgroundImage, {
                 source: _bgicon2.default,
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 16
+                    lineNumber: 17
                 }
             }),
             _react2.default.createElement(
@@ -68875,7 +68992,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 17
+                        lineNumber: 18
                     }
                 },
                 _react2.default.createElement(
@@ -68885,7 +69002,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: heading,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 18
+                            lineNumber: 19
                         }
                     },
                     "About"
@@ -68897,7 +69014,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: paragraph,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 19
+                            lineNumber: 20
                         }
                     },
                     "The MTG Lifecounter app is for Magic: The Gathering players. It helps keep track of up to 6 players",
@@ -68911,24 +69028,17 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: paragraph,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 23
+                            lineNumber: 24
                         }
                     },
                     "This project is for me to learn some new technologies, so if you have suggestions on how to improve the functionalities, please ",
-                    _react2.default.createElement(
-                        _components.Text,
-                        {
-                            type: "paragraph",
-                            style: link,
-                            onClick: openContactLink(),
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 25
-                            }
-                        },
-                        "contact me"
-                    ),
-                    ". I will see if your idea fits my vision of the MTG Lifecounter. Even better: rate the app in the Play Store as honest as possible and leave a review."
+                    _react2.default.createElement(ContactMe, {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 26
+                        }
+                    }),
+                    ". I will see if your idea fits my vision of the MTG Lifecounter. Even better: rate and review the app in the Play Store as honest as possible."
                 ),
                 _react2.default.createElement(
                     _components.Text,
@@ -68937,7 +69047,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: heading,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 30
+                            lineNumber: 31
                         }
                     },
                     "Translations"
@@ -68949,7 +69059,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: paragraph,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 31
+                            lineNumber: 32
                         }
                     },
                     "In the near future, I want to start supporting every language in which Magic: The Gathering cards are being printed. And Dutch. Because that",
@@ -68965,7 +69075,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: heading,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 39
+                            lineNumber: 41
                         }
                     },
                     "Special thanks"
@@ -68977,7 +69087,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: paragraph,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 40
+                            lineNumber: 42
                         }
                     },
                     "A special thanks goes to Rory, my colleague, who reviews my code every now and then. And to my friend Thijs, who designed everything in and around the MTG Lifecounter app."
@@ -68987,7 +69097,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     };
 
     exports.default = About;
-},617,[108,12,618,438,410],"mtg-lifecounter/js/screens/About/About.js");
+},620,[108,12,621,441,410],"mtg-lifecounter/js/screens/About/About.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -69000,6 +69110,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
     var _constants = require(_dependencyMap[2], "../../utils/constants");
 
     exports.default = _reactNative.StyleSheet.create({
+        container: {
+            paddingHorizontal: (0, _utils.normalizeFontSize)(_constants.FONT_SIZE_TINY)
+        },
         heading: {
             fontSize: (0, _utils.normalizeFontSize)(_constants.FONT_SIZE_SMALL),
             marginBottom: (0, _utils.normalizeFontSize)(_constants.FONT_SIZE_TINY)
@@ -69014,7 +69127,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             color: 'red'
         }
     });
-},618,[12,406,405],"mtg-lifecounter/js/screens/About/styles.js");
+},621,[12,406,405],"mtg-lifecounter/js/screens/About/styles.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -69039,9 +69152,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     var _About2 = babelHelpers.interopRequireDefault(_About);
 
-    var _components = require(_dependencyMap[5], "../../components");
-
-    var _constants = require(_dependencyMap[6], "../../utils/constants");
+    var _constants = require(_dependencyMap[5], "../../utils/constants");
 
     var styles = _reactNative.StyleSheet.create({
         header: {
@@ -69066,7 +69177,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 return _react2.default.createElement(_About2.default, {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 24
+                        lineNumber: 23
                     }
                 });
             }
@@ -69089,7 +69200,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     color: _constants.COLOR_FOREGROUND,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 33
+                        lineNumber: 32
                     }
                 },
                 _react2.default.createElement(_reactNavigationHeaderButtons2.default.Item, {
@@ -69100,7 +69211,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     },
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 34
+                        lineNumber: 33
                     }
                 })
             ),
@@ -69108,6 +69219,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
             headerTitleStyle: styles.headerTitle
         };
     };
-},619,[108,12,440,609,617,410,405],"mtg-lifecounter/js/screens/About/About.container.js");
+},622,[108,12,443,612,620,405],"mtg-lifecounter/js/screens/About/About.container.js");
 require(23);
 require(11);

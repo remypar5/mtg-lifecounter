@@ -3,12 +3,17 @@ import { ScrollView } from 'react-native';
 
 import styles from './styles';
 import bgiconSrc from '../Game/bgicon.png';
-import { Text, PageContainer, BackgroundImage } from '../../components';
+import { Text, PageContainer, BackgroundImage, Link } from '../../components';
 
-const { heading, paragraph, link } = styles;
+const { container, heading, paragraph } = styles;
+
+const subject = 'Suggestion%20to%20improve%20the%20MTG%20Lifecounter%20app';
+export const ContactMe = () => (
+    <Link href={`mailto:dev@parzinski.nl?subject=${subject}`}>contact me</Link>
+);
 
 const About = () => (
-    <PageContainer>
+    <PageContainer style={container}>
         <BackgroundImage source={bgiconSrc} />
         <ScrollView>
             <Text type="heading" style={heading}>About</Text>
@@ -18,10 +23,9 @@ const About = () => (
             </Text>
             <Text type="paragraph" style={paragraph}>
                 This project is for me to learn some new technologies, so if you have suggestions
-                on how to improve the functionalities, please
-                <Text type="paragraph" style={link}>contact me</Text>.
-                I will see if your idea fits my vision of the MTG Lifecounter. Even better: rate
-                and review the app in the Play Store as honest as possible.
+                on how to improve the functionalities, please <ContactMe />. I will see if your
+                idea fits my vision of the MTG Lifecounter. Even better: rate and review the app
+                in the Play Store as honest as possible.
             </Text>
 
             <Text type="heading" style={heading}>Translations</Text>
@@ -36,7 +40,7 @@ const About = () => (
 
             <Text type="heading" style={heading}>Special thanks</Text>
             <Text type="paragraph" style={paragraph}>
-                A special thanks goes to Rory, my colleague, who reviews my code every now and
+                A special thanks goes to my colleague Rory, who reviews my code every now and
                 then. And to my friend Thijs, who designed everything in and around the MTG
                 Lifecounter app.
             </Text>
