@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Link
+    href="https://github.com/remypar5/mtg-lifecounter"
+    style={null}
+  >
+    Fork me on GitHub
+  </Link>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "accessible": true,
+      "allowFontScaling": true,
+      "children": "Fork me on GitHub",
+      "ellipsizeMode": "tail",
+      "onPress": [Function],
+      "style": Object {
+        "color": "#710000",
+      },
+    },
+    "ref": null,
+    "rendered": "Fork me on GitHub",
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "accessible": true,
+        "allowFontScaling": true,
+        "children": "Fork me on GitHub",
+        "ellipsizeMode": "tail",
+        "onPress": [Function],
+        "style": Object {
+          "color": "#710000",
+        },
+      },
+      "ref": null,
+      "rendered": "Fork me on GitHub",
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
