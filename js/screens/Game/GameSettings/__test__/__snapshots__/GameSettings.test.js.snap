@@ -49,7 +49,7 @@ ShallowWrapper {
         >
           Lifepoints
         </Text>,
-        <View
+        <Component
           style={
             Object {
               "alignItems": "center",
@@ -113,8 +113,8 @@ ShallowWrapper {
           >
             40
           </Text>
-        </View>,
-        <View
+        </Component>,
+        <Component
           style={
             Object {
               "alignItems": "center",
@@ -138,8 +138,8 @@ ShallowWrapper {
           >
             Keep Screen on
           </Text>
-        </View>,
-        <View
+        </Component>,
+        <Component
           style={
             Object {
               "padding": 22.5,
@@ -160,7 +160,7 @@ ShallowWrapper {
           >
             Start
           </Text>
-        </View>,
+        </Component>,
       ],
       "style": Object {
         "flexDirection": "column",
@@ -512,7 +512,7 @@ ShallowWrapper {
           >
             Lifepoints
           </Text>,
-          <View
+          <Component
             style={
               Object {
                 "alignItems": "center",
@@ -576,8 +576,8 @@ ShallowWrapper {
             >
               40
             </Text>
-          </View>,
-          <View
+          </Component>,
+          <Component
             style={
               Object {
                 "alignItems": "center",
@@ -601,8 +601,8 @@ ShallowWrapper {
             >
               Keep Screen on
             </Text>
-          </View>,
-          <View
+          </Component>,
+          <Component
             style={
               Object {
                 "padding": 22.5,
@@ -623,7 +623,7 @@ ShallowWrapper {
             >
               Start
             </Text>
-          </View>,
+          </Component>,
         ],
         "style": Object {
           "flexDirection": "column",
