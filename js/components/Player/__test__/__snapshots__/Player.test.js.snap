@@ -1,5 +1,395 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Player /> renders a "dead" player with a red background color 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Player
+    onGameOver={[Function]}
+    player={
+      Object {
+        "id": 0,
+        "life": 0,
+        "name": "Dead-eye Joe",
+      }
+    }
+    size="large"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <NumberSpinner
+          max={9007199254740991}
+          min={-9007199254740991}
+          onChange={[Function]}
+          size="large"
+          step={1}
+          stepLarge={10}
+          value={0}
+        />,
+        <Text
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": undefined,
+              "fontSize": 180,
+              "paddingVertical": 5,
+            }
+          }
+          type="label"
+        >
+          Dead-eye Joe
+        </Text>,
+      ],
+      "style": Object {
+        "alignItems": "stretch",
+        "backgroundColor": "#710000",
+        "borderColor": "#262626",
+        "borderStyle": "solid",
+        "borderWidth": 3,
+        "flex": 1,
+        "height": "100%",
+        "justifyContent": "flex-start",
+        "width": "100%",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "max": 9007199254740991,
+          "min": -9007199254740991,
+          "onChange": [Function],
+          "size": "large",
+          "step": 1,
+          "stepLarge": 10,
+          "value": 0,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Dead-eye Joe",
+          "style": Object {
+            "alignSelf": "center",
+            "color": undefined,
+            "fontSize": 180,
+            "paddingVertical": 5,
+          },
+          "type": "label",
+        },
+        "ref": null,
+        "rendered": "Dead-eye Joe",
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <NumberSpinner
+            max={9007199254740991}
+            min={-9007199254740991}
+            onChange={[Function]}
+            size="large"
+            step={1}
+            stepLarge={10}
+            value={0}
+          />,
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": undefined,
+                "fontSize": 180,
+                "paddingVertical": 5,
+              }
+            }
+            type="label"
+          >
+            Dead-eye Joe
+          </Text>,
+        ],
+        "style": Object {
+          "alignItems": "stretch",
+          "backgroundColor": "#710000",
+          "borderColor": "#262626",
+          "borderStyle": "solid",
+          "borderWidth": 3,
+          "flex": 1,
+          "height": "100%",
+          "justifyContent": "flex-start",
+          "width": "100%",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "max": 9007199254740991,
+            "min": -9007199254740991,
+            "onChange": [Function],
+            "size": "large",
+            "step": 1,
+            "stepLarge": 10,
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Dead-eye Joe",
+            "style": Object {
+              "alignSelf": "center",
+              "color": undefined,
+              "fontSize": 180,
+              "paddingVertical": 5,
+            },
+            "type": "label",
+          },
+          "ref": null,
+          "rendered": "Dead-eye Joe",
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`<Player /> renders a large player name without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Player
+    onGameOver={[Function]}
+    player={
+      Object {
+        "id": 0,
+        "life": 2000,
+        "name": "Joe at Large",
+      }
+    }
+    size="large"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <NumberSpinner
+          max={9007199254740991}
+          min={-9007199254740991}
+          onChange={[Function]}
+          size="large"
+          step={1}
+          stepLarge={10}
+          value={2000}
+        />,
+        <Text
+          style={
+            Object {
+              "alignSelf": "center",
+              "color": undefined,
+              "fontSize": 180,
+              "paddingVertical": 5,
+            }
+          }
+          type="label"
+        >
+          Joe at Large
+        </Text>,
+      ],
+      "style": Object {
+        "alignItems": "stretch",
+        "borderColor": "#262626",
+        "borderStyle": "solid",
+        "borderWidth": 3,
+        "flex": 1,
+        "height": "100%",
+        "justifyContent": "flex-start",
+        "width": "100%",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "max": 9007199254740991,
+          "min": -9007199254740991,
+          "onChange": [Function],
+          "size": "large",
+          "step": 1,
+          "stepLarge": 10,
+          "value": 2000,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Joe at Large",
+          "style": Object {
+            "alignSelf": "center",
+            "color": undefined,
+            "fontSize": 180,
+            "paddingVertical": 5,
+          },
+          "type": "label",
+        },
+        "ref": null,
+        "rendered": "Joe at Large",
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <NumberSpinner
+            max={9007199254740991}
+            min={-9007199254740991}
+            onChange={[Function]}
+            size="large"
+            step={1}
+            stepLarge={10}
+            value={2000}
+          />,
+          <Text
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": undefined,
+                "fontSize": 180,
+                "paddingVertical": 5,
+              }
+            }
+            type="label"
+          >
+            Joe at Large
+          </Text>,
+        ],
+        "style": Object {
+          "alignItems": "stretch",
+          "borderColor": "#262626",
+          "borderStyle": "solid",
+          "borderWidth": 3,
+          "flex": 1,
+          "height": "100%",
+          "justifyContent": "flex-start",
+          "width": "100%",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "max": 9007199254740991,
+            "min": -9007199254740991,
+            "onChange": [Function],
+            "size": "large",
+            "step": 1,
+            "stepLarge": 10,
+            "value": 2000,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Joe at Large",
+            "style": Object {
+              "alignSelf": "center",
+              "color": undefined,
+              "fontSize": 180,
+              "paddingVertical": 5,
+            },
+            "type": "label",
+          },
+          "ref": null,
+          "rendered": "Joe at Large",
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`<Player /> renders without crashing 1`] = `
 ShallowWrapper {
   "length": 1,

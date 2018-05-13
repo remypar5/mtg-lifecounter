@@ -1,12 +1,10 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import PropTypes from 'prop-types';
 import HeaderButtons from 'react-navigation-header-buttons';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 
-import GameSettings from './GameSettings';
-import { IconButton } from '../../../components';
-import { COLOR_FOREGROUND } from '../../../utils/constants';
+import About from './About';
+import { COLOR_FOREGROUND } from '../../utils/constants';
 
 const styles = StyleSheet.create({
     header: {
@@ -21,32 +19,24 @@ const styles = StyleSheet.create({
 // eslint-disable-next-line react/prefer-stateless-function
 export default class GameSettingsContainer extends React.Component {
     render() {
-        const { navigation } = this.props;
-
-        return (<GameSettings navigation={navigation} />);
+        return (
+            <About />
+        );
     }
 }
 
 GameSettingsContainer.navigationOptions = ({ navigation }) => ({
-    title: 'Lifecounter',
+    title: 'Info',
+    headerTitle: 'Info',
     headerLeft: (
-        <IconButton
-            source={{ uri: 'mipmap/ic_launcher' }}
-        />
-    ),
-    headerRight: (
-        <HeaderButtons IconComponent={FeatherIcon} iconSize={23} color={`${COLOR_FOREGROUND}`}>
+        <HeaderButtons IconComponent={FeatherIcon} iconSize={28} color={COLOR_FOREGROUND}>
             <HeaderButtons.Item
-                title="About"
-                iconName="info"
-                onPress={() => navigation.navigate('About')}
+                title="Back"
+                iconName="arrow-left"
+                onPress={() => navigation.goBack()}
             />
         </HeaderButtons>
     ),
     headerStyle: styles.header,
     headerTitleStyle: styles.headerTitle,
 });
-
-GameSettingsContainer.propTypes = {
-    navigation: PropTypes.object.isRequired,
-};

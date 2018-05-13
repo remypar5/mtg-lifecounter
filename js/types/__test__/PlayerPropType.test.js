@@ -85,8 +85,7 @@ describe('PlayerPropType', () => {
             expect(spy).toHaveBeenCalled();
         });
 
-        // TODO: unskip and fix this.
-        it.skip('a non-boolean for isGameOver', () => {
+        it('a non-boolean for isGameOver', () => {
             const playerProps = {
                 id: 2,
                 name: 'My Player Name',
